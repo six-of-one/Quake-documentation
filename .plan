@@ -14,13 +14,20 @@ qone
 
 release needs:
 
-r_visclip to fix fps issue
+fix key issue with coop code
 check all doors, plats, buttons, keys, etc
 compile maphack engine for win
 - visual studio install
-play through
+play through / promo video (quake HD)
 write release docs
 clean up source a bit
+
+12.21.15
+
+WIP: map hack - 
+NIX: r_visclip to fix fps issue -- for the time being, this is being put back a bit
+DONE: found a vis block work around on qone.bsp -- added block brush every 2 levels
+CHECKED: no level "boxes" overlap
 
 12.20.15
 
