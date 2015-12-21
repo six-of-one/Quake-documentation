@@ -9,11 +9,8 @@ new trigger / biome system with multiple sets of biome stuff - regular terrain, 
 multi phases need to - id maphacks in their phase, set biomes in their phase
 
 qone
-- needs fixed: 
 
-* damage plat still wrong
-
--- test worldtype settings, look for oddities
+-- check worldtype settings, look for oddities
 
 12.20.15
 
@@ -22,6 +19,13 @@ DONE: gravity entry / exit e1m8
 - gravity on e1m8, 
 -triggers on entry / exit 
 - what about coop, where some player might not be there
+FIXED: damage plat still wrong
+-- this was the chunk belows unseen boundary overlapping the plat move space and causing problems when the player was on the plat
+-- yeah, go figure that
+total remove & reinstall of vs015 - which got buggered by pf86 move
+DONE: episode local area respawn coop - sp (what used to be each map start) - trigger_respawn
+- issue in real coop - simultaneous death will lead to spawn frags - only 1 local area spawn point
+
 
 12.19.15
 
