@@ -2,31 +2,49 @@ current:
 
 -- get farclip to make ents beyond non-exist till they are in range
 
--- from notes
-
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
 idea: completed stats on hud in csqc
-
-hack types - normal, subhack, null hack, loaders -- new rules for spawning, deleting, persistence, etc
--- HOLD flag is a subhack
 
 new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
 multi phases need to - id maphacks in their phase, set biomes in their phase
 
 qone
 - needs fixed: 
-- gravity on e1m8, triggers on entry / exit - what about coop, where some player might not be there
 
 * damage plat still wrong
 
 -- test worldtype settings, look for oddities
 
+12.20.15
+
+WIP: map hack - 
+DONE: gravity entry / exit e1m8
+- gravity on e1m8, 
+-triggers on entry / exit 
+- what about coop, where some player might not be there
 
 12.19.15
 
 WIP: online manuals - sourceforge, github accts
-WIP: win compile darkplaces
+- edited 3.4 spec, some html formatting
+DONE: uploaded specs to git
 
+WIP: win compile darkplaces
+- visual studio install _finally_ complete and installing
+- missing d3dx9.h
+DONE: installed d3dx dev stuff
+WIP: moving some files...have a permissions problem
+
+Completed in some form:
+things to look at - think to ent_load so it happens after all hacks are made
+- add in one type of ent at a time & perfect them (nearly)
+- put rotates back in - figure vector math (yes! vector math is my bitch)
+
+DONE: copied tools to vxp & updated z.bat, compile chain - hmap2, arghlite, rvis
+DONE: compile door section th_0003 with oldschool tools - lot more doors visible, but still had some blanks
+
+WIP: map hack - 
+DONE: gravity code for e1m8 segment
 
 12.18.15
 
