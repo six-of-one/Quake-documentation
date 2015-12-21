@@ -12,6 +12,16 @@ qone
 
 -- check worldtype settings, look for oddities
 
+release needs:
+
+r_visclip to fix fps issue
+check all doors, plats, buttons, keys, etc
+compile maphack engine for win
+- visual studio install
+play through
+write release docs
+clean up source a bit
+
 12.20.15
 
 WIP: map hack - 
