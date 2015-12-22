@@ -14,13 +14,16 @@ qone
 
 release needs:
 
-fix key issue with coop code
+coop spawns dont have trigger_respawn -  see if make ps trigger bigger
 check all doors, plats, buttons, keys, etc
-compile maphack engine for win
-- visual studio install
-play through / promo video (quake HD)
-write release docs
+play through (quake HD) / promo video - e1 at least
 clean up source a bit
+write release docs
+
+12.22.15
+
+WIP: map hack - 
+DONE: engine port to git
 
 12.21.15
 
@@ -28,6 +31,11 @@ WIP: map hack -
 NIX: r_visclip to fix fps issue -- for the time being, this is being put back a bit
 DONE: found a vis block work around on qone.bsp -- added block brush every 2 levels
 CHECKED: no level "boxes" overlap
+
+DONE: visual studio install
+DONE: compile maphack engine for win -- ran engine.  noticed one inconsistency.  testing will commence
+WIP: write release docs
+DONE: fix key issue with coop code -- fix for unreachable / lava too
 
 12.20.15
 
