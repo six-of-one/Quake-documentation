@@ -14,16 +14,17 @@ qone
 
 release needs:
 
-coop spawns dont have trigger_respawn -  see if make ps trigger bigger
 check all doors, plats, buttons, keys, etc
 play through (quake HD) / promo video - e1 at least
-clean up source a bit
-write release docs
 
 12.22.15
 
 WIP: map hack - 
 DONE: engine port to git
+DONE: write release docs
+DONE: clean up source a bit -- maphack.qc excluded until dec. made on license / distr
+DONE: coop spawns dont have trigger_respawn -  see if make ps trigger bigger -- used oldone.mdl
+DONE: built release for alpha / beta testers
 
 12.21.15
 
