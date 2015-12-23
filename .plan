@@ -12,9 +12,8 @@ qone
 
 -- check worldtype settings, look for oddities
 
-release needs:
+release followup:
 
-check all doors, plats, buttons, keys, etc
 play through (quake HD) / promo video - e1 at least
 
 12.22.15
@@ -24,7 +23,13 @@ DONE: engine port to git
 DONE: write release docs
 DONE: clean up source a bit -- maphack.qc excluded until dec. made on license / distr
 DONE: coop spawns dont have trigger_respawn -  see if make ps trigger bigger -- used oldone.mdl
-DONE: built release for alpha / beta testers
+DONE: built release for alpha / beta testers -- testing wip
+FIXED: win .lnk not relative - used .bat
+FIXED: dh (default hack) didnt work if e3 - e4 maps werent there
+DONE: generic load fail map with message trigger
+DONE: some build scripts
+DONE: updated docs
+DONE: check all doors, plats, buttons, keys, etc -- cursory check completed
 
 12.21.15
 
