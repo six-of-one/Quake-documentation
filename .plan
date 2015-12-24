@@ -1,20 +1,37 @@
-current:
+.plan
+-------------------------------------------------
+Number Six
+-------------------------------------------------
+quakec#cataboligne#org				(replace #'s with @ and then . )
+
+current project(s):
+
+quake hack
 
 -- get farclip to make ents beyond non-exist till they are in range
-
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
-idea: completed stats on hud in csqc
 
 new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
 multi phases need to - id maphacks in their phase, set biomes in their phase
 
-qone
+not only are some bmodels not appearing, now torches & flames dont always appear
+-- the incidents of this are stoked way up from before, now most bmodels & flames dont appear
 
--- check worldtype settings, look for oddities
+qone
 
 release followup:
 
 play through (quake HD) / promo video - e1 at least
+-- look for oddities
+
+12.23.15
+
+WIP: map hack - 
+FIXED: cfg bug for qone affecting intermission text scroll speed on infobar
+DONE: "remove coop player - player spawnfrags" -- works fine
+DONE: bmodel rotate match / remove option -- operates on normal rotate, matches up to 3 rotate values & removes
+WIP: qh map sections
+DONE: qone docs updates & upload
 
 12.22.15
 
