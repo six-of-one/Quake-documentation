@@ -24,6 +24,13 @@ release followup:
 
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
+12.24.15
+
+WIP: quake hack - 
+non visible bmodels -- trying old compile tools - NO
+- tried separating hulls - NO
+- tried adding vis data from a sealed map - NO
+FIXED: bad loop bug -- using f3__ in SV_OnEntityPreSpawnFunction copy loop, switched to glb_local
 
 12.23.15
 
