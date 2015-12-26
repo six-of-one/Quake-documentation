@@ -9,14 +9,12 @@ current project(s):
 quake hack
 
 -- get farclip to make ents beyond non-exist till they are in range
+- possible work around with vis data from a segmented map compiled into base map chunk
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
 
 new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
 multi phases need to - id maphacks in their phase, set biomes in their phase
-
-not only are some bmodels not appearing, now torches & flames dont always appear
--- the incidents of this are stoked way up from before, now most bmodels & flames dont appear
--- what really gets me is how near perfect the qone levels are, with tons of bmodels, flames, and over 7500 ents loaded
+- use mt (master trigger) as owner
 
 qone
 
@@ -24,6 +22,34 @@ release followup:
 
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
+
+12.26.15
+
+DONE: github online qc manual and specs, finally!
+- minor updates for site links & credits
+WIP: quake hack - 
+
+12.25.15
+
+WIP: quake hack - 
+- tried full vis data with seal brushes - NO
+- tried full vis data with seal brushes 96 tools - NO
+- tried full vis data with seal brushes original 96 tools (no water vis) - NO
+- tried vis block on qh_0000 map - NO
+- tried all UPPER CASE tex names in compile - NO
+FIXED: not only are some bmodels not appearing, now torches & flames dont always appear
+-- the incidents of this are stoked way up from before, now most bmodels & even flames dont appear
+o...m...g
+- any sub models that load before:
+Server spawned.
+
+Trying to connect...
+3 demo(s) in loop
+========Initialized=========
+- get loaded and are visible, new ones loaded after that are the fails
+- so the answer is simple - everything HAS to be preloaded once
+DONE: 1st cut - needs revised as it relies on self deleting hacks which fail with a persistent world
+
 12.24.15
 
 WIP: quake hack - 
@@ -31,6 +57,7 @@ non visible bmodels -- trying old compile tools - NO
 - tried separating hulls - NO
 - tried adding vis data from a sealed map - NO
 FIXED: bad loop bug -- using f3__ in SV_OnEntityPreSpawnFunction copy loop, switched to glb_local
+
 
 12.23.15
 
