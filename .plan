@@ -9,12 +9,14 @@ current project(s):
 quake hack
 
 -- get farclip to make ents beyond non-exist till they are in range
-- possible work around with vis data from a segmented map compiled into base map chunk
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
 
 new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
 multi phases need to - id maphacks in their phase, set biomes in their phase
 - use mt (master trigger) as owner
+
+re-test delete_hack & up / down chunks
+FIX: chunks that real rotate with bmodels badly placed after rotate
 
 qone
 
@@ -28,6 +30,12 @@ play through (quake HD) / promo video - e1 at least
 DONE: github online qc manual and specs, finally!
 - minor updates for site links & credits
 WIP: quake hack - 
+FIXED: odd "trigger" textured bits
+the odd bit of "trigger" textured things are trigger_counter, which normally spawn with no model set
+and thus are not seen.  maphack changes that, and they are nonsolid, but still have appearance
+DONE: delete_hack updated for HOLD flag hacks replacing existing one
+DONE: vis block interim fix
+- possible work around with vis data from a segmented map compiled into base map chunk
 
 12.25.15
 
