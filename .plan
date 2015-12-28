@@ -15,8 +15,7 @@ new trigger / biome system with multiple sets of biome stuff - regular terrain, 
 multi phases need to - id maphacks in their phase, set biomes in their phase
 - use mt (master trigger) as owner
 
-re-test delete_hack & up / down chunks
-FIX: chunks that real rotate with bmodels badly placed after rotate
+test load standard maps
 
 qone
 
@@ -24,6 +23,17 @@ release followup:
 
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
+
+12.27.15
+
+WIP: quake hack - 
+FIXED: chunks that real rotate with bmodels badly placed after rotate -- bug in rotate dest remove code
+- dup & rotate some bmodels, check lighting on those
+FIXED: 2 level chunk qh_0011L (lift) sometimes gets "chunk stomped" where another chunk occupies its upper structure
+*** warning:   attempting turn: func_maphack, #: 2683, mdl: , at: '  0.0   0.0 512.0', to: '-512.0   0.0 512.0', add vec: ' -1.0   0.0  -0.0', angle: 180
+- rotate was moving the HOLD chunk away from center
+DONE: went back to old rotate code when angle = 90, 180, 270 -- new vector "free" rotate code has issues at some angles
+DONE: re-test delete_hack & up / down chunks -- good, have not seen an overlap for a bit
 
 12.26.15
 
