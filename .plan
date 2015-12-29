@@ -18,6 +18,11 @@ multi phases need to - id maphacks in their phase, set biomes in their phase
 HOLD hacks can _still_ overlap each other with no way to delete
 - need a recursive change of the mh from a hold build
 
+re-light qh_0011R - targeted lights are going dark after player leaves
+one of the double doors in 1x33 is still funky - dbl check
+
+engine: video is still dp{n}
+
 qone
 
 release followup:
@@ -28,7 +33,8 @@ play through (quake HD) / promo video - e1 at least
 12.28.15
 
 WIP: quake hack - 
-fps & vis issue -- hiding hacks & sub ents mk II
+WIP: fps issue -- hiding hacks & sub ents mk II
+- needs some tweakage on up / down, think speed of hacks
 FIXED: bmodel ents did not sub remove & non solids would not be found
 
 12.27.15
