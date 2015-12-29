@@ -15,7 +15,8 @@ new trigger / biome system with multiple sets of biome stuff - regular terrain, 
 multi phases need to - id maphacks in their phase, set biomes in their phase
 - use mt (master trigger) as owner
 
-test load standard maps
+HOLD hacks can _still_ overlap each other with no way to delete
+- need a recursive change of the mh from a hold build
 
 qone
 
@@ -24,16 +25,24 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+12.28.15
+
+WIP: quake hack - 
+fps & vis issue -- hiding hacks & sub ents mk II
+FIXED: bmodel ents did not sub remove & non solids would not be found
+
 12.27.15
 
 WIP: quake hack - 
-FIXED: chunks that real rotate with bmodels badly placed after rotate -- bug in rotate dest remove code
+FIXED: chunks that real rotate with bmodels badly placed after rotate -- 2 bugs in rotate dest remove code
 - dup & rotate some bmodels, check lighting on those
 FIXED: 2 level chunk qh_0011L (lift) sometimes gets "chunk stomped" where another chunk occupies its upper structure
 *** warning:   attempting turn: func_maphack, #: 2683, mdl: , at: '  0.0   0.0 512.0', to: '-512.0   0.0 512.0', add vec: ' -1.0   0.0  -0.0', angle: 180
 - rotate was moving the HOLD chunk away from center
 DONE: went back to old rotate code when angle = 90, 180, 270 -- new vector "free" rotate code has issues at some angles
 DONE: re-test delete_hack & up / down chunks -- good, have not seen an overlap for a bit
+DONE: test load standard maps -- a small selection, all seem right
+WIP: qc manual edits
 
 12.26.15
 
