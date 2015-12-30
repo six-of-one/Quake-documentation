@@ -40,6 +40,8 @@ DONE: redid map base config loaded with PutClientInServer now
 DONE: moved intermission text cvar to autoexec.cfg - has to load no matter what map is loaded
 DONE: added in qone.bsp & cfgs, since it will run anyway
 DONE: quake dir cleanup
+DONE: engine build win
+DONE: automate package build for quake hack
 
 12.28.15
 
