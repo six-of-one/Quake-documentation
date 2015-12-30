@@ -8,7 +8,6 @@ current project(s):
 
 quake hack
 
--- get farclip to make ents beyond non-exist till they are in range
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
 
 new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
@@ -16,12 +15,9 @@ multi phases need to - id maphacks in their phase, set biomes in their phase
 - use mt (master trigger) as owner
 
 HOLD hacks can _still_ overlap each other with no way to delete
-- need a recursive change of the mh from a hold build
+- need a recursive change of the mh from a hold instance
 
-re-light qh_0011R - targeted lights are going dark after player leaves
-one of the double doors in 1x33 is still funky - dbl check
-
-engine: video is still dp{n}
+-monsters can move to a diff hack (in case of hide or delete)
 
 qone
 
@@ -29,6 +25,21 @@ release followup:
 
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
+
+12.29.15
+
+WIP: quake hack - 
+FIXED: engine: video is still dp{n} -- cl_capturevideo_nameformat cvar adjusted
+
+DONE: re-light qh_0011R - targeted lights are going dark after player leaves
+DONE: one of the double doors in 1x33 is still funky - dbl check -- fixed maybe, did not see a repeat
+NIXED: get farclip to make ents beyond non-exist till they are in range -- network send ent workaround sv_hide & .hack_pdist
+FIXED: 2 elevator buttons in 0011L had wrong push dir
+WIP: release package, docs
+DONE: redid map base config loaded with PutClientInServer now
+DONE: moved intermission text cvar to autoexec.cfg - has to load no matter what map is loaded
+DONE: added in qone.bsp & cfgs, since it will run anyway
+DONE: quake dir cleanup
 
 12.28.15
 
