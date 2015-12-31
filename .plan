@@ -19,12 +19,40 @@ HOLD hacks can _still_ overlap each other with no way to delete
 
 -monsters can move to a diff hack (in case of hide or delete)
 
+release:
+
+source distr to qc
+
 qone
 
 release followup:
 
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
+
+12.31.15
+
+WIP: quake hack - 
+FIXED: map cfgs do not exec by worldspawn (affects qone)
+DONE: qone updated to latest code / cfg
+DONE: map chunk fixes for beta release - 1x15  -- tweaked some basement areas, corners
+NOTE: player can still get trapped, need better solve
+DONE: playtest on linux / win from fresh install
+DONE: try coop / dm true 2 multi with l/l l/w
+FIXED: tele dest in a sub hack area dont make proper triggers -- view_ofs additive vector
+- saw after death
+items          -7334809.0000
+FIXED: adjusted all "self.items = self.items - " to use "& self.items" logic
+
+RELEASED !!!
+- beta 1.4.3 demo is out the door.  Woo!
+
+12.30.15
+
+WIP: quake hack - 
+WIP: map chunk fixes for beta release
+DONE: automate package build for quake hack -- for now
+
 
 12.29.15
 
