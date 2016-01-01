@@ -22,6 +22,7 @@ HOLD hacks can _still_ overlap each other with no way to delete
 release:
 
 source distr to qc
+over sample on light phase
 
 qone
 
