@@ -13,16 +13,16 @@ quake hack
 new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
 multi phases need to - id maphacks in their phase, set biomes in their phase
 - use mt (master trigger) as owner
+- alt: have trigger dir spec - spawn a thing & face a certain dir
+			a main func_maphack loads a set of triggers, that load more triggers radiating out
+			null hacks that dont test in probe vs. real world hacks
 
 HOLD hacks can _still_ overlap each other with no way to delete
 - need a recursive change of the mh from a hold instance
 
 -monsters can move to a diff hack (in case of hide or delete)
 
-release:
-
-source distr to qc
-over sample on light phase
+-might want to force display hidden hacks prior to teleport moves
 
 qone
 
@@ -30,6 +30,14 @@ release followup:
 
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
+
+1.1.16
+
+WIP: quake hack - 
+FIXED: tele dest in a sub hack area dont make proper triggers -- view_ofs additive vector
+DONE: fixed again - now offset is really added to trigger set center -- tested good
+WIP: research on next step
+DONE: tested archon HUD, quick docs, uploaded
 
 12.31.15
 
@@ -47,6 +55,8 @@ FIXED: adjusted all "self.items = self.items - " to use "& self.items" logic
 
 RELEASED !!!
 - beta 1.4.3 demo is out the door.  Woo!
+
+WIP: qh_0014, based on e2m1
 
 12.30.15
 
