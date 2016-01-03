@@ -15,9 +15,10 @@
 // Cataboligne 12/25/14  @   - improved test section, added "_ _ _ _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM" to select entries
 // Cataboligne 12/26/14  @   - qc++ mods
 // Cataboligne 12/12/15  @   - added 1792 : Entity __only__ appears in Deathmatch mode.
+// Cataboligne 12/31/15  @   - upload verison, edit some maphack notes
 
-// Version: 1.7.14
-// Last entry: 12-26-14
+// Version: 1.8.1
+// Last entry: 12-30-15
 
 
 
@@ -25,10 +26,10 @@
 
 // Section list              by Cataboligne 	H'der
 
-// Archon mod
-// Map Hack mod
+// Archon mod               - the gods of CHA0S and 0rder
+// Map Hack mod             - the "infinite" quake map
 // Anode X game
-// Painkeep mod
+// Painkeep mod             - awesome deathmatch mod
 // Monster II               - add in monsters - Archon and other mods
 // Half-life                - darkplaces can load half-life maps
                             - these are placeholders for now
@@ -37,12 +38,12 @@
 // Quake
 // Hipnotic                 - mission pack 1
 // Rogue                    - mission pack 2
-// Zerstorer mod
+// Zerstorer mod            - killer singleplayer mission pack
 // ThreeWave Capture the Flag mod
 // Teamfortress mod
 // Quake Rally mod
 // Quess mod
-// Quantlet mod
+// Quantlet mod             - unreleased gauntlet total conversion
 // Quake 3                  - darkplaces can load q3 maps - Archon supports
 // Quake 2                  - has to be hand translated - Archon supports
 
@@ -374,7 +375,7 @@ run frames:
 "count" 		"#"		- first frame
 "state" 		"#"		- last frame loops to first
 "delay" 		"#"		- frame display time - default = 0.1 sec
-"cnt" 		    "#"		- first skin
+"cnt" 		"#"		- first skin
 "dmg"   		"#"		- last skin - > 0 loop to first, < 0 reverse loop (inclusive)
 "map"			"move"	- allow game items (grav well) to move this model
 
@@ -387,19 +388,9 @@ MAPHACK:
 biome controls:
 "lefty"         "#"     - random select % when used with func_biome, < 0 - only load 1 time
 "volume"        "#"     - use random scaling with biome - this is the cap, 3.0 suggested max for small decor, 1.5 for large
-"target1"       "{n}"   - list of ents to copy
-"target2"       "{n}"   - list of ents to randomly copy
-"wad"           "move"  - model will move, do not load from mdl
 
-targets:
-"v_angle"       "{v}"   - origin vector added to destination - so it wont be visible on map
-"target1"       "{n}"   - list of ents to copy
-"target2"       "{n}"   - list of ents to randomly copy
-id the targets with:
-"killtarget"    "{n}"   - match above targets - cant use targetname on targeted map objects
 - will copy relative to 0,0,0 of maphack source
 - ent.lefty used to test inclusion on random copy - default 30%
-- for building doors, etc
 
 solid guide:
 SOLID_NOT       0
@@ -3624,11 +3615,7 @@ angle : viewing angle when spawning
 
 MAPHACK:
 
-use the func_copymod method:
-"classname"     "func_copymod"
-"netname"       "info_player_deathmatch"
-
-note - this ent will copy, but the storage copy might be used on a respawn - do NOT put this ent in maphack storage
+no special notes yet
 */
 
 
