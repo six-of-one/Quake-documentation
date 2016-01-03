@@ -2,6 +2,19 @@
 #               015.10.7 - porting aliases, quake stuff
 #               016.1.02 - external release set
 
+# NOTE: every directory reference and cd will likely fail as they are set for my environment
+#       dir structure I use:
+#       /home/Quake/
+#         "     "   Q branch		# all labs, radiant, snd, vis, docs
+#         "     "   quake			# main install
+#         "     "   quake_*		# various test dirs for building mods
+#         "     "   Arc				# storage
+#         "     "   fps				# other fps games
+#         "     "   qlnx			# symlink dir make it easy to find stuff for vars progs
+
+# the very useful file list section at the end likes /home/Quake/.lsc to exist
+
+
 # Cataboligne - 015.12.9 - unify all qr grep usage
 # use assignment ($QGREP "$@")
 
@@ -188,7 +201,7 @@ alias models='qrec "(progs|maps).*\.(mdl|bsp)"|grep -v precache|grep -o "\".*\""
 
 # qc - search for entity variables
 
-alias evar="echo 'Quake entity variable searches';echo;alias |grep evar|cut -b 6-|sed -e 's/=/\t=\t/';echo"
+alias evar="echo 'Quake variable searches';echo;alias |grep evar|cut -b 6-|sed -e 's/=/\t=\t/';echo"
 
 qvar()
 {
@@ -1568,49 +1581,54 @@ alias mod="./.arc"
 alias rmx="qbkp -fx; # Quake - remove x bit from samba net loaded files"
 
 # more commands that rely on specific dirs
+# these all need a storage location for .lsc
+# this file contains ls options to display various files
 
 # lists
-# CL=`cat /home/Quake/.qbr/.lsc`
+CL=`cat /home/Quake/.lsc`
+
+# alias to set ls options on some file searches
 # use full dir
-# alias listfd="echo '  --color -lXahd'\$1 > /home/Quake/.qbr/.lsc # Quake lists"
+alias listfd="echo '  --color -lXahd'\$1 > /home/Quake/.lsc # Quake lists"
 # use partial full dir
-# alias listfp="echo '  --color -XahdGg'\$1 > /home/Quake/.qbr/.lsc # Quake lists"
+alias listfp="echo '  --color -XahdGg'\$1 > /home/Quake/.lsc # Quake lists"
 # use wide dir
-# alias listwd="echo '  --color -adX'\$1 > /home/Quake/.qbr/.lsc # Quake lists"
+alias listwd="echo '  --color -adX'\$1 > /home/Quake/.lsc # Quake lists"
 # add sort by ctime - note: this makes list full, even p and w
-# alias listc="sed -i 's/$/lc/' /home/Quake/.qbr/.lsc # Quake lists"
+alias listc="sed -i 's/$/lc/' /home/Quake/.lsc # Quake lists"
 
 
 # NOTE: fix later, no worky
-# must add ; echo '' > /home/Quake/.qbr/.lsc2 to other list* above
+# must add ; echo '' > /home/Quake/.lsc2 to other list* above
 # use partial full dir - no permit bits
-# alias listfn="echo '  --color -XahdGg'\$1 > /home/Quake/.qbr/.lsc; echo '|cut -d \" \" -f 3-|sed -e \"s/^  /__/\"|sed -e \"s/^ /_/\"|sed -e \"s/ /\t/\"' > /home/Quake/.qbr/.lsc2 # Quake lists"
+# alias listfn="echo '  --color -XahdGg'\$1 > /home/Quake/.lsc; echo '|cut -d \" \" -f 3-|sed -e \"s/^  /__/\"|sed -e \"s/^ /_/\"|sed -e \"s/ /\t/\"' > /home/Quake/.lsc2 # Quake lists"
 
 # use qbr directive above generically
-# alias lq="ls \`cat /home/Quake/.qbr/.lsc\` * # Quake lists"
-# alias lqh="ls \`cat /home/Quake/.qbr/.lsc\` .* # Quake lists"
+alias lq="ls \`cat /home/Quake/.lsc\` * # Quake lists"
+alias lqh="ls \`cat /home/Quake/.lsc\` .* # Quake lists"
 
 # show cmd
-alias listsh="echo 'list option:';echo -n '		';cat /home/Quake/.qbr/.lsc"
+alias listsh="echo 'list option:';echo -n '		';cat /home/Quake/.lsc"
 
+# big list of file searches
 # 10.30.13 - Cat - changed to operate live from CL file
-alias trm="ls \`cat /home/Quake/.qbr/.lsc\` -tr *.map|tail -n 64; # Quake lists"
-alias wads="ls \`cat /home/Quake/.qbr/.lsc\` *.[Ww][Aa][Dd] 2>/dev/null; # Quake lists"
+alias trm="ls \`cat /home/Quake/.lsc\` -tr *.map|tail -n 64; # Quake lists"
+alias wads="ls \`cat /home/Quake/.lsc\` *.[Ww][Aa][Dd] 2>/dev/null; # Quake lists"
 alias wadst='grep "\"wad\"" *.map|cut -d ":" -f 2-|sort -u|sed -e "s/^[ \t]*//" -e "s/\t/ /g"'
-alias ents="ls \`cat /home/Quake/.qbr/.lsc\` *.[Dd][Ee][Ff] 2>/dev/null; # Quake lists"
-alias maps="ls \`cat /home/Quake/.qbr/.lsc\` *.[Mm][Aa][Pp] 2>/dev/null; # Quake lists"
-#alias maps="ls \`cat /home/Quake/.qbr/.lsc\` *.[Mm][Aa][Pp] \`cat /home/Quake/.qbr/.lsc2\` 2>/dev/null; # Quake lists"
-alias bsps="ls \`cat /home/Quake/.qbr/.lsc\` *.[Bb][Ss][Pp] 2>/dev/null; # Quake lists"
-alias qcs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Qq][Cc] 2>/dev/null; # Quake lists"
-alias cs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
-alias hs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Hh] 2>/dev/null; # Quake lists"
-alias .cps="ls \`cat /home/Quake/.qbr/.lsc\` .cp* 2>/dev/null; # Quake lists"
-alias cfgs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Cc][Ff][Gg] 2>/dev/null; # Quake lists"
-alias paks="ls \`cat /home/Quake/.qbr/.lsc\` *.[Pp][Aa][Kk] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Pp][Kk]3 2>/dev/null; # Quake lists"
-alias zips="ls \`cat /home/Quake/.qbr/.lsc\` *.[Zz][Ii][Pp] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.7[Zz] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Tt][Gg][Zz] 2>/dev/null; # Quake lists"
-alias gfx="ls \`cat /home/Quake/.qbr/.lsc\` *.[Jj][Pp][Gg] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Gg][Ii][Ff] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Tt][Gg][Aa] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Pp][Nn][Gg] 2>/dev/null; # Quake lists"
-alias src="ls \`cat /home/Quake/.qbr/.lsc\` *.[Hh] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
-alias docs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Tt][Xx][Tt] 2>/dev/null; # Quake lists"
+alias ents="ls \`cat /home/Quake/.lsc\` *.[Dd][Ee][Ff] 2>/dev/null; # Quake lists"
+alias maps="ls \`cat /home/Quake/.lsc\` *.[Mm][Aa][Pp] 2>/dev/null; # Quake lists"
+#alias maps="ls \`cat /home/Quake/.lsc\` *.[Mm][Aa][Pp] \`cat /home/Quake/.lsc2\` 2>/dev/null; # Quake lists"
+alias bsps="ls \`cat /home/Quake/.lsc\` *.[Bb][Ss][Pp] 2>/dev/null; # Quake lists"
+alias qcs="ls \`cat /home/Quake/.lsc\` *.[Qq][Cc] 2>/dev/null; # Quake lists"
+alias cs="ls \`cat /home/Quake/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
+alias hs="ls \`cat /home/Quake/.lsc\` *.[Hh] 2>/dev/null; # Quake lists"
+alias .cps="ls \`cat /home/Quake/.lsc\` .cp* 2>/dev/null; # Quake lists"
+alias cfgs="ls \`cat /home/Quake/.lsc\` *.[Cc][Ff][Gg] 2>/dev/null; # Quake lists"
+alias paks="ls \`cat /home/Quake/.lsc\` *.[Pp][Aa][Kk] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Pp][Kk]3 2>/dev/null; # Quake lists"
+alias zips="ls \`cat /home/Quake/.lsc\` *.[Zz][Ii][Pp] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.7[Zz] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Tt][Gg][Zz] 2>/dev/null; # Quake lists"
+alias gfx="ls \`cat /home/Quake/.lsc\` *.[Jj][Pp][Gg] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Gg][Ii][Ff] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Tt][Gg][Aa] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Pp][Nn][Gg] 2>/dev/null; # Quake lists"
+alias src="ls \`cat /home/Quake/.lsc\` *.[Hh] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
+alias docs="ls \`cat /home/Quake/.lsc\` *.[Tt][Xx][Tt] 2>/dev/null; # Quake lists"
 #alias xs='ls -lda * 2>/dev/null|grep "^-..x"; ls -lda .* 2>/dev/null|grep "^-..x"; # Quake lists'
 alias xs='ls -ldaF --color *|grep "\*";ls -ldaF --color .*|grep "\*"; # Quake lists'
 alias lfx='xs'
@@ -1620,13 +1638,17 @@ alias allq="echo;echo 'Quake lists:';echo;alias |grep -i 'Quake'|cut -b 6-|sed -
 alias alq="allq"
 alias rad="echo 'Radiant cmds:';echo;alias |grep -i radiant|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;echo"
 alias srcs="echo 'Source:';echo;alias|grep -i source|grep -vi Resource|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;echo; # Quake lists"
-alias qrcom="grep grep /home/OS/ulb/qr*|cut -b 14-|cut -d '2' -f -1|sed -e 's/:/ = /'|sed -e 's/^/ /';echo;echo 'note: grep -v \"^\\\$sboc\" in qrc, qfc, qrec - to eliminate \$base, etc.';echo '* many other searches use qr?c - qvar for list'; # Quake lists"
+alias qrcom="grep grep /usr/local/bin/qr*|cut -b 14-|cut -d '2' -f -1|sed -e 's/:/ = /'|sed -e 's/^/ /';echo;echo 'note: grep -v \"^\\\$sboc\" in qrc, qfc, qrec - to eliminate \$base, etc.';echo '* many other searches use qr?c - qvar for list'; # Quake lists"
 alias qrcmd="qrcom"
 alias tabs="echo;echo 'Quake tabs:';echo;alias |grep -i '\.t[1-4]='|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;alias |grep -i '.tab'|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;echo;echo Current tab: $TBS;echo"
 alias qc_notes='qc_com -f|xargs -n 1 qr $@'
 alias qc_n='qc_notes'
 
+# quake backup folder - I made this in 99, just use git
 export QBF='/home/Quake/.qbr/q1lab/source/bkp/'
+
+# more things that rely on my production environment
+# you will have to configure all the dirs to your usage
 
 # current project trace
 alias cproj='echo -n "`p d`" > /home/Quake/.qbr/q1lab/source/.cproj;.rb'
@@ -1636,107 +1658,69 @@ if [[ -d "/home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cpro
 	'ln' -sf /home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj` /home/Quake/qlnx/_qc
 fi
 
-#alias .qc='cd /home/Quake/.qbr/q1lab/source/$CPRJ;echo;pwd;echo;lsa;echo;echo "build cmd - aux:		qcc - qrcom, qc_com, qctac";if [[ -f "$PWD/.qca" ]]; then echo;echo "Making:";grep "^cp progs" .qca;fi;echo'
-#alias .qcss='cd /home/Quake/.qbr/q1lab/source/$CPRJ/client_side/;echo;pwd;echo;lsa;if [[ -f "$PWD/.qcc" ]]; then echo;echo "Making:";grep "cp csprogs" .qcc;fi;echo'
+# go to the current qc project
 alias .qc='cd /home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj`;echo;pwd;echo;lsa;echo;echo "build cmd - aux:		qcc - qrcom, qc_com, qctac";if [[ -f "$PWD/.qca" ]]; then echo;echo "Making:";grep "^cp progs" .qca;fi;echo'
 alias .qcss='cd /home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj`/client_side/;echo;pwd;echo;lsa;if [[ -f "$PWD/.qcc" ]]; then echo;echo "Making:";grep "^cp csprogs" .qcc;fi;echo'
 
+# go to the current release mod
 CMOD=`cat /home/Quake/.cmod`
 #alias .mod="echo;cd /home/Quake/$CMOD;pwd;echo;lsa;echo;echo 'build cmd:	mod -y -rm -a';echo"
 alias .mod="echo;cd /home/Quake/\`cat /home/Quake/.cmod\`;pwd;echo;lsa;echo;echo 'build cmd:	mod -y -rm -a';echo"
 
+# go to the current game engine code
 CENG=`cat /home/Quake/.ceng`
 alias .eng='cd /home/Quake/`cat /home/Quake/.ceng`;pwd;echo;lsa;echo'
 alias .dpeng="cd /home/Quake/qlnx/engine-source/darkplaces-03.04.13;pwd;echo;lsa;echo"
 
-#alias .t6="cd /home/Quake/$CENG;pwd;echo;lsa;echo"
 
-# dynamic tab projecting - pick the tab, enter its set cmd ".t{tab #}s" and next load will load it up
-#        ".t{tab #}ss" is super set - supplied command is it
 
-alias .tcmd='echo "		" sa bres, .t{tab \#} - exec tab command, \$TBS - tab \#, .ts - ts\(\) set command fn - uses \$TBS, .t{tab \#}s - set tab command to [change cur dir, pwd, lsa], .t{tab \#}ss - set tab command to \$@'
+# other useful commands
 
-# generic version - relies on TBS variable - replaced with bash fn()
-
-#alias .ts="if [[ \"\$TBS\" -lt \"1\" || \"\$TBS\" -gt \"10\" ]]; then echo \"TBS is not set!\"; else echo \"echo;cd \$PWD;pwd;echo;lsa;echo\" > \"/home/Quake/.qbr/.tab\$TBS\"; fi"
-#alias .tss="if [[ \"\$TBS\" -lt \"1\" || \"\$TBS\" -gt \"10\" ]]; then echo \"TBS is not set!\"; else echo \"$@\" > \"/home/Quake/.qbr/.tab\$TBS\"; fi"
-
-# for command tab
-
-#alias sud=".ulb;'rm' -f /tmp/.sudstart;su;echo Exited root suds"
-
-# these are really not needed - should be using generics because tab number is auto
-
-if [[ -f "/home/Quake/.qbr/.tab1" ]]; then alias .t1="reset;`cat /home/Quake/.qbr/.tab1`"; else alias .t1="reset;.qq;.qa;.q;cd \`cat .qdir\`;echo;pwd;echo"; fi
-if [[ -f "/home/Quake/.qbr/.tab2" ]]; then alias .t2="reset;`cat /home/Quake/.qbr/.tab2`"; else alias .t2="reset;.qc"; fi
-if [[ -f "/home/Quake/.qbr/.tab3" ]]; then alias .t3="reset;`cat /home/Quake/.qbr/.tab3`"; else alias .t3="reset;.qb"; fi
-if [[ -f "/home/Quake/.qbr/.tab4" ]]; then alias .t4="reset;`cat /home/Quake/.qbr/.tab4`"; else alias .t4="reset;.mod;if [[ -f \"\$PWD/.arc\" ]]; then echo \"Making package:\";echo;grep \"zip -\" .arc|grep -v unzip;fi;echo"; fi
-
-if [[ -f "/home/Quake/.qbr/.tab5" ]]; then alias .t5="reset;`cat /home/Quake/.qbr/.tab5`"; fi
-alias .t5s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab5"
-alias .t5ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab5"
-
-if [[ -f "/home/Quake/.qbr/.tab6" ]]; then alias .t6="reset;`cat /home/Quake/.qbr/.tab6`"; fi
-alias .t6s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab6"
-alias .t6ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab6"
-
-if [[ -f "/home/Quake/.qbr/.tab7" ]]; then alias .t7="reset;`cat /home/Quake/.qbr/.tab7`"; fi
-alias .t7s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab7"
-alias .t7ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab7"
-
-if [[ -f "/home/Quake/.qbr/.tab8" ]]; then alias .t8="reset;`cat /home/Quake/.qbr/.tab8`"; fi
-alias .t8s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab8"
-alias .t8ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab8"
-
-if [[ -f "/home/Quake/.qbr/.tab9" ]]; then alias .t9="reset;`cat /home/Quake/.qbr/.tab9`"; fi
-alias .t9s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab9"
-alias .t9ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab9"
-
-if [[ -f "/home/Quake/.qbr/.tab10" ]]; then alias .t10="reset;`cat /home/Quake/.qbr/.tab10`"; fi
-alias .t10s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab10"
-alias .t10ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab10"
-
-if [[ -f "/home/Quake/.qbr/.tab11" ]]; then alias .t11="reset;`cat /home/Quake/.qbr/.tab11`"; else alias .t11='reset;echo;OSb;echo;lsa;echo';fi
-alias .t11s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab11"
-alias .t11ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab11"
-
-.ts()
+sa()
 {
-if [[ "$TBS" -lt "1" || "$TBS" -gt "10" ]]; then
-	echo "TBS is not set!"
-else
-	if [[ "$@" == "" ]]; then
-		echo "reset;echo;cd $PWD;pwd;echo;lsa;echo" > "/home/Quake/.qbr/.tab$TBS"
-		echo ".tab$TBS = \"reset;echo;cd $PWD;pwd;echo;lsa;echo\" - verify:"
-	else
-		echo "reset;echo;cd $PWD;pwd;echo;lsa;echo;$@" > "/home/Quake/.qbr/.tab$TBS"
-		echo ".tab$TBS = \"reset;echo;cd $PWD;pwd;echo;lsa;echo;$@\" - verify:"
-	fi
-	cat "/home/Quake/.qbr/.tab$TBS"
+neol=""
+opc=""
+if [[ "$1" == "neol" ]]; then
+
+        shift
+        neol="1"
+
 fi
-echo
-}
 
-.tss()
-{
-if [[ "$TBS" -lt "1" || "$TBS" -gt "10" ]]; then
-	echo "TBS is not set!"
-else
-	if [[ "$@" == "" ]]; then
-		rm -f "/home/Quake/.qbr/.tab$TBS"
-		echo "removed .tab$TBS"
-	else
-		echo "reset;$@" > "/home/Quake/.qbr/.tab$TBS"
-		echo ".tab$TBS = \"reset;$@\" - verify:"
-		cat "/home/Quake/.qbr/.tab$TBS"
-	fi
+if [[ "$1" == "--" ]]; then
+
+        shift
+        opc="1"
 fi
-echo
-}
 
-# set the quake directory default for tab 1 cmd seq
-setqdir()
-{
-echo "$PWD" > /home/Quake/.qdir
-echo "set \".qdir\" = \"$PWD\""
+if [[ "$1" == "Alias" ]]; then
+
+        opc="2"
+fi
+
+echo
+echo "$@ commands:"
+echo
+
+if [[ "$opc" == "" ]]; then
+
+        alias|grep --color $@|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1
+
+elif [[ "$opc" == "1" ]]; then
+
+        alias|grep --color "'$@"|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1
+
+
+else
+#[[ "$opc" == "2" ]]; then
+
+         alias|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1
+
+fi
+
+if [[ "$neol" != "1" ]]; then
+
+        eol
+
+fi
 }
