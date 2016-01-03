@@ -1,1 +1,1742 @@
-/home/Quake/.qbr/q1lab/kit/cltools/.bash_quake
+# Cataboligne
+#               015.10.7 - porting aliases, quake stuff
+#               016.1.02 - external release set
+
+# Cataboligne - 015.12.9 - unify all qr grep usage
+# use assignment ($QGREP "$@")
+
+export QGREP="/bin/grep --color -Isr "
+
+
+# quake aliases
+
+# removed all local directory alias - like these
+
+#alias .q='cd /home/Quake/;pwd;ls -1Fa|grep "/$";echo'
+#alias .qlnx='cd /home/Quake/qlnx/;pwd;echo;echo "Quake linx";echo'
+
+# this should work if you use darkplaces or maphack
+
+alias .dpu='cd $HOME/.darkplaces;pwd'
+
+alias qa="echo 'Quake commands:';echo;alias |grep -i quake|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;alias|grep -i \.darkplaces|cut -b 6-|sed -e 's/=/\t=\t/';echo"
+alias nq="echo 'Non Quake pntr';echo;alias |grep -iv quake|cut -b 6-|sed -e 's/=/\t=\t/';echo"
+
+# add things to mods
+# this is how I add files to mod projects
+# you would need to change the directory to you mod build site
+
++m ()
+{
+if [[ ! -e "$1" ]]; then echo "+mod: no file selected"
+else
+
+	dsb="$2"
+	if [[ ! -d "/home/Quake/Arc/Quake/Resource/mods/$2" ]]; then dsb=""; fi
+	dsd="/home/Quake/Arc/Quake/Resource/mods/$dsb"
+	cp -aupR "$1" "$dsd"
+	echo copied "$1" to "$dsd"
+
+fi
+}
+
+
+# add a line every 5 to space outputs
+
+alias a5='awk "/$/ { print; i=i+1; if (i == 5) {i = 0; print \"\";} }"'
+#alias a6="awk '/$/ { split($0, a, /:/); i=a[1]; if (i != ii) { print \"\"; ii = i}; print a[1]; print }'"
+
+# remove ALL comments
+alias rmcoma='rmcom|sed -e "s/\/\/.*//"'
+alias rmcomall='rmcoma'
+
+# source highlight in bash
+# -- to use this you must install:
+# -- apt-get install source-highlight
+
+#export LESSOPEN="| src-hilite-lesspipe.sh %s"
+#alias lessh='LESSOPEN="| src-hilite-lesspipe.sh %s" less -r '
+
+# remove dos / win <CR> bs
+
+alias de^m='sed -i "s/\r//g"'
+alias undos=de^m
+
+# counting lines in files / streams, code, etc
+
+alias cnt='wc -l'
+
+countcode()
+{
+
+if [[ "$1" == "" ]]; then
+
+	qfcnl *|wc -l
+
+elif  [[ "$1" == "qc" ]]; then
+
+	qfcnl *.qc|wc -l
+
+elif  [[ "$1" == "cc" ]]; then
+
+	qfcnl *.c *.h|wc -l
+
+elif  [[ "$1" == "-h" || "$1" == "--help" ]]; then
+
+	echo
+	echo "countcode:"
+	echo
+	echo "	{blank} - search * files"
+	echo "	qc - search *.qc files"
+	echo "	cc - search *.c *.h files"
+	echo "	{filespec}... - search filespecs files"
+	echo
+	echo end of line
+	echo
+
+else
+
+	qfcnl "$@"|wc -l
+
+fi
+}
+
+# search
+# the next large section provides all manner of code search options
+
+code()
+{
+
+if [[ "$1" == "" ]]; then
+
+	qfcnl *
+
+elif  [[ "$1" == "qc" ]]; then
+
+	qfcnl *.qc
+
+elif  [[ "$1" == "qcs" ]]; then
+
+	if [[ -e "progs.src" ]]; then 
+
+		for f in `qfcnl progs.src|grep -v "^\."`; do
+
+			if [[ "$2" == "t" || "$2" == "T" ]]; then echo; echo "quake-c file: $f"; echo "============================================================"; echo; fi
+
+			 qfcnl "$f"
+
+		done
+
+	else
+
+		echo "code: progs.src not found !"
+
+	fi
+
+elif  [[ "$1" == "cc" ]]; then
+
+	qfcnl *.c *.h
+
+elif  [[ "$1" == "-h" || "$1" == "--help" ]]; then
+
+	echo
+	echo "code:"
+	echo
+	echo "	show code without c style comments or blank lines"
+	echo
+	echo "	{blank} - show code only * files"
+	echo "	qc  - show *.qc files"
+	echo "	qcs [t] - show *.qc files in progs.src order - t = file titles"
+	echo "	cc  - show *.c *.h files"
+	echo "	{filespec}... - search filespecs files"
+	echo
+	echo end of line
+	echo
+
+else
+
+	qfcnl "$@"
+
+fi
+
+}
+
+# syntax highlight the shit
+
+codeh()
+{
+code "$@"|grep -v "precache_" > /tmp/.x.qc
+lessh /tmp/.x.qc
+}
+
+# code list short
+
+alias cl='codeh qcs t'
+
+
+
+alias qrspawn='qrc "= spawn"'
+alias quaked='qr QUAKED'
+alias qrnum='qrc  "\b[0-9][0-9]*[.]*[0-9]*\b"'
+alias qr1f='qrc "[a-z]1\W*=\b*\["'
+alias plreturn="awk '/return;/,/};/' *|tr '\n' ' '|sed -e 's/};/};\n/g'|grep 'return;\W*};'"
+alias nullquote='qrc "\"\""'
+alias zerocase='qrc "[!=]= 0";qrc "[!=]= .0 0 0";qrc "[!=]= string_null";qrc "[!=]=\"\"";qrc "[!=]= world"'
+alias zerocasec='qr "[!=]= 0";qr "[!=]= .0 0 0";qr "[!=]= string_null";qrc "[!=]=\"\"";qr "[!=]= world"'
+alias sounds='qrc sound|grep -v precache|grep -o ",\W*\".*\.wav\""|sort -u|grep "\/.*\.wav"'
+alias models='qrec "(progs|maps).*\.(mdl|bsp)"|grep -v precache|grep -o "\".*\""|sort -u|grep "\/.*\...."'
+
+# qc - search for entity variables
+
+alias evar="echo 'Quake entity variable searches';echo;alias |grep evar|cut -b 6-|sed -e 's/=/\t=\t/';echo"
+
+qvar()
+{
+
+  echo "Quake entity variable searches"
+  echo
+
+  alias |grep var|cut -b 6-|sed -e 's/=/   \t=\t/'
+  alias |grep qrec|grep -v "qvar"|grep -v "_lsfn"|cut -b 6-|sed -e 's/=/   \t=\t/'
+  alias |grep _ls|grep -v "qvar"|cut -b 6-|sed -e 's/=/   \t=\t/'
+
+  echo
+  echo " nil		=	$(set |grep -A 2 nil|flin 3)				list locals not specified as such"
+  echo " lsfn		=	{grep pattern} 						list functions"
+  echo " lsnf		=	{grep pattern} 						list functions - no q frame macros"
+  echo " 			fnlist, fnlistc, fnlco, nflist, nflistc, nflco		 - function listers"
+  echo " lsfpar		=	[-s|-su|sort] [-f|full] [-b|brief] {grep pattern}	list function parms"
+  echo " vdef		=								list define constants"
+  echo " lsbuilt	=								list builtin functions"
+  echo " quaked										list all QUAKED"
+  echo " frames		=	[-s|sort] [-nc] {grep pattern}				list frame sets, qr1f - list all 1 frames"
+  echo " lsevar		=	[-c|col] [-f|file] [-s|sort] {grep pattern}		list entity variables via file usage"
+  echo " lsgvar		=	[-c|col] [-f|file] [-s|sort] {grep pattern}		list global variables via file usage"
+  echo " lslvar		=	[-c|col] [-f|file] [-s|sort] {grep pattern}		list local variables via file usage"
+  echo " lsdef		=	[-c|col] [-f|file] [-s|sort] {grep pattern}		list define variables via file usage"
+  echo " lsf		=	[-c|col] [-f|file] [-s|sort] {grep pattern}		list function definition via file usage"
+  echo " deb		=	[qc |{filespec}] {grep pattern} 			search for brace { } group by contents"
+  echo " dep		=	[qc |{filespec}] {grep pattern} 			search for parens ( ) group by contents"
+  echo " defn		=	[qc |{filespec}] {grep pattern} 			search for function name and group"
+  echo " difd		=	[qc |{filespec}] {grep pattern} 			search for #if{n}def group by contents"
+  echo " decom		=	[qc |{filespec}] {grep pattern} 			search for comments /* */ and // group by contents"
+  echo " deqed		=	[qc |{filespec}] {grep pattern} 			search for /*QUAKED */ group by contents"
+  echo " plreturn									search for return; };"
+  echo
+  echo " _class - show class_* statements in all qc files"
+  echo " qrspawn - show spawn() calls in all qc files"
+  echo " qrnum - show valid number use in qc files"
+  echo " nullquote - search for \"\""
+  echo " zerocase[c] - search for zero cases"
+  echo " sounds, models"
+  echo " rmcom[a] - remove [all] comments - | (pipe) into this"
+  echo " qfc {filespec} - list file with no comments"
+  echo " qctac - fteqcc and search \"assignment in coditional\""
+  echo " defsed {filespec} - modify into #define constant"
+  echo " const [define|#] [-c|cnt] {grep pattern} - attempt list all constants"
+  echo " count [-n|num] [-f|files] {filespec} - count numerics in source"
+  echo " countcode [qc] [cc] [*] [{filespec}] - count lines of code"
+  echo " code[h] [qc|qcs] [cc] [*] [{filespec}] - show lines of code - strip all comments - codeh - highlight"
+  echo " qc_com [-a|-n], qc_notes"
+  echo " qrcom - list rest of qr* commands"
+  echo
+
+}
+
+alias qv='qvar'
+alias q?='qvar'
+alias qhelp='qvar'
+
+#alias flevar='qrc "^[ \t]*\.float"'
+#alias fnevar='qrc "^[ \t]*\.void"'
+#alias vcevar='qrc "^[ \t]*\.vector"'
+#alias nevar='qrc "^[ \t]*\.entity"'
+#alias sevar='qrc "^[ \t]*\.string"'
+#alias allevar='qrc "^[ \t]*\.[vsfe]"'
+#alias allevarnd='qrc "^[ \t]*\.[vsfe]"|grep -v defs.qc'
+
+#revised
+
+alias flevar='qrc "\.float"'
+alias fnevar='qrc "\.void"'
+alias vcevar='qrc "\.vector"'
+alias nevar='qrc "\.entity"'
+alias sevar='qrc "\.string"'
+alias allevar='qrc "^[ \t]*\.[vsfe]"'
+alias allevarnd='qrc "^[ \t]*\.[vsfe]"|grep -v defs.qc'
+
+alias vevar='vcevar'
+alias enevar='nevar'
+
+# so obvious
+
+alias .float='flevar'
+alias .vector='vcevar'
+alias .string='sevar'
+alias .entity='nevar'
+alias .void='fnevar'
+alias .vsfe='allevar'
+
+# litterals
+alias litstr='qrc \".*\"|grep -v precache|grep  \".*\"'
+alias litvec="qrc \'.*\'"
+alias litn='qrnum'
+
+# super short cuts - may not want these, comment to block
+alias .f='flevar'
+alias .v='vcevar'
+alias .s='sevar'
+alias .e='nevar'
+alias .0='fnevar'
+
+# for pipe to lsevar -l
+
+alias lsfloat='qrc "\.float"|sed -e "s/.*\.float\W*//"|tr "," "\n"|sed -e "s/[ ;\r]//g"|sed "s/matchfound:.*//"|egrep -v "^$" > /tmp/.x;lsevar -l `cat /tmp/.x`'
+alias lsvoid='qrc "\.void"|sed -e "s/.*\.void\W*//"|tr "," "\n"|sed -e "s/[ ;\r]//g"|sed "s/matchfound:.*//"|egrep -v "^$" > /tmp/.x;lsevar -l `cat /tmp/.x`'
+alias lsvec='qrc "\.vector"|sed -e "s/.*\.vector\W*//"|tr "," "\n"|sed -e "s/[ ;\r]//g"|sed "s/matchfound:.*//"|egrep -v "^$" > /tmp/.x;lsevar -l `cat /tmp/.x`'
+alias lsent='qrc "\.entity"|sed -e "s/.*\.entity\W*//"|tr "," "\n"|sed -e "s/[ ;\r]//g"|sed "s/matchfound:.*//"|egrep -v "^$" > /tmp/.x;lsevar -l `cat /tmp/.x`'
+alias lsstr='qrc "\.string"|sed -e "s/.*\.string\W*//"|tr "," "\n"|sed -e "s/[ ;\r]//g"|sed "s/matchfound:.*//"|egrep -v "^$" > /tmp/.x;lsevar -l `cat /tmp/.x`'
+
+# these fail !
+
+#alias _flevar='lsevar|grep float'
+#alias _fnevar='lsevar|grep void'
+#alias _vcevar='lsevar|grep vector'
+#alias _nevar='lsevar|grep entity'
+#alias _sevar='lsevar|grep string'
+
+alias lsevk2='lsevar |sort -nr --key=2,2'
+
+# other q variables
+
+# autocvar
+
+alias var='qrc "\bvar\b"'
+alias lsacv='qrc "\bautocvar"'
+alias lsacvd='qrc "\bvar\b"|grep autocvar'
+
+#alias lvar='qrc "\W*local\s"'
+
+# all vars - even fn
+
+alias _avar='qrec "\b(float|string|entity|vector)\b"|sed -e "s/:[[:space:]]*/:/"|sed -e "s/[\t]/ /g"|sed -e "s/  / /g"|grep -v progdefs.h'
+alias avar='echo;_avar|sed -e "s/:/  \%  /"|grep "%";echo;echo;echo -n "match found: ";_avar|wc -l;echo'
+alias avar2='echo;_avar|sed -e "s/.*://";echo;echo;echo -n "match found: ";_avar|wc -l;echo'
+
+alias ave='_avar|grep entity'
+alias avf='_avar|grep float'
+alias avv='_avar|grep vector'
+alias avs='_avar|grep string'
+
+# local vars
+
+# not as accurate - you dont need to spec "local" for local vars anymore
+
+alias _lvar='_avar|grep "\blocal\b"|sed -e "s/[\t]/ /g"|sed -e "s/  / /g"'
+alias lvar='echo;_lvar|sed -e "s/:/  \%  /"|grep "%";echo;echo;echo -n "match found: ";_lvar|wc -l;echo'
+alias lvar2='echo;_lvar|sed -e "s/.*://";echo;echo;echo -n "match found: ";_lvar|wc -l;echo'
+alias l1var='_lvar|sed -e "s/:.*local[[:space:]]*//"|sed -e "s/[ \t]/\@/"|sed -e "s/.*@//"|sed -e "s/[ \t;]//g"|sed -e "s/\r//"|tr "," "\n"|sort -u'
+
+alias lve='_lvar|grep entity'
+alias lvf='_lvar|grep float'
+alias lvv='_lvar|grep vector'
+alias lvs='_lvar|grep string'
+
+# global vars
+
+alias _gvar='_avar|egrep -v "(float|string|entity|vector|void)\W*\("|egrep -v "\.(float|string|entity|vector|void)\b"|grep -v local|sed -e "s/var //"'
+alias gvar='echo;_gvar|sed -e "s/:/  \%  /"|grep "%";echo;echo;echo -n "match found: ";_gvar|wc -l;echo'
+alias gvar2='echo;_gvar|sed -e "s/.*://";echo;echo;echo -n "match found: ";_gvar|wc -l;echo'
+alias g1var='_gvar|grep -v "WriteString"|sed -e "s/[ \t]/\@/"|sed -e "s/.*@//"|sed -e "s/[ \t;]//g"|sed -e "s/\r//"|tr "," "\n"'
+
+alias gve='_gvar|grep entity'
+alias gvf='_gvar|grep float'
+alias gvv='_gvar|grep vector'
+alias gvs='_gvar|grep string'
+
+alias _lsfn='qrec -o  "\b(string|void|float|entity|vector)[ \w]*\(.*"'
+alias _lsfnn='_lsfn|grep "="| sed "s/:/ :\t/"'
+alias _lsnf='_lsfn| grep -v "\["|grep "="| sed "s/:/ :\t/"'
+alias _lslit='litstr;litvec;qrnum'
+alias _lsnum='count -n *qc'
+
+lsfn()
+{
+  echo
+
+        if [[ "$@" != "" ]]; then
+
+                _lsfnn | grep "$@"
+        else
+                _lsfnn | grep "[a-z ]*("
+        fi
+
+  echo
+
+  echo -n "match found: "
+        if [[ "$@" != "" ]]; then
+
+                _lsfnn | grep "$@" |wc -l
+        else
+                _lsfnn |wc -l
+        fi
+
+  echo
+
+}
+
+alias fnlist="lsfn|sed -e 's/)/@/'|sed -e 's/.*@\W//'|sed -e 's/\W=.*//'|sed -e 's/.*) //'|sed -e 's/=.*//'|sed -e 's/ //g'"
+alias fnlistc='fnlist|egrep -v "^$" > /tmp/.x;for f in `cat /tmp/.x`;do echo -n `qrc -nc "$f" | wc -l`;echo "	$f";done;'rm' -f /tmp/.x'
+alias fnlco='echo "" >/tmp/fnc;fnlist|egrep -v "^$" > /tmp/.x;for f in `cat /tmp/.x`;do echo -n `qrc -nc "$f" | wc -l` >> /tmp/fnc;echo "	$f" >> /tmp/fnc;done;'rm' -f /tmp/.x;less /tmp/fnc'
+
+lsnf()
+{
+  echo
+
+	if [[ "$@" != "" ]]; then
+
+                _lsnf | grep "$@"
+	else
+                _lsnf | grep "[a-z ]*("
+	fi
+
+  echo
+
+  echo -n "match found: "
+        if [[ "$@" != "" ]]; then
+
+                _lsnf | grep "$@" |wc -l
+        else
+                _lsnf |wc -l
+        fi
+
+  echo
+
+}
+
+alias nflist="lsnf|sed -e 's/)/@/'|sed -e 's/.*@\W//'|sed -e 's/\W=.*//'|sed -e 's/.*) //'|sed -e 's/=.*//'|sed -e 's/ //g'"
+alias nflistc='nflist|egrep -v "^$" > /tmp/.x;for f in `cat /tmp/.x`;do echo -n `qrc -nc "$f" | wc -l`;echo "	$f";done;'rm' -f /tmp/.x'
+alias nflco='echo "" >/tmp/fnc;nflist|egrep -v "^$" > /tmp/.x;for f in `cat /tmp/.x`;do echo -n `qrc -nc "$f" | wc -l` >> /tmp/fnc;echo "	$f" >> /tmp/fnc;done;'rm' -f /tmp/.x;less /tmp/fnc'
+
+
+alias _lsproto='_lsfn|grep -v "="'
+alias lsproto='echo;_lsproto| sed "s/:/ :\t/";echo;echo -n "match found: ";_lsproto|wc -l;echo'
+
+# lsdefine
+# grep -o  "#define\W[A-Z_0-9]*" *
+
+# catches all define - vdef should really only be define subs, not compiler control
+
+alias _vdef='qrec "#define\W*[A-Z0-9_]*\W*[0-9]*"'
+alias vdef='qrc "#define\W*[A-Z0-9_]*\W*[0-9]*"'
+alias v1def='_vdef|grep -v progdefs.h|sed -e "s/.*#define\W//"|sed -e "s/\W.*//"'
+alias dvar='vdef'
+
+# builtin
+
+alias lsbf='qrc "=\W*#[0-9][0-9]*"'
+alias lsbuilt='lsbf'
+
+alias lsunbf='qr "=\W*#[0-9][0-9]*"|grep ":\W*//"'
+
+# qrec is qrc with egrep
+
+alias _fpar='qrec -o  "(string|void|float|entity|vector)[ \w]*\(.*\) \w*" |grep -v "()"|grep --color ") .*"'
+alias _fparnc='qrec -o  "(string|void|float|entity|vector)[ \w]*\(.*\) \w*" |grep -v "()"'
+#alias fpar='echo;qrec -o  "(string|void|float|entity|vector)[ \w]*\(.*\) \w*" |grep -v "()"|grep --color ") .*";echo;echo;echo -n "match found: ";egrep -o  "(string|void|float|entity|vector)[ \w]*\(.*\) \w*" *|grep -v "()"|wc -l;echo'
+alias fpar='echo;_fpar;echo;echo;echo -n "match found: ";_fpar|wc -l;echo'
+alias fparnc='echo;_fparnc;echo;echo;echo -n "match found: ";_fparnc|wc -l;echo'
+
+# base lsfpar
+#egrep -o  "(string|void|float|entity|vector)\(.*\) \w*" *|grep -v "()"|grep -o "(.*).*"|tr ',' '\n'|tr "(" "\n"|sed -e  "s/)/\t\t>/"|sed -e 's/^ //'|sed -e 's/ /\t/'
+
+lsfpar()
+{
+
+  echo
+
+  if [[ "$1" == "-s" || "$1" == "sort" || "$1" == "-su" ]]; then
+
+	us=""
+	if [[ "$1" == "-su" ]]; then
+
+		us="-u";
+	fi
+	nocnt="1"
+        shift
+        if [[ "$@" != "" ]]; then
+
+#                _fpar | grep "$@" |sort -u |grep -o "(.*).*"|tr ',' '\n'|tr "(" "\n"|sed -e  "s/)/\t\t>/"|sed -e 's/^ //'|sed -e 's/ /\t/'
+
+                _fpar | grep "$@" |grep -o "(.*)"|tr ',' '\n'|sed -e  's/)//g'|sed -e 's/(//g'|sed -e 's/^ //'|sed -e 's/ /\t/'|sort $us
+        else
+#                _fpar | sort -u |grep -o "(.*).*"|tr ',' '\n'|tr "(" "\n"|sed -e  "s/)/\t\t>/"|sed -e 's/^ //'|sed -e 's/ /\t/'
+
+                _fpar |grep -o "(.*)"|tr ',' '\n'|sed -e  's/)//g'|sed -e 's/(//g'|sed -e 's/^ //'|sed -e 's/ /\t/'|sort $us
+        fi
+
+	echo
+	echo -n "match found: "
+
+        if [[ "$@" != "" ]]; then
+
+                _fpar | grep "$@" |grep -o "(.*)"|tr ',' '\n'|sort $us|wc -l
+        else
+                _fpar |grep -o "(.*)"|tr ',' '\n'|sort $us|wc -l
+        fi
+
+
+  elif [[ "$1" == "-f" || "$1" == "full" ]]; then
+
+	shift
+        if [[ "$@" != "" ]]; then
+
+                _fpar | grep "$@" |sed -e 's/^/,/'|sed -e 's/:/ :\t/'|sed -e 's/(/,,/'|tr ',' '\n'|sed -e  "s/)/\t\t>/"|sed -e 's/^ //'|sed -e 's/ /\t/'
+        else
+                _fpar |sed -e 's/^/,/'|sed -e 's/:/ :\t/'|sed -e 's/(/,,/'|tr ',' '\n'|sed -e  "s/)/\t\t>/"|sed -e 's/^ //'|sed -e 's/ /\t/'
+        fi
+
+  elif [[ "$1" == "-b" || "$1" == "brief" ]]; then
+
+        shift
+        if [[ "$@" != "" ]]; then
+
+                _fpar | grep "$@" | sed 's/:/ :\t/'
+        else
+                _fpar | sed 's/:/ :\t/'
+        fi
+
+  else
+        if [[ "$@" != "" ]]; then
+
+                _fpar | grep "$@" |grep -o "(.*).*"|tr ',' '\n'|tr "(" "\n"|sed -e  "s/)/\t\t>/"|sed -e 's/^ //'|sed -e 's/ /\t/'
+        else
+                _fpar |grep -o "(.*).*"|tr ',' '\n'|tr "(" "\n"|sed -e  "s/)/\t\t>/"|sed -e 's/^ //'|sed -e 's/ /\t/'
+        fi
+  fi
+
+ if [[ "$nocnt" != "1" ]]; then
+
+  echo
+  echo -n "match found: "
+        if [[ "$@" != "" ]]; then
+
+                _fpar | grep "$@" |wc -l
+        else
+                _fpar |wc -l
+        fi
+ fi
+
+  echo
+
+
+
+
+}
+
+# base frames
+#alias frames='echo;qrec -o  "(string|void|float|entity|vector)[ \w]*\(.*\[.*" |sed -e "s/)\t/) /"|sed -e "s/\t\t/\t/g"|sed -e "s/\t\[/\[/"|cut -d "{" -f -1;echo;echo;qrec -o  "(string|void|float|entity|vector)[ \w]*\(.*\[.*" |wc -l;echo'
+
+alias _frames='qrec -o  "(string|void|float|entity|vector)[ \w]*\(.*\[.*" |sed -e "s/)\t/) /"|sed -e "s/\t\t/\t/g"|sed -e "s/\t\[/\[/"|cut -d "{" -f -1'
+
+alias frame='qrec "frame[a-z_]*\b"'
+alias framer='qrec "framer[a-z]*\b"'
+alias framedef='qrec "framer[a-z_]*\b";qrec "frame[a-z_*]arb\b"'
+#alias framedefs='qrec "framer[a-z_]*\b" > /tmp/.x;qrec "frame[a-z_*]arb\b" >>/tmp/.x;sort /tmp/.x;rm -f /tmp/.x'
+
+frames()
+{
+  echo
+
+  if [[ "$1" == "-s" || "$1" == "sort" ]]; then
+
+        shift
+        if [[ "$@" != "" ]]; then
+
+                _frames | grep "$@" |grep --color "[ \t].*\w*="|sort -u
+        else
+                _frames | sort -u |grep --color "[ \t].*\w*="
+        fi
+
+  elif [[ "$1" == "-nc" ]]; then
+
+        shift
+        if [[ "$@" != "" ]]; then
+
+                _frames | grep "$@" 
+        else
+                _frames 
+        fi
+
+  else
+        if [[ "$@" != "" ]]; then
+
+                _frames | grep "$@" |grep --color "[ \t].*\w*="
+        else
+                _frames |grep --color "[ \t].*\w*="
+        fi
+  fi
+  echo
+  echo -n "match found: "
+	if [[ "$@" != "" ]]; then
+
+		_frames | grep "$@" |wc -l
+	else
+		_frames |wc -l
+	fi
+
+  echo
+
+}
+
+# possible not identified locals in qc
+nil()
+{
+  qrc "\s$1\b"|grep -v "progdefs.h:"|grep -v "($1"|grep -v local|grep -v ", $1"|grep -v "var $1"
+}
+
+alias usevar='qr "\W*\.[vsfe]"|cut -d ":" -f 2-|sort -u'
+alias usoevar='qrc "\W*\.[vsfe]"|cut -d ":" -f 2-|sort -u|grep "^\."'
+alias _l1evar="usoevar|sed -e 's/\.[a-z]*[ \t]*//'|sed -e 's/(.*)[ \t]*//'|cut -d ';' -f -1|tr ',' '\n'|sed -e 's/ //g'"
+
+# this will work if we can replicate the first x chars of the line onto , after the \n
+
+# usoevar|sed  's/(.*)[ \t]*//'|cut -d ';' -f -1|tr ',' '\n'|sed -e 's/ //g'
+
+_sl1evar()
+{
+  qrc "\W*\.[vsfe]"|grep "$@"|cut -d ":" -f 2-|sort -u|grep "^\."|sed -e 's/\.[a-z]*[ \t]*//'|sed -e 's/(.*)[ \t]*//'|cut -d ';' -f -1|tr ',' '\n'|sed -e 's/ //g'
+}
+
+l1evar()
+{
+ _l1evar
+# usoevar|sed -e 's/\.[a-z]*[ \t]*//'|sed -e 's/(.*)[ \t]*//'|cut -d ';' -f -1|tr ',' '\n'|sed -e 's/ //g'
+ echo
+# usoevar|sed -e 's/\.[a-z]*[ \t]*//'|sed -e 's/(.*)[ \t]*//'|cut -d ';' -f -1|tr ',' '\n'|sed -e 's/ //g'|wc -l
+ _l1evar | wc -l
+ echo
+}
+
+# lsfpar
+# |grep -o "(.*)"|tr ',' '\n'|tr "(" " "|tr ")" " "|sed -e 's/^ //'|sed -e 's/ /\t/'
+
+
+lsevar()
+{
+  cl2="0"
+  fls=""
+
+  if [[ "$1" == "-c" || "$1" == "--col" ]]; then
+
+	shift
+	let cl2=$COLUMNS-38
+  fi
+
+  if [[ "$1" == "-f" || "$1" == "--file" ]]; then
+
+	shift
+	fls="$@"
+  fi
+
+
+  if [[ "$1" == "-s" || "$1" == "--sort" ]]; then
+
+	shift
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		_l1evar | grep "$@" |sort -u > /tmp/.x
+	else
+		_l1evar | sort -u > /tmp/.x
+	fi
+
+  elif [[ "$1" == "-l" || "$1" == "--list" ]]; then
+
+	shift
+
+	echo -n "" > /tmp/.x
+
+	while [[ "$1" != "" ]]; do
+
+		_l1evar | grep "$1" >> /tmp/.x
+
+		shift
+
+	done
+
+  else
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		_l1evar | grep "$@" > /tmp/.x
+	else
+  		_l1evar > /tmp/.x
+	fi
+  fi
+
+if [[ "$fls" != "" ]]; then
+
+  echo -n "" > /tmp/.dd
+  for f in `cat /tmp/.x`; do
+
+        'grep' --color -sr "\.[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "\.[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " " >> /tmp/.dd
+
+        len=${#f}
+        echo -n "  $f	" >> /tmp/.dd
+        if [[ "$len" -lt "6" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "14" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "22" ]]; then echo -n "	" >> /tmp/.dd; fi
+
+        if [[ "$cl2" -gt "0" ]]; then
+
+                qrlc "\.$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2 >> /tmp/.dd
+
+        else
+
+                qrlc "\.$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//' >> /tmp/.dd
+                echo  >> /tmp/.dd
+
+        fi
+
+
+  done
+
+  while [[ "$1" != "" ]]; do
+
+	grep "$1" /tmp/.dd
+	shift
+	echo
+
+  done
+
+  'rm' -f /tmp/.dd
+
+else
+
+  for f in `cat /tmp/.x`; do
+
+	'grep' --color -sr "\.[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "\.[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " "
+
+	len=${#f}
+	echo -n "  $f	"
+	if [[ "$len" -lt "6" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "14" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "22" ]]; then echo -n "	"; fi
+
+	if [[ "$cl2" -gt "0" ]]; then
+
+		qrlc "\.$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2
+
+	else
+
+		qrlc "\.$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'
+		echo
+
+	fi
+
+
+  done
+
+fi
+
+  'rm' -f /tmp/.x
+
+}
+
+
+lsgvar()
+{
+  cl2="0"
+  fls=""
+
+  if [[ "$1" == "-c" || "$1" == "--col" ]]; then
+
+	shift
+	let cl2=$COLUMNS-38
+  fi
+
+  if [[ "$1" == "-f" || "$1" == "--file" ]]; then
+
+	shift
+	fls="$@"
+  fi
+
+
+  if [[ "$1" == "-s" || "$1" == "--sort" ]]; then
+
+	shift
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		g1var | grep "$@" |sort -u > /tmp/.x
+	else
+		g1var | sort -u > /tmp/.x
+	fi
+
+  elif [[ "$1" == "-l" || "$1" == "--list" ]]; then
+
+	shift
+
+	echo -n "" > /tmp/.x
+
+	while [[ "$1" != "" ]]; do
+
+		g1var | grep "$1" >> /tmp/.x
+
+		shift
+
+	done
+
+  else
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		g1var | grep "$@" > /tmp/.x
+	else
+  		g1var > /tmp/.x
+	fi
+  fi
+
+if [[ "$fls" != "" ]]; then
+
+  echo -n "" > /tmp/.dd
+  for f in `cat /tmp/.x`; do
+
+#        'grep' --color -sr "\b[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " " >> /tmp/.dd
+
+        len=${#f}
+        echo -n "  $f	" >> /tmp/.dd
+        if [[ "$len" -lt "6" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "14" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "22" ]]; then echo -n "	" >> /tmp/.dd; fi
+
+        if [[ "$cl2" -gt "0" ]]; then
+
+                qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2 >> /tmp/.dd
+
+        else
+
+                qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//' >> /tmp/.dd
+                echo  >> /tmp/.dd
+
+        fi
+
+
+  done
+
+  while [[ "$1" != "" ]]; do
+
+	grep "$1" /tmp/.dd
+	shift
+	echo
+
+  done
+
+  'rm' -f /tmp/.dd
+
+else
+
+  for f in `cat /tmp/.x`; do
+
+#	'grep' --color -sr "\b[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " "
+
+	len=${#f}
+	echo -n "  $f	"
+	if [[ "$len" -lt "6" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "14" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "22" ]]; then echo -n "	"; fi
+
+	if [[ "$cl2" -gt "0" ]]; then
+
+		qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2
+
+	else
+
+		qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'
+		echo
+
+	fi
+
+
+  done
+
+fi
+
+  'rm' -f /tmp/.x
+
+}
+
+
+lslvar()
+{
+  cl2="0"
+  fls=""
+
+  if [[ "$1" == "-c" || "$1" == "--col" ]]; then
+
+	shift
+	let cl2=$COLUMNS-38
+  fi
+
+  if [[ "$1" == "-f" || "$1" == "--file" ]]; then
+
+	shift
+	fls="$@"
+  fi
+
+
+  if [[ "$1" == "-s" || "$1" == "--sort" ]]; then
+
+	shift
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		l1var | grep "$@" |sort -u > /tmp/.x
+	else
+		l1var | sort -u > /tmp/.x
+	fi
+
+  elif [[ "$1" == "-l" || "$1" == "--list" ]]; then
+
+	shift
+
+	echo -n "" > /tmp/.x
+
+	while [[ "$1" != "" ]]; do
+
+		l1var | grep "$1" >> /tmp/.x
+
+		shift
+
+	done
+
+  else
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		l1var | grep "$@" > /tmp/.x
+	else
+  		l1var > /tmp/.x
+	fi
+  fi
+
+if [[ "$fls" != "" ]]; then
+
+  echo -n "" > /tmp/.dd
+  for f in `cat /tmp/.x`; do
+
+#        'grep' --color -sr "\b[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " " >> /tmp/.dd
+
+        len=${#f}
+        echo -n "  $f	" >> /tmp/.dd
+        if [[ "$len" -lt "6" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "14" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "22" ]]; then echo -n "	" >> /tmp/.dd; fi
+
+        if [[ "$cl2" -gt "0" ]]; then
+
+                qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2 >> /tmp/.dd
+
+        else
+
+                qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//' >> /tmp/.dd
+                echo  >> /tmp/.dd
+
+        fi
+
+
+  done
+
+  while [[ "$1" != "" ]]; do
+
+	grep "$1" /tmp/.dd
+	shift
+	echo
+
+  done
+
+  'rm' -f /tmp/.dd
+
+else
+
+  for f in `cat /tmp/.x`; do
+
+#	'grep' --color -sr "\b[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " "
+
+	len=${#f}
+	echo -n "  $f	"
+	if [[ "$len" -lt "6" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "14" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "22" ]]; then echo -n "	"; fi
+
+	if [[ "$cl2" -gt "0" ]]; then
+
+		qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2
+
+	else
+
+		qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'
+		echo
+
+	fi
+
+
+  done
+
+fi
+
+  'rm' -f /tmp/.x
+
+}
+
+
+lsdef()
+{
+  cl2="0"
+  fls=""
+
+  if [[ "$1" == "-c" || "$1" == "--col" ]]; then
+
+	shift
+	let cl2=$COLUMNS-38
+  fi
+
+  if [[ "$1" == "-f" || "$1" == "--file" ]]; then
+
+	shift
+	fls="$@"
+  fi
+
+
+  if [[ "$1" == "-s" || "$1" == "--sort" ]]; then
+
+	shift
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		v1def | grep "$@" |sort -u > /tmp/.x
+	else
+		v1def | sort -u > /tmp/.x
+	fi
+
+  elif [[ "$1" == "-l" || "$1" == "--list" ]]; then
+
+	shift
+
+	echo -n "" > /tmp/.x
+
+	while [[ "$1" != "" ]]; do
+
+		v1def | grep "$1" >> /tmp/.x
+
+		shift
+
+	done
+
+  else
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		v1def | grep "$@" > /tmp/.x
+	else
+  		v1def > /tmp/.x
+	fi
+  fi
+
+if [[ "$fls" != "" ]]; then
+
+  echo -n "" > /tmp/.dd
+  for f in `cat /tmp/.x`; do
+
+#        'grep' --color -sr "\b[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " " >> /tmp/.dd
+
+        len=${#f}
+        echo -n "  $f	" >> /tmp/.dd
+        if [[ "$len" -lt "6" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "14" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "22" ]]; then echo -n "	" >> /tmp/.dd; fi
+
+        if [[ "$cl2" -gt "0" ]]; then
+
+                qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2 >> /tmp/.dd
+
+        else
+
+                qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//' >> /tmp/.dd
+                echo  >> /tmp/.dd
+
+        fi
+
+
+  done
+
+  while [[ "$1" != "" ]]; do
+
+	grep "$1" /tmp/.dd
+	shift
+	echo
+
+  done
+
+  'rm' -f /tmp/.dd
+
+else
+
+  for f in `cat /tmp/.x`; do
+
+#	'grep' --color -sr "\b[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " "
+
+	len=${#f}
+	echo -n "  $f	"
+	if [[ "$len" -lt "6" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "14" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "22" ]]; then echo -n "	"; fi
+
+	if [[ "$cl2" -gt "0" ]]; then
+
+		qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2
+
+	else
+
+		qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'
+		echo
+
+	fi
+
+
+  done
+
+fi
+
+  'rm' -f /tmp/.x
+
+}
+
+
+# functions by file
+
+lsf()
+{
+  cl2="0"
+  fls=""
+
+  if [[ "$1" == "-c" || "$1" == "--col" ]]; then
+
+	shift
+	let cl2=$COLUMNS-38
+  fi
+
+  if [[ "$1" == "-f" || "$1" == "--file" ]]; then
+
+	shift
+	fls="$@"
+  fi
+
+
+  if [[ "$1" == "-s" || "$1" == "--sort" ]]; then
+
+	shift
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		nflist | grep "$@" |sort -u > /tmp/.x
+	else
+		nflist | sort -u > /tmp/.x
+	fi
+
+  elif [[ "$1" == "-l" || "$1" == "--list" ]]; then
+
+	shift
+
+	echo -n "" > /tmp/.x
+
+	while [[ "$1" != "" ]]; do
+
+		nflist | grep "$1" >> /tmp/.x
+
+		shift
+
+	done
+
+  else
+	if [[ "$@" != "" && "$fls" == "" ]]; then
+
+		nflist | grep "$@" > /tmp/.x
+	else
+  		nflist > /tmp/.x
+	fi
+  fi
+
+if [[ "$fls" != "" ]]; then
+
+  echo -n "" > /tmp/.dd
+  for f in `cat /tmp/.x`; do
+
+#        'grep' --color -sr "\b[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " " >> /tmp/.dd
+
+        len=${#f}
+        echo -n "  $f	" >> /tmp/.dd
+        if [[ "$len" -lt "6" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "14" ]]; then echo -n "	" >> /tmp/.dd; fi
+        if [[ "$len" -lt "22" ]]; then echo -n "	" >> /tmp/.dd; fi
+
+        if [[ "$cl2" -gt "0" ]]; then
+
+                qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2 >> /tmp/.dd
+
+        else
+
+                qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//' >> /tmp/.dd
+                echo  >> /tmp/.dd
+
+        fi
+
+
+  done
+
+  while [[ "$1" != "" ]]; do
+
+	grep "$1" /tmp/.dd
+	shift
+	echo
+
+  done
+
+  'rm' -f /tmp/.dd
+
+else
+
+  for f in `cat /tmp/.x`; do
+
+#	'grep' --color -sr "\b[vsfe]" "/tmp/.qc/*" |grep "\b$f[,;]"|cut -d ":" -f 2-|grep -o "[a-z]*"|head -n 1|sed -e 's/void/void\t/'|sed -e 's/float/float\t/'|tr "\n" " "
+
+	len=${#f}
+	echo -n "  $f	"
+	if [[ "$len" -lt "6" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "14" ]]; then echo -n "	"; fi
+	if [[ "$len" -lt "22" ]]; then echo -n "	"; fi
+
+	if [[ "$cl2" -gt "0" ]]; then
+
+		qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'|cut -b -$cl2
+
+	else
+
+		qrlc "\b$f\b"|tr "\n" " "|sed -e 's/progs.dat//g'|sed -e 's/  / /g'|sed -e 's/ /, /'g|sed -e 's/,//'|sed -e 's/,//'|sed -e 's/, $//'
+		echo
+
+	fi
+
+
+  done
+
+fi
+
+  'rm' -f /tmp/.x
+
+}
+
+
+
+
+
+
+
+# find stuff between braces or parens
+
+# de-brace
+
+# while this works great on maps, suffers from fate of dep {{{ some stuff } matches
+
+deb()
+{
+ff="$1"
+shift
+
+echo
+
+if [[ "$ff" == "qc" ]]; then
+
+	ff="*.qc"
+
+fi
+
+if [[ "$ff" == "map" ]]; then
+
+	ff="*.map"
+
+fi
+
+if [[ "$ff" != "*" && "$ff" != "*.qc" && "$ff" != "*.map" && ! -e "$ff" || "$@" == "" ]]; then
+
+
+echo "deb [qc | {filespec}] {grep pattern}	# 'qc' = *.qc"
+
+
+else
+
+
+#cat "$ff"|tr "\n" "@"|sed -e 's/}/}\n/g'|grep "$@"|sed -e 's/$/@}/'|tr "@" "\n"
+
+awk '/{/,/}/' $ff|tr "\n" "@"|sed -e 's/}/}\n/g'|grep "$@"|tr "@" "\n"
+
+echo
+echo -n "match found: "
+awk '/{/,/}/' $ff|tr "\n" "@"|sed -e 's/}/}\n/g'|grep "$@"|wc -l
+
+fi
+
+echo
+}
+
+
+
+# de-paren
+
+# this needs fixed - has issues matching up {count} parens - i.e. ((( text | some ) matches without continue to 2nd & 3rd paren
+
+dep()
+{
+
+ff="$1"
+shift
+
+echo
+if [[ "$ff" == "qc" ]]; then
+
+ff="*.qc"
+
+fi
+
+if [[ "$ff" != "*" && "$ff" != "*.qc" && ! -e "$ff" || "$@" == "" ]]; then
+
+
+echo "dep [qc | {filespec}] {grep pattern}	# 'qc' = *.qc"
+
+
+else
+
+
+#cat "$ff"|tr "\n" "@"|sed -e 's/)/)\n/g'|grep "$@"|sed -e 's/$/@}/'|tr "@" "\n"
+
+awk '/\(/,/\)/' $ff|tr "\n" "@"|sed -e 's/)/)\n/g'|grep "$@"|tr "@" "\n"
+
+echo
+echo -n "match found: "
+awk '/\(/,/\)/' $ff|tr "\n" "@"|sed -e 's/)/)\n/g'|grep "$@"|wc -l
+
+fi
+
+echo
+
+
+}
+
+# find other containers
+
+# de #ifdef
+
+difd()
+{
+if [[ "$1" == "-p" ]]; then
+
+	shift
+	gp="$1"
+	shift
+	ff="$@"
+
+else
+
+	if [[ "$2" != "" ]]; then
+
+		ff="$1"
+		shift
+
+	fi
+	gp="$@"
+
+	if [[ "$ff" == "qc" || "$2" == "" ]]; then
+
+		ff="*.qc"
+
+	fi
+
+	if [[ "$ff" != "*" && "$ff" != "*.qc" && ! -e "$ff" ]]; then gp=""; fi
+
+fi
+
+echo
+if [[ "$gp" == "" ]]; then
+
+
+echo "difd [qc | {filespec}] {grep pattern}	# 'qc' = *.qc"
+echo "difd -p {grep pattern} {*filespec}"
+
+echo
+echo "file: $ff"
+echo "grep: $gp"
+
+
+else
+
+awk '/#ifdef/,/#endif/' $ff|tr "\n" "@"|sed -e 's/#endifdef/#endifdef\n/g'|sed -e 's/#endif[^d]/#endif\n/g'|grep "$gp"|tr "@" "\n"
+awk '/#ifndef/,/#endif/' $ff|tr "\n" "@"|sed -e 's/#endifdef/#endifdef\n/g'|sed -e 's/#endif[^d]/#endif\n/g'|grep "$gp"|tr "@" "\n"
+
+echo
+echo -n "match found: "
+let f=`awk '/#ifdef/,/#endif/' $ff|tr "\n" "@"|sed -e 's/#endifdef/#endifdef\n/g'|sed -e 's/#endif[^d]/#endif\n/g'|grep "$gp"|wc -l`
+let f="$f"+`awk '/#ifndef/,/#endif/' $ff|tr "\n" "@"|sed -e 's/#endifdef/#endifdef\n/g'|sed -e 's/#endif[^d]/#endif\n/g'|grep "$gp"|wc -l`
+echo "$f"
+
+fi
+
+echo
+}
+
+# de comment
+
+decom()
+{
+if [[ "$2" != "" ]]; then
+
+ff="$1"
+shift
+
+fi
+
+echo
+
+if [[ "$ff" == "qc"  || "$2" == "" ]]; then
+
+ff="*.qc"
+
+fi
+
+if [[ "$ff" != "*" && "$ff" != "*.qc" && ! -e "$ff" || "$@" == "" ]]; then
+
+
+echo "decom [qc | {filespec}] {grep pattern}	# 'qc' = *.qc"
+
+
+else
+
+
+awk '/\/\*/,/\*\//;/\/\//,/$/' $ff|sed -e 's/.*\/\//\/\//'|tr "\n" "@"|sed -e 's/\*\//\*\/\n/g'|grep "$@"|tr "@" "\n"
+
+echo
+echo -n "match found: "
+awk '/\/\*/,/\*\//;/\/\//,/$/' $ff|tr "\n" "@"|sed -e 's/\*\//\*\/\n/g'|grep "$@"|wc -l
+
+fi
+
+echo
+}
+
+# de QUAKED
+
+deqed()
+{
+if [[ "$2" != "" ]]; then
+
+ff="$1"
+shift
+
+fi
+
+echo
+
+if [[ "$ff" == "qc" || "$2" == "" ]]; then
+
+ff="*.qc"
+
+fi
+
+if [[ "$ff" != "*" && "$ff" != "*.qc" && ! -e "$ff" || "$@" == "" ]]; then
+
+
+echo "deqed [qc | {filespec}] {grep pattern}	# 'qc' = *.qc"
+
+
+else
+
+
+awk '/[Qq][Uu][Aa][Kk][Ee][Dd]/,/\*\//' $ff|tr "\n" "@"|sed -e 's/\*\//\*\/\n/g'|grep "$@"|tr "@" "\n"
+
+echo
+echo -n "match found: "
+awk '/[Qq][Uu][Aa][Kk][Ee][Dd]/,/\*\//' $ff|tr "\n" "@"|sed -e 's/\*\//\*\/\n/g'|grep "$@"|wc -l
+
+fi
+
+echo
+}
+
+# de function
+
+defn()
+{
+
+if [[ "$2" != "" ]]; then
+
+	ff="$1"
+	shift
+
+fi
+
+echo
+
+if [[ "$ff" == "qc" || "$2" == "" ]]; then
+
+	ff="*.qc"
+
+fi
+
+if [[ "$ff" != "*" && "$ff" != "*.qc" && ! -e "$ff" || "$@" == "" ]]; then
+
+
+	echo "defn [qc | {filespec}] {function name}    # 'qc' = *.qc"
+	echo "*    requires function grouping { with terminator };"
+
+else
+
+# it would be nice if we could isolate lines with # (builtin fns) first - they do not terminate with };
+
+	awk "/$@\W*=/,/};/" $ff
+
+	echo
+	echo -n "match found: "
+
+	awk "/$@\W*=/,/};/" $ff|tr "\n" "@"|sed -e 's/};/};\n/g'|wc -l
+
+fi
+
+echo
+}
+
+alias fn='defn'
+
+
+# de set function
+
+deset()
+{
+
+echo
+
+if [[ "$@" == "" ]]; then
+
+
+        echo "deset {function name}"
+        echo "*    requires function grouping { with terminator }"
+
+else
+
+
+        set|awk "/$@\W*()/,/}/"
+
+        echo
+        echo -n "match found: "
+
+        set|awk "/$@\W*()/,/}/"|tr "\n" "@"|sed -e 's/}/}\n/g'|wc -l
+
+fi
+
+echo
+}
+
+
+
+
+
+alias class_='qrho class_[a-z]*|sort -u'
+
+# quake commands
+
+# alias qcc="./.qca 2>/dev/null;./.qcc 2>/dev/null; # Quake"
+# qcc sets - tailor to your needs, copies progs.dat to test dirs
+#alias qcct='qcc;cp progs.dat /home/Quake/quake/id1'
+#alias qcct0='qcc;cp progs.dat /home/Quake/quake_0/id1'
+
+# many of these depend on other tools in my production environment
+
+# map compiles
+alias mcr="./.mcmd; # map command repeat - Quake"
+alias rtx="./.retex; # Quake - radiant conversion retex"
+alias radtex='gr -o "[a-z].*\/.*" ac_1.1c.map|cut -d " " -f -1|sort -u'; # Quake - radiant map file textures
+alias pub="./.pub" # run any .pub command # Quake
+alias pm="pubq1c" # publish maps # Quake
+alias mc='./mc'
+
+# making mods
+alias mmod='.mod;cd ..;pwd;echo;if [[ -f "$PWD/.arc" ]]; then echo "Making package:";echo;grep "zip -" .arc|grep -v unzip;echo;fi; # Quake'
+alias mod="./.arc"
+
+# use qbkp tool to remove "x" bit from non exec files (win tools like to add this)
+# does a bunch of chmod -x
+alias rmx="qbkp -fx; # Quake - remove x bit from samba net loaded files"
+
+# more commands that rely on specific dirs
+
+# lists
+# CL=`cat /home/Quake/.qbr/.lsc`
+# use full dir
+# alias listfd="echo '  --color -lXahd'\$1 > /home/Quake/.qbr/.lsc # Quake lists"
+# use partial full dir
+# alias listfp="echo '  --color -XahdGg'\$1 > /home/Quake/.qbr/.lsc # Quake lists"
+# use wide dir
+# alias listwd="echo '  --color -adX'\$1 > /home/Quake/.qbr/.lsc # Quake lists"
+# add sort by ctime - note: this makes list full, even p and w
+# alias listc="sed -i 's/$/lc/' /home/Quake/.qbr/.lsc # Quake lists"
+
+
+# NOTE: fix later, no worky
+# must add ; echo '' > /home/Quake/.qbr/.lsc2 to other list* above
+# use partial full dir - no permit bits
+# alias listfn="echo '  --color -XahdGg'\$1 > /home/Quake/.qbr/.lsc; echo '|cut -d \" \" -f 3-|sed -e \"s/^  /__/\"|sed -e \"s/^ /_/\"|sed -e \"s/ /\t/\"' > /home/Quake/.qbr/.lsc2 # Quake lists"
+
+# use qbr directive above generically
+# alias lq="ls \`cat /home/Quake/.qbr/.lsc\` * # Quake lists"
+# alias lqh="ls \`cat /home/Quake/.qbr/.lsc\` .* # Quake lists"
+
+# show cmd
+alias listsh="echo 'list option:';echo -n '		';cat /home/Quake/.qbr/.lsc"
+
+# 10.30.13 - Cat - changed to operate live from CL file
+alias trm="ls \`cat /home/Quake/.qbr/.lsc\` -tr *.map|tail -n 64; # Quake lists"
+alias wads="ls \`cat /home/Quake/.qbr/.lsc\` *.[Ww][Aa][Dd] 2>/dev/null; # Quake lists"
+alias wadst='grep "\"wad\"" *.map|cut -d ":" -f 2-|sort -u|sed -e "s/^[ \t]*//" -e "s/\t/ /g"'
+alias ents="ls \`cat /home/Quake/.qbr/.lsc\` *.[Dd][Ee][Ff] 2>/dev/null; # Quake lists"
+alias maps="ls \`cat /home/Quake/.qbr/.lsc\` *.[Mm][Aa][Pp] 2>/dev/null; # Quake lists"
+#alias maps="ls \`cat /home/Quake/.qbr/.lsc\` *.[Mm][Aa][Pp] \`cat /home/Quake/.qbr/.lsc2\` 2>/dev/null; # Quake lists"
+alias bsps="ls \`cat /home/Quake/.qbr/.lsc\` *.[Bb][Ss][Pp] 2>/dev/null; # Quake lists"
+alias qcs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Qq][Cc] 2>/dev/null; # Quake lists"
+alias cs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
+alias hs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Hh] 2>/dev/null; # Quake lists"
+alias .cps="ls \`cat /home/Quake/.qbr/.lsc\` .cp* 2>/dev/null; # Quake lists"
+alias cfgs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Cc][Ff][Gg] 2>/dev/null; # Quake lists"
+alias paks="ls \`cat /home/Quake/.qbr/.lsc\` *.[Pp][Aa][Kk] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Pp][Kk]3 2>/dev/null; # Quake lists"
+alias zips="ls \`cat /home/Quake/.qbr/.lsc\` *.[Zz][Ii][Pp] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.7[Zz] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Tt][Gg][Zz] 2>/dev/null; # Quake lists"
+alias gfx="ls \`cat /home/Quake/.qbr/.lsc\` *.[Jj][Pp][Gg] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Gg][Ii][Ff] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Tt][Gg][Aa] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Pp][Nn][Gg] 2>/dev/null; # Quake lists"
+alias src="ls \`cat /home/Quake/.qbr/.lsc\` *.[Hh] 2>/dev/null; ls \`cat /home/Quake/.qbr/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
+alias docs="ls \`cat /home/Quake/.qbr/.lsc\` *.[Tt][Xx][Tt] 2>/dev/null; # Quake lists"
+#alias xs='ls -lda * 2>/dev/null|grep "^-..x"; ls -lda .* 2>/dev/null|grep "^-..x"; # Quake lists'
+alias xs='ls -ldaF --color *|grep "\*";ls -ldaF --color .*|grep "\*"; # Quake lists'
+alias lfx='xs'
+alias links="ls -lda --color * 2>/dev/null|grep '^l'; # Quake lists"
+alias lists="echo;echo 'Quake lists:';echo;alias |grep -i 'Quake lists'|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;echo"
+alias allq="echo;echo 'Quake lists:';echo;alias |grep -i 'Quake'|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;echo"
+alias alq="allq"
+alias rad="echo 'Radiant cmds:';echo;alias |grep -i radiant|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;echo"
+alias srcs="echo 'Source:';echo;alias|grep -i source|grep -vi Resource|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;echo; # Quake lists"
+alias qrcom="grep grep /home/OS/ulb/qr*|cut -b 14-|cut -d '2' -f -1|sed -e 's/:/ = /'|sed -e 's/^/ /';echo;echo 'note: grep -v \"^\\\$sboc\" in qrc, qfc, qrec - to eliminate \$base, etc.';echo '* many other searches use qr?c - qvar for list'; # Quake lists"
+alias qrcmd="qrcom"
+alias tabs="echo;echo 'Quake tabs:';echo;alias |grep -i '\.t[1-4]='|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;alias |grep -i '.tab'|cut -b 6-|sed -e 's/=/\t=\t/'|cut -d '#' -f -1;echo;echo Current tab: $TBS;echo"
+alias qc_notes='qc_com -f|xargs -n 1 qr $@'
+alias qc_n='qc_notes'
+
+export QBF='/home/Quake/.qbr/q1lab/source/bkp/'
+
+# current project trace
+alias cproj='echo -n "`p d`" > /home/Quake/.qbr/q1lab/source/.cproj;.rb'
+CPRJ=`cat /home/Quake/.qbr/q1lab/source/.cproj`
+if [[ -d "/home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj`/" ]]; then
+	'rm' -f /home/Quake/qlnx/_qc
+	'ln' -sf /home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj` /home/Quake/qlnx/_qc
+fi
+
+#alias .qc='cd /home/Quake/.qbr/q1lab/source/$CPRJ;echo;pwd;echo;lsa;echo;echo "build cmd - aux:		qcc - qrcom, qc_com, qctac";if [[ -f "$PWD/.qca" ]]; then echo;echo "Making:";grep "^cp progs" .qca;fi;echo'
+#alias .qcss='cd /home/Quake/.qbr/q1lab/source/$CPRJ/client_side/;echo;pwd;echo;lsa;if [[ -f "$PWD/.qcc" ]]; then echo;echo "Making:";grep "cp csprogs" .qcc;fi;echo'
+alias .qc='cd /home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj`;echo;pwd;echo;lsa;echo;echo "build cmd - aux:		qcc - qrcom, qc_com, qctac";if [[ -f "$PWD/.qca" ]]; then echo;echo "Making:";grep "^cp progs" .qca;fi;echo'
+alias .qcss='cd /home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj`/client_side/;echo;pwd;echo;lsa;if [[ -f "$PWD/.qcc" ]]; then echo;echo "Making:";grep "^cp csprogs" .qcc;fi;echo'
+
+CMOD=`cat /home/Quake/.cmod`
+#alias .mod="echo;cd /home/Quake/$CMOD;pwd;echo;lsa;echo;echo 'build cmd:	mod -y -rm -a';echo"
+alias .mod="echo;cd /home/Quake/\`cat /home/Quake/.cmod\`;pwd;echo;lsa;echo;echo 'build cmd:	mod -y -rm -a';echo"
+
+CENG=`cat /home/Quake/.ceng`
+alias .eng='cd /home/Quake/`cat /home/Quake/.ceng`;pwd;echo;lsa;echo'
+alias .dpeng="cd /home/Quake/qlnx/engine-source/darkplaces-03.04.13;pwd;echo;lsa;echo"
+
+#alias .t6="cd /home/Quake/$CENG;pwd;echo;lsa;echo"
+
+# dynamic tab projecting - pick the tab, enter its set cmd ".t{tab #}s" and next load will load it up
+#        ".t{tab #}ss" is super set - supplied command is it
+
+alias .tcmd='echo "		" sa bres, .t{tab \#} - exec tab command, \$TBS - tab \#, .ts - ts\(\) set command fn - uses \$TBS, .t{tab \#}s - set tab command to [change cur dir, pwd, lsa], .t{tab \#}ss - set tab command to \$@'
+
+# generic version - relies on TBS variable - replaced with bash fn()
+
+#alias .ts="if [[ \"\$TBS\" -lt \"1\" || \"\$TBS\" -gt \"10\" ]]; then echo \"TBS is not set!\"; else echo \"echo;cd \$PWD;pwd;echo;lsa;echo\" > \"/home/Quake/.qbr/.tab\$TBS\"; fi"
+#alias .tss="if [[ \"\$TBS\" -lt \"1\" || \"\$TBS\" -gt \"10\" ]]; then echo \"TBS is not set!\"; else echo \"$@\" > \"/home/Quake/.qbr/.tab\$TBS\"; fi"
+
+# for command tab
+
+#alias sud=".ulb;'rm' -f /tmp/.sudstart;su;echo Exited root suds"
+
+# these are really not needed - should be using generics because tab number is auto
+
+if [[ -f "/home/Quake/.qbr/.tab1" ]]; then alias .t1="reset;`cat /home/Quake/.qbr/.tab1`"; else alias .t1="reset;.qq;.qa;.q;cd \`cat .qdir\`;echo;pwd;echo"; fi
+if [[ -f "/home/Quake/.qbr/.tab2" ]]; then alias .t2="reset;`cat /home/Quake/.qbr/.tab2`"; else alias .t2="reset;.qc"; fi
+if [[ -f "/home/Quake/.qbr/.tab3" ]]; then alias .t3="reset;`cat /home/Quake/.qbr/.tab3`"; else alias .t3="reset;.qb"; fi
+if [[ -f "/home/Quake/.qbr/.tab4" ]]; then alias .t4="reset;`cat /home/Quake/.qbr/.tab4`"; else alias .t4="reset;.mod;if [[ -f \"\$PWD/.arc\" ]]; then echo \"Making package:\";echo;grep \"zip -\" .arc|grep -v unzip;fi;echo"; fi
+
+if [[ -f "/home/Quake/.qbr/.tab5" ]]; then alias .t5="reset;`cat /home/Quake/.qbr/.tab5`"; fi
+alias .t5s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab5"
+alias .t5ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab5"
+
+if [[ -f "/home/Quake/.qbr/.tab6" ]]; then alias .t6="reset;`cat /home/Quake/.qbr/.tab6`"; fi
+alias .t6s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab6"
+alias .t6ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab6"
+
+if [[ -f "/home/Quake/.qbr/.tab7" ]]; then alias .t7="reset;`cat /home/Quake/.qbr/.tab7`"; fi
+alias .t7s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab7"
+alias .t7ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab7"
+
+if [[ -f "/home/Quake/.qbr/.tab8" ]]; then alias .t8="reset;`cat /home/Quake/.qbr/.tab8`"; fi
+alias .t8s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab8"
+alias .t8ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab8"
+
+if [[ -f "/home/Quake/.qbr/.tab9" ]]; then alias .t9="reset;`cat /home/Quake/.qbr/.tab9`"; fi
+alias .t9s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab9"
+alias .t9ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab9"
+
+if [[ -f "/home/Quake/.qbr/.tab10" ]]; then alias .t10="reset;`cat /home/Quake/.qbr/.tab10`"; fi
+alias .t10s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab10"
+alias .t10ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab10"
+
+if [[ -f "/home/Quake/.qbr/.tab11" ]]; then alias .t11="reset;`cat /home/Quake/.qbr/.tab11`"; else alias .t11='reset;echo;OSb;echo;lsa;echo';fi
+alias .t11s="echo \"reset;echo;cd \$PWD;pwd;echo;lsa;echo\" > /home/Quake/.qbr/.tab11"
+alias .t11ss="echo \"reset;\$@\" > /home/Quake/.qbr/.tab11"
+
+.ts()
+{
+if [[ "$TBS" -lt "1" || "$TBS" -gt "10" ]]; then
+	echo "TBS is not set!"
+else
+	if [[ "$@" == "" ]]; then
+		echo "reset;echo;cd $PWD;pwd;echo;lsa;echo" > "/home/Quake/.qbr/.tab$TBS"
+		echo ".tab$TBS = \"reset;echo;cd $PWD;pwd;echo;lsa;echo\" - verify:"
+	else
+		echo "reset;echo;cd $PWD;pwd;echo;lsa;echo;$@" > "/home/Quake/.qbr/.tab$TBS"
+		echo ".tab$TBS = \"reset;echo;cd $PWD;pwd;echo;lsa;echo;$@\" - verify:"
+	fi
+	cat "/home/Quake/.qbr/.tab$TBS"
+fi
+echo
+}
+
+.tss()
+{
+if [[ "$TBS" -lt "1" || "$TBS" -gt "10" ]]; then
+	echo "TBS is not set!"
+else
+	if [[ "$@" == "" ]]; then
+		rm -f "/home/Quake/.qbr/.tab$TBS"
+		echo "removed .tab$TBS"
+	else
+		echo "reset;$@" > "/home/Quake/.qbr/.tab$TBS"
+		echo ".tab$TBS = \"reset;$@\" - verify:"
+		cat "/home/Quake/.qbr/.tab$TBS"
+	fi
+fi
+echo
+}
+
+# set the quake directory default for tab 1 cmd seq
+setqdir()
+{
+echo "$PWD" > /home/Quake/.qdir
+echo "set \".qdir\" = \"$PWD\""
+}
