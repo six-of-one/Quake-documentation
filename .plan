@@ -22,14 +22,34 @@ HOLD hacks can _still_ overlap each other with no way to delete
 
 -monsters can move to a diff hack (in case of hide or delete)
 
--might want to force display hidden hacks prior to teleport moves
-
 qone
 
 release followup:
 
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
+
+1.3.16
+
+WIP: quake hack - 
+WIP: command line tools release
+DONE: qh1.zip update - water wall fix, docs revision
+DONE: split local repository into all branches of v107, added a testing and a "II" for continuing dev
+FIXED: getting stuck in water in qh_0047 - had to make a full step set
+DONE: git for qh_*.map files from qbkp
+DONE: cltools pkg built
+WIP: compile NPRquake on win
+
+1.2.16
+
+WIP: quake hack - 
+DONE: might want to force display hidden hacks prior to teleport
+-- but only for oh of tele dest
+DONE: re-acquired old meld !
+-- no more - sudo meld, not collapsing all sub dirs, hopefully get config back
+DONE: gzdoom compile --  need for brutal doom
+DONE: fix water wall of qh_0014
+WIP: command line tools release
 
 1.1.16
 
