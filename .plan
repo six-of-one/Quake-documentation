@@ -22,6 +22,7 @@ HOLD hacks can _still_ overlap each other with no way to delete
 
 -monsters can move to a diff hack (in case of hide or delete)
 
+
 qone
 
 release followup:
@@ -29,9 +30,20 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+1.5.16
+
+DONE: NPR: original tar.gz, and win srd up
+WIP: relativity v19 - the 6 plane monster
+WIP: new engine gravity
+
+1.4.16
+
+DONE: npr quake source to git-hub for rothrin
+FAIL: compile NPRquake on win -- .\Release\\.obj file not found deal on link.exe
+DONE: released cltools -- many tweaks & adjusts
+
 1.3.16
 
-WIP: quake hack - 
 WIP: command line tools release
 DONE: qh1.zip update - water wall fix, docs revision
 DONE: split local repository into all branches of v107, added a testing and a "II" for continuing dev

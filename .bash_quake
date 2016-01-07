@@ -2,23 +2,26 @@
 #               015.10.7 - porting aliases, quake stuff
 #               016.1.02 - external release set
 
-# NOTE: every directory reference and cd will likely fail as they are set for my environment
-#       dir structure I use:
+# NOTE: every directory reference and cd will likely fail as they are set for a generic environment
+#       I used this dir structure:
 #       /home/Quake/
 #         "     "   Q branch		# all labs, radiant, snd, vis, docs
+#         "     "                /q1lab		# quake one dev work
 #         "     "   quake			# main install
 #         "     "   quake_*		# various test dirs for building mods
 #         "     "   Arc				# storage
 #         "     "   fps				# other fps games
 #         "     "   qlnx			# symlink dir make it easy to find stuff for vars progs
 
-# the very useful file list section at the end likes /home/Quake/.lsc to exist
-
+# I have done what I can to adjust this for a generic install $HOME/quake
+# but you have to install there
 
 # Cataboligne - 015.12.9 - unify all qr grep usage
 # use assignment ($QGREP "$@")
 
 export QGREP="/bin/grep --color -Isr "
+
+alias  lsa='ls -a --color=auto'
 
 
 # quake aliases
@@ -26,7 +29,7 @@ export QGREP="/bin/grep --color -Isr "
 # removed all local directory alias - like these
 
 #alias .q='cd /home/Quake/;pwd;ls -1Fa|grep "/$";echo'
-#alias .qlnx='cd /home/Quake/qlnx/;pwd;echo;echo "Quake linx";echo'
+alias .qlnx='cd $HOME/quake/q1lab/qlnx/;pwd;echo;echo "Quake linx";echo'
 
 # this should work if you use darkplaces or maphack
 
@@ -45,8 +48,8 @@ if [[ ! -e "$1" ]]; then echo "+mod: no file selected"
 else
 
 	dsb="$2"
-	if [[ ! -d "/home/Quake/Arc/Quake/Resource/mods/$2" ]]; then dsb=""; fi
-	dsd="/home/Quake/Arc/Quake/Resource/mods/$dsb"
+	if [[ ! -d "$HOME/quake/Arc/Quake/Resource/mods/$2" ]]; then dsb=""; fi
+	dsd="$HOME/quake/Arc/Quake/Resource/mods/$dsb"
 	cp -aupR "$1" "$dsd"
 	echo copied "$1" to "$dsd"
 
@@ -236,7 +239,7 @@ qvar()
   echo " deqed		=	[qc |{filespec}] {grep pattern} 			search for /*QUAKED */ group by contents"
   echo " plreturn									search for return; };"
   echo
-  echo " _class - show class_* statements in all qc files"
+  echo " class_ - show class_* statements in all qc files"
   echo " qrspawn - show spawn() calls in all qc files"
   echo " qrnum - show valid number use in qc files"
   echo " nullquote - search for \"\""
@@ -1559,8 +1562,8 @@ alias class_='qrho class_[a-z]*|sort -u'
 
 # alias qcc="./.qca 2>/dev/null;./.qcc 2>/dev/null; # Quake"
 # qcc sets - tailor to your needs, copies progs.dat to test dirs
-#alias qcct='qcc;cp progs.dat /home/Quake/quake/id1'
-#alias qcct0='qcc;cp progs.dat /home/Quake/quake_0/id1'
+#alias qcct0='qcc;cp progs.dat $HOME/quake/id1'
+alias qcct='qcc;cp progs.dat $HOME/quake/id1'
 
 # many of these depend on other tools in my production environment
 
@@ -1568,11 +1571,9 @@ alias class_='qrho class_[a-z]*|sort -u'
 alias mcr="./.mcmd; # map command repeat - Quake"
 alias rtx="./.retex; # Quake - radiant conversion retex"
 alias radtex='gr -o "[a-z].*\/.*" ac_1.1c.map|cut -d " " -f -1|sort -u'; # Quake - radiant map file textures
-alias pub="./.pub" # run any .pub command # Quake
-alias pm="pubq1c" # publish maps # Quake
-alias mc='./mc'
+# alias pm="pubq1c" # publish maps # pubq1c not ready for release, tightly integrated to my dev system
 
-# making mods
+# making mods - script commands stored in ".arc"
 alias mmod='.mod;cd ..;pwd;echo;if [[ -f "$PWD/.arc" ]]; then echo "Making package:";echo;grep "zip -" .arc|grep -v unzip;echo;fi; # Quake'
 alias mod="./.arc"
 
@@ -1585,50 +1586,50 @@ alias rmx="qbkp -fx; # Quake - remove x bit from samba net loaded files"
 # this file contains ls options to display various files
 
 # lists
-CL=`cat /home/Quake/.lsc`
+CL=`cat $HOME/quake/.lsc`
 
 # alias to set ls options on some file searches
 # use full dir
-alias listfd="echo '  --color -lXahd'\$1 > /home/Quake/.lsc # Quake lists"
+alias listfd="echo '  --color -lXahd'\$1 > $HOME/quake/.lsc # Quake lists"
 # use partial full dir
-alias listfp="echo '  --color -XahdGg'\$1 > /home/Quake/.lsc # Quake lists"
+alias listfp="echo '  --color -XahdGg'\$1 > $HOME/quake/.lsc # Quake lists"
 # use wide dir
-alias listwd="echo '  --color -adX'\$1 > /home/Quake/.lsc # Quake lists"
+alias listwd="echo '  --color -adX'\$1 > $HOME/quake/.lsc # Quake lists"
 # add sort by ctime - note: this makes list full, even p and w
-alias listc="sed -i 's/$/lc/' /home/Quake/.lsc # Quake lists"
+alias listc="sed -i 's/$/lc/' $HOME/quake/.lsc # Quake lists"
 
 
 # NOTE: fix later, no worky
-# must add ; echo '' > /home/Quake/.lsc2 to other list* above
+# must add ; echo '' > $HOME/quake/.lsc2 to other list* above
 # use partial full dir - no permit bits
-# alias listfn="echo '  --color -XahdGg'\$1 > /home/Quake/.lsc; echo '|cut -d \" \" -f 3-|sed -e \"s/^  /__/\"|sed -e \"s/^ /_/\"|sed -e \"s/ /\t/\"' > /home/Quake/.lsc2 # Quake lists"
+# alias listfn="echo '  --color -XahdGg'\$1 > $HOME/quake/.lsc; echo '|cut -d \" \" -f 3-|sed -e \"s/^  /__/\"|sed -e \"s/^ /_/\"|sed -e \"s/ /\t/\"' > $HOME/quake/.lsc2 # Quake lists"
 
 # use qbr directive above generically
-alias lq="ls \`cat /home/Quake/.lsc\` * # Quake lists"
-alias lqh="ls \`cat /home/Quake/.lsc\` .* # Quake lists"
+alias lq="ls \`cat $HOME/quake/.lsc\` * # Quake lists"
+alias lqh="ls \`cat $HOME/quake/.lsc\` .* # Quake lists"
 
 # show cmd
-alias listsh="echo 'list option:';echo -n '		';cat /home/Quake/.lsc"
+alias listsh="echo 'list option:';echo -n '		';cat $HOME/quake/.lsc"
 
 # big list of file searches
 # 10.30.13 - Cat - changed to operate live from CL file
-alias trm="ls \`cat /home/Quake/.lsc\` -tr *.map|tail -n 64; # Quake lists"
-alias wads="ls \`cat /home/Quake/.lsc\` *.[Ww][Aa][Dd] 2>/dev/null; # Quake lists"
+alias trm="ls \`cat $HOME/quake/.lsc\` -tr *.map|tail -n 64; # Quake lists"
+alias wads="ls \`cat $HOME/quake/.lsc\` *.[Ww][Aa][Dd] 2>/dev/null; # Quake lists"
 alias wadst='grep "\"wad\"" *.map|cut -d ":" -f 2-|sort -u|sed -e "s/^[ \t]*//" -e "s/\t/ /g"'
-alias ents="ls \`cat /home/Quake/.lsc\` *.[Dd][Ee][Ff] 2>/dev/null; # Quake lists"
-alias maps="ls \`cat /home/Quake/.lsc\` *.[Mm][Aa][Pp] 2>/dev/null; # Quake lists"
-#alias maps="ls \`cat /home/Quake/.lsc\` *.[Mm][Aa][Pp] \`cat /home/Quake/.lsc2\` 2>/dev/null; # Quake lists"
-alias bsps="ls \`cat /home/Quake/.lsc\` *.[Bb][Ss][Pp] 2>/dev/null; # Quake lists"
-alias qcs="ls \`cat /home/Quake/.lsc\` *.[Qq][Cc] 2>/dev/null; # Quake lists"
-alias cs="ls \`cat /home/Quake/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
-alias hs="ls \`cat /home/Quake/.lsc\` *.[Hh] 2>/dev/null; # Quake lists"
-alias .cps="ls \`cat /home/Quake/.lsc\` .cp* 2>/dev/null; # Quake lists"
-alias cfgs="ls \`cat /home/Quake/.lsc\` *.[Cc][Ff][Gg] 2>/dev/null; # Quake lists"
-alias paks="ls \`cat /home/Quake/.lsc\` *.[Pp][Aa][Kk] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Pp][Kk]3 2>/dev/null; # Quake lists"
-alias zips="ls \`cat /home/Quake/.lsc\` *.[Zz][Ii][Pp] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.7[Zz] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Tt][Gg][Zz] 2>/dev/null; # Quake lists"
-alias gfx="ls \`cat /home/Quake/.lsc\` *.[Jj][Pp][Gg] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Gg][Ii][Ff] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Tt][Gg][Aa] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Pp][Nn][Gg] 2>/dev/null; # Quake lists"
-alias src="ls \`cat /home/Quake/.lsc\` *.[Hh] 2>/dev/null; ls \`cat /home/Quake/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
-alias docs="ls \`cat /home/Quake/.lsc\` *.[Tt][Xx][Tt] 2>/dev/null; # Quake lists"
+alias ents="ls \`cat $HOME/quake/.lsc\` *.[Dd][Ee][Ff] 2>/dev/null; # Quake lists"
+alias maps="ls \`cat $HOME/quake/.lsc\` *.[Mm][Aa][Pp] 2>/dev/null; # Quake lists"
+#alias maps="ls \`cat $HOME/quake/.lsc\` *.[Mm][Aa][Pp] \`cat $HOME/quake/.lsc2\` 2>/dev/null; # Quake lists"
+alias bsps="ls \`cat $HOME/quake/.lsc\` *.[Bb][Ss][Pp] 2>/dev/null; # Quake lists"
+alias qcs="ls \`cat $HOME/quake/.lsc\` *.[Qq][Cc] 2>/dev/null; # Quake lists"
+alias cs="ls \`cat $HOME/quake/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
+alias hs="ls \`cat $HOME/quake/.lsc\` *.[Hh] 2>/dev/null; # Quake lists"
+alias .cps="ls \`cat $HOME/quake/.lsc\` .cp* 2>/dev/null; # Quake lists"
+alias cfgs="ls \`cat $HOME/quake/.lsc\` *.[Cc][Ff][Gg] 2>/dev/null; # Quake lists"
+alias paks="ls \`cat $HOME/quake/.lsc\` *.[Pp][Aa][Kk] 2>/dev/null; ls \`cat $HOME/quake/.lsc\` *.[Pp][Kk]3 2>/dev/null; # Quake lists"
+alias zips="ls \`cat $HOME/quake/.lsc\` *.[Zz][Ii][Pp] 2>/dev/null; ls \`cat $HOME/quake/.lsc\` *.7[Zz] 2>/dev/null; ls \`cat $HOME/quake/.lsc\` *.[Tt][Gg][Zz] 2>/dev/null; # Quake lists"
+alias gfx="ls \`cat $HOME/quake/.lsc\` *.[Jj][Pp][Gg] 2>/dev/null; ls \`cat $HOME/quake/.lsc\` *.[Gg][Ii][Ff] 2>/dev/null; ls \`cat $HOME/quake/.lsc\` *.[Tt][Gg][Aa] 2>/dev/null; ls \`cat $HOME/quake/.lsc\` *.[Pp][Nn][Gg] 2>/dev/null; # Quake lists"
+alias src="ls \`cat $HOME/quake/.lsc\` *.[Hh] 2>/dev/null; ls \`cat $HOME/quake/.lsc\` *.[Cc] 2>/dev/null; # Quake lists"
+alias docs="ls \`cat $HOME/quake/.lsc\` *.[Tt][Xx][Tt] 2>/dev/null; # Quake lists"
 #alias xs='ls -lda * 2>/dev/null|grep "^-..x"; ls -lda .* 2>/dev/null|grep "^-..x"; # Quake lists'
 alias xs='ls -ldaF --color *|grep "\*";ls -ldaF --color .*|grep "\*"; # Quake lists'
 alias lfx='xs'
@@ -1645,32 +1646,32 @@ alias qc_notes='qc_com -f|xargs -n 1 qr $@'
 alias qc_n='qc_notes'
 
 # quake backup folder - I made this in 99, just use git
-export QBF='/home/Quake/.qbr/q1lab/source/bkp/'
+export QBF='$HOME/quake/q1lab/bkp/'
 
 # more things that rely on my production environment
 # you will have to configure all the dirs to your usage
 
-# current project trace
-alias cproj='echo -n "`p d`" > /home/Quake/.qbr/q1lab/source/.cproj;.rb'
-CPRJ=`cat /home/Quake/.qbr/q1lab/source/.cproj`
-if [[ -d "/home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj`/" ]]; then
-	'rm' -f /home/Quake/qlnx/_qc
-	'ln' -sf /home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj` /home/Quake/qlnx/_qc
+# current project trace - specced dir linked into _qc
+alias cproj='echo -n "`p d`" > $HOME/quake/q1lab/source/.cproj;.rb'
+CPRJ=`cat $HOME/quake/q1lab/source/.cproj`
+if [[ -d "$HOME/quake/q1lab/source/`cat $HOME/quake/q1lab/source/.cproj`/" ]]; then
+	'rm' -f $HOME/quake/_qc
+	'ln' -sf $HOME/quake/q1lab/source/`cat $HOME/quake/q1lab/source/.cproj` $HOME/quake/_qc
 fi
 
 # go to the current qc project
-alias .qc='cd /home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj`;echo;pwd;echo;lsa;echo;echo "build cmd - aux:		qcc - qrcom, qc_com, qctac";if [[ -f "$PWD/.qca" ]]; then echo;echo "Making:";grep "^cp progs" .qca;fi;echo'
-alias .qcss='cd /home/Quake/.qbr/q1lab/source/`cat /home/Quake/.qbr/q1lab/source/.cproj`/client_side/;echo;pwd;echo;lsa;if [[ -f "$PWD/.qcc" ]]; then echo;echo "Making:";grep "^cp csprogs" .qcc;fi;echo'
+alias .qc='cd $HOME/quake/q1lab/source/`cat $HOME/quake/q1lab/source/.cproj`;echo;pwd;echo;lsa;echo;echo "build cmd - aux:		qcc - qrcom, qc_com, qctac";if [[ -f "$PWD/.qca" ]]; then echo;echo "Making:";grep "^cp progs" .qca;fi;echo'
+alias .qcss='cd $HOME/quake/q1lab/source/`cat $HOME/quake/q1lab/source/.cproj`/client_side/;echo;pwd;echo;lsa;if [[ -f "$PWD/.qcc" ]]; then echo;echo "Making:";grep "^cp csprogs" .qcc;fi;echo'
 
 # go to the current release mod
-CMOD=`cat /home/Quake/.cmod`
-#alias .mod="echo;cd /home/Quake/$CMOD;pwd;echo;lsa;echo;echo 'build cmd:	mod -y -rm -a';echo"
-alias .mod="echo;cd /home/Quake/\`cat /home/Quake/.cmod\`;pwd;echo;lsa;echo;echo 'build cmd:	mod -y -rm -a';echo"
+CMOD=`cat $HOME/quake/.cmod`
+#alias .mod="echo;cd $HOME/quake/$CMOD;pwd;echo;lsa;echo;echo 'build cmd:	mod -y -rm -a';echo"
+alias .mod="echo;cd $HOME/quake/\`cat $HOME/quake/.cmod\`;pwd;echo;lsa;echo;echo 'build cmd:	mod -y -rm -a';echo"
 
 # go to the current game engine code
-CENG=`cat /home/Quake/.ceng`
-alias .eng='cd /home/Quake/`cat /home/Quake/.ceng`;pwd;echo;lsa;echo'
-alias .dpeng="cd /home/Quake/qlnx/engine-source/darkplaces-03.04.13;pwd;echo;lsa;echo"
+CENG=`cat $HOME/quake/.ceng`
+alias .eng='cd $HOME/quake/`cat $HOME/quake/.ceng`;pwd;echo;lsa;echo'
+alias .dpeng="cd $HOME/quake/q1lab/engine-source/darkplaces;pwd;echo;lsa;echo"
 
 
 
