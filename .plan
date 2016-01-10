@@ -30,6 +30,31 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+1.9.16
+
+CHECK: into render code for npr - add directly to maphack & drop the library stuff
+DONE: HD pack / maphack intergration -- ver 1
+DONE: updated qone.map with ENTREPLACE flag for HD .ent replacement files (we hope)
+
+1.8.16
+
+WIP: NPR -> proquake (win) -- fail
+
+1.7.16
+
+FIXED: compile NPRquake on win -- .\Release\\.obj file not found deal on link.exe
+- made blank.c, copied blank.obj to .obj
+WIP: NPRquake compile & run -- fail with linker not finding stuff thats external, but in .asm files
+WIP: NPR / glquake linux - comes up, wont load maps
+
+1.6.16
+
+FAIL: new engine gravity -- does not translate movement into a new gravity plane
+- next: see how engine does gravity
+WIP: relativity v19 - the 6 plane monster
+WIP: NPRquake compile & run
+TEST: visible models DM server deal - dedicated server has a different fail than listen
+
 1.5.16
 
 DONE: NPR: original tar.gz, and win srd up
