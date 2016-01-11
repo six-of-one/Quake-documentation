@@ -30,11 +30,30 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+1.11.16
+
+WIP: qc++
+DONE: engine bot support - check .ishuman, & block the stuff frikbot blocks at the engine level
+DONE: frikbot port qc++
+
+1.10.16
+
+WIP: qc++
+NOTE: r_water 1 -- seems to mess up transparent water, may req. other settings
+DONE: rotating door in hip-sec of test_c map
+WIP: rogue room of test_c map
+NOTE: item translate will be handled by cfg script now similar to the __* overload handling of SV_OnEntityPreSpawnFunction
+- in this case a model file check fail will attempt to translate, remove, hide or leave the dp bit in based on cvar: svx_model_ld_fail
+WIP: painkeep 3.0 -> v1.07
+WIP: engine bot support - check .ishuman, & block the stuff frikbot blocks at the engine level
+WIP: frikbot port qc++
+
 1.9.16
 
 CHECK: into render code for npr - add directly to maphack & drop the library stuff
 DONE: HD pack / maphack intergration -- ver 1
 DONE: updated qone.map with ENTREPLACE flag for HD .ent replacement files (we hope)
+- works for the most part with quake_hack - qone has bad fps
 
 1.8.16
 

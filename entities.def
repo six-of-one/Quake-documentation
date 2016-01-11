@@ -16,8 +16,9 @@
 // Cataboligne 12/26/14  @   - qc++ mods
 // Cataboligne 12/12/15  @   - added 1792 : Entity __only__ appears in Deathmatch mode.
 // Cataboligne 12/31/15  @   - upload verison, edit some maphack notes
+// Cataboligne 1/10/16  @   - bit list tweak
 
-// Version: 1.8.1
+// Version: 1.8.2
 // Last entry: 12-30-15
 
 
@@ -440,7 +441,7 @@ Cat special flame thrower
 --------  CAT  -------
 -------- SPAWNFLAGS --------
 BIG = gives 48 instead of 24
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -521,7 +522,7 @@ sounds : see below
 dmg : see below
 
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -565,7 +566,7 @@ button2 = separate rnd chance of selecting 4 if set - default 10%
 --------  CAT  -------
 special version that wont be loaded by other mods
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -739,7 +740,7 @@ ALLSAME - all targets get same value, otherwise individual targets are randomize
 --------  CAT  -------
 Chaos Mod MK II
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -1036,7 +1037,7 @@ origin - "x, y, z" - center of allow area
 volume - "{n}" - radius range of allow area
 
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -1067,7 +1068,7 @@ Chaos Mod MK II
 --------  CAT  --------
 All Cat classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -1133,7 +1134,7 @@ copy of "func_wall"
 -------- KEYS --------
 targetname : if set change texture when fired (?)
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -1385,7 +1386,7 @@ sounds : 1 = ratchet metal (Zerstorer) 2) stone 3) base 4) stone chain 5) screec
 TRAIN_TOUCH (Zerst) will cause the train to  hurt the player on touch.
 TRAIN_TELEPORTER (Zerst) will make a teleporter out of the train.  If you want to target a specific destination, use the "netname" field to target it. Or, if you want to use 
 random teleport destinations, you MUST USE a "spawnflags" of "6" on the func_train. This will make it a random teleporter.
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -1571,7 +1572,7 @@ when the voted map ends.
 --------  PK  --------
 All Painkeep classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -1584,14 +1585,14 @@ weapon_chainlg
 weapon_grapgun
 item_painkeep_gwell
 item_painkeep_turret
-item_painkeep_can(0
-item_painkeep_beartrap(0
+item_painkeep_can
+item_painkeep_beartrap
 light_painkeep_candle
 item_painkeep_expshells
-item_pkplus_ego
-item_pkplus_tomb
-item_pkplus_actor
-item_pkplus_phone
+item_pkplus_ego *
+item_pkplus_tomb *
+item_pkplus_actor *
+item_pkplus_phone *
 light_sparks
 func_drip
 func_thumpsound
@@ -1610,6 +1611,7 @@ hub_control
 
 -------- NOTES --------
 place holder lists all Painkeep classnames - not a useable entity
+* panikeep "artefacts" expansion
 
 */
 
@@ -1813,7 +1815,7 @@ tri leg aliens from alien infestation mod
 --------  CAT  --------
 All Monster II classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -1972,7 +1974,7 @@ place holder for weapon_shotgun, which cm mk2 handles
 --------  Half Life  --------
 All half life classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -2895,7 +2897,7 @@ Flags:
 --------  DOOM  --------
 All doom classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3412,7 +3414,7 @@ set skin for key color
 --------  WOLF  --------
 All wolf classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3529,7 +3531,7 @@ INFO_* Entities
 Invisible entity.
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3547,7 +3549,7 @@ Removes itself.
 Invisible entity.
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3565,7 +3567,7 @@ Intermission camera point
 -------- KEYS --------
 mangle : set pitch roll yaw
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3586,7 +3588,7 @@ The normal starting point for a level.
 -------- KEYS --------
 angle : viewing angle when spawning
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3604,7 +3606,7 @@ Potential spawning position(s) for deathmatch games.
 -------- KEYS --------
 angle : viewing angle when spawning
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3625,7 +3627,7 @@ Potential spawning position(s) for coop games.
 -------- KEYS --------
 angle : viewing angle when spawning
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3642,7 +3644,7 @@ Only used on start map for the return point from an episode.
 -------- KEYS --------
 angle : viewing angle when spawning
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3660,7 +3662,7 @@ This is the destination marker for a teleporter.
 targetname : value used by teleporter
 angle : new view angle after teleporting
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3709,7 +3711,7 @@ sounds : 0 = no sound 1 = stone 2 = base 3 = stone chain 4 = screechy metal
 cnt: # of players on map needed to activate door if target1 is player_count in deathmatch
 
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3780,7 +3782,7 @@ wait : wait before returning (1 is default, -1 = never return)
 lip : lip remaining at end of move 4 is default
 sounds : 0 = steam metal 1 = wooden clunk 2 = metallic click 3 = in-out
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3811,7 +3813,7 @@ wait : wait before returning (3 is default, -1 = never return)
 dmg : damage to inflict when blocked 2 is default
 sounds : 1 = medieval 2 = metal 3 = base
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3839,7 +3841,7 @@ dest							- when rotate value (angles_y) of hack = any of x, y, z, remove this 
 /*QUAKED func_bossgate (0 .5 .8) ? _ _ _ _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3858,7 +3860,7 @@ Used to close the floor in start.map (stairs to Shub).
 /*QUAKED func_episodegate (0 .5 .8) ? E1 E2 E3 E4 _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3876,7 +3878,7 @@ This bmodel will appear if the episode has already been completed, so players ca
 /*QUAKED func_illusionary (0 .5 .8) ? _ _ _ _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3895,7 +3897,7 @@ A simple entity that looks solid but lets you walk through it. Does not block li
 -------- KEYS --------
 targetname : if set change texture when fired (?)
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3926,7 +3928,7 @@ sounds : 1 = ratchet metal (Zerstorer) 2) stone 3) base 4) stone chain 5) screec
 TRAIN_TOUCH (Zerst) will cause the train to  hurt the player on touch.
 TRAIN_TELEPORTER (Zerst) will make a teleporter out of the train.  If you want to target a specific destination, use the "netname" field to target it. Or, if you want to use 
 random teleport destinations, you MUST USE a "spawnflags" of "6" on the func_train. This will make it a random teleporter.
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3954,7 +3956,7 @@ height : determines the amount the plat moves, instead of being implicitly deter
 sounds : 1 = base fast 2 = chain slow
 -------- SPAWNFLAGS --------
 PLAT_TOGGLE (Zerstorer) - will force the platform to be triggered to move between states.
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -3996,7 +3998,7 @@ AMBIENT_* entities
 /*QUAKED air_bubbles (0 .5 .8) (-8 -8 -8) (8 8 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4010,7 +4012,7 @@ AMBIENT_* entities
 /*QUAKED ambient_light_buzz (0.3 0.1 0.6) (-10 -10 -8) (10 10 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4024,7 +4026,7 @@ AMBIENT_* entities
 /*QUAKED ambient_drip (0.3 0.1 0.6) (-10 -10 -8) (10 10 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4038,7 +4040,7 @@ AMBIENT_* entities
 /*QUAKED ambient_drone (0.3 0.1 0.6) (-10 -10 -8) (10 10 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4052,7 +4054,7 @@ AMBIENT_* entities
 /*QUAKED ambient_comp_hum (0.3 0.1 0.6) (-10 -10 -8) (10 10 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4066,7 +4068,7 @@ AMBIENT_* entities
 /*QUAKED ambient_flouro_buzz (0.3 0.1 0.6) (-10 -10 -8) (10 10 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4081,7 +4083,7 @@ AMBIENT_* entities
 /*QUAKED ambient_suck_wind (0.3 0.1 0.6) (-10 -10 -8) (10 10 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4096,7 +4098,7 @@ AMBIENT_* entities
 /*QUAKED ambient_swamp1 (0.3 0.1 0.6) (-10 -10 -8) (10 10 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4111,7 +4113,7 @@ AMBIENT_* entities
 /*QUAKED ambient_swamp2 (0.3 0.1 0.6) (-10 -10 -8) (10 10 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4126,7 +4128,7 @@ AMBIENT_* entities
 /*QUAKED ambient_thunder (0.3 0.1 0.6) (-10 -10 -8) (10 10 8)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4141,7 +4143,7 @@ AMBIENT_* entities
 /*QUAKED event_lightning (0 1 1) (-16 -16 -16) (16 16 16)
 -------- KEYS --------
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4187,7 +4189,7 @@ style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle 
 targetname : if set it will toggle between on or off.
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4216,7 +4218,7 @@ Short wall torch.
 light : sets brightness, 200 is default
 style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle (first variety) 4 = fast strobe 5 = gentle pulse 6 = flicker (second variety) 7 = candle (second variety) 8 = candle (third variety) 9 = slow strobe 10 = flourescent flicker 11 = slow pulse, not fading to black
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4236,7 +4238,7 @@ Large yellow flames.
 -------- KEYS --------
 light : sets brightness
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4254,7 +4256,7 @@ Small yellow flames.
 light : sets brightness
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4272,7 +4274,7 @@ Small white flames.
 light : sets brightness
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4292,7 +4294,7 @@ style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle 
 targetname : if set it will toggle between on or off.
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4315,7 +4317,7 @@ style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle 
 targetname : if set it will toggle between on or off.
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4338,7 +4340,7 @@ style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle 
 targetname : if set it will toggle between on or off.
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4365,7 +4367,7 @@ ITEM_* ENTITIES
 -------- KEYS --------
 -------- SPAWNFLAGS --------
 BIG = gives 12 instead of 6
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4382,7 +4384,7 @@ BIG = gives 12 instead of 6
 -------- KEYS --------
 -------- SPAWNFLAGS --------
 BIG = gives 10 instead of 5
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4399,7 +4401,7 @@ BIG = gives 10 instead of 5
 -------- KEYS --------
 -------- SPAWNFLAGS --------
 BIG = gives 40 instead of 20
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -4427,7 +4429,7 @@ you can use this to make any size ammo boxes with the standard models
 -------- KEYS --------
 -------- SPAWNFLAGS --------
 BIG = gives 50 instead of 25
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -5350,6 +5352,17 @@ target1: chaos mod mkII score limit achievement:
 - score_rel1, score_rel2
 -------- NOTES --------
 Should be only one per MAP.
+
+Game mode guide:
+-------- SPAWNFLAGS --------
+!(bit list) : Entity appears in all game modes.
+256 : Entity doesnt appear in Easy mode.
+512 : Entity doesnt appear in Medium mode.
+1024 : Entity doesnt appear in Hard mode.
+1024 : Entity doesnt appear in Nightmare mode.
+2048 : Entity doesnt appear in Deathmatch mode.
+1792 : Entity __only__ appears in Deathmatch mode.
+(does NOT apply to worldspawn - its easy to read here by selecting any brush)
 */
 
 
@@ -5357,7 +5370,7 @@ Should be only one per MAP.
 --------  Q  --------
 All Quake classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -6830,7 +6843,7 @@ takes the brush to do one full bob.
 --------  HIPN  --------
 All Hipnotic classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -7398,7 +7411,7 @@ off trigger.
 --------  ROGU  --------
 All Rogue classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -7620,7 +7633,7 @@ ScREw Cannon
 --------  ZERS  --------
 All Zerstorer classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -10122,7 +10135,7 @@ model="q3_models/weapons2/shotgun/shotgun.md3"
 --------  Q3  --------
 All Quake III classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
@@ -11251,7 +11264,7 @@ model="models/objects/dmspot/tris.md2"
 --------  Q2  --------
 All Quake II classnames
 -------- SPAWNFLAGS --------
-0 : Entity appears in all game modes.
+!(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
 1024 : Entity doesnt appear in Hard mode.
