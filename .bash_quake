@@ -247,7 +247,7 @@ qvar()
   echo " sounds, models"
   echo " rmcom[a] - remove [all] comments - | (pipe) into this"
   echo " qfc {filespec} - list file with no comments"
-  echo " qctac - fteqcc and search \"assignment in coditional\""
+  echo " qctac - fteqcc and search \"assignment in conditional\""
   echo " defsed {filespec} - modify into #define constant"
   echo " const [define|#] [-c|cnt] {grep pattern} - attempt list all constants"
   echo " count [-n|num] [-f|files] {filespec} - count numerics in source"
