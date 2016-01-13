@@ -30,11 +30,29 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+1.12.16
+
+WIP: qc++
+DONE: NPRquake win compile & run -- fix from rothrin - was obj compile option (from asm files)
+from
+     <Outputs Condition="'$(Configuration)|$(Platform)'=='GL Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
+to
+     <Outputs Condition="'$(Configuration)|$(Platform)'=='GL Release|Win32'">$(OUTDIR)%(Filename).obj;%(Outputs)</Outputs>
+-- it crashes
+-- BEX apparently
+-- its the gl_extension issue
+WIP: pk2.0 -> git
+
 1.11.16
 
 WIP: qc++
 DONE: engine bot support - check .ishuman, & block the stuff frikbot blocks at the engine level
 DONE: frikbot port qc++
+DONE: a modest promo video for coop bots - uploaded
+-- compile testing & stats - turning _everything_ off
+FIXED: wont compile without local_ent - misc.qc
+WIP: processing videos into more compressed format for uploads
+WIP: pk2.0 -> git
 
 1.10.16
 
@@ -54,6 +72,7 @@ CHECK: into render code for npr - add directly to maphack & drop the library stu
 DONE: HD pack / maphack intergration -- ver 1
 DONE: updated qone.map with ENTREPLACE flag for HD .ent replacement files (we hope)
 - works for the most part with quake_hack - qone has bad fps
+WIP: pk2.0 -> git
 
 1.8.16
 
