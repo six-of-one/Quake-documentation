@@ -30,6 +30,15 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+1.13.16
+
+WIP: qc++
+FIX: server crash when callfunction has invalid ref
+TWEAK: update so compiler.qc lists all modules active during compile if messages enabled
+ISSUES: compiler.qc - nondp blocks opgrade
+FIXED: sv_cmd with {null} argument can break qc code...somehow 
+WIP: port viswep
+
 1.12.16
 
 WIP: qc++
@@ -42,6 +51,8 @@ to
 -- BEX apparently
 -- its the gl_extension issue
 WIP: pk2.0 -> git
+WIP: dpext research
+DONE: frikbot remote admin
 
 1.11.16
 
