@@ -30,6 +30,14 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+1.14.16
+
+WIP: qc++
+DONE: port viswep - base 8 weps working
+DONE: setup private git for prop modules
+DONE: maphack git caught up
+TWEAK: vw_player.mdl for viswep
+
 1.13.16
 
 WIP: qc++
