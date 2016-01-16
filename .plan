@@ -6,6 +6,11 @@ quakec#cataboligne#org				(replace #'s with @ and then . )
 
 current project(s):
 
+chaos mod Archon - mark III code base port to qc 2.0:
+- maphack
+- frikbot
+- viswep
+
 quake hack
 
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
@@ -20,15 +25,24 @@ multi phases need to - id maphacks in their phase, set biomes in their phase
 HOLD hacks can _still_ overlap each other with no way to delete
 - need a recursive change of the mh from a hold instance
 
--monsters can move to a diff hack (in case of hide or delete)
-
-
 qone
 
 release followup:
 
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
+
+1.15.16
+
+WIP: qc++
+TEST: item override works
+FIXED: monsters that move around need to update their mh to the nearest
+-monsters can move to a diff hack (in case of hide or delete)
+monsters (along with any other free movers) should be handled seperately from the hacks
+-- monsters are now updated seperately using distance to nearest player to the monster
+TWEAK: all sub ents are checked against every player position now, during the hide_hack think
+- optional code (not compiled) for going back to the old behavior during dm
+DONE: override items / monsters with existing spawn funcs
 
 1.14.16
 
@@ -37,6 +51,8 @@ DONE: port viswep - base 8 weps working
 DONE: setup private git for prop modules
 DONE: maphack git caught up
 TWEAK: vw_player.mdl for viswep
+WIP: item override deal -- initial code done
+- load an item with no spawn function in code !
 
 1.13.16
 
