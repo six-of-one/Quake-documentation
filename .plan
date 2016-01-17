@@ -32,6 +32,21 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+1.16.16
+
+WIP: qc++
+RESEARCH: artifact shells for all morphs -- try darkplaces trick in place of this - see extensions - colormod, glowmod
+SPEC: update for weapon cycle loop, translations, dynamic spawns, new ents
+- using override script
+- need a live update func that uses cvars __lup_{seq#|cfg_name}_{classvn} to indicate which ents to change
+- call prespawn code to do update after running next script -- think call fn, run cfg, next think call does update
+- copy worldspawn (or so, mh root etc.) into loopcyc ent -- cfg script will update this ent as well with next script to call, timing
+- check for dyn spawn script __dyn_{classname} - if not found use def __{classname} spec
+- mask for new ents - spec what to set on touch (all ents), what to change on timeout (artifact), etc
+- could have time dependent or achievemnt update scripts, progressive ents, more powerful weps, morph cube updates, etc
+- also handle genre stuff
+WIP: compile stats chart
+
 1.15.16
 
 WIP: qc++
@@ -43,6 +58,7 @@ monsters (along with any other free movers) should be handled seperately from th
 TWEAK: all sub ents are checked against every player position now, during the hide_hack think
 - optional code (not compiled) for going back to the old behavior during dm
 DONE: override items / monsters with existing spawn funcs
+WIP: compile stats chart
 
 1.14.16
 
