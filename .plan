@@ -32,9 +32,13 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+1.17.16
+
+WIP: qc 2.0
+
 1.16.16
 
-WIP: qc++
+WIP: qc 2.0
 RESEARCH: artifact shells for all morphs -- try darkplaces trick in place of this - see extensions - colormod, glowmod
 SPEC: update for weapon cycle loop, translations, dynamic spawns, new ents
 - using override script
@@ -46,10 +50,14 @@ SPEC: update for weapon cycle loop, translations, dynamic spawns, new ents
 - could have time dependent or achievemnt update scripts, progressive ents, more powerful weps, morph cube updates, etc
 - also handle genre stuff
 WIP: compile stats chart
+FIXED: issue where invis, fire shotgun or ssg & it keeps twiddling muzzle flash
+- frameset loops & doesnt exit for sg, ssg when invisible
+- .frame is not updating correctly when invisible
+-- was this in invisible run code - client.qc, CheckPowerups: self.frame = 0; 
 
 1.15.16
 
-WIP: qc++
+WIP: qc 2.0
 TEST: item override works
 FIXED: monsters that move around need to update their mh to the nearest
 -monsters can move to a diff hack (in case of hide or delete)
@@ -62,7 +70,7 @@ WIP: compile stats chart
 
 1.14.16
 
-WIP: qc++
+WIP: qc 2.0
 DONE: port viswep - base 8 weps working
 DONE: setup private git for prop modules
 DONE: maphack git caught up
@@ -72,7 +80,7 @@ WIP: item override deal -- initial code done
 
 1.13.16
 
-WIP: qc++
+WIP: qc 2.0
 FIX: server crash when callfunction has invalid ref
 TWEAK: update so compiler.qc lists all modules active during compile if messages enabled
 ISSUES: compiler.qc - nondp blocks opgrade
