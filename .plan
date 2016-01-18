@@ -35,6 +35,8 @@ play through (quake HD) / promo video - e1 at least
 1.17.16
 
 WIP: qc 2.0
+WIP: pk2.0 -> git
+WIP: overload cfg for archon items
 
 1.16.16
 
@@ -54,6 +56,7 @@ FIXED: issue where invis, fire shotgun or ssg & it keeps twiddling muzzle flash
 - frameset loops & doesnt exit for sg, ssg when invisible
 - .frame is not updating correctly when invisible
 -- was this in invisible run code - client.qc, CheckPowerups: self.frame = 0; 
+WIP: pk2.0 -> git
 
 1.15.16
 
@@ -67,6 +70,7 @@ TWEAK: all sub ents are checked against every player position now, during the hi
 - optional code (not compiled) for going back to the old behavior during dm
 DONE: override items / monsters with existing spawn funcs
 WIP: compile stats chart
+WIP: pk2.0 -> git
 
 1.14.16
 
@@ -77,6 +81,7 @@ DONE: maphack git caught up
 TWEAK: vw_player.mdl for viswep
 WIP: item override deal -- initial code done
 - load an item with no spawn function in code !
+WIP: pk2.0 -> git
 
 1.13.16
 
@@ -86,6 +91,7 @@ TWEAK: update so compiler.qc lists all modules active during compile if messages
 ISSUES: compiler.qc - nondp blocks opgrade
 FIXED: sv_cmd with {null} argument can break qc code...somehow 
 WIP: port viswep
+WIP: pk2.0 -> git
 
 1.12.16
 
@@ -132,6 +138,7 @@ DONE: HD pack / maphack intergration -- ver 1
 DONE: updated qone.map with ENTREPLACE flag for HD .ent replacement files (we hope)
 - works for the most part with quake_hack - qone has bad fps
 WIP: pk2.0 -> git
+
 
 1.8.16
 
