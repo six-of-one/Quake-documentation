@@ -33,6 +33,19 @@ release followup:
 play through (quake HD) / promo video - e1 at least
 -- look for oddities
 
+svvm_cmds.c
+//									if (developer.integer > 1)  // FIX: restore
+										Con_Printf("* WriteDest - blocked sending to a non-human [ %i ] \n", entnum);
+
+
+other ideas
+
+pattern match override & copy - check before main copy
+
+1.23.16
+
+WIP: qc 2.0
+
 1.22.16
 
 WIP: qc 2.0
