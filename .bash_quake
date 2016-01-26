@@ -294,10 +294,15 @@ alias .void='fnevar'
 alias .vsfe='allevar'
 
 # literals
+
+# strings, unique strings
 alias litstr='qrc -v precache|grep "\"\{1\}[^\"]*\"\{1\}"'
+alias ulits='qrc -v precache|grep -oh "\"\{1\}[^\"]*\"\{1\}"|sort -u'
+alias lslits=litstr
+
+# vectors, numbers
 alias litvec="qrc \"'\{1\}[^']*'\{1\}\""
 alias litn='qrnum'
-alias lslits=litstr
 
 # super short cuts - may not want these, comment to block
 alias .f='flevar'
