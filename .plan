@@ -42,42 +42,48 @@ other ideas
 
 pattern match override & copy - check before main copy
 
+1.25.16
+
+WIP: qc 2.0 <- archon
+
 1.24.16
 
-WIP: qc 2.0
+WIP: qc 2.0 <- archon
 WIP: wep sys 6 extras build
 DONE: _axe, _shotgun
 DONE: genwdq branch off archon (final release) -> git
+DONE: repack of visage extras as vsg.pk3
+WIP: pk repack
 
 1.23.16
 
-WIP: qc 2.0
+WIP: qc 2.0 <- archon
 WIP: wep sys 6 extras build
 DONE: func_drip on test map
 
 1.22.16
 
-WIP: qc 2.0
+WIP: qc 2.0 <- archon
 DONE: {d,w}decor overload cfg
 
 1.21.16
 
-WIP: qc 2.0
+WIP: qc 2.0 <- archon
 WIP: x items (wep sys 6) - touch fn
 
 1.20.16
 
-Porter
+Porter died
 No dev
 
 1.19.16
 
-WIP: qc 2.0
+WIP: qc 2.0 <- archon
 WIP: x items (wep sys 6) -- gen load up with masks
 
 1.18.16
 
-WIP: qc 2.0
+WIP: qc 2.0 <- archon
 DONE: archon -> git
 DONE: moved entity stuff from maphack to x_ent
 WIP: overload cfg for archon items
@@ -85,7 +91,7 @@ WIP: x items (wep sys 6)
 
 1.17.16
 
-WIP: qc 2.0
+WIP: qc 2.0 <- archon
 DONE: pk2.0 -> git
 WIP: archon -> git
 WIP: overload cfg for archon items

@@ -293,10 +293,11 @@ alias .entity='nevar'
 alias .void='fnevar'
 alias .vsfe='allevar'
 
-# litterals
-alias litstr='qrc \".*\"|grep -v precache|grep  \".*\"'
-alias litvec="qrc \'.*\'"
+# literals
+alias litstr='qrc -v precache|grep "\"\{1\}[^\"]*\"\{1\}"'
+alias litvec="qrc \"'\{1\}[^']*'\{1\}\""
 alias litn='qrnum'
+alias lslits=litstr
 
 # super short cuts - may not want these, comment to block
 alias .f='flevar'
