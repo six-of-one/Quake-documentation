@@ -45,6 +45,7 @@ pattern match override & copy - check before main copy
 1.25.16
 
 WIP: qc 2.0 <- archon
+TWEAK: improved grep for string litteral search - no longer includes chars outside of strings
 
 1.24.16
 
