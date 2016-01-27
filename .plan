@@ -41,11 +41,16 @@ svvm_cmds.c
 other ideas
 
 pattern match override & copy - check before main copy
+1.27.16
+
+WIP: qc 2.0 <- archon
+IMP: default set for __ override
 
 1.25.16
 
 WIP: qc 2.0 <- archon
 TWEAK: improved grep for string litteral search - no longer includes chars outside of strings
+WIP: archon ents
 
 1.24.16
 
