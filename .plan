@@ -41,6 +41,12 @@ svvm_cmds.c
 other ideas
 
 pattern match override & copy - check before main copy
+
+1.28.16
+
+WIP: qc 2.0 <- archon
+IMP: dynamic items cfg
+
 1.27.16
 
 WIP: qc 2.0 <- archon
