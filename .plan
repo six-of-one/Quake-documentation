@@ -45,7 +45,8 @@ pattern match override & copy - check before main copy
 1.28.16
 
 WIP: qc 2.0 <- archon
-IMP: dynamic items cfg
+IMP: dynamic items cfg, spawnflag 1 for big ammo
+WIP: archon ents
 
 1.27.16
 
