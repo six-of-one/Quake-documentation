@@ -42,10 +42,21 @@ other ideas
 
 pattern match override & copy - check before main copy
 
+2.2.16
+
+WIP: qc 2.0 <- archon
+
+2.1.16
+
+WIP: qc 2.0 <- archon
+tweak for w_key - skins dont match spawnflag select
+WIP: alpha tran code to cfg
+
 1.31.16
 
 WIP: qc 2.0 <- archon
 WIP: reload cfg
+-- spec for live reload now stated
 
 1.29.16
 
