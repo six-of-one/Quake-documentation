@@ -1323,11 +1323,14 @@ Written by Matt Houser
 --------  PK  --------
 	func_drip
 	Written by Matt Houser
+	016.1.25 - Cataboligne - add acid damage
 
 	"style" "#"	- not implemented yet
 	"sounds" "#"	- not implemented yet
 	"mean" "#" 	- Mean time between drips (default is 5)
 	"stdev" "#" 	- Variation around the mean time (default is 0)
+	"dmg" "#"		- acid drop damage -- [ 1 - 4 ] suggested  (default 0)
+	"noise3"	"{snd}"	- hiss sound when acid drop hits
 */
 
 
@@ -2271,6 +2274,10 @@ place holder lists all half life classnames - not a useable entity
 --------  DOOM  --------
 */
 
+/*QUAKED d_inert_cellbox (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
 
 /*QUAKED d_barrel (0 .8 0) (-16 -16 0) (16 16 32)
 --------  DOOM  --------
@@ -2317,6 +2324,35 @@ place holder lists all half life classnames - not a useable entity
 */
 
 
+/*QUAKED d_weapon_flamer (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+/*QUAKED d_ammo_gas (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+
+/*QUAKED d_weapon_spray (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+
+/*QUAKED d_weapon_proj (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+
+/*QUAKED d_weapon_claw (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+
+/*QUAKED d_weapon_unmaker (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+
 /*QUAKED d_art_berserker (0 .8 0) (-16 -16 0) (16 16 32)
 --------  DOOM  --------
 */
@@ -2343,6 +2379,24 @@ place holder lists all half life classnames - not a useable entity
 
 
 /*QUAKED d_art_radsuit (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+
+/*QUAKED d_art_speed (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+/*QUAKED d_art_vampire (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+
+/*QUAKED d_art_book (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+/*QUAKED d_art_skull (0 .8 0) (-16 -16 0) (16 16 32)
 --------  DOOM  --------
 */
 
@@ -3069,7 +3123,7 @@ place holder lists all doom classnames - not a useable entity
 */
 
 
-/*QUAKED w_ammo_clip (0 .8 0) (-16 -16 0) (16 16 32)
+/*QUAKED w_ammo_clip (0 .8 0) (-16 -16 -16) (16 16 16)
 --------  WOLF  --------
 */
 
