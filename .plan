@@ -42,6 +42,13 @@ other ideas
 
 pattern match override & copy - check before main copy
 
+tdo: missing alpha item models, spawn cfg
+
+2.3.16
+
+WIP: qc 2.0 <- archon
+DONE: missing item cfg -- still need some models & code
+FIXED: x_touch had bugs
 
 2.2.16
 
