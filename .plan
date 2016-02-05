@@ -42,7 +42,15 @@ other ideas
 
 pattern match override & copy - check before main copy
 
-tdo: missing alpha item models, spawn cfg
+tdo: missing alpha item models
+
+2.4.16
+
+WIP: qc 2.0 <- archon
+FIXED: null th_die could crash server in killed()
+-- better solution: put SUB_Null in all .void every spawn() call
+IMP: cvar_fields sets all .void to SUB_Null -- this will fail non fn tests
+IMP: wad == "pwep" so touch code knows to run wep stuff -- pwep is the packwep deal from deadthrew
 
 2.3.16
 
