@@ -42,8 +42,20 @@ other ideas
 
 pattern match override & copy - check before main copy
 
-tdo: missing alpha item models
+idea: #ifndef x_ents - call cfg to default to q1 xlate
+tdo: missing alpha item models, code
+tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents
+fix: pack type for max ammo
+fix: selector mgs chgs - using nails for test
+fix: w mg -> w chg
+fix: v_* update wrong with eweapon changes to std wep
 TDO: cancel code on touch
+
+2.7.16
+
+WIP: qc 2.0 <- archon
+WIP:  packs, artifacts, keys
+DONE: ammo (mostly), wep cfgs -- still need wep qc
 
 2.6.16
 
