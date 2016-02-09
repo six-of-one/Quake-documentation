@@ -51,6 +51,12 @@ fix: w mg -> w chg
 fix: v_* update wrong with eweapon changes to std wep
 TDO: cancel code on touch
 
+2.8.16
+
+WIP: qc 2.0 <- archon
+WIP:  packs, artifacts, keys
+FIX: double entity fields
+
 2.7.16
 
 WIP: qc 2.0 <- archon
