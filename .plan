@@ -42,6 +42,7 @@ other ideas
 
 pattern match override & copy - check before main copy
 
+idea: DM modes - everything lasts 30 secs, armor lasts 30 secs, infinite ammo, all melee combat
 idea: #ifndef x_ents - call cfg to default to q1 xlate
 tdo: missing alpha item models, code
 tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents
@@ -50,6 +51,14 @@ fix: selector mgs chgs - using nails for test
 fix: w mg -> w chg
 fix: v_* update wrong with eweapon changes to std wep
 TDO: cancel code on touch
+FIX: bullet use, firing
+FIX: double entity fields -- save 1st instance of field value, dont update wrong value
+TDO: countdown & remove timer
+
+2.9.16
+
+WIP: qc 2.0 <- archon
+FIX: double entity fields
 
 2.8.16
 
