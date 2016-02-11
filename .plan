@@ -55,6 +55,13 @@ FIX: bullet use, firing
 FIX: double entity fields -- save 1st instance of field value, dont update wrong value
 TDO: countdown & remove timer
 
+2.10.16
+
+WIP: qc 2.0 <- archon
+WIP: rest of x_firecode
+DONE: flamer -- slime_flare is complex, perhaps needlessly
+WIP:
+
 2.9.16
 
 WIP: qc 2.0 <- archon
