@@ -52,20 +52,25 @@ fix: w mg -> w chg
 fix: v_* update wrong with eweapon changes to std wep
 TDO: cancel code on touch
 FIX: bullet use, firing
-FIX: double entity fields -- save 1st instance of field value, dont update wrong value
 TDO: countdown & remove timer
+
+2.11.16
+
+WIP: qc 2.0 <- archon
+WIP: fail touch
 
 2.10.16
 
 WIP: qc 2.0 <- archon
 WIP: rest of x_firecode
 DONE: flamer -- slime_flare is complex, perhaps needlessly
-WIP:
-
+WIP: fail touch -- note: copyentity issue poss chaos mod vector
+ 
 2.9.16
 
 WIP: qc 2.0 <- archon
-FIX: double entity fields
+FIXED: double entity fields
+WIP: rest of x_firecode
 
 2.8.16
 
