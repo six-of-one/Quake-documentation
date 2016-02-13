@@ -46,13 +46,21 @@ idea: DM modes - everything lasts 30 secs, armor lasts 30 secs, infinite ammo, a
 idea: #ifndef x_ents - call cfg to default to q1 xlate
 tdo: missing alpha item models, code
 tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents
-fix: pack type for max ammo
-fix: selector mgs chgs - using nails for test
-fix: w mg -> w chg
 fix: v_* update wrong with eweapon changes to std wep
-TDO: cancel code on touch
+fix: selector mgs chgs - using nails for test
 FIX: bullet use, firing
 TDO: countdown & remove timer
+TDO: rest of x_firecode
+
+2.12.16
+
+WIP: qc 2.0 <- archon
+FIXED: mask logic - all maximums
+WIP: rest of x_firecode
+DONE: addstats for hud
+WIP: pak set for Archon mk III
+???: w mg -> w chg -- doesnt seem to happen now
+DONE: W_BestWeapon by .distance set in cfg files
 
 2.11.16
 
