@@ -52,6 +52,14 @@ FIX: bullet use, firing
 TDO: countdown & remove timer
 TDO: rest of x_firecode
 
+2.13.16
+
+WIP: qc 2.0 <- archon
+WIP: rest of x_firecode
+FIXED: bullet use, firing -- we hope so
+FIXED: selector mgs chgs - using nails for test
+FIXED: v_* update wrong with eweapon changes to std wep
+
 2.12.16
 
 WIP: qc 2.0 <- archon
