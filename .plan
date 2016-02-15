@@ -46,11 +46,17 @@ idea: DM modes - everything lasts 30 secs, armor lasts 30 secs, infinite ammo, a
 idea: #ifndef x_ents - call cfg to default to q1 xlate
 tdo: missing alpha item models, code
 tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents
-fix: v_* update wrong with eweapon changes to std wep
-fix: selector mgs chgs - using nails for test
-FIX: bullet use, firing
+TDO: swap weps should "throw" the deselecting wep - can be touched
 TDO: countdown & remove timer
 TDO: rest of x_firecode
+FIX: once auto switch to fists, collecting bullets doesnt switch back
+
+2.14.16
+
+WIP: qc 2.0 <- archon
+WIP: rest of x_firecode
+DONE: pistols / fists
+DONE: plasma weps
 
 2.13.16
 
