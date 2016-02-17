@@ -51,6 +51,13 @@ TDO: countdown & remove timer
 TDO: rest of x_firecode
 FIX: once auto switch to fists, collecting bullets doesnt switch back
 
+2.16.16
+
+WIP: qc 2.0 <- archon
+WIP: rest of x_firecode
+DONE: hyper gun
+DONE: chaingun 2
+
 2.15.16
 
 WIP: qc 2.0 <- archon
@@ -62,7 +69,7 @@ DONE: te_gunshot adjust
 REVOKE: zerocase adjust -- where "if ( {string var} != string_null )" was set to "if ( {string var} ) " --- it failed!
 FIXED: FL_MELEE in player frames - w pistol was wrong
 FIXED: inf ammo weps were not getting touch_go
-NOTE: msk_u can NOT be used with weapons
+NOTE: msk_u can NOT be used with weapons because of select switch
 
 2.14.16
 
