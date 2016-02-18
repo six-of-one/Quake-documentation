@@ -48,15 +48,29 @@ tdo: missing alpha item models, code
 tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents
 TDO: swap weps should "throw" the deselecting wep - can be touched
 TDO: countdown & remove timer
-TDO: rest of x_firecode
 FIX: once auto switch to fists, collecting bullets doesnt switch back
+ISSUE: q3 plasma gun options with 0 ammo
+TDO: pk weps into wsys6
+TDO: hip / rogue weps into wsys6
+WIP: expand spawnflag loop  -- TEST this
+FIX: swap wep when swapping held wep - update vmodel
+FIX: inconsistency with vmodel when getting x_weps
+
+---  START of .plan daily
+
+2.17.16
+
+WIP: qc 2.0 <- archon
+DONE: quantum -- first cut
+WIP: railgun
 
 2.16.16
 
 WIP: qc 2.0 <- archon
-WIP: rest of x_firecode
+DONE: rest of x_firecode
 DONE: hyper gun
 DONE: chaingun 2
+DONE: bfg
 
 2.15.16
 
