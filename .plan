@@ -58,6 +58,13 @@ FIX: inconsistency with vmodel when getting x_weps
 
 ---  START of .plan daily
 
+2.18.16
+
+WIP: qc 2.0 <- archon
+DONE: hooks
+CHECKED: dbfg traces on impact -- working, but fail to target barrels properly, perhaps bc of solid setting
+FIXED: bfg traces & barrels
+
 2.17.16
 
 WIP: qc 2.0 <- archon
@@ -71,6 +78,7 @@ DONE: rest of x_firecode
 DONE: hyper gun
 DONE: chaingun 2
 DONE: bfg
+WIP: expand spawnflag loop
 
 2.15.16
 
