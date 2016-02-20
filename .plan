@@ -45,18 +45,26 @@ pattern match override & copy - check before main copy
 idea: DM modes - everything lasts 30 secs, armor lasts 30 secs, infinite ammo, all melee combat
 idea: #ifndef x_ents - call cfg to default to q1 xlate
 tdo: missing alpha item models, code
-tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents
+tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents -- use mcode & set __mcode{n}_vwicon "{model}"
 TDO: swap weps should "throw" the deselecting wep - can be touched
 TDO: countdown & remove timer
 FIX: once auto switch to fists, collecting bullets doesnt switch back
-ISSUE: q3 plasma gun options with 0 ammo
-TDO: pk weps into wsys6
+ISSUE: q3 plasma gun, wchg  select / switch with 0 ammo
 TDO: hip / rogue weps into wsys6
 WIP: expand spawnflag loop  -- TEST this
 FIX: swap wep when swapping held wep - update vmodel
 FIX: inconsistency with vmodel when getting x_weps
+FIX: no te_gunshot on barrels
 
 ---  START of .plan daily
+
+2.19.16
+
+WIP: qc 2.0 <- archon
+WIP: pk weps into wsys6 -- turret
+DONE: select fists w/ dpistol
+FIXED: fists used a te_gunshot
+WIP: select / fire cary weps as eweapon
 
 2.18.16
 
