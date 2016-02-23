@@ -64,6 +64,9 @@ WIP: qc 2.0 <- archon
 WIP: pk weps into wsys6 -- vwepent
 WIP: rune server
 
+NOTE: on if () code minimize -- you can NOT have "if (noise)" swap for "if (noise != string_null)"
+- it does work for void, entity and float
+
 2.21.16
 
 WIP: qc 2.0 <- archon
