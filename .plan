@@ -58,11 +58,27 @@ FIX: no te_gunshot on barrels
 
 ---  START of .plan daily
 
+2.24.16
+
+WIP: qc 2.0 <- archon
+WIP: pk weps into wsys6 -- rest of qc
+FIXED: distances for weps - see vload -- axe / shotgun have an issue
+
+2.23.16
+
+WIP: qc 2.0 <- archon
+DONE: firecary will have to adjust this for curr selected pkitem
+FIXED: melee / range weps that dont holster (hooks, deepsleep) -- all vv_draw - vv_holster disable test was faulty
+WIP: select / fire cary weps as eweapon
+DONE: vw_seq data port to cvar / cfg file
+DONE: proper viswep with pk items
+
 2.22.16
 
 WIP: qc 2.0 <- archon
 WIP: pk weps into wsys6 -- vwepent
-WIP: rune server
+WIP: rune server prep
+WIP: select / fire cary weps as eweapon
 
 NOTE: on if () code minimize -- you can NOT have "if (noise)" swap for "if (noise != string_null)"
 - it does work for void, entity and float
@@ -72,6 +88,7 @@ NOTE: on if () code minimize -- you can NOT have "if (noise)" swap for "if (nois
 WIP: qc 2.0 <- archon
 WIP: pk weps into wsys6 -- turret
 WIP: rune server prep
+WIP: select / fire cary weps as eweapon
 
 2.19.16
 
