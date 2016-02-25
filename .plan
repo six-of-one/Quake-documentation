@@ -42,19 +42,19 @@ other ideas
 
 pattern match override & copy - check before main copy
 
+idea: turn off auto wep switch - make all distance = 1
 idea: DM modes - everything lasts 30 secs, armor lasts 30 secs, infinite ammo, all melee combat
 idea: #ifndef x_ents - call cfg to default to q1 xlate
 tdo: missing alpha item models, code
 tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents -- use mcode & set __mcode{n}_vwicon "{model}"
 TDO: swap weps should "throw" the deselecting wep - can be touched
 TDO: countdown & remove timer
-FIX: once auto switch to fists, collecting bullets doesnt switch back
+FIX: once auto switch to fists, collecting bullets doesnt switch back -- test again
 ISSUE: q3 plasma gun, wchg  select / switch with 0 ammo
 TDO: hip / rogue weps into wsys6
-WIP: expand spawnflag loop  -- TEST this
-FIX: swap wep when swapping held wep - update vmodel
-FIX: inconsistency with vmodel when getting x_weps
+WIP: expand spawnflag loop  -- done, TEST this
 FIX: no te_gunshot on barrels
+FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
@@ -63,6 +63,12 @@ FIX: no te_gunshot on barrels
 WIP: qc 2.0 <- archon
 WIP: pk weps into wsys6 -- rest of qc
 FIXED: distances for weps - see vload -- axe / shotgun have an issue
+FIXED: bug where eweapon was assigned to a vwepent instead - messed up v_shot.mdl
+DONE: drop vwepent when throwing last item (check self.impulse ?) -- final fix was eweapon assign when settting W_BestWeapon
+NIXED: picking up flamer, hum starts, even if not switching to -- seems to not happen now
+FIXED: inconsistency with vmodel when getting x_weps sometimes -- got hyper - it set v_light
+- assign eweapon in x_wep_touch if getting wep
+FXIED: swap wep when swapping held wep - update vmodel
 
 2.23.16
 
@@ -72,6 +78,7 @@ FIXED: melee / range weps that dont holster (hooks, deepsleep) -- all vv_draw - 
 WIP: select / fire cary weps as eweapon
 DONE: vw_seq data port to cvar / cfg file
 DONE: proper viswep with pk items
+DONE: fire from frames, call .use
 
 2.22.16
 
