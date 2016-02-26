@@ -58,6 +58,12 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
+2.25.16
+
+WIP: qc 2.0 <- archon
+WIP: pk weps into wsys6 -- rest of qc
+DONE: beartrap, copb, all of item cfg
+
 2.24.16
 
 WIP: qc 2.0 <- archon
