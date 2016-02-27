@@ -58,6 +58,14 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
+2.26.16
+
+WIP: qc 2.0 <- archon
+WIP: pk weps into wsys6 -- rest of qc
+FIXED: plasma gun 3 - cfg ammo type wrong
+FIXED: no te_gunshot on exploder barrels -- was in TraceAttack
+DONE: recode on spawnblood as well to not bloody world, doors & such
+
 2.25.16
 
 WIP: qc 2.0 <- archon
