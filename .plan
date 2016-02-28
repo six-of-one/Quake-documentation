@@ -50,13 +50,21 @@ tdo: add hud icon select to cfg for xweps - figure out how to have that detectab
 TDO: swap weps should "throw" the deselecting wep - can be touched
 TDO: countdown & remove timer
 FIX: once auto switch to fists, collecting bullets doesnt switch back -- test again
-ISSUE: q3 plasma gun, wchg  select / switch with 0 ammo
+TDO: update clear cfg for new stuff
 TDO: hip / rogue weps into wsys6
 WIP: expand spawnflag loop  -- done, TEST this
-FIX: no te_gunshot on barrels
 FIX: weaphum continues past new wep select for 1/2 sec
+- handle explodeshells - still need to fix issue w/ axe level & currentitem
 
 ---  START of .plan daily
+
+2.27.16
+
+WIP: qc 2.0 <- archon
+WIP: pk items / weps into wsys6 -- rest of qc
+DONE: pk sounds
+FIXED: throwing an item & switch back to axe didnt display vw_axe
+DONE: sparks, pk lightning effect (light.qc)
 
 2.26.16
 
