@@ -58,6 +58,12 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
+2.29.16
+
+WIP: qc 2.0 <- archon
+WIP: pk items / weps into wsys6 -- rest of qc
+DONE: damage skins
+
 2.28.16
 
 WIP: qc 2.0 <- archon
