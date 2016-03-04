@@ -58,11 +58,20 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
+3.3.16
+
+WIP: qc 2.0 <- archon
+WIP: pk items / weps into wsys6 -- rest of qc
+DONE: air cannon
+FIXED: pk_item range weps & vw animations
+
 3.2.16
 
 WIP: qc 2.0 <- archon
 WIP: pk items / weps into wsys6 -- rest of qc
 DONE: pulse nailgun -- can not swap with std nailgun because of same ammo type
+NIXED: once auto switch to fists, collecting bullets doesnt switch back
+-- mk II code did not autoswitch back, likely doom did not either
 
 2.29.16
 
@@ -76,7 +85,9 @@ WIP: qc 2.0 <- archon
 WIP: pk items / weps into wsys6 -- rest of qc
 DONE: reuse_field code option
 TWEAK: BT_BUFFER deal
-WIP: tomb -- restored original frame set - been wrong this whole time
+DONE: tomb -- restored original frame set - been wrong this whole time
+DONE: ego -- needs tested
+DONE: zombie decor
 
 2.27.16
 
