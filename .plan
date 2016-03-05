@@ -58,6 +58,13 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
+3.4.16
+
+WIP: qc 2.0 <- archon
+WIP: pk items / weps into wsys6 -- rest of qc
+DONE: gravity well
+DONE: grap
+
 3.3.16
 
 WIP: qc 2.0 <- archon
