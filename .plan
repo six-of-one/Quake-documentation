@@ -58,6 +58,26 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
+3.9.16
+
+WIP: qc 2.0 <- pk 3.0
+
+3.8.16
+
+WIP: qc 2.0 <- pk 3.0
+
+3.7.16
+
+WIP: qc 2.0 <- pk 3.0
+DONE: chain thunderbolt -- hot prongs fix
+TWEAK: option of not compiling painkeep -- likely to repeat a few times as I test the compile sets
+FIXED: fire_cary doesnt clear v_* models -- my still have an issue when going firecary to range wep
+
+3.6.16
+
+WIP: qc 2.0 <- pk 3.0
+WIP: chain thunderbolt, hub
+
 3.5.16
 
 WIP: qc 2.0 <- archon
