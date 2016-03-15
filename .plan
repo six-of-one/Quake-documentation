@@ -58,9 +58,43 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
+3.15.16
+
+WIP: qc 2.0 <- pk 3.0
+WIP: rune server mk2 port -- still need inv. control code
+
+3.14.16
+
+WIP: qc 2.0 <- pk 3.0
+WIP: rune server mk2 port -- still need inv. control code
+
+3.13.16
+
+WIP: qc 2.0 <- pk 3.0
+
+3.12.16
+
+WIP: qc 2.0 <- pk 3.0
+UPDATE: vw ? (what it says in gc)
+WIP: rune server mk2 port
+
+3.11.16
+
+WIP: qc 2.0 <- pk 3.0
+UPDATE: hub ops, vars
+
+3.10.16
+
+WIP: qc 2.0 <- pk 3.0
+DONE: hub -- needs revised, ent field adjust, centerprint deals, client.qc, painkeep.qc parts
+- removing most of custom hub map code - all hubs will run like normal maps now
+
 3.9.16
 
 WIP: qc 2.0 <- pk 3.0
+WIP: hub -- needs revised, ent field adjust, centerprint deals, client.qc, painkeep.qc parts
+WIP: motd -- needs revised, centerprint, message etc (ref map name from HD pack)
+FIXED: tomb, ego set v_axe.mdl only -- was ammo mask: __msk_progs/vw_pkp_tomb.mdl	 being set wrong
 
 3.8.16
 
