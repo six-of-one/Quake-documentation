@@ -55,8 +55,14 @@ TDO: hip / rogue weps into wsys6
 WIP: expand spawnflag loop  -- done, TEST this
 FIX: weaphum continues past new wep select for 1/2 sec
 - handle explodeshells - still need to fix issue w/ axe level & currentitem
+- idea to store pk_item in every vweapon for the slot - test vs pk_currentitem of ind. weps, will not set self.pk_currentitem
 
 ---  START of .plan daily
+
+3.16.16
+
+WIP: qc 2.0 <- pk 3.0
+WIP: rune server mk2 port -- still need inv. control code
 
 3.15.16
 
