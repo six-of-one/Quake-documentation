@@ -42,22 +42,66 @@ other ideas
 
 pattern match override & copy - check before main copy
 
-idea: turn off auto wep switch - make all distance = 1
+idea: turn off auto wep switch by making all distance = 1
 idea: DM modes - everything lasts 30 secs, armor lasts 30 secs, infinite ammo, all melee combat
 idea: #ifndef x_ents - call cfg to default to q1 xlate
 tdo: missing alpha item models, code
 tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents -- use mcode & set __mcode{n}_vwicon "{model}"
+TDO: put in rest of score_rel & player_count code
 TDO: swap weps should "throw" the deselecting wep - can be touched
 TDO: countdown & remove timer
-FIX: once auto switch to fists, collecting bullets doesnt switch back -- test again
-TDO: update clear cfg for new stuff
-TDO: hip / rogue weps into wsys6
-WIP: expand spawnflag loop  -- done, TEST this
+TDO: rest of hip / rogue weps into whpr.cfg
+DONE: expand spawnflag loop  -- done, TEST this
 FIX: weaphum continues past new wep select for 1/2 sec
 - handle explodeshells - still need to fix issue w/ axe level & currentitem
 - idea to store pk_item in every vweapon for the slot - test vs pk_currentitem of ind. weps, will not set self.pk_currentitem
 
 ---  START of .plan daily
+8.1.16
+
+WIP: looper stuff, dynamic spawns
+
+7.31.16
+
+prototype a way to load looping admin commands
+- check for a func_admin{n} set of cvar & load up think ents
+- will replace: loopcyc, all translates, control module for all dynamic ents
+
+reload ents:
+1: think loop ent - checks every interval for any __{classname}_reload set to 1
+2: script launches a think ent & when complete, end of seq runs clrld.cfg
+
+
+7.30.16
+
+DONE: compiler "switch" fixes -- runes, frik_bots
+
+7.28.16
+
+DONE: update clear cfg for new stuff -- may want to bash script this update process
+
+7.27.16
+
+INFO: swap key is impulse 29 -- bind w is not working in this regard
+
+7.26.16
+
+DONE: rune server mk2 port -- initial port, this needs: admin controls, code spiffy - make it prettier
+
+7.21.16
+
+WIP: re-acquire project
+WIP: rune server mk2 port -- still need inv. control code
+- decided to dump inv. control & just do a simple item eject
+
+5.5.16
+
+WIP: re-acquire project
+
+3.31.16
+
+WIP: qc 2.0 <- pk 3.0
+WIP: rune server mk2 port -- still need inv. control code
 
 3.16.16
 
