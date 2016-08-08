@@ -57,6 +57,15 @@ FIX: weaphum continues past new wep select for 1/2 sec
 - idea to store pk_item in every vweapon for the slot - test vs pk_currentitem of ind. weps, will not set self.pk_currentitem
 
 ---  START of .plan daily
+
+8.8.16
+
+prep for q-rpg maps from q1 map source
+
+8.7.16
+
+DONE: git updates online
+
 8.1.16
 
 WIP: looper stuff, dynamic spawns
