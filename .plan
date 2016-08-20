@@ -58,6 +58,10 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
+8.19.16
+
+Release version pk2.x & pk1.2.x dont compile with fteqcc
+
 8.8.16
 
 prep for q-rpg maps from q1 map source
