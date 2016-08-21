@@ -58,6 +58,11 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 ---  START of .plan daily
 
+8.20.16
+
+FIXED: Release version pk2.x & pk1.2.x dont compile with fteqcc
+-- still have pile of warnings
+
 8.19.16
 
 Release version pk2.x & pk1.2.x dont compile with fteqcc
