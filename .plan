@@ -61,7 +61,7 @@ FIX: weaphum continues past new wep select for 1/2 sec
 
 8.21.16
 
-WIP: removing  warning: {X}  no references
+DONE: removing  warning: {X}  no references, pk_2
 
 8.20.16
 
