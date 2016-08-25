@@ -56,8 +56,19 @@ FIX: weaphum continues past new wep select for 1/2 sec
 - handle explodeshells - still need to fix issue w/ axe level & currentitem
 - idea to store pk_item in every vweapon for the slot - test vs pk_currentitem of ind. weps, will not set self.pk_currentitem
 
+
+NEEDED: 
+- spawn_x_ cvar command sets
+- rune controls
+- spawners for cubes, crates -- including cfg for rnd items
+this is replacement for dynamic spawns
+
 ---  START of .plan daily
 
+
+8.23.16
+
+FIX: -- warning: You may wish to add brackets after that ! operator
 
 8.22.16
 
