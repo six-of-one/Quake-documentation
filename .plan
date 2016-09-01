@@ -65,9 +65,14 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+9.1.16
+
+WIP: dynamic spawners
+
 8.31.16
 
 WIP: dynamic spawners
+DONE: spawn_loop code
 
 8.30.16
 
