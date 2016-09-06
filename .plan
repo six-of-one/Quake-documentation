@@ -65,10 +65,15 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+9.6.16
+
+FIXED: floaty rock bits via func_train fail -- this is an archon code update
+WIP: release pledge 12 current image pk3
 
 9.5.16
 
 FIX: rune code, eject fail
+FIX: floaty rock bits via func_train fail -- this is an archon code update
 
 9.4.16
 
