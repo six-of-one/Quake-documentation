@@ -69,6 +69,7 @@ this is replacement for dynamic spawns
 
 WIP: release pledge 12 current image zip -- mhd_w1
 - redo this with load on top of quake hack base release
+FIXED: rune toss doesnt remove bit or locate rune by player
 
 9.8.16
 
