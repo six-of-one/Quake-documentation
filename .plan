@@ -65,6 +65,12 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+9.17.16
+
+WIP: rune code in *.qc
+DONE: dp cam and view ofs deal -- tracked down to csprogs.dat
+- the original SMC HUD code is bonked as well
+
 9.16.16
 
 FIXED: runes dont bounce when tossed
