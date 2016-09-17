@@ -67,13 +67,15 @@ this is replacement for dynamic spawns
 
 9.16.16
 
-FIX: rune code, eject fail
+FIXED: runes dont bounce when tossed
 WIP: rune code in combat.qc
+DONE: weekly code snapshot for v107 - excises prop codes
+DONE: code_xents undefined and can compile pk, hip
 
 9.15.16
 
 WIP: rune code in combat.qc
-WIP: release pledge 12 code sets
+WIP: release pledge 36 code sets -- cm mkII, cm mkI
 
 9.14.16
 
