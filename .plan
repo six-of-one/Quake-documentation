@@ -65,13 +65,30 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+9.19.16
+
+FIXED: map name issue with HUD csqc -- inconsistent color setting on Sbar_DrawString
+
+
 9.18.16
 
 WIP: rune code in *.qc
+FIXED: runes not ejected on death -- plus suicide and disconnect
+ogres and knights appear on dm4_x when using "+set deathmatch 1" -- this is the 'not using -listen' launch deal
+for some reason when using the "map dm4" command, rune server doesnt run
+WIP: pk maps need bouncy nailgun -- on first map load, this isnt always done via cfg
+\- DONE: -- we need to undo this as well 
+FIXED: get an ammo box with SG, SSG or LG and 1pv weaponmodel disappears - not on pk maps tho
+-- was this line in float() W_BestWeapon - self.eweapon = e1__; 
+-- because e1__ was a point to a chain of viswep
+FIXED: R_EARTH is 0 after cfg sets it -- messes up rune id
+\-- "Unknown - Resistance = 1/2 damage all attacks."
+- had to reload rune cfg with a spawner
 
 9.17.16
 
 WIP: rune code in *.qc
+DONE: rune code in client.qc
 DONE: dp cam and view ofs deal -- tracked down to csprogs.dat
 - the original SMC HUD code is bonked as well
 
