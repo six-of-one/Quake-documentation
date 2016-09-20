@@ -65,10 +65,25 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+9.20.16
+
+WIP: rune code in *.qc
+WIP: pk 3.0 code in *.qc
+
 9.19.16
 
 FIXED: map name issue with HUD csqc -- inconsistent color setting on Sbar_DrawString
+FIXED: weekly code snapshot for v107 -- had issues if bot module not compiled
+FIXED: damage runes dont have attack sound
+WIP: color code pk10 - rev 1 complete
+FIXED:
+  server EDICT 0:
+classname      vomisss																												*** !should not set
+model          maps/OA.bsp
 
+-- this code:  	frame_arb($attack6,if (random() < 0.08) vom_shot(-3); newmis.classname = "vomisss");
+
+research into subhack idea for triggerfield parks and such
 
 9.18.16
 
