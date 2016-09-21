@@ -65,10 +65,17 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+9.21.16
+
+WIP: item_reload
+
 9.20.16
 
-WIP: rune code in *.qc
-WIP: pk 3.0 code in *.qc
+WIP: item_reload
+WIP: #ifdef masking some precache that snuck in
+FIXED: many items do not play proper regen sound
+-- x_touch - respawn use noise4 (weps might have issue here) -- poss to check __ over
+FIXED: swap wep on impulse 29 fail - was key bind on "w" = "impulse 29; impulse 50" - added ;wait in middle
 
 9.19.16
 
