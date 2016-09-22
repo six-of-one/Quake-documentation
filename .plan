@@ -65,9 +65,15 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+9.22.16
+
+WIP: item_reload - some code improvements
+
 9.21.16
 
 WIP: item_reload
+-- now working with tweaks: $T{n} to add {n} to current time for nextthing
+-- "_reload" passed to StartItem so it reloads self.model on changes
 
 9.20.16
 
