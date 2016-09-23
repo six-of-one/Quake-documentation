@@ -68,6 +68,13 @@ this is replacement for dynamic spawns
 9.22.16
 
 WIP: item_reload - some code improvements
+DONE: reload a single item -- needs tested
+DONE: Con_DPrintf("Warning: Could not expand"
+NADA: nothing respawns since last reload changes -- not a bug, just issue of using "+set deathmatch 1" - forum post
+nailgun to pulse nailer is now working on pk maps with initial load - as long as there is a cfg file for that map
+DONE: server.cfg exec on any cl or map cmd -- parts of items.cfg / etc
+FIXED: mega health no worky with regen rune
+DONE: wad q1 maps non-mod item remove
 
 9.21.16
 
