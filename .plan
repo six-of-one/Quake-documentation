@@ -38,23 +38,14 @@ svvm_cmds.c
 										Con_Printf("* WriteDest - blocked sending to a non-human [ %i ] \n", entnum);
 
 
-other ideas
 
-pattern match override & copy - check before main copy
-
-idea: turn off auto wep switch by making all distance = 1
-idea: DM modes - everything lasts 30 secs, armor lasts 30 secs, infinite ammo, all melee combat
-idea: #ifndef x_ents - call cfg to default to q1 xlate
-tdo: missing alpha item models, code
-tdo: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents -- use mcode & set __mcode{n}_vwicon "{model}"
-TDO: put in rest of score_rel & player_count code
-TDO: swap weps should "throw" the deselecting wep - can be touched
-TDO: countdown & remove timer
-TDO: rest of hip / rogue weps into whpr.cfg
-DONE: expand spawnflag loop  -- done, TEST this
-FIX: weaphum continues past new wep select for 1/2 sec
-- handle explodeshells - still need to fix issue w/ axe level & currentitem
-- idea to store pk_item in every vweapon for the slot - test vs pk_currentitem of ind. weps, will not set self.pk_currentitem
+TDO: pk*bot fix - classname = "player" instead of "pk*bot" - lots of recode on this
+WIP: pk maps need bouncy nailgun -- on first map load, this isnt always done via cfg --- reason being map is already loaded when cfg is run
+FIX: got ammo - explode shooter changed to reg SG
+TDO: harpoon doesnt always grap items because harp back touch is not setup on items & stuff
+FIX: cfg script __ pos1 & pos2 settings for all wsys6 ents+
+TDO: loopcyc scripts
+FIX: got ammo, lg3 v_model changed to lg1
 
 
 NEEDED: 
@@ -64,6 +55,10 @@ NEEDED:
 this is replacement for dynamic spawns
 
 ---  START of .plan daily
+
+9.23.16
+
+WIP: rune code - compare all existing source for missing code
 
 9.22.16
 
