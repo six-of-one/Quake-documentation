@@ -1,25 +1,25 @@
 // Quake entity definition file for GTK Radiant
 // Based on code based on draft by Suicide 20 7.30.99 and inolen 9-3-99
-// Cataboligne 6/15/5 quakec@cataboligne.org
-// Cataboligne 6/12/10   @   - painkeep+
-// Cataboligne 4/25/11   @   - specials
-// Cataboligne 6/6/11    @   - wolf 3D expanded
-// Cataboligne 10/12/12  @   - half life map items, classname_ lister
-// Cataboligne 10/12/12  @   - minor updates - tele, etc
-// Cataboligne 11/20/12  @   - fast monsters
-// Cataboligne 10/13/13  @   - nodules, archon altar
-// Cataboligne 5/21/14   @   - quake hack
-// Cataboligne 6/22/14   @   - monster generators, func_detail, misc_model
-// Cataboligne 8/3/14    @   - quake hack additions, scourge fix, other updates
-// Cataboligne 11/24/14  @   - added section list
-// Cataboligne 12/25/14  @   - improved test section, added "_ _ _ _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM" to select entries
-// Cataboligne 12/26/14  @   - qc++ mods
-// Cataboligne 12/12/15  @   - added 1792 : Entity __only__ appears in Deathmatch mode.
-// Cataboligne 12/31/15  @   - upload verison, edit some maphack notes
-// Cataboligne 1/10/16  @   - bit list tweak
+// Cataboligne 6/15/005 quakec@cataboligne.org
+// Cataboligne 6/12/010   @   - painkeep+
+// Cataboligne 4/25/011   @   - specials
+// Cataboligne 6/6/011    @   - wolf 3D expanded
+// Cataboligne 10/12/012  @   - half life map items, classname_ lister
+// Cataboligne 10/12/012  @   - minor updates - tele, etc
+// Cataboligne 11/20/012  @   - fast monsters
+// Cataboligne 10/13/013  @   - nodules, archon altar
+// Cataboligne 5/21/014   @   - quake hack
+// Cataboligne 6/22/014   @   - monster generators, func_detail, misc_model
+// Cataboligne 8/3/014    @   - quake hack additions, scourge fix, other updates
+// Cataboligne 11/24/014  @   - added section list
+// Cataboligne 12/25/014  @   - improved test section, added "_ _ _ _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM" to select entries
+// Cataboligne 12/26/014  @   - qc++ mods
+// Cataboligne 12/12/015  @   - added 1792 : Entity __only__ appears in Deathmatch mode.
+// Cataboligne 12/31/015  @   - upload verison, edit some maphack notes
+// Cataboligne 1/10/016   @   - bit list tweak
 
 // Version: 1.8.2
-// Last entry: 12-30-15
+// Last entry: 1-10-016
 
 
 
@@ -276,7 +276,7 @@ parameters:
 
 */
 
-/*QUAKED func_biome (.6 .1 .6) (-8 -8 -8) (8 8 8) FADEIN WORLD DESTROY null null NOPERSIST RANDOM
+/*QUAKED func_biome (.6 .1 .6) (-8 -8 -8) (8 8 8) SUBH WORLD DESTROY null null NOPERSIST RANDOM
 --------  CAT  -------
 Chaos Mod MK II
 
@@ -288,7 +288,7 @@ Set this biome to build when triggered with:
 
 spawnflags:
 
-FADEIN         1			- fade chunks into existance - has a heavy cost on rendering engine (large models hurt "fps" bad)
+SUBH         1			- sub hack biome - do not set master biome, triggers use owner to get biome info
 WORLD          2			- use this biome immediately upon map load
 DESTROY        4			- destroy any hack chunk in the same location - would allow this biome to "overwrite" any other biome!  *will not work with persistent hacks
                8			- do NOT set - would have bizarre effects
@@ -1571,6 +1571,28 @@ when the voted map ends.
 */
 
 
+/*QUAKED monster_zombie2 (1 0 0) (-16 -16 -24) (16 16 32)
+--------  PK  --------
+
+-------- NOTES --------
+Usage:
+special swinging zombies - as in hellraiser
+
+Need placement guidelines & sizing
+*/
+
+
+/*QUAKED monster_zombie3 (1 0 0) (-16 -16 -24) (16 16 32)
+--------  PK  --------
+
+-------- NOTES --------
+Usage:
+special swinging zombies - as in hellraiser
+
+Need placement guidelines & sizing
+*/
+
+
 /*QUAKED classname_pk (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  PK  --------
 All Painkeep classnames
@@ -1611,6 +1633,8 @@ func_frame
 hub_teleport
 hub_custom
 hub_control
+monster_zombie2
+monster_zombie3
 
 -------- NOTES --------
 place holder lists all Painkeep classnames - not a useable entity
@@ -4545,8 +4569,13 @@ or slime for 30 seconds.
 */
 
 
-/*QUAKED item_artifact_invulnerability (0 .5 .8) (-16 -16 -24) (16 16 32) _ _ _ _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM
+/*QUAKED item_artifact_invulnerability (0 .5 .8) (-16 -16 -24) (16 16 32) 8ray rot8ray super _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM
 Player is invulnerable for 30 seconds.
+--------  CAT  -------
+Flags:
+"8ray"	center is 8 ray symbol
+"rot8ray"	center is 8 ray symbol that rotates
+"super"	center is 8 ray symbol that rotates, bigger model
 */
 
 
@@ -4555,9 +4584,14 @@ Player is invisible for 30 seconds.
 */
 
 
-/*QUAKED item_artifact_super_damage (0 .5 .8) (-16 -16 -24) (16 16 32) _ _ _ _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM
+/*QUAKED item_artifact_super_damage (0 .5 .8) (-16 -16 -24) (16 16 32) dbl quad octa _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM
 The next attack from the player will
 do 4x damage. Lasts 30 seconds.
+--------  CAT  -------
+Flags:
+"dbl"	double quad - 4 tines
+"quad"	quad quad - 4 tines + 4 small tines
+"octa"	octa quad - 4 tines + 4 small tines, bigger model
 */
 
 
