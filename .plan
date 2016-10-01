@@ -8,9 +8,9 @@ current project(s):
 
 chaos mod Archon - mark III code base port to qc 2.0:
 - maphack (rewritten)
-- frikbot
-- viswep
-- xents
+- frikbot - minor rev
+- viswep -- needs minor revision, position data update
+- xents --- mostly done
 
 quake hack
 
@@ -30,27 +30,36 @@ qone
 
 release followup:
 
-play through (quake HD) / promo video - e1 at least
+play through / promo video - e1 at least
 -- look for oddities
 
-svvm_cmds.c
-//									if (developer.integer > 1)  // FIX: restore
-										Con_Printf("* WriteDest - blocked sending to a non-human [ %i ] \n", entnum);
 
-
-
+???: code_xents remove spawn func & touch where obsolete ?
+TDO: redefine .height as used by morph -- morphcode
+IDEA: monster & morph cvar sets -- frame out, fn calls
+- idea to have generic code set that uses cvar script to run frames, call fn, etc
 TDO: pk*bot fix - classname = "player" instead of "pk*bot" - lots of recode on this
-WIP: pk maps need bouncy nailgun -- on first map load, this isnt always done via cfg --- reason being map is already loaded when cfg is run
-FIX: got ammo - explode shooter changed to reg SG
-TDO: harpoon doesnt always grap items because harp back touch is not setup on items & stuff
+FIX: got ammo - explode shooter changed to reg SG -- could not dup on get ammo, but happens on swap out
 FIX: cfg script __ pos1 & pos2 settings for all wsys6 ents+
 TDO: loopcyc scripts
 FIX: got ammo, lg3 v_model changed to lg1
+TDO: -- need ammo removed from inventory
+TDO: use swap drop code for deadthrow, etc
+TDO: a way for reload to select target ents (i.e. only map ents, or dynamic ents, or a certain series - crates, cubes, nailguns, etc)
+FIX: loopcyc - gwell conv beartraps fire super grav wells - gwell cfg needs spawnflag distinction
+TDO: need dynamic item ident, detectable, map items too -- archon used .event
+ISSUE: nailgun broken - WTF? -- not on test_c sp skill 2, but fails on sp qh_0000
+TDO: clear .group use for define as .script -- gen usage to run cfg scripts at places in code
+TDO: fill out .cfg unit_X fields - item stuff done by func_model or startitem
+WIP: pk maps need bouncy nailgun -- need a way to set pk mode so one generic pk.cfg script can run, instead of a ton of map scripts
+TDO: moddb annc
 
 
-NEEDED: 
+
+Overview current WIP: 
 - spawn_x_ cvar command sets
-- rune controls
+- verify painkeep ops & code + 3.0 release
+- rune controls -- need tested
 - spawners for cubes, crates -- including cfg for rnd items
 this is replacement for dynamic spawns
 
