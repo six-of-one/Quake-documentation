@@ -16,10 +16,10 @@
 // Cataboligne 12/26/014  @   - qc++ mods
 // Cataboligne 12/12/015  @   - added 1792 : Entity __only__ appears in Deathmatch mode.
 // Cataboligne 12/31/015  @   - upload verison, edit some maphack notes
-// Cataboligne 1/10/016   @   - bit list tweak
+// Cataboligne 10/1/016   @   - bit list tweak
 
 // Version: 1.8.2
-// Last entry: 1-10-016
+// Last entry: 10-1-016
 
 
 
@@ -175,7 +175,7 @@ base stats
 "speed"         "#"     - rate at which daylight changes, up or down
 "aflag"         "#"     - same as speed, but dir = + for up, - for down
 "delay"         "#"     - time between changes
-
+ 
 run sun level up then down, waiting at peaks
 "volume"        "#"     - max daylight - when hit cycle starts down
 "count"         "#"     - time to sit at max
