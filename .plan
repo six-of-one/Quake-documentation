@@ -65,19 +65,29 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+
+10.3.16
+
+WIP: maphack world builder -- 
+
 10.2.16
 
-WIP: maphack world builder -- try again
+WIP: maphack world builder -- got biome string carry in target2 from trigger to hack for build
+TEST: qh with HD pack textures
+DONE: Maphack license attrib
 
 10.1.16
 
-WIP: maphack world builder
+WIP: maphack world builder -- ARG
 WIP: crate spawner
+DONE: quakeone quake-hack announce
 
 9.30.16
 
 WIP: maphack world builder -- spec adjusted for the notes above regarding maphack full scale
-
+WIP: patreon / git link branding -- lots of this now
+WIP: crate spawner
+ 
 9.29.16
 
 WIP: maphack world builder
@@ -85,6 +95,7 @@ WIP: maphack world builder
 9.28.16
 
 WIP: maphack world builder
+FIXED: silly 100mb file limit on patreon
 
 9.27.16
 
