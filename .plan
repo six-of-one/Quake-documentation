@@ -65,10 +65,20 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+10.4.16
+
+WIP: maphack world builder -- 
 
 10.3.16
 
 WIP: maphack world builder -- 
+DONE: exec script on triggers via SUB_UseTargets
+DONE: clear .group use for define as .script -- gen usage to run cfg scripts at places in code
+FIXED: nailgun broken - WTF? -- sky_touch fail - must be a maphack thing
+DONE: sky_touch fix and improvement -- had to block when biome set - fails with maphack on, always touches sky
+DONE: crate ops -- contents via spawner - may have quirks
+FIX: loopcyc - gwell conv beartraps fire super grav wells - gwell cfg needs spawnflag distinction
+FIXED: - inf loop: x_wep//viswep.qc : vchk : statement 10 -- keep an eye on this
 
 10.2.16
 
