@@ -72,6 +72,8 @@ FIXED: using event to spec map item is messed because it also sets startitem / f
 WIP: need dynamic item ident, detectable, map items too
 .map = "dyn_item" or "map_item", or runes settings
 - cyc cfg should not assign .map value -- but reload needs to match it for ops
+WIP: a way for reload to select target ents (i.e. only map ents, or dynamic ents, or a certain series - crates, cubes, nailguns, etc)
+-- the load coad (cvar_fields?) needs a selection spec - or reload does
 
 10.4.16
 
