@@ -67,7 +67,11 @@ this is replacement for dynamic spawns
 
 10.5.16
 
+DONE: need dynamic item ident, detectable, map items too -- archon used .event, maybe a msk cvar selector
+FIXED: using event to spec map item is messed because it also sets startitem / func_model -- using .map
 WIP: need dynamic item ident, detectable, map items too
+.map = "dyn_item" or "map_item", or runes settings
+- cyc cfg should not assign .map value -- but reload needs to match it for ops
 
 10.4.16
 
