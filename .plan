@@ -67,13 +67,17 @@ this is replacement for dynamic spawns
 
 10.5.16
 
+NOTE: pre load or exiting map, set map spec ID, on clear cfg set dyn spec ID
 DONE: need dynamic item ident, detectable, map items too -- archon used .event, maybe a msk cvar selector
 FIXED: using event to spec map item is messed because it also sets startitem / func_model -- using .map
 WIP: need dynamic item ident, detectable, map items too
 .map = "dyn_item" or "map_item", or runes settings
 - cyc cfg should not assign .map value -- but reload needs to match it for ops
-WIP: a way for reload to select target ents (i.e. only map ents, or dynamic ents, or a certain series - crates, cubes, nailguns, etc)
+DONE: a way for reload to select target ents (i.e. only map ents, or dynamic ents, or a certain series - crates, cubes, nailguns, etc)
 -- the load coad (cvar_fields?) needs a selection spec - or reload does
+- does not work with sv_cmd item_reload
+reload - /// TDO: block certain items -- dynamic, map load, etc
+FIXED: map, changelevel command - server.cfg needs to reset map_item stat
 
 10.4.16
 
