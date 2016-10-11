@@ -65,10 +65,19 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+
+10.11.16
+
+WIP: maphack - make some new hacks
+
 10.10.16
 
-Back from trip
+* Back from trip
 WIP: maphack world builder -- 
+DONE: std items req as map_item or dyn_item
+FIXED: maphack will make dyn_item and dyn_spawn for hack loads
+DONE: bclr script update
+DONE: _class_select & _map defaults for std spawns
 
 10.6.16
 
