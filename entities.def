@@ -227,8 +227,7 @@ map segment:
 "group"			"start"	- use auto fire trigger on this biome
 "invisible_time"		"#"		- number of times to auto fire - code maps to refire_time
 "style"         "#"	   - distance factor - track player distance from hack > #, add .lefty per sub hacks 
-"stack*"       "map$"	- map segments to randomize - 1 to 16 - stack1 MUST be set, probabilty of choice is equal unless --v
-"button*"      "#"		- successive probability for each biome from 0 - 1000 (e.g. 100, 200, 1000 for 3 hacks), if not assigned even chances are used
+"target2"		"{n}"		- biome load string - default __biome_, used to load cvar biome data
 "origin"			"# # #"	- MUST match func_maphack coords sets for probe
 
 feature:
@@ -313,6 +312,7 @@ map segment:
 "group"			"start2" - use auto fire trigger on this biome one time only
 "invisible_time"	"#"	- number of times to auto fire - code maps to refire_time
 "style"         "#"	   - distance factor - track player distance from hack > #, add .lefty per sub hacks 
+"target2"		"{n}"		- biome load string - default __biome_, used to load cvar biome data
 "stack*"        "map$"  - map segments to randomize - 1 to 16 - stack1 MUST be set, probabilty of choice is equal unless --v
 "button*"       "#"     - successive probability for each biome from 0 - 1000 (e.g. 100, 200, 1000 for 3 hacks), if not assigned even chances are used
 
