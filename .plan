@@ -65,13 +65,20 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+10.16.16
 
+WIP: maphack - fix rotate point origin ents
+FIXED: mh rotate now not rotating point ents correctly
 
 10.14.16
 
-WIP: maphack - make some new hacks -- code to run from biome cfg
+WIP: maphack - code to run from biome cfg
 WIP: replacing func_biome with cfg system
-FIX: info_intermission mangle_y, trap shooters angles_y
+FIXED: maphack_trigger spawn failure - biome not loading from cfg because of missing _ prepended to field name
+DONE: /// subhacks - only remove triggers owned by this guys biome -- in the new idiom, this would be matching target2	
+FIXED: maphack_trigger was propigating insane - not being deleted before fire, sf world from biome was becoming noauto on trigger
+
+DONE: info_intermission mangle_y, trap shooters angles_y --- test
 DONE: func_msgboard init
 
 10.13.16
@@ -83,6 +90,7 @@ DONE:/// add option for these to go away if rotate is not matched to provided va
 handled - /// for now hacks will not rotate if they have bmodel ents such as: doors, plats, buttons, triggers
 CHECKED: trick rotate maps (2 or 4 segment maps) point ents handling - ents on map dont need rotated, what about .ent files?
 -- bsp load ents do not rotate on trick rotate, .ent file ones do
+WIP: replacing func_biome with cfg system
 
 10.12.16
 
