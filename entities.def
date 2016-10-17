@@ -256,7 +256,7 @@ MH/{dff}_{filename}.bsp	- will load all ents it contains unless ent.lefty*, dff 
 
 */
 
-/*QUAKED maphack_trigger (0.5 0.0 0.5) ? notouch NOAUTO
+/*QUAKED maphack_trigger (0.5 0.0 0.5) ? NOTOUCH NOAUTO PERM
 --------  CAT  -------
 Chaos Mod MK II
 
@@ -264,6 +264,7 @@ spawnflags:
 
 NOTOUCH          1       - trigger is fired by targetname
 NOAUTO	        2       - trigger persists outside autotrigger parameters
+PERM	   	     4       - trigger never goes away (in theory) -- issue: really goes away
 
 Variable sized trigger. Normally built by map hack code.
 Exception is the initial map chunk trigger, and special triggers such as boss battle and structure loaders
@@ -272,6 +273,7 @@ parameters:
 
 "lefty"			"#"		- trigger size set - total size value, MUST be set, + and evenly divisible by 2
 "origin"			"# # #"	- MUST match func_maphack coords sets for probe
+"target2"		"{n}"		- biome load string - default __biome_, used to access cvar biome data
 
 */
 
@@ -332,7 +334,7 @@ bmodel ents:
 dest							- when rotate value (angles_y) of hack = any of x, y, z, remove this entity
 
 trick rotated:
-MN/{ang}_{filename}.bsp	- loaded when selected by t_length rotate, ang = 90, 180, 270
+MH/{ang}_{filename}.bsp	- loaded when selected by t_length rotate, ang = 90, 180, 270
 								- ents in .ent files rotate by code
 
 difficulty sets:
@@ -4770,7 +4772,7 @@ Flags:
  
 MAPHACK:
 
-targetname - 1st char is:
+targetname	- 1st char is:
 				r{n} - forms a group and one is selected at random every teleport
 				p{n} - forms a group and one is selected as a one time link
 				o{n} - forms a group and one is selected , remove all others
@@ -4779,6 +4781,10 @@ targetname - 1st char is:
 				selection(s) happen on teleport
 				$MHN - sets targetname to mh.netname value, mh is hack that owns ent
 				other values - hack system hash value is added to target pairs for unique links
+
+dest			- when rotate value (angles_y) of hack = any of x, y, z, remove this entity
+
+group			- runs script designated in key field
 */
 
 
@@ -4876,7 +4882,9 @@ Keys:
 
 MAPHACK:
 
-dest							- when rotate value (angles_y) of hack = any of x, y, z, remove this entity
+dest			- when rotate value (angles_y) of hack = any of x, y, z, remove this entity
+
+group			- runs script designated in key field
 
 */
 
@@ -4925,7 +4933,7 @@ Keys:
 
 MAPHACK:
 
-targetname - 1st char is:
+targetname	- 1st char is:
 				r{n} - forms a group and one is selected at random every teleport
 				p{n} - forms a group and one is selected as a one time link
 				o{n} - forms a group and one is selected , remove all others
@@ -4935,7 +4943,9 @@ targetname - 1st char is:
 				$MHN - sets targetname to mh.netname value, mh is hack that owns ent
 				other values - hack system hash value is added to target pairs for unique links
 
-dest							- when rotate value (angles_y) of hack = any of x, y, z, remove this entity
+dest			- when rotate value (angles_y) of hack = any of x, y, z, remove this entity
+
+group			- runs script designated in key field
 
 */
 
