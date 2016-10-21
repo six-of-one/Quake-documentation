@@ -65,10 +65,15 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+10.21.16
+
+WIP: maphack world builder -- outdoor test biome cfg files
+
 10.20.16
 
 WIP: maphack world builder -- outdoor test biome cfg files
-Testing
+FIX: .state issue as probe was setting it and confusion func_maphack state select
+DONE: implement difficulty ent setting: MH/k{dff}_{filename}.ent	- will load all ents it contains unless ent.lefty*, dff = 0, 1, 2, 3, 4 ... {n}
 
 10.19.16
 
