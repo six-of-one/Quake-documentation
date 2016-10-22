@@ -65,15 +65,23 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+10.22.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+
 10.21.16
 
-WIP: maphack world builder -- outdoor test biome cfg files
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+FIXED: hold hacks from test map were getting spawnflag override by cvar_fields in func_maphack code
+FIXED: -- on init to a non default biome, def biomes are spawned the first time, then alt takes over
+- used exec cfg/map/{mapname}.cfg in client.qc and world.qc to load the biome data
 
 10.20.16
 
 WIP: maphack world builder -- outdoor test biome cfg files
 FIX: .state issue as probe was setting it and confusion func_maphack state select
 DONE: implement difficulty ent setting: MH/k{dff}_{filename}.ent	- will load all ents it contains unless ent.lefty*, dff = 0, 1, 2, 3, 4 ... {n}
+DONE: mostly anyway -- next is to remove global biome, setup *hack.cfg & get new build system working with existing stuff
 
 10.19.16
 
