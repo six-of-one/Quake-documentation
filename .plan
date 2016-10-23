@@ -65,9 +65,18 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+10.23.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+
 10.22.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+REV: init is broken after moving cvar_fields - new cfg init leaves initial hacks in ldfail status somehow -- delay on loading any initial maphack
+- reverted back to earlier code, above fix caused to many problems
+FIXED: init issues fixed by running init biome cfg before loading map -- used a bash fn() to do this
+- this fix may have allieviated the overlaps that were seen
+DONE: item_rune fix (code had item_sigil which new rune server code changed)
 
 10.21.16
 
