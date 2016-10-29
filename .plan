@@ -65,10 +65,16 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+10.29.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+
 10.28.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 today - more map chunks, and terrain features
+FIXED: weaphum continues past new wep select for 1/2 sec -- weapons.qc
+DONE: higher hills clk_{n}h
 
 10.27.16
 
