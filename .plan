@@ -65,9 +65,18 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+10.30.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+DONE: trigger biome ref abstraction layer via set command: set	btr1	"cfg/biome/ot_fri.cfg" 
+																												 trigger: "group" "$btr1"
+
 10.29.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+-- anode x skybox test
+-- anode x segments
+-- e3m6 building for ot_
 
 10.28.16
 
