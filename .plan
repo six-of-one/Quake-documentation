@@ -65,9 +65,18 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.1.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+
 10.31.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: doom lands chunks & build system
+FIXED: (sort of) - func_maphack on test_c5 were messing with func_illusionary and door cfg biome triggers
+-- prob due to leaving mh global active - fix was moving all func_maphack to end of map file
+FIXED: func_maphack on test_c5 were messing with * -- prem fix, this was DESTROYH option not clearing mh global
+ISSUE: point light above chunks - reduced 600 to 440 -- fails, leaves chunks fullbright - 550 is better
 
 10.30.16
 
