@@ -65,9 +65,17 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.2.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+
 11.1.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+DONE: vault post on dpext string fns
+WIP: relight on landforms -- light below works (for above ground anyway)
+DONE: had not copied override for some tex
+DONE: maphack engine mods: prvm_nofreedisp, prvm_nosrchdisp, multi field search
 
 10.31.16
 
