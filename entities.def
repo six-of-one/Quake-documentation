@@ -203,7 +203,7 @@ Chaos Mod MK II
 spawnflags:
 
 FADEIN         1			- fade chunks into existance - has a heavy cost on rendering engine (large models hurt "fps" bad)
-DESTROY        4			- destroy any hack chunk in the same location - for large rooms, copied with "deathtype" match
+DESTROY        4			- destroy hack chunk after ent load - this is for pre-loading map bsp models
 HOLD           8			- place holder - will not load a model or set solid (for multi chunk hacks to occupy large areas)
 AUTOLOAD       16			- a trigger is spawned by func_maphack and the surrounding spots will be filled in with this biome when the trigger fires
 NOPERSIST      32			- not a persistent hack set - can be deleted
@@ -233,8 +233,8 @@ map segment:
 feature:
 
 a connected series sequence of map-hacks that are copied onto map by:
-selection:              - biome stack* / button* set
-
+selection:              - target2 matches map base __biome_ or setting
+model name 1st letter u - this model is unique, and the 2nd will revert to null.mdl
 
 MAPHACK:
 
@@ -250,9 +250,9 @@ MN/{ang}_{filename}.bsp	- loaded when selected by t_length rotate, ang = 90, 180
 								  use 360 to match 0
 
 difficulty sets:
-MH/{dff}_{filename}.bsp	- will load all ents it contains unless ent.lefty*, dff = 1, 2, 3, 4 ... {n}
+MH/k{dff}_{filename}.ent	- will load all ents it contains unless ent.lefty*, dff = 0, 1, 2, 3, 4 ... {n}
 
-*"lefty"						- percent chance an ent will be used per chunk load - not for multipart ents: linked doors
+*"lefty"						- percent chance an ent will be removed per chunk load - not for multipart ents: linked doors
 
 */
 
@@ -277,7 +277,7 @@ parameters:
 
 */
 
-/*QUAKED func_biome (.6 .1 .6) (-8 -8 -8) (8 8 8) SUBH WORLD DESTROY null null NOPERSIST RANDOM
+/*QUAKED func_biome (.6 .1 .6) (-8 -8 -8) (8 8 8) SUBH WORLD DESTROY null null NOPERSIST RANDOM ENTREPLACE
 --------  CAT  -------
 Chaos Mod MK II
 
@@ -315,6 +315,8 @@ map segment:
 "invisible_time"	"#"	- number of times to auto fire - code maps to refire_time
 "style"         "#"	   - distance factor - track player distance from hack > #, add .lefty per sub hacks 
 "target2"		"{n}"		- biome load string - default __biome_, used to load cvar biome data
+
+deprecated - no longer used
 "stack*"        "map$"  - map segments to randomize - 1 to 16 - stack1 MUST be set, probabilty of choice is equal unless --v
 "button*"       "#"     - successive probability for each biome from 0 - 1000 (e.g. 100, 200, 1000 for 3 hacks), if not assigned even chances are used
 
@@ -338,9 +340,9 @@ MH/{ang}_{filename}.bsp	- loaded when selected by t_length rotate, ang = 90, 180
 								- ents in .ent files rotate by code
 
 difficulty sets:
-MH/{dff}_{filename}.bsp	- will load all ents it contains unless ent.lefty*, dff = 1, 2, 3, 4 ... {n}
+MH/k{dff}_{filename}.ent	- will load all ents it contains unless ent.lefty*, dff = 0, 1, 2, 3, 4 ... {n}
 
-*"lefty"				- percent chance an ent will be used per chunk load
+*"lefty"				- percent chance an ent will be removed per chunk load
 
 
 */
