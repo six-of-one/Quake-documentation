@@ -68,10 +68,12 @@ this is replacement for dynamic spawns
 11.2.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+FIXED: from land form template, 1b / 2b, 1h / 2h were swapped - put them back
 
 11.1.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: doom lands chunks & build system
 DONE: vault post on dpext string fns
 WIP: relight on landforms -- light below works (for above ground anyway)
 DONE: had not copied override for some tex
