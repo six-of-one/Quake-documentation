@@ -67,7 +67,12 @@ this is replacement for dynamic spawns
 
 11.3.16
 
-WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: maphack world builder -- outdoor test biome cfg files, production line for oWIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: tree templates - couple of decid tree enhances
+FIXED: now, not all oh ents are hiding beyond sv_hide dist to hack -- hack_pdist is not being defaulted now
+|		one thing is left from hack_pdist: individual ent trace is used for monsters and other things that can be moved
+ \_	but this means lone ents can be visible when the building isnt because the bld center is farther away
+FIXED: was causing an extra global used: s2__ = field_loop = entityfieldname(1);
 
 11.2.16
 
