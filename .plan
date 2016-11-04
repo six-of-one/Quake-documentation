@@ -67,12 +67,20 @@ this is replacement for dynamic spawns
 
 11.3.16
 
-WIP: maphack world builder -- outdoor test biome cfg files, production line for oWIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: tree templates - couple of decid tree enhances
 FIXED: now, not all oh ents are hiding beyond sv_hide dist to hack -- hack_pdist is not being defaulted now
 |		one thing is left from hack_pdist: individual ent trace is used for monsters and other things that can be moved
  \_	but this means lone ents can be visible when the building isnt because the bld center is farther away
 FIXED: was causing an extra global used: s2__ = field_loop = entityfieldname(1);
+ISSUE: if __tr_bld & __tr_biome master trigger does not center with __biome trigger, HOLD sub-hacks do not co-ord correctly
+\_ this may not have an easy fix, besides speccing the origin on init
+-- ISSUE: server.cfg stuff is not taking effect for _map designate
+\_ this was the vs. autoexec deal, and the fix is to spec the cfg file on the command line
+-- is there some issue where a maphack gets set to ldfail and then an overlap happens?
+\_ ldfail gets used when __tr_bld & __tr_biome have no cfg script, but the trigger inits
+XXX: maphack overlap prevention & probe ops -- seems like some overlab & such is happening, esp on 2 highs
+\_ feel like this is well in hand now with the discovery of the master trigger origin init issue
 
 11.2.16
 
