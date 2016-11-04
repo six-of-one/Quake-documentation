@@ -34,36 +34,19 @@ play through / promo video - e1 at least
 -- look for oddities
 
 
-???: code_xents remove spawn func & touch where obsolete ?
-TDO: redefine .height as used by morph -- morphcode
-IDEA: monster & morph cvar sets -- frame out, fn calls
-- idea to have generic code set that uses cvar script to run frames, call fn, etc
-TDO: pk*bot fix - classname = "player" instead of "pk*bot" - lots of recode on this
-FIX: got ammo - explode shooter changed to reg SG -- could not dup on get ammo, but happens on swap out
-FIX: cfg script __ pos1 & pos2 settings for all wsys6 ents+
-TDO: loopcyc scripts
-FIX: got ammo, lg3 v_model changed to lg1
-TDO: -- need ammo removed from inventory
-TDO: use swap drop code for deadthrow, etc
-TDO: a way for reload to select target ents (i.e. only map ents, or dynamic ents, or a certain series - crates, cubes, nailguns, etc)
-FIX: loopcyc - gwell conv beartraps fire super grav wells - gwell cfg needs spawnflag distinction
-TDO: need dynamic item ident, detectable, map items too -- archon used .event
-ISSUE: nailgun broken - WTF? -- not on test_c sp skill 2, but fails on sp qh_0000
-TDO: clear .group use for define as .script -- gen usage to run cfg scripts at places in code
-TDO: fill out .cfg unit_X fields - item stuff done by func_model or startitem
-WIP: pk maps need bouncy nailgun -- need a way to set pk mode so one generic pk.cfg script can run, instead of a ton of map scripts
-TDO: moddb annc
-
-
-
 Overview current WIP: 
 - spawn_x_ cvar command sets
 - verify painkeep ops & code + 3.0 release
 - rune controls -- need tested
 - spawners for cubes, crates -- including cfg for rnd items
 this is replacement for dynamic spawns
+- ton of quake-hack code
 
 ---  START of .plan daily
+
+11.4.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 
 11.3.16
 
@@ -81,6 +64,7 @@ ISSUE: if __tr_bld & __tr_biome master trigger does not center with __biome trig
 \_ ldfail gets used when __tr_bld & __tr_biome have no cfg script, but the trigger inits
 XXX: maphack overlap prevention & probe ops -- seems like some overlab & such is happening, esp on 2 highs
 \_ feel like this is well in hand now with the discovery of the master trigger origin init issue
+NOTE: it seems the droptofloor is a no-go with building loads under func_maphack
 
 11.2.16
 
