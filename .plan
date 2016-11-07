@@ -44,10 +44,17 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.7.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+
 11.6.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: painkeep maps & the hack builder
+- x4 expand - now a "lip 256" op set
+- _7 & _8 are up steps & down ramp
+NOTE: can NOT make a func_wall with *teleport tex without some other tex brush added in
 
 11.5.16
 
