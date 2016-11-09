@@ -17,6 +17,7 @@
 // Cataboligne 12/12/015  @   - added 1792 : Entity __only__ appears in Deathmatch mode.
 // Cataboligne 12/31/015  @   - upload verison, edit some maphack notes
 // Cataboligne 10/1/016   @   - bit list tweak
+// Cataboligne 11/9/016   @   - redid styles on lights so radiant entity window is pretty
 
 // Version: 1.8.2
 // Last entry: 10-1-016
@@ -4267,7 +4268,7 @@ LIGHT_* ENTITIES
 Non-displayed light
 -------- KEYS --------
 light : sets brightness, 300 is default
-style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle (first variety) 4 = fast strobe 5 = gentle pulse 6 = flicker (second variety) 7 = candle (second variety) 8 = candle (third variety) 9 = slow strobe 10 = flourescent flicker 11 = slow pulse, not fading to black
+style : sets "flicker", 0 is default
 targetname : if set it will toggle between on or off.
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
@@ -4279,9 +4280,7 @@ START_OFF : starts off until triggered
 2048 : Entity doesnt appear in Deathmatch mode.
 1792 : Entity __only__ appears in Deathmatch mode.
 -------- NOTES --------
-Flags:
 Styles:
- 32-62 are assigned by the light program for switchable lights
 0 normal	(default)
 1 flicker (first variety)
 2 slow strong pulse
@@ -4293,6 +4292,7 @@ Styles:
 8 candle (third variety)
 9 slow strobe (fourth variety)
 10 fluorescent flicker
+ 32-62 are assigned by the light program for switchable lights
 
 -------- DARKPLACES --------
 _color: {#} {#} {#}
@@ -4309,7 +4309,7 @@ May possibly work with other advanced engines
 Short wall torch.
 -------- KEYS --------
 light : sets brightness, 200 is default
-style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle (first variety) 4 = fast strobe 5 = gentle pulse 6 = flicker (second variety) 7 = candle (second variety) 8 = candle (third variety) 9 = slow strobe 10 = flourescent flicker 11 = slow pulse, not fading to black
+style : sets "flicker", 0 is default
 -------- SPAWNFLAGS --------
 !(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
@@ -4320,8 +4320,18 @@ style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle 
 1792 : Entity __only__ appears in Deathmatch mode.
 -------- NOTES --------
 Styles:
+0 normal	(default)
+1 flicker (first variety)
+2 slow strong pulse
+3 candle (first variety)
+4 fast strobe
+5 gentle pulse 1
+6 flicker (second variety)
+7 candle (second variety)
+8 candle (third variety)
+9 slow strobe (fourth variety)
+10 fluorescent flicker
  32-62 are assigned by the light program for switchable lights
- 0 is default
 */
 
 
@@ -4330,6 +4340,7 @@ Styles:
 Large yellow flames.
 -------- KEYS --------
 light : sets brightness
+style : sets "flicker", 0 is default
 -------- SPAWNFLAGS --------
 !(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
@@ -4339,6 +4350,18 @@ light : sets brightness
 2048 : Entity doesnt appear in Deathmatch mode.
 1792 : Entity __only__ appears in Deathmatch mode.
 -------- NOTES --------
+Styles:
+0 normal	(default)
+1 flicker (first variety)
+2 slow strong pulse
+3 candle (first variety)
+4 fast strobe
+5 gentle pulse 1
+6 flicker (second variety)
+7 candle (second variety)
+8 candle (third variety)
+9 slow strobe (fourth variety)
+10 fluorescent flicker
 */
 
 
@@ -4347,6 +4370,7 @@ light : sets brightness
 Small yellow flames.
 -------- KEYS --------
 light : sets brightness
+style : sets "flicker", 0 is default
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
 !(bit list) : Entity appears in all game modes.
@@ -4357,6 +4381,18 @@ START_OFF : starts off until triggered
 2048 : Entity doesnt appear in Deathmatch mode.
 1792 : Entity __only__ appears in Deathmatch mode.
 -------- NOTES --------
+Styles:
+0 normal	(default)
+1 flicker (first variety)
+2 slow strong pulse
+3 candle (first variety)
+4 fast strobe
+5 gentle pulse 1
+6 flicker (second variety)
+7 candle (second variety)
+8 candle (third variety)
+9 slow strobe (fourth variety)
+10 fluorescent flicker
 */
 
 
@@ -4365,6 +4401,7 @@ START_OFF : starts off until triggered
 Small white flames.
 -------- KEYS --------
 light : sets brightness
+style : sets "flicker", 0 is default
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
 !(bit list) : Entity appears in all game modes.
@@ -4375,6 +4412,18 @@ START_OFF : starts off until triggered
 2048 : Entity doesnt appear in Deathmatch mode.
 1792 : Entity __only__ appears in Deathmatch mode.
 -------- NOTES --------
+Styles:
+0 normal	(default)
+1 flicker (first variety)
+2 slow strong pulse
+3 candle (first variety)
+4 fast strobe
+5 gentle pulse 1
+6 flicker (second variety)
+7 candle (second variety)
+8 candle (third variety)
+9 slow strobe (fourth variety)
+10 fluorescent flicker
 */
 
 
@@ -4383,7 +4432,7 @@ START_OFF : starts off until triggered
 Non-displayed light. Makes steady fluorescent humming sound.
 -------- KEYS --------
 light : sets brightness, 300 is default
-style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle (first variety) 4 = fast strobe 5 = gentle pulse 6 = flicker (second variety) 7 = candle (second variety) 8 = candle (third variety) 9 = slow strobe 10 = flourescent flicker 11 = slow pulse, not fading to black
+style : sets "flicker", 0 is default
 targetname : if set it will toggle between on or off.
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
@@ -4396,8 +4445,18 @@ START_OFF : starts off until triggered
 1792 : Entity __only__ appears in Deathmatch mode.
 -------- NOTES --------
 Styles:
+0 normal	(default)
+1 flicker (first variety)
+2 slow strong pulse
+3 candle (first variety)
+4 fast strobe
+5 gentle pulse 1
+6 flicker (second variety)
+7 candle (second variety)
+8 candle (third variety)
+9 slow strobe (fourth variety)
+10 fluorescent flicker
  32-62 are assigned by the light program for switchable lights
- 0 is default
 */
 
 
@@ -4406,7 +4465,7 @@ Styles:
 Non-displayed light. Makes sparking, broken fluorescent sound.
 -------- KEYS --------
 light : sets brightness, 300 is default
-style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle (first variety) 4 = fast strobe 5 = gentle pulse 6 = flicker (second variety) 7 = candle (second variety) 8 = candle (third variety) 9 = slow strobe 10 = flourescent flicker 11 = slow pulse, not fading to black
+style : sets "flicker", 10 is default
 targetname : if set it will toggle between on or off.
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
@@ -4419,8 +4478,18 @@ START_OFF : starts off until triggered
 1792 : Entity __only__ appears in Deathmatch mode.
 -------- NOTES --------
 Styles:
+0 normal
+1 flicker (first variety)
+2 slow strong pulse
+3 candle (first variety)
+4 fast strobe
+5 gentle pulse 1
+6 flicker (second variety)
+7 candle (second variety)
+8 candle (third variety)
+9 slow strobe (fourth variety)
+10 fluorescent flicker	(default)
  32-62 are assigned by the light program for switchable lights
- 10 is default
 */
 
 
@@ -4429,7 +4498,7 @@ Styles:
 Sphere globe light (sprite).
 -------- KEYS --------
 light : sets brightness, 300 is default
-style : 0 = normal 1 = flicker (first variety) 2 = slow strong pulse 3 = candle (first variety) 4 = fast strobe 5 = gentle pulse 6 = flicker (second variety) 7 = candle (second variety) 8 = candle (third variety) 9 = slow strobe 10 = flourescent flicker 11 = slow pulse, not fading to black
+style : sets "flicker", 0 is default
 targetname : if set it will toggle between on or off.
 -------- SPAWNFLAGS --------
 START_OFF : starts off until triggered
@@ -4442,8 +4511,18 @@ START_OFF : starts off until triggered
 1792 : Entity __only__ appears in Deathmatch mode.
 -------- NOTES --------
 Styles:
+0 normal	(default)
+1 flicker (first variety)
+2 slow strong pulse
+3 candle (first variety)
+4 fast strobe
+5 gentle pulse 1
+6 flicker (second variety)
+7 candle (second variety)
+8 candle (third variety)
+9 slow strobe (fourth variety)
+10 fluorescent flicker
  32-62 are assigned by the light program for switchable lights
- 0 is default
 */
 
 
