@@ -4282,7 +4282,18 @@ START_OFF : starts off until triggered
 Flags:
 Styles:
  32-62 are assigned by the light program for switchable lights
- 0 is default
+0 normal	(default)
+1 flicker (first variety)
+2 slow strong pulse
+3 candle (first variety)
+4 fast strobe
+5 gentle pulse 1
+6 flicker (second variety)
+7 candle (second variety)
+8 candle (third variety)
+9 slow strobe (fourth variety)
+10 fluorescent flicker
+
 -------- DARKPLACES --------
 _color: {#} {#} {#}
 Where {#} = -1.0 to 1.0 for [ red green blue ] color element
