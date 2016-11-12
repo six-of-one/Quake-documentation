@@ -44,6 +44,23 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.12.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+
+11.11.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+FIXED: crate contents going -velocity_z through floors -- set movetype 0 in cfg
+DONE: some items need a z boost out of the box -- added .view_ofs in x_ents spawner loop
+FIXAT: eweapon _attack() qc crash
+FIXED: q2 shot from crate that spawned at '0 0 0'
+WIP: cubes
+WIP: random DM map rethinks via spawner & alias cmd
+DONE: re-hack - reloading existing maphacks that are not sub-hacks		\\\_some oh ents are not de-rezzing
+
 11.10.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
