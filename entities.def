@@ -197,7 +197,7 @@ skybox controls, path of sun, moon
 "button*"       "#"     - level appx to set matched skybox
 */
 
-/*QUAKED func_maphack (.6 .1 .6) (-8 -8 -8) (8 8 8) FADEIN null DESTROY HOLD AUTOLOAD NOPERSIST RANDOM ENTREPLACE
+/*QUAKED func_maphack (.6 .1 .6) (-8 -8 -8) (8 8 8) FADEIN null DESTROY HOLD NOTRIG NOPERSIST RANDOM ENTREPLACE
 --------  CAT  -------
 Chaos Mod MK II
 
@@ -206,7 +206,7 @@ spawnflags:
 FADEIN         1			- fade chunks into existance - has a heavy cost on rendering engine (large models hurt "fps" bad)
 DESTROY        4			- destroy hack chunk after ent load - this is for pre-loading map bsp models
 HOLD           8			- place holder - will not load a model or set solid (for multi chunk hacks to occupy large areas)
-AUTOLOAD       16			- a trigger is spawned by func_maphack and the surrounding spots will be filled in with this biome when the trigger fires
+NOTRIG 	      16			- this maphack will NOT make load triggers - for limited builds
 NOPERSIST      32			- not a persistent hack set - can be deleted
 RANDOM         64			- randomize hacks when beyond farclip - old will be deleted & reload on re-trigger
 ENTREPLACE		128		- replace chunk entities as per map load ops - i.e. if a {chunkname}.ent file exists do NOT load {chunkname}.bsp ents
@@ -221,8 +221,9 @@ map segment:
 "cnt"				"#"		- preference percent for "count" - 0.3 default
 "map"				"{n}"		- use this named segment
 "delay"			"#"		- reset after delay rels if "map" not set
-"rotate_type"	"#"		- rotate 90 deg. incr + random 0.## deg. incr to 89, >= 1 full 89 deg & exclude < # for stack#
+"rotate_type"	"#"		- rotate 90 deg. incr + random 0.## deg. incr to 89, >= 1 full 89 deg -- < 0 sets t_length
 "t_length"		"#"		- 1, 2, 3 = rotate 90 deg. incr for {map chunk}.ent only and load {mapid}_?000.bsp where ? is 0 - # for 0, 90, 180, 270
+								- < -4 -- force angle to match degrees #
 "lefty"			"#"      - trigger size set - total size value, must be + and evenly divisible by 2
 "lip"           "#"     - vertical size set - moves up & down this amt - also sets hack trigger height
 "group"			"start"	- use auto fire trigger on this biome
@@ -278,7 +279,7 @@ parameters:
 
 */
 
-/*QUAKED func_biome (.6 .1 .6) (-8 -8 -8) (8 8 8) SUBH WORLD DESTROY null null NOPERSIST RANDOM ENTREPLACE
+/*QUAKED func_biome (.6 .1 .6) (-8 -8 -8) (8 8 8) SUBH WORLD DESTROY null NOTRIG NOPERSIST RANDOM ENTREPLACE
 --------  CAT  -------
 Chaos Mod MK II
 
@@ -294,7 +295,7 @@ SUBH         1			- sub hack biome - do not set master biome, triggers use owner 
 WORLD          2			- use this biome immediately upon map load
 DESTROY        4			- destroy any hack chunk in the same location - would allow this biome to "overwrite" any other biome!  *will not work with persistent hacks
                8			- do NOT set - would have bizarre effects
-					16			- should NOT be set - triggers are different now
+NOTRIG 	      16			- this biome will NOT make load triggers - for limited builds
 NOPERSIST      32			- hacks made from this can be deleted or changed - world is NOT persistent
 RANDOM			64			- a "random" world - beyond farclip, hacks & ents will be removed to be replaced by new hacks - forces nopersist option
 ENTREPLACE		128		- replace chunk entities as per map load ops
@@ -306,8 +307,9 @@ map segment:
 "count"			"#"		- prefer this segment number (> 0)
 "cnt"				"#"		- preference percent for "count" - 0.3 default
 "delay"			"#"		- reset after delay rels if "map" not set
-"rotate_type"	"#"		- rotate 90 deg. incr + random 0.## deg. incr to 89, > 0.9 is 90 deg only, >= 1 full 89 deg & exclude < # for stack#
+"rotate_type"	"#"		- rotate 90 deg. incr + random 0.## deg. incr to 89, > 0.9 is 90 deg only, >= 1 full 89 deg -- < 0 sets t_length
 "t_length"		"#"		- 1, 2, 3 = rotate 90 deg. incr for {map chunk}.ent only and load {mapid}_?000.bsp where ? is 0 - # for 0, 90, 180, 270
+								- < -4 -- force angle to match degrees #
 "t_width"		"#"		- do not rotate any hack with a state # < t_width of biome
 "lefty"			"#"		- trigger size set - total size value, must be + and evenly divisible by 2
 "lip"           "#"     - vertical size set - moves up & down this amt - also sets hack trigger height
@@ -882,7 +884,13 @@ REMOVE - remove items made after dynamic timeout
 
 nothing - pick a random item from pk_cube list
 
+"netname" - ref code to load items from def: __cratecont_
+
 "deathtype" - string to center print when crate is touched - over rides crate generic touch messages
+
+"bubble_count" - {n} random count items - __cratecont_1_ to __cratecont_{n}, default 3, must be set -1 to negate
+
+deprecated old mk_II mode:
 
 "items" - mapcode of item to create
 "stdev" - add random this to items mapcode for a custom series
@@ -7393,6 +7401,18 @@ Light-emitting lantern.
 
 Default light value is 200
 Default style is 0
+Styles:
+0 normal	(default)
+1 flicker (first variety)
+2 slow strong pulse
+3 candle (first variety)
+4 fast strobe
+5 gentle pulse 1
+6 flicker (second variety)
+7 candle (second variety)
+8 candle (third variety)
+9 slow strobe (fourth variety)
+10 fluorescent flicker
 */
 
 
