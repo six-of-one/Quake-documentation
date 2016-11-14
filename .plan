@@ -7,28 +7,22 @@ quakec#cataboligne#org				(replace #'s with @ and then . )
 current project(s):
 
 chaos mod Archon - mark III code base port to qc 2.0:
+
+- pk3.0 (verify all operation code)
 - maphack (rewritten)
 - frikbot - minor rev
 - viswep -- needs minor revision, position data update
 - xents --- mostly done
 
-quake hack
+quake hack:
 
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
+- possible solution - load _every_ _single_ hack with submodels for 1st map load --- still wont work
+- would have to load every think as a hack / sub-hack on the first map loaded, including script processing
 
-new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
-multi phases need to - id maphacks in their phase, set biomes in their phase
-- use mt (master trigger) as owner
-- alt: have trigger dir spec - spawn a thing & face a certain dir
-			a main func_maphack loads a set of triggers, that load more triggers radiating out
-			null hacks that dont test in probe vs. real world hacks
+qone:
 
-HOLD hacks can _still_ overlap each other with no way to delete
-- need a recursive change of the mh from a hold instance
-
-qone	
-
-release followup:
+release followup -
 
 play through / promo video - e1 at least
 -- look for oddities
@@ -44,10 +38,31 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.14.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+
+DONE:
+new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
+multi phases need to - id maphacks in their phase, set biomes in their phase
+- use mt (master trigger) as owner
+- alt: have trigger dir spec - spawn a thing & face a certain dir
+			a main func_maphack loads a set of triggers, that load more triggers radiating out
+			null hacks that dont test in probe vs. real world hacks
+
+-- all of that is done in the new multi-tiered biome script system - except this hold hack issue:
+HOLD hacks can _still_ overlap each other with no way to delete
+- need a recursive change of the mh from a hold instance
+
 11.13.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
+DONE: crate open model displayed
+DONE: more crate contents height adjusts
+FIXED: so many script issues -- did not realize scripts would be so sensitive
+FIX: classname can be erased by "classname has no spawn fn" code block
 
 11.12.16
 
