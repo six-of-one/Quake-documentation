@@ -38,10 +38,27 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.15.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+
 11.14.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
+WIP: Archon, PK3
+DONE: added bouncy spawn to spawn loop code -- used for random crates & cubes
+FIXED: blank classname issue -- see SV_OnEntityNoSpawnFunction
+DONE: maphack adjust on 3a1, 9a1 -- 
+FOUND: bug in crate & cube made weps - have think set to SUB_remove from spawn init
+FIXED: 2 missing items in d test area -- had sf 1792
+FIXED: bad bug in cvar_fields where self was used instead of passed ent
+-- self worked when called from SV_OnEntityPreSpawnFunction because it was using self
+FIXED: translate items
+\_ added a new translate cfg field to ease up on making scripts
+-  doesnt seem to translate back real well on loopcyc, but d alpha scripts work great
 
 DONE:
 new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
@@ -59,15 +76,17 @@ HOLD hacks can _still_ overlap each other with no way to delete
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
+WIP: Archon, PK3
 DONE: crate open model displayed
 DONE: more crate contents height adjusts
 FIXED: so many script issues -- did not realize scripts would be so sensitive
-FIX: classname can be erased by "classname has no spawn fn" code block
+FIX: classname could be erased by "classname has no spawn fn" code block
 
 11.12.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
+WIP: Archon, PK3
 FIXAT: viswep_post loop issue
 * tons of brush tweaks the past week
 FIXED: crate made q2 dblshot has wrong bullet spread
@@ -78,6 +97,7 @@ WIP: pk cubes
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
+WIP: Archon, PK3
 FIXED: crate contents going -velocity_z through floors -- set movetype 0 in cfg
 DONE: some items need a z boost out of the box -- added .view_ofs in x_ents spawner loop
 FIXAT: eweapon _attack() qc crash
