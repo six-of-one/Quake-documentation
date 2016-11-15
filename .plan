@@ -43,6 +43,20 @@ this is replacement for dynamic spawns
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
+FIXED: bug in crate & cube made weps - have think set to SUB_remove from spawn init
+WIP: use _tr as refer for cube / crate contents if reg item
+FIXED: flamer no pickup sound -- also quantum, deepsleep
+
+-- calling this done too
+DONE: - spawners for cubes, crates -- including cfg for rnd items
+this is replacement for dynamic spawns
+
+-- way old, just plunking it down here
+DONE: map & model detector test -- need to test out - see maphack code fn = filer()
+
+
+-- way old, just plunking it down here
+DONE: map & model detector test -- need to test out - see maphack code fn = filer()
 
 11.14.16
 
