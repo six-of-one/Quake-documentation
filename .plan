@@ -38,22 +38,42 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.16.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+FIXED: map item pk_cube do not clear model when collected  (delay / think deal in spawn loop)
+
 11.15.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
 FIXED: bug in crate & cube made weps - have think set to SUB_remove from spawn init
+XXX: * noted qc crashes -- fixed by above entry
 WIP: use _tr as refer for cube / crate contents if reg item
 FIXED: flamer no pickup sound -- also quantum, deepsleep
+FIXED: loopcyc not restoring to original -- was == classname deal in trans code
+FIXED: translate to pnail in wpk_png.cfg - __weapon_nailgun was not 1
+-- likely all XXX below are fixed now
+XXX: invis vw_model from crate stuff -- check reg map items where we have invis issues (pk ng)
+XXX: v_model screwage
+XXX: cyc weps & nailgun etc. screwage
+FIXED?: got ammo, lg3 v_model changed to lg1 -- this happens at other times too, this code really needs solidified
+
+FIXED: swing zombie facing on x4c_4a3
+FIXED: cubecont_0 fails -- because __weapon_rocketlauncher has no cfg to translate into
+FIXED: adv toolkit ents not solid -- some ents that still event to startitem dont have solid in cfg
+FIXED: small map crate no reset model on respawn -- was _def_model deal - cant use on respawners via cvar_fields
+FIXED: still have an axe select as pk_currentitem = 2 which is screwed, also leaves eweap set doing weird
+-- this is from explode shells being pki 2 - the eweap search sees this
+
+in recent days the _tr initiative is the best code I've put in archon mark III
 
 -- calling this done too
 DONE: - spawners for cubes, crates -- including cfg for rnd items
 this is replacement for dynamic spawns
-
--- way old, just plunking it down here
-DONE: map & model detector test -- need to test out - see maphack code fn = filer()
-
 
 -- way old, just plunking it down here
 DONE: map & model detector test -- need to test out - see maphack code fn = filer()
@@ -73,6 +93,7 @@ FIXED: bad bug in cvar_fields where self was used instead of passed ent
 FIXED: translate items
 \_ added a new translate cfg field to ease up on making scripts
 -  doesnt seem to translate back real well on loopcyc, but d alpha scripts work great
+DONE: punchangle does eject on spawner
 
 DONE:
 new trigger / biome system with multiple sets of biome stuff - regular terrain, oceans / bedrock, buildings / villages
