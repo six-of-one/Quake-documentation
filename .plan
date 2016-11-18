@@ -1,7 +1,7 @@
 .plan
 -------------------------------------------------
 Number Six
--------------------------------------------------
+-------------------------------------------------	
 quakec#cataboligne#org				(replace #'s with @ and then . )
 
 current project(s):
@@ -38,11 +38,36 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.18.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+
 11.17.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
+XXX: swap png with q3 rail - no slug ammo -- all swaps fail to add base wep ammo - was calling item_putis in x_weapon_touch
+XXX: ammo rem. from pl inventory -- for now swap tossed weps have no ammo in them
+FIXED: rnd tele dest- copy angles to mangle if mangle 0 0 0
+\_ doesnt seem to work -- had to test _y component of vector, and not entire vector
+DONE: eweap that can not be swapped with aflag = -1
+issue: explode shells are a real pain -- shotgun is tested for swap and not them, so the block doesnt work
+FIXED: explode shells gun goes away when ammo runs out -- clears viswep
+XXX: explode shooter vwepent is not removed when ammo runs out -- other vwepent dont work this way either
+\_ -- still blocks reg shotgun when empty!
+-- also block a legit cube when empty!
+DONE: doom crate - put in doom room with rnd doom items in cfg -- crate is textured - check it
+FIXED: adjust on using SUB_Regen with cvar_fields load & event driving there
+
+\_ the next 2 XXX seem cleared away
+XXX: got ammo - explode shooter changed to reg SG -- could not dup on get ammo, but happens on swap out
+
+XXX: issues with pk pulsenail on test_c - v_ was nailgun, swapped to 3 railgun - still showing v_nailgun
+-- v models have mucho fuckage - this NEEDS fixed permanently, use cvar dealy
+-- this may be a viswep code screwage
 
 11.16.16
 
