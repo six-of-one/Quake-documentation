@@ -38,11 +38,26 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.20.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+
 11.19.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
+DONE: cvar_fields spawnflag read now checks 1792 seperate from individual bits
+DONE: added item_health to cyc / tr system
+DONE: cthon lightning tester tweak on test_c5
+FIX: all wsys6 weps that dont work right
+FIXED: reggun had no fire sound -- got left out of pak file for sys6
+DONE: quantum makes portals on hacks
+FIXED: deepsleep hit flash, sound, etc
+FIXED: ish - all graps can be picked up, but now there is no swap - they overwrite the old grap
+TESTED: expand spawnflag loop  -- done, TEST this
 
 11.18.16
 
