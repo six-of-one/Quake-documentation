@@ -38,11 +38,22 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.22.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+
 11.21.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
+DONE: BecomeExplosion - all of them, do sound test -- can not block engine played sound later - use cl_sound_r_exp3 '" to silence
+DONE: explosions, sounds & silence, alt snds in hip code
+DONE: explosion via Become do not need to play r_exp3.wav - engine does that
+FIX: hip weps missing a good bit - hammer code fsck player model
+FIXED: EWEAP fails in lasercannon code -- used self.eweapon
 
 11.20.16
 
