@@ -38,11 +38,22 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.23.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+
 11.22.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
+FIXED: hip weps missing a good bit - hammer code fsck player model
+WIP: complete all weapon haste effects
+WIP: relativity19q -- converting patches to q1 brush
+DONE: generic pack / ammo rune max values, can be overridden on a per item basis
+WIP: check all hip weps - check IT_? stuff
 
 11.21.16
 
