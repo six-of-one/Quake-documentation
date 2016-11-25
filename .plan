@@ -38,11 +38,26 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.25.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+
 11.24.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
+FIXED: busted map files 
+DONE: resort of cfg dir, adjusted all alias
+WIP: tr_{item} translate aliases, including no_{} and untr_{}
+???: fix q2_band & pack msk_ in cfg
+\_ is this completed by the new master maxes ? -- should q1items not change maxes for q2/d/w packs ?
+FIX: also when pickup clb, melee / range wep visual gets set wrong sometimes for player mdl
+\_ also with harpoon
+WIP: check all hip weps - check IT_? stuff
+FIXED: player_hampain1(); -- not used with xents
 
 11.23.16
 
