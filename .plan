@@ -17,8 +17,8 @@ chaos mod Archon - mark III code base port to qc 2.0:
 quake hack:
 
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
-- possible solution - load _every_ _single_ hack with submodels for 1st map load --- still wont work
-- would have to load every think as a hack / sub-hack on the first map loaded, including script processing
+- possible solution - load _every_ _single_ hack with submodels for 1st map load --- still wont work -v
+- would have to load every thing as a hack / sub-hack on the first map loaded, including script processing
 
 qone:
 
@@ -38,11 +38,19 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.27.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+
 11.26.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
+FIXED: guake-term backgrounds not visible -- prefs / appearance / transparency - move slider right
+WIP: master translate cfg
 
 11.25.16
 
@@ -52,7 +60,7 @@ WIP: Archon, PK3
 DONE: cleaned out qbkp of much dross
 DONE: should this be encoded in cfg data? -- "progs/v_cl_on.mdl"
 FIXED: clb frame bork when prongs hot from viswep handle of fists -- in viswep under fists
-FIXED: clb way wrong now, wtf? -- was a define org_{x,y,z} with no under in hiprot.qc
+FIXED: clb way wrong now, wtf? -- was a define org_{x,y,z} with no #undef in hiprot.qc
 
 11.24.16
 
