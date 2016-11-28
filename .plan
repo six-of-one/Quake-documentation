@@ -38,11 +38,26 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.28.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+
 11.27.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
+WIP: master translate cfg - need keys
+FIX: lg blood on crates -- is 225 blood?
+WIP: new idea - warnings - a string value for specific warning sets 
+\_ this can only disp 1 warning without builtin fns to select multiple from matches
+DONE: bumped deepsleep damage to 45 units
+FIXED: suddenly tr_quake off blows the f up -- was working before some "stuff" was added
+- found some untr were set {}_tr "" -- this was the problem
+DONE: change from _map to _def_map to preserve map_item / dyn_item settings during reloads
+CHECKED: see if genre conversion script exists for q2 / q3, etc -- .q{2,3}_cis
 
 11.26.16
 
