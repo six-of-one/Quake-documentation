@@ -38,11 +38,21 @@ this is replacement for dynamic spawns
 
 ---  START of .plan daily
 
+11.29.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3
+
 11.28.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3
+WIP: q1 health translate sfs code
+DONE: sf check to limit sf loop code run to actual sfs only & in cfg files
+FIXED: infinite loop in cvar_fields on sfs -- maybe, needs more test
+???: push not working on test map for v107 ?!
 
 11.27.16
 
