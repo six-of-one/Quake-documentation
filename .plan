@@ -43,6 +43,9 @@ this is replacement for dynamic spawns
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
+FIXED: new mode #define PK_TUR_* as self.* vars for cfg script ops, are storing data in self, and not wep launch ent
+CHECKED: infinite ammo and pki -- worked great with beartrap, except viswep got removed on some switch - likely in _cary
+WIP: test map updates - func_train
 
 12.1.16
 
