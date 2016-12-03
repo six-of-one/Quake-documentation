@@ -29,12 +29,9 @@ play through / promo video - e1 at least
 
 
 Overview current WIP: 
-- spawn_x_ cvar command sets
-- verify painkeep ops & code + 3.0 release
 - rune controls -- need tested
-- spawners for cubes, crates -- including cfg for rnd items
-this is replacement for dynamic spawns
-- ton of quake-hack code
+- pk-bots
+- verify painkeep ops & code + 3.0 release
 
 ---  START of .plan daily
   
