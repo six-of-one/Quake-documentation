@@ -34,12 +34,23 @@ Overview current WIP:
 - verify painkeep ops & code + 3.0 release
 
 ---  START of .plan daily
-  
+
+12.5.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
+
 12.4.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
+NOTE: added sphere_annihilation to _x_6 - release needs some effort for pak file sorting
+FIXED: map nodules dont appear - model not set right -- modelmode2 - check the stuff prev. method fixed
+DONE: bot test 1 - frikbot; uses pki (we think anyway) - had a loop crash on vw_load, need pkbots
+WIP: master server vars - ammo max, etc
+WIP: test map updates - misc_teleporttrain
 
 12.3.16
 
