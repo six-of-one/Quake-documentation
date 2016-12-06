@@ -34,12 +34,23 @@ Overview current WIP:
 - verify painkeep ops & code + 3.0 release
 
 ---  START of .plan daily
+12.6.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
 
 12.5.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
+WIP: wepeqcy update
+WIP: pk 3.0 release list
+FIXED: no_pki leaves airfist, harp, clg
+FIXED: no_* using __item_null leaves items with solid = 0 after untr_* issued
+\_ still restores model on grabbed SP items
+WIP: genre weapon xlate - ammo_grenades, weapon_railgun, etc -- only have to worry about q3 maps (wad == "")
 
 12.4.16
 
