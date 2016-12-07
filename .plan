@@ -34,11 +34,23 @@ Overview current WIP:
 - verify painkeep ops & code + 3.0 release
 
 ---  START of .plan daily
+
+12.7.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
+WIP: wepeqcy update - all listed weps done
+
 12.6.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
+WIP: wepeqcy update - all listed weps done
+WIP: test map updates - secret door -- yes, it lacked one
+CHECKED: adren adds 1 to max health -- ISSUE: x_ents health dont use max_health field!
+WIP: pk 3.0 maphack based hub
 
 12.5.16
 
