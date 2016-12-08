@@ -41,6 +41,10 @@ WIP: maphack world builder -- outdoor test biome cfg files, production line for 
 WIP: DM maps & the hack builder
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
 WIP: wepeqcy update - all listed weps done
+FIXED: respawn incorrect mdl issues, mostly a translate issue -- all cfg must also set mdl
+-- q1setcyc causes problems with disamb_q3.cfg and non-q translates - it sets _mdl
+-- SUB_regen, setmodel(self, self.mdl); also causes problems if mdl != model for any reason
+DONE: item_enviro touch msk
 
 12.6.16
 
