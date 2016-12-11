@@ -35,12 +35,37 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.11.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+
 12.10.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
+FIXED: k7a_3 had some issue that crashed the engine:
+
+Mod_Q1BSP_RecursiveNodePortals: WARNING: new portal was clipped away
+*** Error in `maphack-glx': malloc(): memory corruption: 0x0000000005826f60 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x70bcb)[0x7fc463288bcb]
+/lib/x86_64-linux-gnu/libc.so.6(+0x76fa6)[0x7fc46328efa6]
+/lib/x86_64-linux-gnu/libc.so.6(+0x78f79)[0x7fc463290f79]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_malloc+0x54)[0x7fc463292d94]
+/usr/lib/x86_64-linux-gnu/tls/libnvidia-tls.so.352.41(+0x2341)[0x7fc45d0ca341]
+======= Memory map: ========
+00400000-0071f000 r-xp 00000000 08:01 5193447304                         /home/OS/ulb/maphack-glx
+0091e000-0091f000 r--p 0031e000 08:01 5193447304                         /home/OS/ulb/maphack-glx
+0091f000-00967000 rw-p 0031f000 08:01 5193447304                         /home/OS/ulb/maphack-glx
+
+repair seq:
+
+kept deleting the non rectangular ones until it fixed
+then I ctrl-z them back in and it works
 
 12.9.16
 
