@@ -35,12 +35,21 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.14.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+
 12.13.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
-WIP: 
+WIP: k7a_12 k7a_4 + whole freaking bunch of new chunks
+DONE: biome specific z limits -- high_limit, low_limit 	- via #define on button?
+- invisible room may be due to sub-hack think / setup
+- hide hack needs to be checked for room flicker
 
 12.12.16
 
