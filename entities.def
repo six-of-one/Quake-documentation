@@ -863,34 +863,43 @@ BOSSMAN			= 16
 */
 
 
-/*QUAKED func_crate  (0 .5 .8) (-16 -16 0) (16 16 32) LARGE RESPAWN REMOVE
+/*QUAKED func_crate  (0 .5 .8) (-16 -16 0) (16 16 32) LARGE RESPAWN
 --------  CAT  --------
-Chaos Mod MK II
+Chaos Mod MK III
 
 Breakable crates for your map
 
 LARGE - large crate = dimensions (-32 -32 0) (32 32 64)
 RESPAWN - respawn this crate
-REMOVE - remove items made after dynamic timeout
-
 
 -------- NOTES --------
 
+"delay" - think time for crate after item made, default 45
+"think" - default is SUB_Remove, set to SUB_null for perm open crate, sf2 sets to SUB_regen
+
+"health" - damage crate takes
+
 "message" - message for the crate opener (after opened)
 
-"target" - points to info_notnull with additional crate item flags
-         - these can chain for multi item crates
-         - wad = "pk_crate" on each info_notnull
+"netname" - ref code to load items from def: __cratecont_, requires cfg script set data
 
-nothing - pick a random item from pk_cube list
-
-"netname" - ref code to load items from def: __cratecont_
+"group" - exec this cfg script
 
 "deathtype" - string to center print when crate is touched - over rides crate generic touch messages
 
 "bubble_count" - {n} random count items - __cratecont_1_ to __cratecont_{n}, default 3, must be set -1 to negate
 
+"movetype" - less than 0 - un-moveable
+
 deprecated old mk_II mode:
+
+sf: REMOVE - remove items made after dynamic timeout
+
+nothing - pick a random item from pk_cube list
+
+"target" - points to info_notnull with additional crate item flags
+         - these can chain for multi item crates
+         - wad = "pk_crate" on each info_notnull
 
 "items" - mapcode of item to create
 "stdev" - add random this to items mapcode for a custom series
@@ -900,8 +909,6 @@ deprecated old mk_II mode:
 "wait" - use func_make codes = special value listed below
 
 "mean" - set time for removal if select in flags
-
-"movetype" - less than 0 - un-moveable
 
 special values of .wait - select random item from:
 -1 = q1 items, no runes if RUNES
@@ -920,11 +927,30 @@ special values of .wait - select random item from:
 */
 
 
+
 /*QUAKED func_pk_cube  (0 .5 .8) (-16 -16 0) (16 16 32)
 --------  CAT  --------
-Chaos Mod MK II
+Chaos Mod MK III
 
 to use as map item - they will respawn
+
+-------- NOTES --------
+
+"delay" - think time for cube after item made, default 30
+"think" - default is SUB_regen, set SUB_Remove for only one use
+
+"message" - message for the cube opener (after opened)
+
+"netname" - ref code to load items from def: __cubecont_, requires cfg script set data
+
+"group" - exec this cfg script
+
+"bubble_count" - {n} random count items - __cubecont_1_ to __cubecont_{n}, default 3, must be set -1 to negate
+
+"movetype" - less than 0 - un-moveable
+
+deprecated old mk_II mode:
+
 wad = "pk_cube"
 
 nothing - pick a random item from pk_cube list
@@ -4009,7 +4035,7 @@ dest							- when rotate value (angles_y) of hack = any of x, y, z, remove this 
 
 
 
-/*QUAKED func_train (0 .5 .8) ? TRAIN_TOUCH TRAIN_TELEPORTER _ _ _ _ _ _ !_EASY !_MEDIUM !_HARD !_DM
+/*QUAKED func_train (0 .5 .8) ? TRAIN_TOUCH TRAIN_TELEPORTER _ _ TRAIN_MDL _ _ _ !_EASY !_MEDIUM !_HARD !_DM
 Train platform - follows set path
 -------- KEYS --------
 speed : moving speed, default is 100
@@ -4019,6 +4045,7 @@ sounds : 1 = ratchet metal (Zerstorer) 2) stone 3) base 4) stone chain 5) screec
 TRAIN_TOUCH (Zerst) will cause the train to  hurt the player on touch.
 TRAIN_TELEPORTER (Zerst) will make a teleporter out of the train.  If you want to target a specific destination, use the "netname" field to target it. Or, if you want to use 
 random teleport destinations, you MUST USE a "spawnflags" of "6" on the func_train. This will make it a random teleporter.
+TRAIN_MDL use a custom model supplied in mdl - this overrides model (compiled map bsp)
 !(bit list) : Entity appears in all game modes.
 256 : Entity doesnt appear in Easy mode.
 512 : Entity doesnt appear in Medium mode.
