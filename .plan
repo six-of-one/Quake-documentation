@@ -35,11 +35,23 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.16.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+
 12.15.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+WIP: k7a - aa3 expand nodes, too much sameness - k7a_1m8aa3
+DONE: adjust trigger, clip in rprep
+NOTE: some reconstituted maps lack texture names on brush faces (egyptra3, pkts04)
+- pkts04 is really bad - no world brushes get made
+WIP: enumerate all pk maps
+FIXED: "invisible" sub-hacks now seem fixed via svh local var -- test this extensively
 
 12.14.16
 
