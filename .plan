@@ -35,11 +35,22 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.17.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+
 12.16.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+- hub special build
+TEST: DM maps
+FIXED: some minor tex alignment / angle stuff
+DONE: x4c_8a3 - using semi-core
+TEST: sparks, drips can be turned on / off with alias & cfg
 
 12.15.16
 
