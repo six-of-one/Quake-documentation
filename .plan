@@ -35,11 +35,20 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.18.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+
 12.17.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+- hub special build - reconstr hub1 -- compile fails "LinkConvexFaces: Mixed face contents in leafnode"
+WIP: rest of gate ops / dhd
+struck: commit d945e2f24e8684791e69f7bc733dea4573f1bdf5
 
 12.16.16
 
