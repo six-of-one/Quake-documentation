@@ -35,11 +35,20 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.19.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+
 12.18.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+WIP: rest of gate ops / dhd -- added flush, proper timing
+- still have button + early close issue
+FIXED: if you turn gate off, relay tuns back on - need to turn off relay with off action -- test more
 
 12.17.16
 
