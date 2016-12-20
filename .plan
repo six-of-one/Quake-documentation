@@ -35,11 +35,21 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.20.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+
 12.19.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+WIP: gate sounds - trigger ents in place & targeted
+NOTE: regarding the maphack "flicker" on x4c DM set -
+v_onlycsqcnetworking is "0" ["0"] disables legacy entity networking code for higher performance (except on clients, which can still be legacy)
+-- setting this makes all hacks not display - prob. whacks the sv_hide engine code
 
 12.18.16
 
