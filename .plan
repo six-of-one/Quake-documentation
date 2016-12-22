@@ -35,12 +35,24 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.22.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+- some chunk expansion for variety
+
 12.21.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
-- some chunk expansion for variety - 
+- some chunk expansion for variety - x4c now
+- tweak x4c_5a4 to lower top -- block x4c_0 unit was allowing player into blocked off unit via teleport
+\_ always has to be this type of fix
+FIXED: x4c is now generating x4_ chunks from a probe set -- turns out flaw in autobiome logic that was not exposed prior to this
+FIXED: x4c black sky -- base map chunk had no sky brush to focus
+\ - and hacks dont display different sky bits either
 
 12.20.16
 
