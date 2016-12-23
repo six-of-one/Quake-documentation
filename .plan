@@ -35,12 +35,22 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.23.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+- some chunk expansion for variety
+
 12.22.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
 - some chunk expansion for variety
+FIXED: regen of dyn items not handled properly - set wait to -2 in cfgs
+FIXED: will still fail for std items that ignore new ops
+WIP: admin override of std items stats
 
 12.21.16
 
