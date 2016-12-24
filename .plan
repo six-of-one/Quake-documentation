@@ -35,12 +35,24 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.24.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+- some chunk expansion for variety
+
 12.23.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
 - some chunk expansion for variety
+- added 2nd core to x4c - 8a0 / 10a0
+DONE: transparent chunks for media sets
+- set		__light_painkeep_candle_think		"FireAmbient"
+\_ was removing candles -- they still need sound?
+DONE: random items on map - via spawn loop contents rnd select
 
 12.22.16
 
