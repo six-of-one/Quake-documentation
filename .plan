@@ -35,11 +35,19 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.26.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- some chunk expansion for variety -
+
 12.25.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
-- some chunk expansion for variety
+- some chunk expansion for variety -- x4c group
+FIXISH: genre mega heal respawn code -- bumpted respawn time to 60 secs, ideal would be 80
+FIXED: wolf mortar - added fire fn
 
 12.24.16
 
