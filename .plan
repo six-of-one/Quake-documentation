@@ -35,11 +35,20 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.27.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- some chunk expansion for variety -
+WIP: pk code check vs. archon / pk 3.0
+
 12.26.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
+FIXED: harpoon out state shows wrong v_model state -- has to be the x wep code ops & assigning v_model from cfg
+WIP: pk code check vs. archon / pk 3.0
 
 12.25.16
 
@@ -48,7 +57,7 @@ WIP: DM maps & the hack builder
 - some chunk expansion for variety -- x4c group
 FIXISH: genre mega heal respawn code -- bumpted respawn time to 60 secs, ideal would be 80
 FIXED: wolf mortar - added fire fn
-
+			
 12.24.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
