@@ -35,6 +35,13 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+12.28.16
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder
+- some chunk expansion for variety -
+WIP: pk code check vs. archon / pk 3.0
+
 12.27.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
@@ -46,7 +53,7 @@ FIXED: when an x_ent made touch on init / spawn, axe did not get a vw_ model
 FIXED: map model used as vw_ with item repeatable on spawn at air cannon spot in 8a0
 \-- reload was finding classvn of viswep
 FIXED: viswep bug via hack_pdist -- still has oh set and getting set by mh code
-
+DONE: x4c, k7a map tweaks, _bb3 biome set got left out last edit
 
 12.26.16
 
