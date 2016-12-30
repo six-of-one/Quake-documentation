@@ -35,11 +35,22 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-12.29.16
+12.27.16
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+12.29.16
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: motd.qc replace with cfg
+- moved main motd below fancy HUD map name
+- more concise message detail
+- restored fire "clears" to infobar -- put other msg on infobar?
+- easier code flow in hud & motd
+WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
+- copb -- note T_Heal hard coded & not archon / pk 3.x vers
 
 12.28.16
 
