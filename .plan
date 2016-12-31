@@ -35,11 +35,20 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-12.30.16
+12.31.16
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+12.30.16
+
+WIP: pk code check vs. archon / pk 3.0
+- tomb admin
+DONE: tomb not in line with other pk 3 admin
+FAIL: attempt to make long string cvar_string -- \n \b do not work this way
+DONE: cphub bprints changed to localcmd of cfg files
+DONE: no_sfx needs op remove spikers -- set and commented out
 
 12.29.16
 
@@ -51,6 +60,7 @@ WIP: motd.qc replace with cfg
 - easier code flow in hud & motd
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
 - copb -- note T_Heal hard coded & not archon / pk 3.x vers
+DONE: canpab (recode) use .volume for limit, and healtype
 
 12.28.16
 
