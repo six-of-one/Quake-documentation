@@ -35,11 +35,17 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-12.31.16
+12.31.161.1.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+12.31.16
+
+WIP: pk code check vs. archon / pk 3.0
+DONE: check lasercanon admin sv_c_laser_bounce sv_c_laser_fly
+FIXED: when collecting cube, v_models shift from x_ent to std
 
 12.30.16
 
