@@ -35,11 +35,27 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-12.31.161.1.17
+1.2.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+1.1.17
+
+WIP: pk code check vs. archon / pk 3.0
+FIXED: where you cant open a cube if you have no ammo for ammo based weps (dfq?)
+-- if you stand on the cube and keep firing the axe it opens in a few secs
+-- W_BestWeapon is clearing eweap
+CHECKED: check hub vote & return - custom hubs
+\_ checked without bots using fraglimit & frags hack - seems to work
+FIXED: harpoon pulled a shootable trigger -- this is in Archon and pk 2.x
+\_ solved by "grap_firetest == 666" code -- needs added to triggers
+FIXISH: new issue - harp does not damage these triggers, but bounces off -- still bounces, but causes damage first
+\_ ideal might be to have harp pull player like a wall, but still do 9 pts dmg
+CHECKED: check where else archon had this -- on altars and occaug eye set
+DM test override status - button0 define for dm_over
+DONE: set def_resp "$1", exec cfg with $def_resp, spawn_ run
 
 12.31.16
 
