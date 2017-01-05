@@ -35,11 +35,18 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.4.17
+1.5.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+1.4.17
+
+WIP: pk code check vs. archon / pk 3.0
+DONE: engine sounds - water1.wav, wind2.wav -- sv_sound_water, sv_sound_wind
+CHECKED: deny sound missing on key doors -- test map is "worldtype          4.0000" which has no deny seq
+DONE: door opgrade - worldtype handle & set default sound -- do we want default sound - makes it hard to null it out
 
 1.3.17
 
