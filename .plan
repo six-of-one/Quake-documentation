@@ -35,11 +35,27 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.6.17
+1.7.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+1.6.17
+
+WIP: pk code check vs. archon / pk 3.0
+DONE: verfiy all pk translate sounds covered -- just calling this done
+FIXED: find_tdest select items has fall thru floor issues to often -- not selecting items for now
+CHECKED: timelimit doesnt work ? -- works, must have real DM set
+FIXED: cthunder can be selected with no ammo and makes a muzzleflash on button0
+-- axe has to have aflag = 1 for x_ents W_BestWeapon to work right when out of all ammo / weps
+FIXED: new bug - can select x_wep that use other ammo & have slot ammo - like nails for slot 4 / laser cannon
+DONE: .theowner is now .goalentity by #define
+-- painkeep/pulse_nail.qc:	newmis.theowner = self;
+-- painkeep/turret.qc:		newmis.theowner = self.owner;
+-- painkeep/_defs.qc:#define	theowner	groundentity
+-- x_ent/x_firecode.qc:			self.owner = self.theowner; // restore owner - was set to world after bounce
+DONE: complete all weapon haste effects -- hyperblaster, doom pistol, q2 blaster, wolf pistol -- tested
 
 1.5.17
 
