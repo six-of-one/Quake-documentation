@@ -35,11 +35,21 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.7.17
+1.8.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+1.7.17
+
+WIP: pk code check vs. archon / pk 3.0
+FIXED: x-terminal-emulator -> /usr/bin/urxvt* -- messed by printer driver install ?!
+UNDONE: commented out all *_pos{1,2} "0 0 0" non cfgable vectors -- this was complete fail, test map run slow as balls, many models were black
+DONE: test gib_{1,2,3}.wav -- fixed bug
+DONE: pk1-3 mode scripts, & nopk variants
+DONE: alias / script to turn pk mode back off
+WIP: pk map menu cfg
 
 1.6.17
 
