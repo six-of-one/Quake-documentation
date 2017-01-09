@@ -35,11 +35,21 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.8.17
+1.9.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+1.8.17
+
+WIP: pk code check vs. archon / pk 3.0
+DONE: now blocking "!dp" stuff found in some maps, like arc_hub
+DONE: trace & report tutorial
+WIP: pk 3.0 rcon admin __
+WIP: pk item position restore after move (respawn or timer)
+\_ fallen out check for map items -- need to catch repeat offenders & "freeze" them
+DONE: ramp count up for q-hack possibles -- in remove_loop
 
 1.7.17
 
