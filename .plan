@@ -35,11 +35,19 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.9.17
+1.10.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+1.9.17
+
+WIP: pk code check vs. archon / pk 3.0
+FIXED: pk weps & items dissappear on reload! -- nopki was using _tr and wpk.cfg did not wipe them
+DONE: limited PK mode for running pk maps in a loop with no pk hub
+DONE: dyn_item are set as _def_map
+WIP: pk item position restore after move (respawn or timer)
 
 1.8.17
 
