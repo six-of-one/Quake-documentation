@@ -35,11 +35,25 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.10.17
+1.11.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+
+1.10.17
+
+WIP: pk code check vs. archon / pk 3.0
+DONE: pk item position restore after move (respawn or timer)
+-- tested basic moves, dunk in lava
+FIXED: beacon not being set and using '0 0 0' which might be invalid
+FIXED: ip_chk ent was removed by viswep code due to classname contra exlude test
+DONE: fallen out save feature with MH - use sv_below & -z velocity test - teleport back to "beacon" setting
+CLEAR: no vote - hub goes to start.bsp -- "must have dm" set deal
+FIXED: Set: wrong number of parameters, usage: set <variablename> <value> [<description>]
+-- weapon_nailgun_wait missing "{n}" bit
+WIP: pk 3.0 rcon admin __ - help menu, vars
+WIP: pk modules cleared 123: admin.qc ambient.qc dmg_skin.qc
 
 1.9.17
 
