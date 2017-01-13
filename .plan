@@ -35,11 +35,30 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.12.17
+1.13.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+WIP: pk modules cleared 123: 
+
+1.12.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk modules cleared 123: 
+_note_cleanup_
+NIX: !mod, !dpc codify for various map ents -- there will be no !dp
+NIX: mk III will not run on winquake -->
+-- winquake - admin login fails on correct password
+-- winquake - botmatch fail - movetype 3 deal
+XXX: best wep really is such -- best wep is likely totally borked with xweps
+-- best wep is fixed in mk III with .distance compare
+DONE: added lava ball launchers to more x4c map modules
+NIX: scale 1.5 doom crate -- scaled crates / boom boxes need pos1 & pos2 size bnds set -- this fails w/o cfg override
+ICK: scale crates dont set mins, maxs correctly, would have be cfg script overriden to work
+DONE: !mod, q1 on test_c, notmod code block -- checked - only need q1, !dp, !mod - for now anyway
+NIX: more pushables -- some issue where they fall out of level
+DONE: pkmm.cfg -- all this needs tested
 
 1.11.17
 
