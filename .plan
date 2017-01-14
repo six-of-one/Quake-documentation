@@ -35,17 +35,26 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.13.17
+1.14.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk modules cleared 123: 
+WIP: pk modules clearing 123:
+
+1.13.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk modules clearing 123: admin.qc, pkitems.qc, client.qc
+DONE: _any_ pushable model ent -- note: prob wont work with touch trigger ents, only solids / non touch
+FIXED: more pushables -- some issue where they fall out of level
+\_ ref bounded on top or sides note in entities.def
+WIP: no_hub, pk_hub -- no hub does NOT remove hub_control
 
 1.12.17
 
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk modules cleared 123: 
+WIP: pk modules clearing 123: admin.qc, pkitems.qc, client.qc
 _note_cleanup_
 NIX: !mod, !dpc codify for various map ents -- there will be no !dp
 NIX: mk III will not run on winquake -->
