@@ -35,12 +35,23 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.14.17
+1.15.17
 
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk modules clearing 123:
+
+1.14.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk modules clearing 123:
+WIP: no_hub, pk_hub -- no hub does NOT bonk hub_control
+DONE: ( > 0 ) _reload now auto unset by reload loop
+NIX: fix _pos1,2 in items.cfg -- this was changed a few notes back
+CHECKED: runes randomly relocate -- not functioning
+DONE: runes in lava relocate imm
+WIP: runes randomly relocate & fall out / noway checks
 
 1.13.17
 
