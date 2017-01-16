@@ -35,12 +35,20 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+1.16.17
+
+WIP: DM maps & the hack builder			- some chunk expansion for variety -
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk modules clearing 123: pkitems.qc, client.qc, player.qc
+
 1.15.17
 
-WIP: DM maps & the hack builder
-- some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk modules clearing 123:
+WIP: pk modules clearing 123: pkitems.qc, client.qc, player.qc
+DONE: runes randomly relocate & fall out / noway checks
+- need to check for runes fallen out every few secs, run relo code every spec secs
+WIP: notes review, org
+
 
 1.14.17
 
