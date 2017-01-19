@@ -35,11 +35,30 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.17.17
+1.19.17
 
 WIP: DM maps & the hack builder			- some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
+WIP: pk modules clearing 123: pkitems.qc, client.qc
+
+1.18.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk modules clearing 123: pkitems.qc, client.qc
+CHECKED: changed - itm_ng.cfg turns off __weapon_pulsenail -- undone, whole seq. needs tested
+WIP: pk modules cleared 123: cleared player.qc, sound.qc (if func_pksound_play matches v1/2 code), sparks.qc, train2d.qc (2dtrain.qc)
+\_: zombie2.qc
+FIXED: 2dtrain.qc missing
+
+1.17.17
+
+WIP: pk code check vs. archon / pk 3.0
 WIP: pk modules clearing 123: pkitems.qc, client.qc, player.qc
+TESTED: bolt_s_explode1 -- see notes
+DONE: bolt_s_explode1 framer
+DONE: pk expanded player gibs
+FIXED: skin conflict on h_player from damage skins - head model not matching
+FIXED: issues with runes fallen in lava & adjusted relocate code
 
 1.16.17
 
