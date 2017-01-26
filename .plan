@@ -35,11 +35,18 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.25.17
+1.26.17
 
 WIP: DM maps & the hack builder			- some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk modules clearing 123: pkitems.qc, client.qc, weapons.qc
+WIP: pk modules cleared 123: 
+
+1.25.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk modules clearing 123: pkitems.qc, client.qc, weapons.qc
+WIP: pk modules cleared 123: actor.qc (module only), ogre.qc, defs.qc
 
 1.24.17
 
