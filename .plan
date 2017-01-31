@@ -35,11 +35,17 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.30.17
+1.31.17
 
 WIP: DM maps & the hack builder			- some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk modules clearing 123: client.qc
+WIP: pk*bot -- 
+
+1.30.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk modules cleared 123: client.qc, pk_client.qc (~parms, archon notes), pkitems.qc (~pack, archon *), pkweapons.qc (~ archon impulse)
+WIP: pk*bot -- code added & compiled (!) - got init stats
 
 1.29.17
 
