@@ -35,11 +35,24 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-1.31.17
+2.1.17
 
-WIP: DM maps & the hack builder			- some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- 
+
+1.31.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- adjusting classname, group, etc - need to track all bot tests from cm2
+FIXED: pkbot has targeting issue + see qc fail -- bogus fn call
+DONE: compile adjust for no bots, pk only, frik only
+DONE: .group update for detecting pk*bot
+WIP: pk*bot code adjust -- should prb do same for frik to lower global use with local_ent package
+DONE: include botaim in b_aim call - set v_forward for other calc -- test bot aim somehow
+ISSUE: bots get stuck -- refer to:
+-- cvar sv_gameplayfix_droptofloorstartsolid_nudgetocorrect is "0" ["1"] tries to nudge stuck items and monsters out of walls before droptofloor is performed
+-- cvar sv_gameplayfix_upwardvelocityclearsongroundflag is "1" ["1"] prevents monsters, items, and most other objects from being stuck to the floor when pushed around by damage, and other situations in mods
+\_ these may fix, test with monsters too
 
 1.30.17
 
