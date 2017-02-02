@@ -35,10 +35,24 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.2.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+
 2.1.17
 
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk*bot -- 
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+FIXED: obit isfunction crash where string was empty
+CHECK: see if pk*bot tracks levels -- answer is no
+DONE: bot init recode - fix pk not transit levels, removed disconnectPlayer - using null classname logic
+DONE: pk ifdef adjust - removed pkvl warning float, commentary
+DONE: pk ifdef adjust ai.qc - removed pkvl warning float, commentary
+DONE: pk ifdef adjust - backpack bot setup
+DONE: bot plat_hit_bottom code in door_hit_bottom
+DONE: remove bot_BackpackSetup - op statements moved to items backpack code
+FIXED: pk*bot tracks levels
 
 1.31.17
 
@@ -53,6 +67,14 @@ ISSUE: bots get stuck -- refer to:
 -- cvar sv_gameplayfix_droptofloorstartsolid_nudgetocorrect is "0" ["1"] tries to nudge stuck items and monsters out of walls before droptofloor is performed
 -- cvar sv_gameplayfix_upwardvelocityclearsongroundflag is "1" ["1"] prevents monsters, items, and most other objects from being stuck to the floor when pushed around by damage, and other situations in mods
 \_ these may fix, test with monsters too
+
+master code check set:
+- pk code check vs. archon / pk 3.0
+admin.qc, ambient.qc, dmg_skin.qc, drip.qc, light.qc, meantime.qc,  sound.qc, sparks.qc, train2d.qc, zombie2.qc, fallaway.qc, splash.qc
+beartrap.qc, copb.qc, ego.qc, horn.qc, grap.qc, motd.qc, tomb.qc, phone.qc, turret.qc, gravity.qc, bolt.qc, hub.qc, actor.qc
+- also cleared for pk3 / archon / pk bots
+fight.qc, player.qc, buttons.qc, ai.qc, combat.qc, doors.qc, misc.qc, monster.qc, plat.qc, subs.qc, world.qc, triggers.qc, defs.qc, weapons.qc, client.qc
+zombie.qc, wizard.qc, tarbaby.qc, soldier.qc, shambler.qc, shalrath.qc, oldone.qc, knight.qc, fish.qc, dog.qc, demon.qc, hknight.qc, enforcer.qc, boss.qc, ogre.qc
 
 1.30.17
 
