@@ -35,10 +35,12 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-2.4.17
+2.3.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+FIXED: monsters & bots getting stuck, running in place -- gameplayfix? framer loop?  ai_rep call?
+\_ fixed with -- //	#define hip_monsters - .th_turn code in ai.qc is culprit
 
 2.2.17
 
