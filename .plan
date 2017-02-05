@@ -35,10 +35,20 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.5.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+
 2.4.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+DONE: obits: x monsters, morph, x_weps, chaos weps -- TEST
+FIXED: map_item.cfg fixed for wait -2 by clrld.cfg
+WIP: more obit tweaks via .theowner, .deathtype -- making these more generic for script
+\_ any fire_missile or launch_spike call sets these
+- even more obit tweaks
 
 2.3.17
 
