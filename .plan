@@ -39,6 +39,7 @@ Overview current WIP:
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+DONE: bot fixer update, buku code cleanup
 
 2.4.17
 
@@ -67,6 +68,7 @@ DONE: botcam code improved - now tracks frikbot as well, and no live players are
 FIXED: dm is respawning cells from pkcubes -- fix in cfg - set wait to -2 to remove dyn_item in touched
 NIX: bot_changelevel may need issued with map or changelevel command if bots are loaded -- see if we can just set sv_bot_pkset
 \_ call on lvl chg is deprecated - sv_bot_pk* now controls bot saving tween levels
+DONE: botmatch alias
 
 2.1.17
 
