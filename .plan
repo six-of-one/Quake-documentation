@@ -35,11 +35,19 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.6.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+
 2.5.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 DONE: bot fixer update, buku code cleanup
+"": bot_fixer code in - was in painkeep.qc
+\_ there exist cm2 code to fix stuck bots - make sure we get
+WIP: .plan rechaos
 
 2.4.17
 
