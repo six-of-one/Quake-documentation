@@ -35,10 +35,21 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.7.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+
 2.6.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+DONE: updated botmatch alias
+WIP: fake load with x_ents module
+CHECKED: sparks running out on x4c - nopki process
+- nopki alias runs cfg/items/nopkm.cfg which calls cfg/items/pk_nosfx.cfg, which kills sparks think & use
+- pk level maps should:		alias	nopki	"exec cfg/null.cfg" in cfg/map/{mapname}.cfg
+FIXED: sparks not working on map outside of hud / pk {n} mode -- changed nopki / nopkm.cfg to allow map stuff / items
 
 2.5.17
 
