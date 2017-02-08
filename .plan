@@ -35,10 +35,18 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-2.7.17
+2.8.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: fakeload for pk range weps, unholstered x_ent
+
+2.7.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: fake load with x_ents module
+- next step to build the fakeload loop - get classname, call cvar_fields, self = ent, other = player, call x_load, clear out, set ammo cnt
+\_ pk cary items working
 
 2.6.17
 
