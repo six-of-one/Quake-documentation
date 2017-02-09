@@ -35,11 +35,20 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-2.8.17
+2.9.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: fakeload for pk range weps, unholstered x_ent
+
+2.8.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: fakeload for pk range weps, unholstered x_ent
+- parm assign already has self.mcode set in viswep from cm2
+- make __p{mcode} lines:
+g -R _mcode *|g sys6|sed -e 's/.*://' -e 's/\t""//' -e 's/__[0-9a-z_].*/& "&/' -e 's/__[0-9a-z_]*//' -e 's/\t\t\t\t/\t\t/' -e 's/"/__p/' -e 's/"//' -e 's/_mcode/"/' -e 's/"[0-9]*"//'
+FIXED: viswep bad loop bug -- added vw_chain before the vload "find the last vwepent" loop
 
 2.7.17
 
