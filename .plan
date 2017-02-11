@@ -35,15 +35,24 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.11.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+
 2.10.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+FIXISH: died & respawn bugged out on fakeload -- checking to make sure EW ptr is really an eweapon
+\_ pointer corruption had to be self.eweapon not reset - fixed in pcis
+DONE: backpack & pk items -- test
 
 2.9.17
 
 WIP: pk code check vs. archon / pk 3.0
 DONE: fakeload for pk range weps, unholstered x_ent - current iter -- needs thorough test
+WIP: backpack & pk items
 
 2.8.17
 
