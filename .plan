@@ -35,10 +35,22 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.12.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+
 2.11.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+FIXED: pk*bots dont get fallout check in client.qc
+DONE: compile w/o pk module -- some wild code appeared outside #ifdef
+DONE: put use_pki back in frikbot
+DONE: use_pki select eweap via cycle weps
+DONE: compile w x monsters module -- got a stray char in code "f" - must have been an f for fail
+DONE: compile w/o a few modules -- some wild code appeared outside #ifdef
+\_ note: some combination of modules wont compile - e.g. viswep, maphack require xents -- may be other compile issues
 
 2.10.17
 
