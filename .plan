@@ -35,10 +35,18 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.13.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+
 2.12.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+FIXED: p2 died with key - self.think is missing qc fail -- must have had something to do with 2nd player in server, added cvar_fields to null out fns
+FIXED: after turret tweak, unable to toss last turret due to eweapon change mid toss
+WIP: x_decparm pki ammo counts -- may still have issues on some ammo counts
 
 2.11.17
 
