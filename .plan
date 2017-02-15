@@ -35,10 +35,22 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.15.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+
 2.14.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+ISSUE: CycleWeaponCommand & .f__ != 1 does not handle pk_currentitem proper
+\_ also messed up axe slot items
+DONE: impulse [1-9] preserve slot 1 select, but cycle can defunk it
+FIXED: adjust to mcode val * 256 in other modules
+DONE: impulse [1-9] now starts new slot at pk_curr = 1, & cycles
+DONE: CycleWeaponCommand goes thru all inv slot items
+FIXED: EF_NODRAW set by viswep on some pk_curr stuff not in slot 1 -- complete retool of viswep post logic
 
 2.13.17
 
