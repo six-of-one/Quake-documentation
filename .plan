@@ -35,10 +35,23 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.16.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+
 2.15.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+DONE: CycleWeaponCommand & impulse [1-9], 10, 12
+DONE: moved hooks to slot on 8192 bit - no impulse val yet
+FIXED: imp 1-9 can select a base wep when not held from bit in x_wep -- can select GL when you get prox
+---: when getting proxmine first, some butkis with gl happens where it can select w/o a vwepent
+DONE: swap canpab & beartrap bits to fix cycle seq & HUD display
+WIP: moving items2 into x_items -- see about retooling some x stuff w/regards to HUD display - use more mcodes
+\_ see if HUD can trace thru vwepents
+DONE: turn off "no wep" & "no ammo" msg with cycle wep using imp 1-9
 
 2.14.17
 
