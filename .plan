@@ -35,10 +35,29 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.18.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+
 2.17.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+FIXED: NULL function in server: FIELD_FNC  locus (=entity 21), think1 (=.think1), GLOBAL1520
+-- wrapped in - if (self.eweapon)
+DONE: removed unused code in _bots
+NIX: explode shot bugs non-q1 shotguns - frame bork, unloads when empty and returns to normal eweap
+\-- not happening now, but as proper the single shot can not be selected
+DONE: pkbot taunt msg slight mod
+WIP: bots keeps busting eweap - free ents, pointer goes world while firing, etc
+DONE: now protecting from freed ent and non eweap -- prob. need to leave this in
+NOTE: saved1 was set 483 (cust hub deal) and messing with frikbot msg
+DONE: pkbots now use hi? msg set if pk
+NIX: bot msgs arent yellow in console -- pkbots never were - upd to have multi color now, frik msg back on
+FIXED: pkbot is firing lightning wrong -- had to set v_forward prior to fire - make this generic?
 
 2.16.17
 
