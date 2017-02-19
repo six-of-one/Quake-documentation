@@ -35,11 +35,26 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.19.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+
 2.18.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots
+FIXED: viswep_ld was harboring a bad loop bug when bots called it
+-- seems like the bot self.vwepent pointer was not being cleared - leaving a freed ent, which on re-entry bad looped
+-- might have been a bug in viswep logic that didnt always trip -> if (pr) tr = pr;
+ISSUE: fryguy may not play happy with frikbot	-- no takedamage, in axe frames, stuck in place
+\-- adjust bot_fixer to handle this
+ \_ frik must take over think while in conduit jerk frames
+FIXED: map codes in HUD for weps that arent showing (aircan, clg, harp)
+FIXED: revised pk_currentitem plays havok with HUD code -- mostly fixed, new pk_curr setup is messing with detect of std weps (lg icon shows when only have clg)
+DONE: saved? scratch? used by frikbot - change to sv_bot_fk?
 
 2.17.17
 
