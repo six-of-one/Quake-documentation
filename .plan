@@ -35,11 +35,21 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.20.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+WIP: bots keeps busting eweap  - free ents, pointer goes world while firing, etc
+
 2.19.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots
+DONE: remove viswep_post from pk botthink	-- will be called by player or frikbot in postthink
+FIXED: vwep_firecary clears vwepent - never changes eweapon
+FIXED: mask does nada -- needed ifdef switch
 
 2.18.17
 
