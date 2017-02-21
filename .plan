@@ -35,12 +35,31 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.21.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+WIP: bots keeps busting eweap  - free ents, pointer goes world while firing, etc
+
 2.20.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots
 WIP: bots keeps busting eweap  - free ents, pointer goes world while firing, etc
+FIXING: bots breaking eweap code -- 3rd time
+DONE: check actor logic in ego -- changed this to not blast true invuln players
+\_ changed this back -- not sure real purpose - seems like they want ego to respect the actor powerup
+FIXED: turrets: health           -99.0000	ammo_cells     -18967.0000
+-- turret code is now bugged - eweapon can be cleared by e_use_ammo before vals are set
+NOTE: with current x_ent setup for pk cary weps - activate fn MUST be called before e_use_ammo [ .use() ]
+FIXED: more bots eweap screwage
+CHECKED: after a rune is ejected on death, it keeps relocating on short interval for a while
+\_ pk12b has a bogus noway_below value ( -1 ) on load -- set in script now
+NOTE: could be a problem on every maphack map unless values preset
+DONE: sv_bot_fk0 now saved in config.cfg
+CHECKED: changelevel - lost frikbots - sv_bot_fk didnt work -- seems like this works now
 
 2.19.17
 
