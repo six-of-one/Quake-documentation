@@ -35,12 +35,27 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.22.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+
 2.21.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots
 WIP: bots keeps busting eweap  - free ents, pointer goes world while firing, etc
+DONE: some tweaks to way W_BestWeapon logic works
+DONE: clear self.eweap ptr & EWEAP, if wasfreed or not valid refer
+WIP:  HUD not displaying currentammo of 1 by weapon icon		-- unknown - ref:
+\_			if (cammo > 0) DrawAmmo('0.3 0.3 1', v + y + '-24 4 0', ceil(cammo), ALPHA_FULL * awepflash);
+ISSUE: fryguy may not play happy with frikbot	-- no takedamage, in axe frames, stuck in place
+_ had a look at bot code, no obvious why they get in this state as fryguy has a clean exit in playerdie
+FIXISH: forced bot think to jerk in bolt_s_explode1 -- test, see if works
+FIXED: item_reload - s4__ adjust -- cvf is called and s4__ is field_loop
+DONE: generic impulse weapon select & fn caller
 
 2.20.17
 
