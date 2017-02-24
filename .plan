@@ -35,11 +35,34 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.24.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+
+2.23.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+FIXED: pack touch x_load bad loop bug
+\ -- might be: bp.weapon   = 2				this should be an mcode > 147 ;  this will have to effect of reloading the just created turret
+ \_ might be last bit of e_weap_Attack code - if death occured / pack is thrown, then return to finish wep firing aspect
+HUH: painframes - aircannon went to holster / back pos -- also harp, clg
+\_ this works properly now ? hrm...
+CHECKED: maybe too much rune moving -- timing seems fine on no / bots map
+\_ what this might be is when players die and runes eject, they move soon after
+DONE: bots keeps busting eweap / viswep_ld - free ents, pointer goes world while firing, etc -- perhaps it is over
+
 2.22.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots
+FIXISH: pack touch x_load bad loop bug		-- thinking this is reuse of f10__ in viswep - could cause a bad loop by resetting f10__ while x_dec loops
+FIXED: couldnt touch power armors -- __msk was wrong
+DONE: x_items touches -- keys			// for now anyways
 
 2.21.17
 
