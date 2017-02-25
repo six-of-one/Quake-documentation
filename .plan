@@ -35,11 +35,23 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.25.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+WIP: fact3 adjust for new code to handle moving lava blocks
+
 2.24.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots
+FIXED: pulse spikes stuck forever in void again -- a lot of these slug a server down 10 fps or so for about 25 spikes
+FIXED: deathtype not cleared on respawn
+DONE: adjust power armor imp to 56 -- 55 used by beacon now
+DONE: all pk impulse item selects
+WIP: fact3 adjust for new code to handle moving lava blocks
 
 2.23.17
 
