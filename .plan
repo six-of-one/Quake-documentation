@@ -35,12 +35,21 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.26.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots
+
 2.25.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots
 WIP: fact3 adjust for new code to handle moving lava blocks
+FIXED: bot_fixer not fixing now -- wasnt being run after changelevel / map cmd, put in server.cfg
+DONE: new cycle & 1-9 impulse
+DONE: add pk_currentitem to _every_ cfg wep -- dbl check
 
 2.24.17
 
