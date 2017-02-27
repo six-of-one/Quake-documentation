@@ -35,11 +35,38 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+2.27.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots -- 41 hrs & running 50 fps on altarbeta
+
 2.26.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
-WIP: hard server tests with 6 bots
+WIP: hard server tests with 6 bots -- 41 hrs & running 50 fps on altarbeta
+DONE: removed vwepsel -- not used in new scheme
+DONE: mem on slot 1 select
+- removed pk_crs1 (#define as waitmin)
+DONE: controls section of archon autoexec.cfg
+DONE: admin.cfg stuff moved out of autoexec.cfg
+DONE: CycleWeaponCommand doesnt bypass a top slot wep with no ammo for one below that has or is inf ammo
+\_ does not select a pk_curr wep imm. when no 1 item in slot -- ref only have prox gun
+ARG: 
+1. hitting 1 requires an extra tap to advance pki when cycling in -- or
+2. hitting 1 auto advances when re-entry from another slot -- you were on turret, select rl, then 1 again - comes back in with beartrap
+FIX: put hip laser cannon in right rotate place
+_HUH: doin stuff, tests,  opened map crates, had q2 mech hook, touching crates after resp. opens them -- test
+FIXED:
+Download rejected: server does not have the file "sound/ambient/humming.wav"		-- in _x_6b  - not sure where in pk3 release if at all
+Download rejected: server does not have the file "sound/ambient/waterfal.wav"
+FIXED: trigger dtype & fact3 ops -- redo map with moving lava door - works if tex is *lava
+NOTE: moving lava doors - one brush with *lava, one brush solid tex -- or compiler barfs
+NOTE: ran server for 2 days - noticeable slowdown spikes, fps generally over 35
+FIXED: disamb_q2 missing super shotgun
+DONE: wsys6+ _mdl missing -- still might need pk
+WIP: q2 teleport sounds & particle fountain -- fact3, ac
 
 2.25.17
 
