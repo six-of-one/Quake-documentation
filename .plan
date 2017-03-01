@@ -30,16 +30,41 @@ play through / promo video - e1 at least
 
 Overview current WIP: 
 - rune controls -- need tested
-- pk-bots
 - verify painkeep ops & code + 3.0 release
+- build release package
 
 ---  START of .plan daily
+
+3.1.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots -- 41 hrs & running 50 fps on altarbeta
 
 2.28.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots -- 41 hrs & running 50 fps on altarbeta
+DONE: pk impulse set	-- still have: 46 - best wep, 69 - prev wep		-- not doing admin via impulse
+DONE: best wep tweaks - pk no blaster deal, lg rank 75, etc.
+DONE:
+// make your favorite wep always select as best wep if you have it
+// favwep weapon_flamer		# favor the flame thrower
+// note: doenst work on q1 weps - they are: set  __rprogs/{vwmodel}.mdl	"{rank}"
+//		 also wont work if you already have the item
+
+alias favwep "set __$1_distance 99;set __$1_reload 1;reload"
+-- and deprecated as well
+DONE: noexit deal - ? -- this is the cm2 server code that dealt with frag / timelimit and a map without a trigger_changelevel
+DONE: admin - nextlevel code
+NIXED: serious slowdown (8 fps) on x4c alpha 0.6 - 9 fps on pkn6 (700 ents)
+NOTE: reload cmd in server.cfg delay loading x_items
+DONE: add real ply_count to test code
+DONE: crosshair impulse 49 replaced with cfg loop
+DONE: hub override -- is this working live?  it works on map reloads
+|  very quirky, may work live, may need to reload hub, a hub turned off and back on when timesout will load itself anyway
+\_ hubs can be turned off, and back on - in theory a hub turned off live can be turned back on
 
 2.27.17
 
