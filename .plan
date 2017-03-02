@@ -35,16 +35,28 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.1.17
+3.2.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
-WIP: hard server tests with 6 bots -- 41 hrs & running 50 fps on altarbeta
+WIP: hard server tests with 6 bots 
+
+3.1.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot
+WIP: hard server tests with 6 bots 
+DONE: notes on pk admin commands & ops -- admin.cfg
+WIP: pk maps need bouncy nailgun -- need a way to set pk mode so one generic pk.cfg script can run, instead of a ton of map scripts
+\_ hubs have a generic script, but individual map scripts still needed for non hub map loop
+DONE: debounce t_botpath .touch
+DONE: map vote displays -- prev WriteB3 method total remove
+DONE: added inHubMap to nox code in client -- shouldnt fraglimit hub
 
 2.28.17
 
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: pk*bot
 WIP: hard server tests with 6 bots -- 41 hrs & running 50 fps on altarbeta
 DONE: pk impulse set	-- still have: 46 - best wep, 69 - prev wep		-- not doing admin via impulse
 DONE: best wep tweaks - pk no blaster deal, lg rank 75, etc.
