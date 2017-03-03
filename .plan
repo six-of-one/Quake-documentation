@@ -35,11 +35,21 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+3.3.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots 
+WIP: pk maps need bouncy nailgun
+
 3.2.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
+WIP: pk maps need bouncy nailgun
+DONE: map admin - new "menu" system replacement via .cfg & alias {n} setup -- mostly
+FIXED: when nopk is used, pk_sfx alias never comes back
 
 3.1.17
 
