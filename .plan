@@ -35,21 +35,34 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.3.17
+3.4.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
-WIP: pk maps need bouncy nailgun
+
+3.3.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+DONE: pk maps need bouncy nailgun -- testing pkmm / nopki with vars maps, seems legit
+FIXISH: bad wolf loop bug in  W_BestWeapon -- stuck on a free ent
+\_ suspect these vwepent / x_load / viswep freed bugs are from locus getting mispurposed mid fn call -- qc would need to run in parallel for this tho
+FIXED: oddball centerprint of world.message -- wep select message when ptr is world
+WIP: #unused cleanup started
+FIXISH: when wep changes gets v_model wrong for an x_wep
+DONE: RankForWeapon doesnt take eweap into account -- needs to use distance but dont have that in weapon or ammo _touch
+DONE: botcam #ifdef wrapper adjust
+power armor msgs only appear if both held -- turns out this was a design feature so you knew which was on, if you only have one, that must be on
 
 3.2.17
 
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: pk maps need bouncy nailgun
 DONE: map admin - new "menu" system replacement via .cfg & alias {n} setup -- mostly
 FIXED: when nopk is used, pk_sfx alias never comes back
+FIX: bad wolf loop bug in  W_BestWeapon -- stuck on a free ent
 
 3.1.17
 
