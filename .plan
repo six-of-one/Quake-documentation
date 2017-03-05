@@ -35,11 +35,24 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+3.5.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots 
+
 3.4.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
+FIXED: holster last wep kinda odd -- found 2nd logic bug - even made _yet_ _another_ logic bug
+\ axe holster flicks to slot 1 items when other slot items pk_curr != 1 -- have other partial holster issues as well
+ \_ hammer & axe both holstered
+DONE: update W_ChangeWeapon was code, include pki -- eweap didnt changed, does it need incl
+\ when on a pki, and hitting impulse for empty slot, it changes vw display to axe tho wep is still pki
+ \_ - changed pk_currentitem to 1, but eweap stayed on item
+DONE: dob - dead observer by alias & cli #
 
 3.3.17
 
@@ -54,6 +67,7 @@ FIXISH: when wep changes gets v_model wrong for an x_wep
 DONE: RankForWeapon doesnt take eweap into account -- needs to use distance but dont have that in weapon or ammo _touch
 DONE: botcam #ifdef wrapper adjust
 power armor msgs only appear if both held -- turns out this was a design feature so you knew which was on, if you only have one, that must be on
+WIP: holster last wep kinda odd -- found logic bug
 
 3.2.17
 
