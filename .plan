@@ -35,16 +35,43 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.5.17
+3.6.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 
+3.5.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot
+WIP: hard server tests with 6 bots 
+DONE: dob now run on server only
+FIXISH: fired canpab - pk_curr was 4 and gl had no viswep -- cant duplicate yet
+\_ firecary now sets defaxe when a cary wep is empty
+CHECKED: dp has a map base name -- cvar sv_worldbasename is "anomie"
+\_ substring(world.model,5,strlen(world.model) - 5);
+ \_ adds a global, not much save unless we need that value a lot
+WIP: clearing vars check:
+CHECKED: search map source - find out if regioned mode is ever used REMOVE this check -- none found in id maps - testplayerstart left wrapped in #debug
+CHECKED: weaponmodel stuff -- for fists - wm seems to work fine given that fhists have no wm
+CHECKED: does this cause the test_c map teleport train facing issue?? -- indeed was the reason
+FIXED: teleport train on test_c leaves fixangle wrong !
+CHECKED: monster enemies? -- bot_ai - pkb just not geared for monsters - would req. serious ai recode
+CHECKED: attempt fold into multi* -- hip monsters check attacks - all diff from multi code - gremlin is prob. most generic
+CHECKING: what d, q2, q3 guy drop in dm when dead -- q3 drops held wep
+CHECKED: do the next 2 need moved ? -- ambient stuff in map_hack - moved to env
+CHECKED: does this work cli / srv remote - or does this have to be sent to _every_ cli with stuffcmd -- needs stuffcmd send
+DONE: _/
+CHECKED: ideal - switching back from fists - next test bugs out clb hot prongs -- viswep fists code - clb prongs seem to work fine
+NOTE: q2 code - see if pooted out runes make noise -- self.noise4 = "misc/null.wav";
+\_ noise4 would need set in cfg if runes have a pop out noise
+FIXED: pk*bots need this -- already in bothink now
+DONE: scripted obits -- was done aways back
+
 3.4.17
 
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 FIXED: holster last wep kinda odd -- found 2nd logic bug - even made _yet_ _another_ logic bug
 \ axe holster flicks to slot 1 items when other slot items pk_curr != 1 -- have other partial holster issues as well
