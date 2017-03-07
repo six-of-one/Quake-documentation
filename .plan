@@ -40,6 +40,15 @@ Overview current WIP:
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
+WIP: building release package
+
+3.6.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+DONE: test - see what happens when hitting a monster / player -- harp pulls both
+WIP: building release package
+WIP: info alias & cfg file
 
 3.5.17
 
