@@ -35,12 +35,25 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.9.17
+3.10.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
+
+3.9.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+DONE: reconfig vars build components
+WIP: test list track
+FIXED: had beartrap before transit, after - icon on hud, no vw_, cant select
+\_ vw for canpab - not on hud, cant select -- fakeload seq was not adjusted for canpab 128
+FIXED: no pk cube model
+WIP: weapon / level transit issues -- axe is fixed
+\_ shotgun fix in, but not working
 
 3.8.17
 
