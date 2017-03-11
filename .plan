@@ -35,12 +35,31 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.10.17
+3.11.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
+
+3.10.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+FIXED: info cfg missing
+DONE: level transit & x_wep / pk_wep blocking std wep vwepent -- the subtract bit at issue
+-- only fixed for axe so far
+- will have to re-run vwepent & take out all sub off bits that arent eweapon
+NOTE: pk.pk3 got replaced by build while server were in progress - after map load:
+FS_Read: Can't inflate file
+Mod_LoadModel: model "progs/x_explo1.spr" is of unknown/unsupported type
+FIXED: bad loop bug in SelectSpawnPoint with .chain and pk select system enhance
+DONE: func_arcarn, archon_fader
+FIXED: weapon / level transit issues -- shotgun, axe are fixed
+\_ issues with lg, gl
+FIXED: hud not showing beartrap select -- hud_pak did not have updated csprogs.dat
+FIXED: "You got the Thunderbolt" - but no vwepent, already had clg -- its the clg - got that & bit is set, no vwepent added
 
 3.9.17
 
@@ -54,6 +73,8 @@ FIXED: had beartrap before transit, after - icon on hud, no vw_, cant select
 FIXED: no pk cube model
 WIP: weapon / level transit issues -- axe is fixed
 \_ shotgun fix in, but not working
+FIXED: occasional missing axe -- is this a level transit thing with pki ?
+FIXED: missing 8ray in chv_?
 
 3.8.17
 
