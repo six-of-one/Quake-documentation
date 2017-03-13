@@ -35,14 +35,24 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.12.17
+3.13.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
-WIP: doom1_e1 map issue
+WIP: doom1_e1 map issue -- 
 WIP: test list
+
+3.12.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: building release package
+WIP: doom1_e1 map issue -- qover fixes most ents, but still score_rel1
+WIP: test list
+DONE: enabled qover -- and fixed logic
+DONE: added ldfail.bsp to build
+WIP: qover build
 
 3.11.17
 
