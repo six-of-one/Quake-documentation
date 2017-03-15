@@ -35,7 +35,7 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.14.17
+3.15.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -43,7 +43,19 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: doom1_e1 map issue -- 
 WIP: test list
-WIP: build pk extr, mod, norm -- initial cut, from cm2 dev
+WIP: build pk extr, mod, norm -- revising for 3.0
+WIP: add pk max live ents -- should prob always have max live ents, implement thru fire_cary or whatever common code all ents use
+
+3.14.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: doom1_e1 map issue -- 
+WIP: test list
+WIP: build pk extr, mod, norm -- revising for 3.0
+IDEA: replace cvar reads with gv - have script use - prvm_global_set server  {var}
+WIP: add pk max live ents -- should prob always have max live ents, implement thru fire_cary or whatever common code all ents use
 
 3.13.17
 
