@@ -35,7 +35,7 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.15.17
+3.16.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -43,8 +43,22 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: doom1_e1 map issue -- 
 WIP: test list
-WIP: build pk extr, mod, norm -- revising for 3.0
-WIP: add pk max live ents -- should prob always have max live ents, implement thru fire_cary or whatever common code all ents use
+
+3.15.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: doom1_e1 map issue -- 
+WIP: test list
+DONE: build pk extr, mod, norm -- revising for 3.0
+DONE: add pk max live ents -- limit for turrets and limit for btrap + tombs
+DONE: maploop sample
+FIXED: when level transit w/ x_wep, on entry, eweap not set
+FIXED: x_wep ammo factory on transit -- additive from x_load & what wep has
+NIXED: crates / cubes leaving bogus ents in SUB_regen -- cfg set for wait is wrong somehow
+\_ this is not fixable, the cfg setup simply must be correct
+DONE: finish pki inf ammo settings
 
 3.14.17
 
@@ -56,6 +70,7 @@ WIP: test list
 WIP: build pk extr, mod, norm -- revising for 3.0
 IDEA: replace cvar reads with gv - have script use - prvm_global_set server  {var}
 WIP: add pk max live ents -- should prob always have max live ents, implement thru fire_cary or whatever common code all ents use
+\_ starting to think turrets need a lower limit than traps or tombs
 
 3.13.17
 
@@ -65,6 +80,7 @@ WIP: doom1_e1 map issue --
 WIP: test list
 DONE: decor now qover to item_null
 FIXED: item_null goes trigger solid - for decor to null -- this will jack up any solid tr'ed to item_null !
+\_ leaving it that way because tr_ is used mostly on items
 FIXED: func_pushable target validates target model > 6 chars -- incase decor / push is taken to item_null or other invalid model values
 DONE: qover build -- for all the prev 7 & 8 item converts anyway
 \_ armor shards convert to q1 green armor is overkill
