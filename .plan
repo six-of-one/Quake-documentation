@@ -35,7 +35,9 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.16.17
+3.17.17
+
+Happpy St. Pattys day!
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -43,6 +45,19 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: doom1_e1 map issue -- 
 WIP: test list
+
+3.16.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: doom1_e1 map issue -- 
+WIP: test list
+DONE: inf ammo, x_wep
+FIXED: cfg errors in translate - armor1, armor2, q3 artifacts that turn on alpha
+DONE: tr q1 to q3, wf
+DONE: clear disambit every server
+DONE: mvc9 singleplayer mode with new setup -- still needs random pki cfg completed, either set same as cm2 or just activated in sp
 
 3.15.17
 
