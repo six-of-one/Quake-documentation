@@ -35,9 +35,7 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.17.17
-
-Happpy St. Pattys day!
+3.18.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -45,6 +43,19 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: doom1_e1 map issue -- 
 WIP: test list
+
+3.17.17
+
+Happpy St. Pattys day!
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+DONE: null strings no longer crash qc w/regard: sv_cmd, isfunction, callfunction, cvar, cvar_string, etc
+DONE: remove null string tests for above list
+DONE: build new maphack win exe & update release set
+DONE: include engine in release
 
 3.16.17
 
