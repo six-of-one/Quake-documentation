@@ -35,7 +35,7 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.18.17
+3.19.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -43,6 +43,14 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: doom1_e1 map issue -- 
 WIP: test list
+
+3.18.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+DONE: qh elements for pk3 - bash & .bat files, mod include list, msvcr120.dll -- .arc 
 
 3.17.17
 
