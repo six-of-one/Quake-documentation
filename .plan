@@ -35,13 +35,21 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.21.17
+3.22.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: doom1_e1 map issue -- 
+WIP: test list
+WIP: default.cfg for cvar that werent ported & are needed (painkeep.qc as well)
+
+3.21.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
 WIP: test list
 WIP: default.cfg for cvar that werent ported & are needed (painkeep.qc as well)
 
