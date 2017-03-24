@@ -35,14 +35,26 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.23.17
+3.24.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
-WIP: doom1_e1 map issue -- 
 WIP: test list
+WIP: doom1_e1 map issue -- idea is remake from de1m1 w/o d_ stuff -remove score, !mod, q1 tags
+
+3.23.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+DONE: default.cfg for cvar that werent ported & are needed 
+CHECKED: painkeep.qc - admin level stuff -- detail notes for cm3 update in  imp_sv.cfg
+DONE: mirror request research
+DONE: max ammo admin - all ammos -- still need pack override settings - be nice if cfg had "if / then" & string tests
+WIP: doom1_e1 map issue -- idea is remake from de1m1 w/o d_ stuff -remove score, !mod, q1 tags
 
 3.22.17
 
