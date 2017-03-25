@@ -35,10 +35,19 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.24.17
+3.25.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+WIP: doom1_e1 map issue -- idea is remake from de1m1 w/o d_ stuff -remove score, !mod, q1 tags
+for fancy chars - need upd, scite does wierd stuff now - ○
+
+3.24.17
+
+WIP: pk code check vs. archon / pk 3.0
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: test list
