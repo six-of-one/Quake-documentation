@@ -35,14 +35,27 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.25.17
+3.26.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: test list
-WIP: doom1_e1 map issue -- idea is remake from de1m1 w/o d_ stuff -remove score, !mod, q1 tags
+
+3.25.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+DONE: doom1_e1 map issue -- idea is remake from de1m1 w/o d_ stuff -remove score, !mod, q1 tags
+\_: doom1_e1 currently in q0 id1 test has crash - make sure release is using de1m1 mod
+DONE: added grn slime light to outside pool
+DONE: upated _ow vers as well
+CHECKED: pkbot chat diahrea during low fps - 3.21 screens
+-- pkbot talk is in BotFoundTarget - if all bots get stuck, and one keeps entering that routine, it may be the only talker
+DONE: bound_other_ammo - max ammo admin -- caveat: server.cfg MUST have global set, code has no defaults
 for fancy chars - need upd, scite does wierd stuff now - ○
 
 3.24.17
@@ -52,6 +65,9 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: test list
 WIP: doom1_e1 map issue -- idea is remake from de1m1 w/o d_ stuff -remove score, !mod, q1 tags
+FIXED: this will kerbob other ammo limits in x_ents -- 1st cut - adds ammo_* to q1 ammo ents & only checks given ammo
+- may have issue with packs or something - check multi ammo ent*
+- still need max admin globals / cvar set by alias
 
 3.23.17
 
