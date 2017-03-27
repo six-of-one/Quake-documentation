@@ -35,13 +35,24 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.26.17
+3.27.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: test list
+
+3.26.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+FIXED: aircan blowing lasers from hiplaz -- test
+DONE: player override step with __player or __player{morphnum}
+WIP: admin master settings similar to respawn timer - max ammo, health box heal amts
+FIXED: player override borks model size
 
 3.25.17
 
