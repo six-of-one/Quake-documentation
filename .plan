@@ -35,13 +35,22 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.27.17
+3.28.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: test list
+
+3.27.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+WIP: finalize crates / pkcube contents, random pki for sp & dm map with no pki
+\_ diff contents on pk maps vs. non pk maps
 
 3.26.17
 
