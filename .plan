@@ -35,14 +35,27 @@ Overview current WIP:
 
 ---  START of .plan daily
 
-3.30.17
+3.31.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: test list
-WIP: hip support module include
+WIP: x6.pk3 cleanup -- .mdl
+WIP: admin alias need $lrcon -- whole ton of set / seta / unset
+
+3.30.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+DONE: hip support module include -- some rogue stuff here, set date 1999
+WIP: x6.pk3 cleanup -- .mdl
+DONE: _pak identify.txt
+DONE: local / rcon command mode - use set & $var
+WIP: admin alias need $lrcon -- whole ton of set / seta / unset
 
 3.29.17
 
