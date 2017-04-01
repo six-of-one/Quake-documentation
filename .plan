@@ -20,17 +20,18 @@ quake hack:
 - possible solution - load _every_ _single_ hack with submodels for 1st map load --- still wont work -v
 - would have to load every thing as a hack / sub-hack on the first map loaded, including script processing
 
+
 qone:
 
 release followup -
 
 play through / promo video - e1 at least
 -- look for oddities
+-- wait until archon update is done for this
 
 
-Overview current WIP: 
-- rune controls -- need tested
-- verify painkeep ops & code + 3.0 release
+PaiNKeep 3.0 WIP: 
+- verify files, ops & code >> 3.0 release
 - build release package
 
 ---  START of .plan daily
@@ -48,7 +49,6 @@ WIP: missing ac1 tex -- check other tex overrides
 3.31.17
 
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: test list
