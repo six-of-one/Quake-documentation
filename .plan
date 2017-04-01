@@ -35,6 +35,16 @@ Overview current WIP:
 
 ---  START of .plan daily
 
+4.1.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+WIP: x6.pk3 cleanup -- .mdl
+WIP: missing ac1 tex -- check other tex overrides
+
 3.31.17
 
 WIP: pk code check vs. archon / pk 3.0
@@ -43,7 +53,16 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: test list
 WIP: x6.pk3 cleanup -- .mdl
-WIP: admin alias need $lrcon -- whole ton of set / seta / unset
+DONE: admin alias need $lrcon -- whole ton of set / seta / unset
+DONE: client only cfg from world
+DONE: $lrcon tweak for srv / cli
+NIXED: alias for cfg from server -- not doing right now, would not save any globals, and exec strings are short
+DONE: +listen setup to clear $lrcon when runnnig a listen server, so qc cfg calls will work
+DONE: move binds out of cfg.pk3
+DONE: server.cfg & DM.cfg map calls outside of cfg.pk3
+CHECKED: sv_sound_watersplash "" -- was old qc driven cam ent - not anymore
+\_ null this and stuff doesnt splash
+WIP: missing ac1 tex
 
 3.30.17
 
