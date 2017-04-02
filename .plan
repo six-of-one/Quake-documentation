@@ -36,7 +36,7 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.1.17
+4.2.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -44,7 +44,17 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: test list
 WIP: x6.pk3 cleanup -- .mdl
-WIP: missing ac1 tex -- check other tex overrides
+WIP: missing ac1 tex
+
+4.1.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+WIP: x6.pk3 cleanup -- .mdl
+WIP: missing ac1 tex
+FIXED: biosuit qover from some rogue item -- apparently - no known changes were made
 
 3.31.17
 
