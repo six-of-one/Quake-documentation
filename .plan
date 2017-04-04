@@ -33,10 +33,12 @@ play through / promo video - e1 at least
 PaiNKeep 3.0 WIP: 
 - verify files, ops & code >> 3.0 release
 - build release package
+- Quake-C is locked except for bug-fix
+- admin cfg is locked except for bug-fix
 
 ---  START of .plan daily
 
-4.3.17
+4.4.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -45,6 +47,19 @@ WIP: building release package
 WIP: test list
 WIP: x6.pk3 cleanup -- .mdl
 WIP: missing ac1 tex
+
+4.3.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: building release package
+WIP: test list
+WIP: x6.pk3 cleanup -- .mdl
+WIP: missing ac1 tex
+DONE: finalize crates / pkcube contents, random pki for sp & dm map with no pki
+\_ diff contents on pk maps vs. non pk maps
+FIXED: ac1 pp track mode
+FIXED: grab ammo, vw_ is wrecked for xents -- problem in W_BestWeapon
+\_ pk_currentitem is wrecked - thats why it never affects q1 weps -- fix by setting pk_currentitem to eweap val if defined
 
 4.2.17
 
