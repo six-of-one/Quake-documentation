@@ -38,15 +38,26 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.4.17
+4.5.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: test list
-WIP: x6.pk3 cleanup -- .mdl
-WIP: missing ac1 tex
+WIP: x6.pk3 cleanup -- .mdl 
+
+4.4.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: test list
+WIP: x6.pk3 cleanup -- .mdl 
+DONE: added 8ray_2_2d.bsp
+DONE: missing ac1 tex, check others -- mostly, need to script automate this from map src where we can
+DONE: tex move __chaos to chaos for some old maps
+DONE: updated fact3 from new compile (still need tex fix)
 
 4.3.17
 
