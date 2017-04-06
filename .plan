@@ -38,14 +38,26 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.5.17
+4.6.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
-WIP: test list
 WIP: x6.pk3 cleanup -- .mdl 
+WIP: test list
+
+4.5.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: x6.pk3 cleanup -- .mdl 
+WIP: test list
+DONE: test - impulse list
+it_runemap is "1" ["0"] custom cvar -- seriously delayed results - may be check time on rune loop
+cube_release: impulse 50 -- fail - changed release to pk_bestwep
+DONE: pref.cfg update with mod binds
 
 4.4.17
 
