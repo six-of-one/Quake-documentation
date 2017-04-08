@@ -38,7 +38,7 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.7.17
+4.8.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -46,6 +46,16 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: x6.pk3 cleanup -- .mdl 
 WIP: test list
+
+4.7.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: x6.pk3 cleanup -- .mdl 
+WIP: test list
+FIXED: door close never stops on mode doors -- some door travel sounds on this mode are cut short
+FIXED: silent lava pit move
 
 4.6.17
 
