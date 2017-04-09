@@ -38,7 +38,7 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.8.17
+4.9.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -46,6 +46,20 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: x6.pk3 cleanup -- .mdl 
 WIP: test list
+
+4.8.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: x6.pk3 cleanup -- .mdl 
+WIP: test list
+WIP: make sure mods/.cfg gets updated with new .cfg script
+DONE: e2u2/ceil1_2 adjust in wad -- recompile map
+FIXED: num disp bad tex
+WIP: OA.bsp support for arc_hub -- still need trigger start
+DONE: removed maphack test alpha
+DONE: radiant tex updates -- why do we need this?  seems like __chaos was swapped out for some reason - all the copy back come from there
 
 4.7.17
 
@@ -64,6 +78,7 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: x6.pk3 cleanup -- .mdl 
 WIP: test list
+WIP: make sure mods/.cfg gets updated with new .cfg script
 REMOVE: con_notify_alias - no ref, not called -- also remove one instance in runes display code
 DONE: tex correct: wndow0_1
 FIXED: missing door sounds, module default if x6b not ready
@@ -75,6 +90,7 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: x6.pk3 cleanup -- .mdl 
 WIP: test list
+WIP: make sure mods/.cfg gets updated with new .cfg script
 DONE: test - impulse list
 it_runemap is "1" ["0"] custom cvar -- seriously delayed results - may be check time on rune loop
 cube_release: impulse 50 -- fail - changed release to pk_bestwep
