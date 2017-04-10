@@ -38,7 +38,7 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.9.17
+4.10.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -47,12 +47,21 @@ WIP: building release package
 WIP: x6.pk3 cleanup -- .mdl 
 WIP: test list
 
-4.8.17
+4.9.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: x6.pk3 cleanup -- .mdl 
+WIP: test list
+FIXED: 1pv grap not out while pinned -- change of .weapon for grap
+FIXED: bt, tomb, turret in lava from pk1.1
+
+4.8.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
 WIP: test list
 WIP: make sure mods/.cfg gets updated with new .cfg script
 DONE: e2u2/ceil1_2 adjust in wad -- recompile map
