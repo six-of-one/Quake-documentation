@@ -38,7 +38,7 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.11.17
+4.12.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -46,6 +46,18 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: x6.pk3 cleanup -- .mdl 
 WIP: test list
+
+4.11.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: x6.pk3 cleanup -- .mdl 
+WIP: test list
+FIXED: pistol / dsg vw anim frames -- still have a 0.05 sec flicker of rockatt? - dont notice at full spd
+DONE: removed vw_ pistol origin_z "kick up"
+FIXED: getting pack of q1 ammo - holding dsp - lose eweap ptr
+XXX: lock code & cfg for release
 
 4.10.17
 
