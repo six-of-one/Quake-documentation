@@ -38,14 +38,25 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.14.17
+4.15.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
-WIP: x6.pk3 cleanup -- .mdl 
-WIP: test list
+WIP: x6.pk3 cleanup
+WIP: test list -- add win here
+
+4.14.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: hard server tests with 6 bots 
+WIP: building release package
+WIP: x6.pk3 cleanup
+WIP: test list -- add win here
+DONE: base key cfg - wasd
+lrcon not set on client -- because pk3.bat starts listen server and +listen is set
+DONE: added pk3cli.lnk for win launching client
 
 4.13.17
 
