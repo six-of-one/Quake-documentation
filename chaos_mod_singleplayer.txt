@@ -487,3 +487,68 @@ the door.  No surprises short of teleport.
 Day 4:
 
 
+።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።
+
+fragment 4.017 - meeting Cthulhu
+
+Set: one of the familiar q1 base maps with slight mods
+
+mod: new slipgate research tech - tubes / wires / etc.
+     new audio to enhance things, sparks, flashes, and so on
+
+Player has to create a new power source with a grav bomb and ? (soa??)
+
+After macguffin activates they hang on a railing, and get sucked in.
+
+< fade to swirling, churning chaos of color, sound, et. al. >
+
+The big "C" dialog:
+
+Ah, a small thing.  You are...
+No, dont struggle, your feeble mind cannot quite handle the dimension it is faced with.
+
+A warrior, you are.  Accomplished if one believes your distinct memories.
+< "C"'s eyes expand. >
+You have touched the flesh of an elder god.  Which one?  Think warrior...
+
+Yes, Shub-Niggurath.  What?  
+< we watch a sub-window play out shubs death>
+
+No She is not dead.  I assure you.  Would you like to view her true form?
+
+< fade to a new view - a dismal lava filled plain (maphack tech) --
+-- we see a massive creature of many tentacles, eyes and lumps of shub stuff >
+< face back to big "C" realm >
+
+See, warrior.  Shubs is alive and well.  How?
+Heh.  So hard for you to know these dimensions.
+Beings such as us can not even fit in your small dimensions.
+What you encounter there are mere affectations.  Not even copies,
+more like a tiny portion of our true being.
+
+Mostly we send them after a summons, intentional or not.
+They see to certain needs we have.
+
+Now warrior, think of how you came here - such should not be possible!
+A...what is that?  "Device"
+Something akin to our alkemy process, such as you think is magic.
+
+Well now...how odd.  Your device uses anti-neutron energy. How could you...
+Oh.  You didnt and you dont know how.
+
+Your fate warrior?  Indeed, that is your first worthy query since arrival.
+Eh.  Standard process would be harvest your soul / mind and churn
+your small flesh into some tasty tid-bit for a servant.
+
+But I see that will not be for you.  The energy carrying you has filled
+you with some purpose I would be unwise to change.  And I am most wise.
+
+So, you shall proceed as the device designed - to your origin.
+Be warned - it is not what you seek!
+
+< fade to chaos >
+
+< slow fade up - looking up at trees >
+
+loc: outside slipgate complex, on base grounds.
+
