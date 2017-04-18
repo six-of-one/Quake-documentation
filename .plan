@@ -38,7 +38,7 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.17.17
+4.18.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -46,6 +46,13 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: x6.pk3 cleanup
 WIP: test list +win
+WIP: streaming with obs -- compiling new source / install
+
+4.17.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: test list +win
+WIP: streaming with obs -- compiling new source / install
 
 4.16.17
 
