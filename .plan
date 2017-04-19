@@ -38,7 +38,7 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.18.17
+4.19.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
@@ -47,6 +47,15 @@ WIP: building release package
 WIP: x6.pk3 cleanup
 WIP: test list +win
 WIP: streaming with obs -- compiling new source / install
+
+4.18.17
+
+WIP: pk code check vs. archon / pk 3.0
+WIP: building release package
+WIP: test list +win
+WIP: streaming with obs -- compiling new source / install
+\_  having to use cam mic, front & rear mic w/capture 1 - input src 1 just doesnt work
+ \_ for some reason source 1 / cap 1 register very low
 
 4.17.17
 
