@@ -38,11 +38,17 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-4.26.17
+4.27.17
 
 WIP: hard server tests with 6 bots 
 WIP: testing release package
 WIP: x6.pk3 cleanup
+WIP: test list +win -- also recording
+
+4.26.17
+
+WIP: hard server tests with 6 bots 
+WIP: testing release package
 WIP: test list +win -- also recording
 DONE: streaming with obs -- streaming / record setup - now on win
 
