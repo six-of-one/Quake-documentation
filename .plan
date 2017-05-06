@@ -38,20 +38,30 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-5.5.17
+5.6.17
 
 WIP: hard server tests with 6 bots 
 WIP: testing release package
 WIP: x6.pk3 cleanup
 WIP: test list +win -- also recording
-TEST: issue (re)discovered
+
+5.5.17
+
+WIP: hard server tests with 6 bots 
+WIP: testing release package
+WIP: test list +win -- also recording
+FIXED: issue (re)discovered -- fail seems to be in viswep_pkbot
+\_ bot e: 141 has way to many vwepents for carried weps
+--- for self = 134, comes down to a vwepent that is free at end of chain
+-- vwep were unloading via: model          ""
+* __ have some concern that freed ent bugs still exist
 
 5.4.17
 
 WIP: hard server tests with 6 bots 
 WIP: testing release package
 WIP: test list +win -- also recording
-TEST: issue (re)discovered
+FIX: issue (re)discovered
 
 5.3.17
 
