@@ -38,11 +38,17 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-5.6.17
+5.7.17
 
 WIP: hard server tests with 6 bots 
 WIP: testing release package
 WIP: x6.pk3 cleanup
+WIP: test list +win -- also recording
+
+5.6.17
+
+WIP: hard server tests with 6 bots 
+WIP: testing release package
 WIP: test list +win -- also recording
 
 5.5.17
