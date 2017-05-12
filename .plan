@@ -41,10 +41,13 @@ PaiNKeep 3.0 WIP:
 5.11.17
 
 WIP: hard server tests with 6 bots 
-WIP: testing release package
-WIP: x6.pk3 cleanup
+DONE: testing release package
 WIP: test list +win -- also recording
-WIP: verify release package
+DONE: info alias & cfg file -- for rc1 anyway
+DONE: verify release package
+DONE: final release package
+DONE: release image
+DONE: Release candidate 1 !
 
 5.10.17
 
