@@ -38,6 +38,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.15.17
+
+WIP: hard server tests with 6 bots -- still running the test for latent issues
+Back from mini holiday
+Chaos of tasks: some spiffy for PK3, map work - hack stuff, archon code
+
+5.12.17
+
+Mini holiday
+
 5.11.17
 
 WIP: hard server tests with 6 bots 
@@ -45,6 +55,7 @@ DONE: testing release package
 WIP: test list +win -- also recording
 DONE: info alias & cfg file -- for rc1 anyway
 DONE: verify release package
+DONE: verify test cfg not in release - infinite pki, etc -- only seem to be in dpu - config.cfg
 DONE: final release package
 DONE: release gfx
 DONE: Release candidate 1 upload!
