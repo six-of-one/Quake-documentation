@@ -37,6 +37,12 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+7.10.17
+
+Research for Archon restart
+WIP: archon code - power point random spawner
+\_ replicate rnd item func_make with spawn_loop
+
 7.8.17
 
 Research for Archon restart
