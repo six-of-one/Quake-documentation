@@ -8,7 +8,6 @@ current project(s):
 
 chaos mod Archon - mark III code base port to qc 2.0:
 
-- pk3.0 (verify all operation code)
 - maphack (rewritten)
 - frikbot - minor rev
 - viswep -- needs minor revision, position data update
@@ -35,6 +34,15 @@ PaiNKeep 3.0 WIP:
 - followup items need attention
 
 ---  START of .plan daily
+
+11.13.17
+
+WIP: maphack engine code to use replacable texs on a biome entry level
+\_ engine code research - loadimagepixelsbgra()
+
+11.11.17
+
+Re-open project files, research
 
 8.30.17
 
