@@ -16,9 +16,7 @@ chaos mod Archon - mark III code base port to qc 2.0:
 quake hack:
 
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
-- possible solution - load _every_ _single_ hack with submodels for 1st map load --- still wont work -v
-- would have to load every thing as a hack / sub-hack on the first map loaded, including script processing
-
+- find a way to force all sub models reload
 
 qone:
 
@@ -31,14 +29,24 @@ play through / promo video - e1 at least
 
 PaiNKeep 3.0 WIP: 
 - 3.0 released !!!
-- followup items need attention
+- followup items
 
 ---  START of .plan daily
+
+11.19.17
+
+bkg project - the random dir version
+
+11.18.17
+
+bkg project - the random dir version
 
 11.16.17
 
 WIP: maphack engine code to use replacable texs on a biome entry level
 \_ find where map tex are loaded by engine
+
+bkg project - the random dir version
 
 11.13.17
 
