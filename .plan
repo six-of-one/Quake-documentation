@@ -33,9 +33,19 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+11.23.17
+
+WIP: maphack engine code to use replacable texs on a biome entry level
+\_ without some kind of per model code system, tex replace is suck
+
 11.22.17
 
 bkg project - the random dir version - doctor who special bits that didnt get finished before
+WIP: maphack engine code to use replacable texs on a biome entry level
+\_ texs & overrides seem to be setup at launch - setup Mod_Q1BSP_Load - uses Mod_Q1BSP_LoadTextures - calls loadimagepixelsbgra - which handles the override
+-- 				data = loadimagepixelsbgra(gamemode == GAME_TENEBRAE ? tx->name : va("textures/%s/%s", mapname, tx->name), false, false, false, NULL);
+--				if (!data)
+--					data = loadimagepixelsbgra(gamemode == GAME_TENEBRAE ? tx->name : va("textures/%s", tx->name), false, false, false, NULL);
 
 11.21.17
 
