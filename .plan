@@ -33,6 +33,11 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+11.24.17
+
+WIP: maphack engine code to use replacable texs on a biome entry level
+IDEA: proceed from r_replacemaptexture code to get tex replace on bsp models
+
 11.23.17
 
 WIP: maphack engine code to use replacable texs on a biome entry level
