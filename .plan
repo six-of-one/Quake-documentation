@@ -33,6 +33,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+11.27.17
+
+WIP: v107 archon code - random items from power points
+
+11.26.17
+
+WIP: v107 monster code
+\_ research to use cfg set monsters -- first check how weapons work
+WIP: archon point random items -- setup spawn_loop stype maker with __copy*
+
 11.25.17
 
 WIP: v107 monster code
