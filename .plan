@@ -33,15 +33,23 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+11.28.17
+
+WIP: v107 archon code - random items from power points
+- try sub loop again
+
 11.27.17
 
 WIP: v107 archon code - random items from power points
+DONE: variable scope test for qc vault
+- added sub loop -- fails strangely, must be some issue with recursive call of spawn_loop
 
 11.26.17
 
 WIP: v107 monster code
 \_ research to use cfg set monsters -- first check how weapons work
 WIP: archon point random items -- setup spawn_loop stype maker with __copy*
+WIP: variable scope test for qc vault
 
 11.25.17
 
