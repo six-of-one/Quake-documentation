@@ -33,10 +33,17 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+11.29.17
+
+WIP: v107 archon code - random items from power points
+
 11.28.17
 
 WIP: v107 archon code - random items from power points
-- try sub loop again
+DONE: sub loop for spawn_loop code - rnd items can now spawn subsets
+\_ like a randomly spawn weapon can add ammo to the level
+using '-8 -8 -8' for __archon_maker_rocket_1 messes up spawn of archon points ??
+.punchangle does not eject during sub loop
 
 11.27.17
 
