@@ -33,9 +33,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+11.30.17
+
+WIP: v107 archon code - random items from power points
+
 11.29.17
 
 WIP: v107 archon code - random items from power points
+FIXED: __archon_maker_ was firing on spawn - used spawn_loop as classname -- oops
 
 11.28.17
 
