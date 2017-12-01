@@ -36,11 +36,14 @@ PaiNKeep 3.0 WIP:
 11.30.17
 
 WIP: v107 archon code - random items from power points
+FIXED: new persistant __archon_maker_rocket ents
+FIXED: .punchangle does not eject during sub loop -- velocity was set - no movetype
 
 11.29.17
 
 WIP: v107 archon code - random items from power points
 FIXED: __archon_maker_ was firing on spawn - used spawn_loop as classname -- oops
+FIXED: using '-8 -8 -8' -- was taking over self from point from faulty spawn loop code
 
 11.28.17
 
