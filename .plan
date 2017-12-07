@@ -33,9 +33,20 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.7.17
+
+WIP: v107 archon code
+
 12.6.17
 
 WIP: v107 archon code
+CHECK: pk*bot level transitions - need serverflags redone for dp -- whre is this?
+\_ transition uses cvar and serverflags -- maybe one day remove serverflags dependency ?
+ \_ transition is functioning correctly in PK3 release tests for mk III codebase
+NIXED: - look into simplify or remove multi damage on hitscan -- decided to leave as is for the time being
+NIXED: nondp - hipnotic/hip_precache.qc:60: error: "precache_sound" is not a type
+-- might be happening because this file is a #include in world.qc
+\_ no longer using nondp
 
 12.5.17
 
