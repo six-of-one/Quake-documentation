@@ -33,13 +33,25 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.8.17
+
+WIP: v107 archon code
+WIP: backlog item clear
+
 12.7.17
 
 WIP: v107 archon code
+WIP: backlog item clear
+FIXED: q3_tex - flyer subdir - need map repair script for all texs -- q0/id1/textures
+\_ fixed a few more of these
+CHECKED: cvar_string, scale, substring & nondp defines
+\_ what for ? -- except for nondp (which needs removed) these are defined in dpext.qc
+ \_ whats more everywhere these are used seems to work
 
 12.6.17
 
 WIP: v107 archon code
+WIP: backlog item clear
 CHECK: pk*bot level transitions - need serverflags redone for dp -- whre is this?
 \_ transition uses cvar and serverflags -- maybe one day remove serverflags dependency ?
  \_ transition is functioning correctly in PK3 release tests for mk III codebase
