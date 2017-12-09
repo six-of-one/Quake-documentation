@@ -33,10 +33,28 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.9.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many easy check items need cleared out
+
 12.8.17
 
 WIP: v107 archon code
-WIP: backlog item clear
+WIP: backlog item clear -- many easy check items need cleared out
+CHECKED: pk bot code .classname == "light" -- those are ambient ents that are removed, unless bot code did something diff
+\_ issues - std light ents are removed, code never sets nearlight back to 0 for next test
+DONE: q1 override if x_ent script models are missing -- prob do this in cvar_fields near tr
+\_ implemented with _qover cvars -- works just like _tr, but you cant use a _tr set from a _qover set op
+ \_ one cav is that the qover ent spec _must_ exist
+NIXED: fill out .cfg unit_X fields - item stuff done by func_model or startitem -- this is the setmodel / setsize deal in cvar_fields()
+\_ func_model calls via _event not needed - cvar_fields now implements setmodel & setsize on given parms
+FIXED: both haste runes - axe does not damage very often -- this is an attack finish issue
+\_ -- added rune_axeatt with a shorter frame time (0.5) - dual haste axe will be deadly if it contacts
+HUH: pistol return frames - extra frame not needed (an axe use frame)
+\_ -- seems this is fixed - tho all pistol (melee held) type weps flick to shotgun fire frame 1 before going on to their frames
+ \_ fix attemp on pistol fire frame flick also failed
+NIXED: q3_bob_height(); -- handled by cfg now - see pref.cfg, server.cfg, {mapname}.cfg
 
 12.7.17
 
