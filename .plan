@@ -33,10 +33,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.10.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many easy check items need cleared out
+
 12.9.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many easy check items need cleared out
+research - why some rnd spawn weps give no pickup sound when they use weapon_touch() code -- no conclusion yet
+FIXED: pickup sounds are blanking -- logic bug in weapon_touch via  "else { remove(stemp); return; }"
+???: testing - picking up more than 1 copb - ignores other limits too
+\_ is a cvar set for testing -- no tests found in cfg
+ \_ not reproducing -- may only be happening on a rnd canpab from one variety of crate
+TWEAK: __copy{n} ops - need to check more #s - cant always be sequential
+WIP: give away items cfg
 
 12.8.17
 
