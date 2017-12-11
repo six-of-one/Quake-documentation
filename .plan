@@ -33,10 +33,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.11.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many easy check items need cleared out
+WIP: full give away cfg
+
 12.10.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many easy check items need cleared out
+DONE: give away items cfg base ops
+\_ issue - multi touch on legacy weps -- fixed with msk_u
+FIXED: __copy{n} cfg items
+-- __copy{n}_info_player_start   guide - 0 was a mess - now base biome, 1 - tr_bld - building trigger set, 2 - tr_biome - biome control trigger
+-- 8 - grav trigger (qone e1m8 deal), 7 - respawn trigger (sp hack to work like coop), 9 - trigger to show map messages for qone levels
+WIP: full give away cfg
 
 12.9.17
 
