@@ -33,11 +33,18 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.12.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many easy check items need cleared out
+
 12.11.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many easy check items need cleared out
-WIP: full give away cfg
+WIP: give away cfg -- q1 weps & ctf hook done
+\_ note - xwep give away does not display "You got the {X}"
+DONE: hook admin items -- giveaway hook
 
 12.10.17
 
