@@ -33,10 +33,32 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.13.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many easy check items need cleared out
+
 12.12.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many easy check items need cleared out
+DONE: gave cfg shortcut alias
+DONE: give away cfg - genre init weps
+- clear: wont force an overwrite of inventory wep
+- issue: replaced viswep isnt cleared until another wep is touched
+
+TAG: not loading sub models, maphack fail
+NOTISS: qh_0000 no longer loading sub models ?  -- what happened - was it the above change
+research: qh maps must load with proper cmd -- maps load after cfg has set proper cvar parms
+\_ mhrepo& maphack-glx qh +exec cfg/load/ld_qh_0000.cfg
+|_ mhrepo& maphack-glx k7a -listen +exec cfg/load/ld_k7a.cfg
+|_ maphack-glx x4c -listen +exec cfg/load/ld_x4c.cfg
+|_ mhrepo& maphack-glx test_c +exec cfg/load/ld_test_c.cfg
+|_ mhrepo& maphack-glx ot_0 +exec cfg/load/ld_ot_0.cfg
+
+NOTE: qone crashes if reloader / item_reload enabled in server.cfg
+CHECKED: __copy{n} cfg items adjustments w/ live tests -- all tests but qone
+FIXED: grav well pulls dead cams - changed dob cfg code, added -- prvm_edictset server $1 map nonmove
 
 12.11.17
 
