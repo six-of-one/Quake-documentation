@@ -33,10 +33,20 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.14.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: explode box respawn & admin
+
 12.13.17
 
 WIP: v107 archon code
-WIP: backlog item clear -- many easy check items need cleared out
+WIP: backlog item clear -- many tdo & check items need cleared out
+reFIXED: grav well pulls dead cams - changed dob cfg code -- prvm_edictset server $1 AIRG_Timeout -6
+WIP: explode box respawn & admin
+\_ coding as a generic respawn for any ent - spawn_loop will be used for explosions / making other ents
+ \_ additional - monsters should be able to pick up / drop items
 
 12.12.17
 
