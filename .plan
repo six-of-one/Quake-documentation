@@ -33,11 +33,18 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.17.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: explode box respawn & admin -- stop damage
+
 12.16.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: explode box respawn & admin -- stop damage
+IMP: new mode for item_respawn - read an "e"ncoded cvar_fields data set on call
 
 12.15.17
 
