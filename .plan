@@ -33,11 +33,19 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.18.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: explode box respawn & admin -- controls
+
 12.17.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: explode box respawn & admin -- stop damage
+WIP: explode box respawn & admin -- controls
+DONE: fn - clear model, set timer to resp., script set SUB_regen think (mayb), call spawn_loop
+-- if no resp, just go sub_null so this can be reloaded on command
 
 12.16.17
 
