@@ -33,11 +33,25 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.19.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: explode box respawn & admin -- controls
+
 12.18.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: explode box respawn & admin -- controls
+DONE: Archon code complexity like respawn exploboxen
+\_ !dm, dm 2 or 4 - no respawn
+ \_ could be done: exec cfg/items/DMexplob$deathmatch.cfg -- where DMexplob{0,2,4}.cfg would turn off resp and {1,3} would turn it on
+
+FIXED: SUB_regen issue where a respawned xent model size was wrong on explode boxes
+TESTED: \_ also changelevel w/pki selected - eweapon not set & cant fire -- was fixed / ops work
+FIXED: de1m1 corner item issue -- these are removed by PlaceItem droptofloor code because they fall out...but why
+\_ fixed by bounding box change in cfg via pos*
 
 12.17.17
 
