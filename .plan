@@ -33,11 +33,20 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.20.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+IDEA: move VWX_ data to cfg files, retool ops code
+
 12.19.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: explode box respawn & admin -- controls
+DONE: explode box respawn & admin -- controls - handles various DM config - 0,1,2,3,4
+DONE: resp on std explobox -- misc_explobox is cantanqerous on test_c, but seems ok on other maps - huh ?
+DONE: random translates -- use _tr code cvar extras
+\_ random qover as well
 
 12.18.17
 
