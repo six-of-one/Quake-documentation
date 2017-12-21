@@ -33,11 +33,20 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.21.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: move VWX_ data to cfg files, retool ops code
+
 12.20.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-IDEA: move VWX_ data to cfg files, retool ops code
+WIP: move VWX_ data to cfg files, retool ops code
+DONE: all of cfg we have VW{X,Y,Z} defined for
+???: rune print routine handles pent oddly -- didnt see rune print
+\_ test with I impulse - show_rune -- seemed to work right
 
 12.19.17
 
