@@ -33,11 +33,18 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.22.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: move VWX_ data to cfg files, retool ops code
+
 12.21.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: move VWX_ data to cfg files, retool ops code
+FIXED: csqc hud doesnt show q1 runes as indicated by serverflags 1, 2, 4, 8 -- client side compile is under archon qc
 
 12.20.17
 
