@@ -33,11 +33,19 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.23.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: {cln}_qover, {cln}_trr use {cln}_tr as reference to a generic list -- need this for randomize over genre & total randomize
+
 12.22.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: move VWX_ data to cfg files, retool ops code
+DONE: move VWX_ data to cfg files, retool ops code
+\_ notes: enforcer laser fire - uses vwlaunch, no qual, laser, plasma, flamer, rail fire as well
+WIP: {cln}_qover, {cln}_trr use {cln}_tr as reference to a generic list -- need this for randomize over genre & total randomize
 
 12.21.17
 
