@@ -33,11 +33,17 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.26.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+
 12.25.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: finish master translates - wolf, doom
+DONE: finish master translates - wolf, doom
+FIXED: _tr, _qover resetting classvn from original -- there is still wierdness
 
 12.24.17
 
