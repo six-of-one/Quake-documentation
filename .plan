@@ -33,11 +33,18 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.28.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: item randomizers
+
 12.27.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: item randomizers
+FIXED: tr_ any -> q1 mega health -- fail because cfg entry incomplete
 
 12.26.17
 
