@@ -33,11 +33,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+12.29.17
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+
 12.28.17
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: item randomizers
+DONE: item randomizers
+DONE: cleanup map stats in config.cfg from HUD	-- remove decimal subs
+FIXED: client side that writes those
+NIX: hip trap rocket, lavab shooter has obit: _-=*[Six] was spiked -- this is hip code true ops
+DONE: alternate messages on trap .deathtype - lavabshooter or rocketshooter
+???: q1 ammo bounds for wes & boxes - messes with x_ents that have larger ammo bounds
+\_ test - q1 ammo wont pickup if inv > max q1 ammo -- so, is this a fixable issue
 
 12.27.17
 
