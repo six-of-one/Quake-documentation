@@ -33,12 +33,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.2.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: missing alpha item models, code
+WIP: skullstick, probjectile model
+
 1.1.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item models, code
 WIP: skullstick, spray rifle code
+FIXED: if (EWEAP.mcode = 315)
+DONE: w_ammo_rockbox, w_ammo_bbox on test_c
+FIXED: d_rockbox.mdl alpha bottom skin issue
 
 12.31.17
 
