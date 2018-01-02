@@ -891,6 +891,8 @@ RESPAWN - respawn this crate
 
 "movetype" - less than 0 - un-moveable
 
+"scale" - make crate this much larger or smaller - do NOT use with LARGE crates
+
 deprecated old mk_II mode:
 
 sf: REMOVE - remove items made after dynamic timeout
@@ -3190,13 +3192,21 @@ place holder lists all doom classnames - not a useable entity
 --------  WOLF  --------
 */
 
+/*QUAKED w_ammo_bbox (0 .8 0) (-16 -16 -16) (16 16 16)
+--------  WOLF  --------
+*/
+
 
 /*QUAKED w_ammo_gas (0 .8 0) (-16 -16 0) (16 16 32)
 --------  WOLF  --------
 */
 
-
 /*QUAKED w_ammo_rock (0 .8 0) (-16 -16 0) (16 16 32)
+--------  WOLF  --------
+*/
+
+
+/*QUAKED w_ammo_rockbox (0 .8 0) (-16 -16 0) (16 16 32)
 --------  WOLF  --------
 */
 
@@ -3546,8 +3556,10 @@ w_weapon_flamer
 w_weapon_pistol
 w_weapon_knife
 w_ammo_clip
+w_ammo_bbox
 w_ammo_gas
 w_ammo_rock
+w_ammo_rockbox
 w_key
 w_key_gold
 w_key_blue
@@ -3824,7 +3836,7 @@ speed : movement speed (100 default)
 wait : wait before returning (3 is default, -1 = never return)
 lip : lip remaining at end of move 8 is default
 dmg : damage to inflict when blocked 2 is default
-sounds : 0 = no sound 1 = stone 2 = base 3 = stone chain 4 = screechy metal
+sounds : 0 = no sound 1 = stone 2 = base 3 = stone chain 4 = screechy metal  -6 = 2 sound doors
 cnt: # of players on map needed to activate door if target1 is player_count in deathmatch
 
 -------- SPAWNFLAGS --------
@@ -3845,10 +3857,15 @@ Key doors are always wait -1.  Unless they are doom doors (have x_items bits set
 
 doom / q2 doors:
 
+noise1: door closing
+noise2: door opening
 noise3: key fail - no default
 noise4: key open - no default
 map: set mode of door - "W", "D", "Q", "PK", "Q2", "Q3" - only D & Q2 are used
 -- affects auto key messages & sounds
+- to use custom sounds set:
+"worldtype" = 6
+"sounds" = 6
 netname: print string when x_item key is needed - set by bit & map mode if left blank
 x_items: any of these bits requires that key(s) to open door
 
@@ -5573,6 +5590,7 @@ sky: skybox for darkplaces - files in {root}/env/{basename}
 fog: value for darkplaces
 - "fog (density red green blue alpha mindist maxdist top depth textures/mapname/fogheight.tga)"
 -------- CM2 --------
+event: a map genre: W, D, Q, Q2, Q3, PK
 target1: chaos mod mkII score limit achievement:
 - score_rel1, score_rel2
 -------- NOTES --------
@@ -6004,11 +6022,26 @@ sounds
 */
 
 
-/*QUAKED func_pushable (0 .5 .8) ?
+/*QUAKED func_pushable (0 .5 .8) ? MDL LOC
 -------- HIPN --------
 Hipnotic Miscellaneous Geometry
 -------------------------------
-Pushable walls. Not quite working,
+"MDL" using a custom bps or mdl model on pushable or target
+(doesnt work on pushable, makes little sense on target ent)
+"LOC" locate pushable proxy to target ent
+
+"view_ofs" - z adust for LOC locate ent that ends up in floor '0 0 1' suggested
+"target" - spawn a 'push wall proxy' for this ent and enable it as a pushable
+(you can make an explodbox pushable this way - then it wont blow up
+unless splash damaged)
+"targetname" - allow pushable to be targeted for removal
+
+Pushable walls.
+Can NOT be bounded on top or sides by a solid brush.
+If you want a pushable hidden in a wall it MUST have a few
+units of func_illusionary around it.  Suggest 4 qu. brush.
+
+Hipnotic note: Not quite working,
 but fun to play around with.
 */
 
@@ -7852,6 +7885,8 @@ a 'trigger_once'.
 /*QUAKED weapon_chainlightning (0 .5 .8) (-16 -16 0) (16 16 32)
 -------- ZERS --------
 Chain lightning gun
+
+NOTE: weapon_chainlg - PainKeep version
 */
 
 
@@ -10948,8 +10983,15 @@ used with target_string (must be on same "team")
 
 
 
-/*QUAKED misc_teleporter (1 0 0) (-32 -32 -24) (32 32 -16)
+/*QUAKED misc_teleporter (1 0 0) (-32 -32 -24) (32 32 -16)  PLAYER_ONLY SILENT RANDOM STEALTH NONDIR NODEATH ALT_TARGET _ !_EASY !_MEDIUM !_HARD !_DM NOSPRAY
 --------  Q2  --------
+spawnflags:
+NOSPRAY - no particle fountain
+
+"map" = "Q2" - force q2 mode always
+sounds:
+"noise" = "q2_snd/telehum.wav" - constant hum
+
 Stepping onto this disc will teleport players to the targeted misc_teleporter_dest object.
 model="models/objects/dmspot/tris.md2"
 */
