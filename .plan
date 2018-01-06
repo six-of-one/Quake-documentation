@@ -33,12 +33,20 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.6.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: missing alpha item models, code
+WIP: rest of hip / rogue weps into whpr.cfg -- finish touch & ops cfg
+
 1.5.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item models, code
-WIP: probjectile model, code
+DONE: probjectile model -- need code, skin update
+WIP: rest of hip / rogue weps into whpr.cfg -- finish touch & ops cfg
 
 1.4.18
 
