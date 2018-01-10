@@ -33,11 +33,19 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.10.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: missing alpha item code
+
 1.9.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item code
+TESTED: flamer2 w/ cyl on back -- has minor overlap issues with holstered range weps
+DONE: d_flamer reskin, more alpha wep models
 
 1.8.18
 
@@ -45,6 +53,7 @@ WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item models, code
 DONE: final model from dmaitems
+FIXED: flamer frames bug for non-gauge flamers -- i.e. anything besides flamer2 from cm2 
 
 1.7.18
 
