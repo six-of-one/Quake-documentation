@@ -18,6 +18,7 @@
 // Cataboligne 12/31/015  @   - upload verison, edit some maphack notes
 // Cataboligne 10/1/016   @   - bit list tweak
 // Cataboligne 11/9/016   @   - redid styles on lights so radiant entity window is pretty
+// Cataboligne 12/31/017  @   - update for some alpha items
 
 // Version: 1.8.2
 // Last entry: 10-1-016
@@ -2398,12 +2399,22 @@ place holder lists all half life classnames - not a useable entity
 */
 
 
+/*QUAKED d_weapon_rifle (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+
+/*QUAKED d_weapon_bayonet (0 .8 0) (-16 -16 0) (16 16 32)
+--------  DOOM  --------
+*/
+
+
 /*QUAKED d_weapon_spray (0 .8 0) (-16 -16 0) (16 16 32)
 --------  DOOM  --------
 */
 
 
-/*QUAKED d_weapon_proj (0 .8 0) (-16 -16 0) (16 16 32)
+/*QUAKED d_weapon_prob (0 .8 0) (-16 -16 0) (16 16 32)
 --------  DOOM  --------
 */
 
