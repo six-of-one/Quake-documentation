@@ -33,11 +33,23 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.12.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: missing alpha item code
+
 1.11.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item code
+FIXED: viswep double up - see reggun screen cap
+\_ could also be 0 mcode values -- likey this is the case, bug not seen since this fix is in
+ISSUE: rifle is not animating range wep with vv_draw -- bit 4096 is hard coded as melee wep
+\_ moved rifle to slot 1, pk 4 -- for now
+DONE: _all_ dmaitems, weapevol initial models -- skins need tweaks
+FIXED: weird rotate bug in vv_range_base was because #define Q_RANGE 127 excluded bit 128 weps ! -- saw this issue with hip laser cannon
 
 1.10.18
 
