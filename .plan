@@ -33,11 +33,21 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.13.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: missing alpha item code
+
 1.12.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item code
+FIXED: HUD is flicking pk cube open very fast -- mcode assign is trashed in viswep via clr_x code
+FIXED: morph cube cfg had wrong mcodes
+FIXED: rotating weps out of cube touch changes .weapon & v / vw model but not .eweapon
+\_ "mostly" - this still sometimes confuses eweaps some way -- needs to be more bulletproof
 
 1.11.18
 
@@ -107,20 +117,20 @@ WIP: probjectile model
 DONE: skullstick, skullart, dark claw
 FIXED: HUD not doing pk cube open -- mk III changed map code set for this
 
-1.3.18
+ 1.3.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item models, code
-WIP: skullstick, probjectile model
+WIP: skullstick, probjectile, dark claw models
 
 1.2.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item models, code
-WIP: skullstick, probjectile model
-
+WIP: skullstick, probjectile models
+ 
 1.1.18
 
 WIP: v107 archon code
@@ -138,6 +148,7 @@ WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item models, code
 WIP: skullstick, spray rifle code
 DONE: spray rifle code, audio
+WIP: rest of hip / rogue weps into whpr.cfg -- finish touch & ops cfg
 
 12.30.17
 
@@ -160,6 +171,7 @@ WIP: skullstick
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 DONE: item randomizers
+FIXED: mk II translate code had random translates -- poss fix with spawn_loop rnd select - but need a way not to spawn new item, just mod the _tr item
 DONE: cleanup map stats in config.cfg from HUD	-- remove decimal subs
 FIXED: client side that writes those
 NIX: hip trap rocket, lavab shooter has obit: _-=*[Six] was spiked -- this is hip code true ops
