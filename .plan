@@ -33,11 +33,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.15.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: missing alpha item code
+
 1.14.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item code
+FIXED: railgun splatter has wrong origin - off from beam strike -- this is an issue with the sprite gfx - strike point origin is accurate
+\_ sprite origin was not set
+DONE: folded rlspg_fade, plspg_fade into stain_fade (hipx.qc)
+WIP: q3_ha_rot(other, value);
+\_ logic -- dont rot with runes: regen, adoc, vamp, q3 rots armor as well, dont rot other items over max (copb, etc)
 
 1.13.18
 
