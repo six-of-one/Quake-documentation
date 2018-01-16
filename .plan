@@ -33,11 +33,28 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.16.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: missing alpha item code
+WIP: last man standing
+
 1.15.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item code
+DONE: q3_ha_rot -- need to handle armor, which respawns so we cant just think the armor ent
+now handled - when collecting less limited health (d_bottle etc) health rot should reduce decr by collected amt
+DONE: te_explosionsilent for hip exploder and other barrel sounds
+\_ void(vector org) te_explosionsilent = #458;
+RESEARCH: seems it does -- maybe beacon should cancel fall velocity ?
+\_ self.owner.velocity = (v_forward * 300);
+RESEARCH: damage_inflictor and .dmg_inflictor seem sort of redundant -- idea rmv .dmg_infl ent field & use global
+\_ .dmg_inflictor is an engine sys_fields item and is used heavy by ego code
+ \_ damage_inflictor could possibly fall to .damage_inflictor, but maybe not
+WIP: last man standing
 
 1.14.18
 
@@ -139,6 +156,7 @@ WIP: missing alpha item models, code
 WIP: probjectile model
 DONE: skullstick, skullart, dark claw
 FIXED: HUD not doing pk cube open -- mk III changed map code set for this
+WIP: last man standing
 
  1.3.18
 
@@ -146,6 +164,7 @@ WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item models, code
 WIP: skullstick, probjectile, dark claw models
+WIP: last man standing
 
 1.2.18
 
