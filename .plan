@@ -33,17 +33,24 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-1.17.18
+1.18.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item code
+WIP: archon pts in cfg
+
+1.17.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+DONE: random monster test via cfg
+WIP: archon pts in cfg
 
 1.16.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: missing alpha item code
 DONE: last man standing -- initial vers
 
 1.15.18
