@@ -33,12 +33,19 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-1.18.18
+1.19.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item code
-WIP: archon pts in cfg
+WIP: archon morphs via qc++
+
+1.18.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+CHECKED: if items directly gave archon pts, or only awarded xp -- awards xp
+DONE: archon pts in cfg -- ish
 
 1.17.18
 
