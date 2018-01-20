@@ -39,6 +39,12 @@ WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: missing alpha item code
 WIP: archon morphs via qc++
+WIP: archon monster enhance (some used by morph)
+DONE: meld comparison setup from archon
+DONE: client_side updates from current compile
+DONE: vomitus idle sound restore
+FIXED: compile issues when #define quakemonsters turned off
+DONE: last man standing winner announce
 
 1.18.18
 
@@ -52,6 +58,7 @@ DONE: archon pts in cfg -- ish
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 DONE: random monster test via cfg
+DONE: _tr can call fn if not defined as cvar during cvar_fields loop
 WIP: archon pts in cfg
 
 1.16.18
