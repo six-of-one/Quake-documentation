@@ -33,19 +33,28 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.21.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: archon morphs via qc++
+WIP: archon monster enhance (some used by morph)
+
 1.20.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: missing alpha item code
 WIP: archon morphs via qc++
 WIP: archon monster enhance (some used by morph)
+
+note: these will be replaced by cfg script ops that set speed override - so will the equiv slow
+\_	float FAST_MONSTER; // monster bits set here will always be fast monsters
+ \_	if (FAST_MONSTER & CB_M_OGRE) self.speed = MON_FAST;
 
 1.19.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: missing alpha item code
 WIP: archon morphs via qc++
 WIP: archon monster enhance (some used by morph)
 DONE: meld comparison setup from archon
