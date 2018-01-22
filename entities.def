@@ -20,8 +20,8 @@
 // Cataboligne 11/9/016   @   - redid styles on lights so radiant entity window is pretty
 // Cataboligne 12/31/017  @   - update for some alpha items
 
-// Version: 1.8.2
-// Last entry: 10-1-016
+// Version: 1.8.3
+// Last entry: 12-31-017
 
 
 
@@ -54,6 +54,25 @@
 
 //=============================================================================
 
+/*
+
+/*QUAKED info_notes - Note section, not a useable entity!
+
+Regarding map spawn entities - the following are engine control flags.
+Setting one of these flags does what it says.
+Mods can NOT use these 4 bits on entity load from maps.
+These apply to all entities that load with a spawnfunction after worldspawn.
+
+If a map ent is not loading, check the source for one of these flags.
+
+256 : Entity doesnt appear in Easy mode.
+512 : Entity doesnt appear in Medium mode.
+1024 : Entity doesnt appear in Hard mode.
+1024 : Entity doesnt appear in Nightmare mode.
+2048 : Entity doesnt appear in Deathmatch mode.
+1792 : Entity __only__ appears in Deathmatch mode.
+
+*/
 
 
 
@@ -3659,6 +3678,7 @@ place holder for enhanced mods that can accomodate dropped axes / throwing axes
 
 
 /*QUAKED weapon_shotgun (0 .5 .8) (-16 -16 0) (16 16 32)
+place holder for mods - quake has no shotgun drop or map item
 */
 
 INFO_* Entities
