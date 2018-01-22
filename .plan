@@ -33,12 +33,25 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.22.18
+
+WIP: v107 archon code
+WIP: backlog item clear -- many tdo & check items need cleared out
+WIP: missing alpha item code
+WIP: archon morphs via qc++
+WIP: archon monster enhance (some used by morph)
+
 1.21.18
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: archon morphs via qc++
 WIP: archon monster enhance (some used by morph)
+DONE: _trr random monster spawn method
+CHECKED: random spawn from both method
+DUH: enforcer laser shoot sounds -- wrong classname on rnd spawn monsters, also class_select
+DONE: rebuilt xmon.pk3, added mon_II sounds
+FIXED: missing x_mon sounds -- they are in archon beta release - now in xmon.pk3
 
 1.20.18
 
