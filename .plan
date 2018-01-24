@@ -33,14 +33,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-1.23.18
+1.24.18
 
 WIP: v107 archon code
-WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: missing alpha item code
 WIP: archon morphs via qc++
 WIP: archon monster enhance (some used by morph)
 WIP: sub field cfg remake
+
+1.23.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon monster enhance (some used by morph)
+WIP: sub field cfg remake
+DONE: crates, rnd items -- sub field cfg
+DONE: framer soldier mon+ army_natk1
+FIXED: enhanced monsters firing rockets werent going vertical -- code was not compiled
 
 1.22.18
 
@@ -51,6 +59,7 @@ WIP: archon monster enhance (some used by morph)
 CHECKED: bouncer can be turned off for rnd items -- cfg purpose sets punchangle, can leave it '0 0 0'
 DONE: cvar_fields _sub{n} load - sub-fields for common data
 WIP: sub field cfg remake
+DONE: cubes - __touch_set, __rndloc_itm, __smloc_itm
 
 1.21.18
 
