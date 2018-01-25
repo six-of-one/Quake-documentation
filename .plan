@@ -33,12 +33,23 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.25.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon monster enhance (some used by morph)
+WIP: sub field cfg remake
+WIP: remodel: wizard -- 6s. 3x need pain & death framed
+
 1.24.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: archon monster enhance (some used by morph)
 WIP: sub field cfg remake
+going with seperate models, no new framing on monster enhance
+DONE: remodel: scourge, ogre, dog, tarbaby, demon
+WIP: remodel: wizard -- 6s. 3x need pain & death framed
 
 1.23.18
 
