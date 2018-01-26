@@ -33,19 +33,32 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.26.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon monster enhance
+WIP: sub field cfg remake
+
 1.25.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: archon monster enhance (some used by morph)
+WIP: archon monster enhance
 WIP: sub field cfg remake
 WIP: remodel: wizard -- 6s. 3x need pain & death framed
+NIX: test_c has fps 2 with deathmatch 1 -- ? when did this start, and why
+\_ * this has now cleared up - suspect some issue with monster_silhouette 
+ \_ that I used to put samples of many monsters as practice dummies when dm is set
+DONE: rogue multi weapon for ogre bawse -- still have plasma code not compiled
+DONE: removed hip_xlate.qc, hip_null.qc and control code -- fn is provided by cfg system 6
+DONE: OGRE_BAWSE code
 
 1.24.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: archon monster enhance (some used by morph)
+WIP: archon monster enhance
 WIP: sub field cfg remake
 going with seperate models, no new framing on monster enhance
 DONE: remodel: scourge, ogre, dog, tarbaby, demon
@@ -55,7 +68,7 @@ WIP: remodel: wizard -- 6s. 3x need pain & death framed
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: archon monster enhance (some used by morph)
+WIP: archon monster enhance
 WIP: sub field cfg remake
 DONE: crates, rnd items -- sub field cfg
 DONE: framer soldier mon+ army_natk1
@@ -66,7 +79,7 @@ FIXED: enhanced monsters firing rockets werent going vertical -- code was not co
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: archon morphs via qc++
-WIP: archon monster enhance (some used by morph)
+WIP: archon monster enhance
 CHECKED: bouncer can be turned off for rnd items -- cfg purpose sets punchangle, can leave it '0 0 0'
 DONE: cvar_fields _sub{n} load - sub-fields for common data
 WIP: sub field cfg remake
