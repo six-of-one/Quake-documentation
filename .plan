@@ -33,12 +33,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.27.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon monster enhance
+WIP: sub field cfg remake
+
 1.26.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: archon monster enhance
 WIP: sub field cfg remake
+DONE: vaarezeil.mdl, supervore code upd -- tho this will be removed for spawnflags version in 1 fn
+FIXED: monster W_FireRocket issues from v107 code change
+DONE: horn ops -- note: has teleport effect in original	-- 1st cut anyway
 
 1.25.18
 
