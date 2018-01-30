@@ -33,19 +33,28 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.30.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: sub field cfg remake -- has touch set left
+WIP: archon monster enhance -- generic code for monster_start
+WIP: convert enhance to cfg method
+
 1.29.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: archon monster enhance -- generic code for monster_start
 WIP: sub field cfg remake -- has touch set left
+WIP: archon monster enhance -- generic code for monster_start
+WIP: convert enhance to cfg method
 
 1.28.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: archon monster enhance -- generic code for monster_start
 WIP: sub field cfg remake
+WIP: archon monster enhance -- generic code for monster_start
 DONE: wixard 3x, 6s frame out - pain, death
 
 1.27.18
