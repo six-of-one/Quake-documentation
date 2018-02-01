@@ -33,6 +33,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.32.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: sub field cfg remake -- has touch set left
+WIP: archon monster enhance -- generic code for monster_start
+WIP: convert enhance to cfg method
+WIP: 5Tb disk setup
+
 1.31.18
 
 WIP: v107 archon code
@@ -41,6 +50,12 @@ WIP: sub field cfg remake -- has touch set left
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
 WIP: 5Tb disk setup
+FIXED: monster enhance option puts pkitems in packs
+FIX: enforcer firing issues -- most were monunit not having sf ammo load
+\_ still have hip laser issues
+DONE: server.cfg update for calling all map / DM / SP / COOP / skill cfg sets
+DONE: __decor_set
+updated __touch_set
 
 1.30.18
 
