@@ -33,6 +33,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.33.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: sub field cfg remake -- has touch set left
+WIP: archon monster enhance -- generic code for monster_start
+WIP: convert enhance to cfg method
+WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+
 1.32.18
 
 WIP: v107 archon code
