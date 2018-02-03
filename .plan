@@ -33,14 +33,27 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.3.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon monster enhance -- generic code for monster_start
+WIP: convert enhance to cfg method
+WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+WIP: sub field cfg remake -- still: runes, q1setcyc deal
+
 1.33.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: sub field cfg remake -- has touch set left
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+FIXED: enforcer firing issues -- lasercanon
+\_ this ( rvel = 1; ) only happens for eweapons, but ( newmis.velocity = newmis.velocity * velmul * rvel ; ) always happens
+ \_ so if ( #define	rvel		f3__ ) is 0, velocity is killed
+CHECKED: enforcer railgun, rocket, lasercan, ltn - soldier rocket -- all working as of nowish
+WIP: sub field cfg remake -- has touch set left
 
 1.32.18
 
