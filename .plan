@@ -33,6 +33,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.4.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon monster enhance -- generic code for monster_start
+WIP: convert enhance to cfg method
+WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+
 2.3.18
 
 WIP: v107 archon code
@@ -40,7 +48,19 @@ WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
-WIP: sub field cfg remake -- still: runes, q1setcyc deal
+DONE: sub field cfg remake -- still: runes
+DONE: runes sub fields
+FIXED: _sub1 causes an infinite loop in cvar_fields due to reuse of f0__ -- added local float f_;
+find lines that terminate without "" -- g -v "\"$" *cfg|g -v "^$"
+DONE: cfg remake -- q1setcyc deal
+\_ test of _tr to call classname fails
+FIXED: some vector cvar in *cfg are still triples
+DONE: decor has no class select -- set to: set		__decor_set_class_select		"decor_item"
+TDO: % chance for __copy ents
+NIXED: - also factor skill block sf 256 - 2048 -- this occurs in prespawn - thinking engine takes care of this, even for maphack ents
+DONE: wolf ammo clip, other touch "box" issues -- fixes
+ISSUE: pickup gas cyl when over max ammo, and health bottles, q3 reg health
+\_ from __msk_*_xp		"+" -- causes an "allow" touch condition
 
 1.33.18
 
