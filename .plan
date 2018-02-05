@@ -33,6 +33,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.5.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon monster enhance -- generic code for monster_start
+WIP: convert enhance to cfg method
+WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+ISSUE: pickup gas cyl when over max ammo, and health bottles, q3 reg health
+WIP: monster enhance -- ogre, hell knight, fiend, tarbaby
+
 2.4.18
 
 WIP: v107 archon code
@@ -40,6 +50,8 @@ WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+ISSUE: pickup gas cyl when over max ammo, and health bottles, q3 reg health
+WIP: monster enhance -- ogre, hell knight, fiend, tarbaby
 
 2.3.18
 
