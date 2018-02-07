@@ -33,6 +33,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.7.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon monster enhance -- generic code for monster_start
+WIP: convert enhance to cfg method
+WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+ISSUE: pickup gas cyl when over max ammo, and health bottles, q3 reg health
+WIP: monster enhance -- fiend, wizard, vore, dog
+
 2.6.18
 
 WIP: v107 archon code
@@ -41,7 +51,12 @@ WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
 ISSUE: pickup gas cyl when over max ammo, and health bottles, q3 reg health
-WIP: monster enhance -- fiend, tarbaby, wizard, vore
+WIP: monster enhance -- fiend, tarbaby, wizard, vore, dog
+DONE: tarbaby
+???: admin to turn off this - what aspect ?  any tbaby having shots, or just this logic being blocked ?
+\	if (self.model != "progs/lavabomb.mdl")
+\	if (!(self.spawnflags & TB_SUPER))
+ \_ this maybe can be done via cvar overrides
 
 2.5.18
 
@@ -51,6 +66,7 @@ WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
 WIP: monster enhance -- ogre, hell knight, fiend, tarbaby
+DONE: ogre, hell knight
 FIXED: cfg - spawnflags in cfg require {selector}_sf	"1" -- some of these were missing
 FIXED: ( attempt ) - monster teleport deal
 
