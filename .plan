@@ -40,7 +40,19 @@ WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- 1Tb root drive copy finished - bohdi multi-boot setup next
-WIP: monster enhance -- fiend, wizard, vore, dog
+WIP: steamOS
+\_ both zip files fail from usb boot - *installer - kby lock, *image - goes fuck all to command line
+ \_ SteamOSDVD.iso starts, but network cfg fails & it cant find some .deb for amd64
+
+WIP: monster enhance -- wizard
+DONE: override - vore, dog, fiend, vore
+DONE: define monster dmg_save as gibdmg
+DONE: define monster dodmg is jump attack dmg
+DONE: saving history of qr search in .qrs |sort -u
+DONE: cfg for super monsters -- all mk II super elements listed
+DONE: super monster .scale and movement adjust -- in ai.qc
+DONE: removed mk II extended model framesets -- demon.qc, dog.qc, ogre.qc, shalrath.qc, soldier.qc, tarbaby.qc, wizard.qc
+FIXED: monster teleport issue still exists -- used mk I teleport debounce
 
 2.7.18
 
@@ -54,6 +66,7 @@ WIP: monster enhance -- fiend, wizard, vore, dog
 DONE: override - tarbaby explode damage - used mon_gibdmg
 WIP: define monster dmg_save as gibdmg, dodmg is jump attack dmg
 DONE: define xwep dmg_save as ammo_used -- TEST
+search mon_: qr "\bmon_[aesxgmj]"|g -v defs
 
 2.6.18
 
