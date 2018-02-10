@@ -33,6 +33,30 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.10.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-setup with dd if= of=
+WIP: monsters should have a cfg load melee attack value to acc. supers large sizes
+
+2.9.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- 1Tb root drive w7 fails boot, xp fails boot, morphix fails boot, bohdi installed
+\_ chroot - grub-install - not working -- use this -v
+ \_ grub-install --boot-directory=/mnt/sdb1 /dev/sdb
+  \_ now tweaking 2Tb to new spec, dropping 1Tb ops
+DONE: ai.qc, hip_ai.qc updated with mon_speed, morph elements
+DONE: removed all monster commented out speed code on init
+DONE: FL_FROZEN, monsters
+DONE: all known monster speed code in mk_II
+WIP: monsters should have a cfg load melee attack value to acc. supers large sizes
+DONE: demon meleedmg
+
 2.8.18
 
 WIP: v107 archon code
@@ -40,12 +64,13 @@ WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- 1Tb root drive copy finished - bohdi multi-boot setup next
+DONE: 1Tb root drive setup - bohdi bootable, win7, winxp, morphix multi boot -- no steam tho
 WIP: steamOS
 \_ both zip files fail from usb boot - *installer - kby lock, *image - goes fuck all to command line
  \_ SteamOSDVD.iso starts, but network cfg fails & it cant find some .deb for amd64
 
-WIP: monster enhance -- wizard
-DONE: override - vore, dog, fiend, vore
+WIP: monster enhance
+DONE: override - vore, dog, fiend, vore, wizard
 DONE: define monster dmg_save as gibdmg
 DONE: define monster dodmg is jump attack dmg
 DONE: saving history of qr search in .qrs |sort -u
@@ -53,6 +78,7 @@ DONE: cfg for super monsters -- all mk II super elements listed
 DONE: super monster .scale and movement adjust -- in ai.qc
 DONE: removed mk II extended model framesets -- demon.qc, dog.qc, ogre.qc, shalrath.qc, soldier.qc, tarbaby.qc, wizard.qc
 FIXED: monster teleport issue still exists -- used mk I teleport debounce
+DONE: archon monster enhance -- generic code for monster_start
 
 2.7.18
 
