@@ -33,13 +33,33 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.11.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-install xp, w_VII
+WIP: timeout remove random monsters
+
 2.10.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-setup with dd if= of=
-WIP: monsters should have a cfg load melee attack value to acc. supers large sizes
+WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-setup with dd if= of= -- failed
+DONE: monsters should have a cfg load melee attack value to acc. supers large sizes
+DONE: meleedmg - ai_melee calls, dog, ogre, hknight, shambler, fish
+DONE: check all * self.scale for ( ) enclose on prev arg
+DONE: update so monsters_plus__ can be turned off
+DONE: all mon frames need checked for ones that dont call an ai_* with speed controls
+\_ very few of these would involve movement, but the framing will be diff from speed changes
+ \_ of special note: scourge_atk1, sham_magic1, young_runatt1, armagon_satk11, old_thrash1
+  \_-- unknown if any besides #1 needs fixed
+DONE: "self.nextthink = time + (self.speed * MON_SPEED_DIV * self.speed_div);" needs to be in framer, framerloop
+FIXED: pickup gas cyl when over max ammo, and health bottles, q3 reg health
+\_ needs to know not to bump touch_go when adding aux stuff
+ \_ -- new ops "++" works same as "+" but doesnt twiddle touch_go test
+WIP: timeout remove random monsters
 
 2.9.18
 
