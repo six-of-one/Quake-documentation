@@ -33,13 +33,25 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+
+2.12.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install
+FIXED: translate ops with solid = 2		-- translate to / from explod boxen or that one barrel    and note the experimental push blowboxen
+
 2.11.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-install xp, w_VII
-WIP: timeout remove random monsters
+WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-install xp, w_VII - fails
+\_ xp install on ide 40G HD -- FAILS!? htf ??
+DONE: timeout remove random monsters
+DONE: all enhanced monsters in rnd spawn test cfg
+DONE: exploder sub sets
 
 2.10.18
 
