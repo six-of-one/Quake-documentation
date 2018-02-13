@@ -34,13 +34,27 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+2.13.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - 
+
 2.12.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install
+WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - xp finally installed - note: needs a primary partition for boot files
 FIXED: translate ops with solid = 2		-- translate to / from explod boxen or that one barrel    and note the experimental push blowboxen
+DONE: cube / crate monster spawn charmer -> after spawn loop code
+FIXED: pk throwables all inf ammo, not thrown right
+-- sub set update made changes to cfg - this is wrong:
+\_		unset		__pk_set_style
+WIP: q1 explodbox - dont always explode - just go away -- something about respawn setup
+\_ has rnd_ ( bubble_count ) - which randomly selects other than __Barrel0 - no boom
+ \_ must be via .f__ =
 
 2.11.18
 
