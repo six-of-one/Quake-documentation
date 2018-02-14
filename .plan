@@ -34,12 +34,24 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+2.14.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - restore w7, setup bohdi fin, attempt xp repairs?
+WIP: rest of hip / rogue weps into whpr.cfg -- finish touch & ops cfg
+
 2.13.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - 
+WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - w7 init, bohdi init
+DONE: q1 explodbox - dont always explode - just go away -- something about respawn setup
+\_ with x_ents compile f__ is set to button14
+FIXED: spawn arent making many jump sounds ? -- logic change from mk II wasnt moved over
+WIP: rest of hip / rogue weps into whpr.cfg -- finish touch & ops cfg
 
 2.12.18
 
