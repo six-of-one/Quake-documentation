@@ -34,19 +34,29 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
-2.14.18
+2.15.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - restore w7, setup bohdi fin, attempt xp repairs?
-WIP: rest of hip / rogue weps into whpr.cfg -- finish touch & ops cfg
+WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS
+WIP: rest of hip / rogue weps into whpr.cfg -- lava nail ops & cfg
+\_ need ammo ops, share slot with ngs
+
+2.14.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method
+WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - restore w7, setup bohdi fin - done
+WIP: rest of hip / rogue weps into whpr.cfg -- lava nail ops & cfg
+\_ need ammo ops, share slot with ngs
 
 2.13.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - w7 init, bohdi init
 DONE: q1 explodbox - dont always explode - just go away -- something about respawn setup
 \_ with x_ents compile f__ is set to button14
@@ -57,7 +67,7 @@ WIP: rest of hip / rogue weps into whpr.cfg -- finish touch & ops cfg
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - xp finally installed - note: needs a primary partition for boot files
 FIXED: translate ops with solid = 2		-- translate to / from explod boxen or that one barrel    and note the experimental push blowboxen
 DONE: cube / crate monster spawn charmer -> after spawn loop code
@@ -72,7 +82,7 @@ WIP: q1 explodbox - dont always explode - just go away -- something about respaw
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-install xp, w_VII - fails
 \_ xp install on ide 40G HD -- FAILS!? htf ??
 DONE: timeout remove random monsters
@@ -83,7 +93,7 @@ DONE: exploder sub sets
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-setup with dd if= of= -- failed
 DONE: monsters should have a cfg load melee attack value to acc. supers large sizes
 DONE: meleedmg - ai_melee calls, dog, ogre, hknight, shambler, fish
@@ -103,7 +113,7 @@ WIP: timeout remove random monsters
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method
 WIP: 5Tb disk setup -- 1Tb root drive w7 fails boot, xp fails boot, morphix fails boot, bohdi installed
 \_ chroot - grub-install - not working -- use this -v
  \_ grub-install --boot-directory=/mnt/sdb1 /dev/sdb
