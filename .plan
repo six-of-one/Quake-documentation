@@ -34,14 +34,23 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+2.16.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst
+
 2.15.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS
-WIP: rest of hip / rogue weps into whpr.cfg -- lava nail ops & cfg
-\_ need ammo ops, share slot with ngs
+WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - done but, after hardware inst errors out
+DONE: rest of hip / rogue weps into whpr.cfg -- all but lava nail ammo
+FIXED: ops_rot - q1 mega health has no max_health - rots below 100
+DONE: random monster facing dir -- angles_y		"$R355"
+DUR: pickup on item_plasma failed 9 times of 10 - classname was item_item_plasma -- failing msk tests
 
 2.14.18
 
