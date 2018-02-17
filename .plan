@@ -8,10 +8,10 @@ current project(s):
 
 chaos mod Archon - mark III code base port to qc 2.0:
 
-- maphack (rewritten)
+- maphack (rewritten) - finish mod maps
 - frikbot - minor rev
 - viswep -- needs minor revision, position data update
-- xents --- mostly done
+- xents --- nearly complete
 
 quake hack:
 
@@ -29,7 +29,7 @@ play through / promo video - e1 at least
 
 PaiNKeep 3.0 WIP: 
 - 3.0 released !!!
-- followup items
+- see followup items notes
 
 ---  START of .plan daily
 
@@ -39,7 +39,21 @@ PaiNKeep 3.0 WIP:
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst
+WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst + wipe 2Tb sys2 drive & copy backup over
+NIX: -- wad q1 test fails in conv code for pkitems.qc - placeitem
+research -
+DONE: find out why runes accumulate / spawn in generator area on test map
+\_ random locator for now targets quake_item, starts, info_dm, teleport dest ents with parm 1, no quake_item with parm 0
+ \_ rune maker uses find_tdest(0) - the generators have a min of 8 info_teleport_destination per - one has 16, big has 12
+TWEAK: plasma conflict with clg, moved to pk_slot 4
+research: port NPR code to quakespasm or some engine -- meld qspasm vs nprq
+- cleared: --
+Download rejected: server does not have the file "progs/d_claw.mdl"
+Download rejected: server does not have the file "progs/d_unmaker.mdl"
+whpr, wsys6 artifacts, keys, items not enabled -- will pk3 use any?
+-- fixed - bots no model after death
+- water jump bobbing near a jump out point -- likely an engine physics issue - bug or feature ?  and does it warrant a qc fix ?
+xx: ultra scourge needs tested, prob, sc_supers as well - individually, multiple times	--  re-code for mk III
 
 2.16.18
 
