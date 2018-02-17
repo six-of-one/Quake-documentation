@@ -34,12 +34,21 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+2.17.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst
+
 2.16.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
 WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst
+DONE: .qca stamp & compiler.qc version (if avail) on qcc output
+DONE: rest of q3 items -- artifacts / rune powers done, holdables done
 
 2.15.18
 
