@@ -34,6 +34,13 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+2.18.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst + wipe 2Tb sys2 drive & copy backup over
+
 2.17.18
 
 WIP: v107 archon code
@@ -47,12 +54,17 @@ DONE: find out why runes accumulate / spawn in generator area on test map
  \_ rune maker uses find_tdest(0) - the generators have a min of 8 info_teleport_destination per - one has 16, big has 12
 TWEAK: plasma conflict with clg, moved to pk_slot 4
 research: port NPR code to quakespasm or some engine -- meld qspasm vs nprq
+FIXED: archon power bar missing - addstat wasnt compiled
+DONE: after regen rot must occur
+DONE: +5 health needs rot to 100 or touch health level
+DONE: rest of shambler cfg meleedmg -- he had 2 melee dmg
+FIXED: artifacts - mask ops - at one point seemed powers were real -- warning system blew this away
 - cleared: --
 Download rejected: server does not have the file "progs/d_claw.mdl"
 Download rejected: server does not have the file "progs/d_unmaker.mdl"
 whpr, wsys6 artifacts, keys, items not enabled -- will pk3 use any?
 -- fixed - bots no model after death
-- water jump bobbing near a jump out point -- likely an engine physics issue - bug or feature ?  and does it warrant a qc fix ?
+- water jump bobbing near a jump out point -- likely waterjump in client.qc - bug or feature ?  and does it warrant a qc fix ?
 xx: ultra scourge needs tested, prob, sc_supers as well - individually, multiple times	--  re-code for mk III
 
 2.16.18
