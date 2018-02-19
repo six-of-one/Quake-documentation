@@ -33,13 +33,28 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.19.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - apt-get upgrade / dist_upgrade may be the thing
 
 2.18.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst + wipe 2Tb sys2 drive & copy backup over
+WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - apt-get upgrade / dist_upgrade may be the thing
+\_ wipe 2Tb sys2 drive & copy - drives have to be internal or it will take 30 days - ~1.5G / hr -- nixed, case hardware mods drive interface, parms are wrong when bare
+ \_ replan: (bring a horse) - gparted move / expand 4Tb backup after copying off unique sys1 data, dup sys1 to 2Tb backup internal
+DONE: item regen HUD show regen rune
+CHECKED: quad actor via tdmg warning -- good
+???: 'quake adv toolkit' message is bork wrong -- checked this out
+\_ message prints when crate is opened in the console as coded
+ \_ somehow this gets centerprint later - method unknown -- could be some kind of junk string issue
+DONE: merged v107_II & prv into one project -- do we need to make a new master ?
+DONE: scragg enhanced attacks were left out
 
 2.17.18
 
