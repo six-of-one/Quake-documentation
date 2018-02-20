@@ -33,19 +33,32 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.20.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: gs_1 drive rebuild -- plug all drives, install new main linux
+ \_ wip: (bring a horse) - gparted move / expand 4Tb backup after copying orphan sys1 data from backup, dup sys1 to 2Tb backup internal
+WIP: archon scourge.qc convert to mk_III
+
 2.19.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - apt-get upgrade / dist_upgrade may be the thing
+WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - apt-get upgrade / dist_upgrade may be the thing
+										\-- found a way to install std distro packages - may attempt alternate dm
+ \_ wip: (bring a horse) - gparted move / expand 4Tb backup after copying orphan sys1 data from backup, dup sys1 to 2Tb backup internal
+DONE: gs_1 drive rebuild -- steam OS install on spare 1Tb hard drive
+WIP: archon scourge.qc convert to mk_III
 
 2.18.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - apt-get upgrade / dist_upgrade may be the thing
+WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - apt-get upgrade / dist_upgrade may be the thing
 \_ wipe 2Tb sys2 drive & copy - drives have to be internal or it will take 30 days - ~1.5G / hr -- nixed, case hardware mods drive interface, parms are wrong when bare
  \_ replan: (bring a horse) - gparted move / expand 4Tb backup after copying off unique sys1 data, dup sys1 to 2Tb backup internal
 DONE: item regen HUD show regen rune
@@ -61,7 +74,7 @@ DONE: scragg enhanced attacks were left out
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst + wipe 2Tb sys2 drive & copy backup over
+WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst + wipe 2Tb sys2 drive & copy backup over
 NIX: -- wad q1 test fails in conv code for pkitems.qc - placeitem
 research -
 DONE: find out why runes accumulate / spawn in generator area on test map
@@ -87,7 +100,7 @@ xx: ultra scourge needs tested, prob, sc_supers as well - individually, multiple
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst
+WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst
 DONE: .qca stamp & compiler.qc version (if avail) on qcc output
 DONE: rest of q3 items -- artifacts / rune powers done, holdables done
 
@@ -96,7 +109,7 @@ DONE: rest of q3 items -- artifacts / rune powers done, holdables done
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: 5Tb disk setup -- alt 1Tb root drive - steamOS - done but, after hardware inst errors out
+WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - done but, after hardware inst errors out
 DONE: rest of hip / rogue weps into whpr.cfg -- all but lava nail ammo
 FIXED: ops_rot - q1 mega health has no max_health - rots below 100
 DONE: random monster facing dir -- angles_y		"$R355"
@@ -107,7 +120,7 @@ DUR: pickup on item_plasma failed 9 times of 10 - classname was item_item_plasma
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - restore w7, setup bohdi fin - done
+WIP: gs_1 drive rebuild -- 1Tb root drive total wipe & fresh install - restore w7, setup bohdi fin - done
 WIP: rest of hip / rogue weps into whpr.cfg -- lava nail ops & cfg
 \_ need ammo ops, share slot with ngs
 
@@ -116,7 +129,7 @@ WIP: rest of hip / rogue weps into whpr.cfg -- lava nail ops & cfg
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - w7 init, bohdi init
+WIP: gs_1 drive rebuild -- 1Tb root drive total wipe & fresh install - w7 init, bohdi init
 DONE: q1 explodbox - dont always explode - just go away -- something about respawn setup
 \_ with x_ents compile f__ is set to button14
 FIXED: spawn arent making many jump sounds ? -- logic change from mk II wasnt moved over
@@ -127,7 +140,7 @@ WIP: rest of hip / rogue weps into whpr.cfg -- finish touch & ops cfg
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- 1Tb root drive total wipe & fresh install - xp finally installed - note: needs a primary partition for boot files
+WIP: gs_1 drive rebuild -- 1Tb root drive total wipe & fresh install - xp finally installed - note: needs a primary partition for boot files
 FIXED: translate ops with solid = 2		-- translate to / from explod boxen or that one barrel    and note the experimental push blowboxen
 DONE: cube / crate monster spawn charmer -> after spawn loop code
 FIXED: pk throwables all inf ammo, not thrown right
@@ -142,7 +155,7 @@ WIP: q1 explodbox - dont always explode - just go away -- something about respaw
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-install xp, w_VII - fails
+WIP: gs_1 drive rebuild -- 2 Tb drive reconf (in-case) - 1Tb root drive re-install xp, w_VII - fails
 \_ xp install on ide 40G HD -- FAILS!? htf ??
 DONE: timeout remove random monsters
 DONE: all enhanced monsters in rnd spawn test cfg
@@ -153,7 +166,7 @@ DONE: exploder sub sets
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- 2 Tb drive reconf (in-case) - 1Tb root drive re-setup with dd if= of= -- failed
+WIP: gs_1 drive rebuild -- 2 Tb drive reconf (in-case) - 1Tb root drive re-setup with dd if= of= -- failed
 DONE: monsters should have a cfg load melee attack value to acc. supers large sizes
 DONE: meleedmg - ai_melee calls, dog, ogre, hknight, shambler, fish
 DONE: check all * self.scale for ( ) enclose on prev arg
@@ -173,7 +186,7 @@ WIP: timeout remove random monsters
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- 1Tb root drive w7 fails boot, xp fails boot, morphix fails boot, bohdi installed
+WIP: gs_1 drive rebuild -- 1Tb root drive w7 fails boot, xp fails boot, morphix fails boot, bohdi installed
 \_ chroot - grub-install - not working -- use this -v
  \_ grub-install --boot-directory=/mnt/sdb1 /dev/sdb
   \_ now tweaking 2Tb to new spec, dropping 1Tb ops
@@ -190,7 +203,7 @@ WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- 1Tb root drive copy finished - bohdi multi-boot setup next
+WIP: gs_1 drive rebuild -- 1Tb root drive copy finished - bohdi multi-boot setup next
 DONE: 1Tb root drive setup - bohdi bootable, win7, winxp, morphix multi boot -- no steam tho
 WIP: steamOS
 \_ both zip files fail from usb boot - *installer - kby lock, *image - goes fuck all to command line
@@ -213,7 +226,7 @@ WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+WIP: gs_1 drive rebuild -- having issues with 1Tb root drive copy / w7 install
 ISSUE: pickup gas cyl when over max ammo, and health bottles, q3 reg health
 WIP: monster enhance -- fiend, wizard, vore, dog
 DONE: override - tarbaby explode damage - used mon_gibdmg
@@ -227,7 +240,7 @@ WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+WIP: gs_1 drive rebuild -- having issues with 1Tb root drive copy / w7 install
 ISSUE: pickup gas cyl when over max ammo, and health bottles, q3 reg health
 WIP: monster enhance -- fiend, tarbaby, wizard, vore, dog
 DONE: tarbaby
@@ -242,7 +255,7 @@ WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+WIP: gs_1 drive rebuild -- having issues with 1Tb root drive copy / w7 install
 WIP: monster enhance -- ogre, hell knight, fiend, tarbaby
 DONE: ogre, hell knight
 FIXED: cfg - spawnflags in cfg require {selector}_sf	"1" -- some of these were missing
@@ -254,7 +267,7 @@ WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+WIP: gs_1 drive rebuild -- having issues with 1Tb root drive copy / w7 install
 ISSUE: pickup gas cyl when over max ammo, and health bottles, q3 reg health
 WIP: monster enhance -- ogre, hell knight, fiend, tarbaby
 
@@ -264,7 +277,7 @@ WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+WIP: gs_1 drive rebuild -- having issues with 1Tb root drive copy / w7 install
 DONE: sub field cfg remake -- still: runes
 DONE: runes sub fields
 FIXED: _sub1 causes an infinite loop in cvar_fields due to reuse of f0__ -- added local float f_;
@@ -285,7 +298,7 @@ WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup -- having issues with 1Tb root drive copy / w7 install
+WIP: gs_1 drive rebuild -- having issues with 1Tb root drive copy / w7 install
 FIXED: enforcer firing issues -- lasercanon
 \_ this ( rvel = 1; ) only happens for eweapons, but ( newmis.velocity = newmis.velocity * velmul * rvel ; ) always happens
  \_ so if ( #define	rvel		f3__ ) is 0, velocity is killed
@@ -299,7 +312,9 @@ WIP: archon morphs via qc++
 WIP: sub field cfg remake -- has touch set left
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup
+WIP: gs_1 drive rebuild -- having issues with 1Tb root drive copy / w7 install
+FIXES: enforcer firing issues -- railgun - something to do with framer loop
+\_ switched ssg & rail option to 1st sortie - enf ends up in stand loop somehow after rail fire
 
 1.31.18
 
