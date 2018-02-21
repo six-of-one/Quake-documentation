@@ -33,13 +33,24 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.21.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: gs_1 drive rebuild -- redo main 1Tb drive to attemp xp ressurect in ext partition ?
+ \_ wip: (bring a horse) - still move orphan data from backup, dup sys1 to 2Tb backup internal
+WIP: archon scourge.qc convert to mk_III
+
 2.20.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: gs_1 drive rebuild -- plug all drives, install new main linux
+WIP: gs_1 drive rebuild -- 
  \_ wip: (bring a horse) - gparted move / expand 4Tb backup after copying orphan sys1 data from backup, dup sys1 to 2Tb backup internal
+DONE: plug all drives -- resized win7 to 250Gb
+NIX: install new main linux -- booted recover - grub re-do, seems to have fixed problem
 WIP: archon scourge.qc convert to mk_III
 
 2.19.18
