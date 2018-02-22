@@ -33,14 +33,25 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.22.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: gs_1 drive rebuild -- redo main 1Tb drive to attemp xp ressurect in ext partition ?
+ \_ wip: (bring a horse) - still move orphan data from backup
+WIP: archon scourge.qc convert to mk_III
+
 2.21.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
 WIP: gs_1 drive rebuild -- redo main 1Tb drive to attemp xp ressurect in ext partition ?
- \_ wip: (bring a horse) - still move orphan data from backup, dup sys1 to 2Tb backup internal
+ \_ wip: (bring a horse) - still move orphan data from backup, 
+DONE:  dup sys1 to 2Tb backup internal
 WIP: archon scourge.qc convert to mk_III
+DONE: scourge.qc convert to mk_III cfg file, rv 1
 
 2.20.18
 
