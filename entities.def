@@ -19,9 +19,10 @@
 // Cataboligne 10/1/016   @   - bit list tweak
 // Cataboligne 11/9/016   @   - redid styles on lights so radiant entity window is pretty
 // Cataboligne 12/31/017  @   - update for some alpha items
+// Cataboligne 2/22/018   @   - update for chaos mod mk_III dev - more scanning needed for changed ops
 
-// Version: 1.8.3
-// Last entry: 12-31-017
+// Version: 1.8.4
+// Last entry: 2-22-018
 
 
 
@@ -217,7 +218,7 @@ skybox controls, path of sun, moon
 "button*"       "#"     - level appx to set matched skybox
 */
 
-/*QUAKED func_maphack (.6 .1 .6) (-8 -8 -8) (8 8 8) FADEIN null DESTROY HOLD NOTRIG NOPERSIST RANDOM ENTREPLACE
+/*QUAKED func_maphack (.6 .1 .6) (-8 -8 -8) (8 8 8) FADEIN X DESTROY HOLD NOTRIG NOPERSIST RANDOM ENTREPLACE
 --------  CAT  -------
 Chaos Mod MK II
 
@@ -299,7 +300,7 @@ parameters:
 
 */
 
-/*QUAKED func_biome (.6 .1 .6) (-8 -8 -8) (8 8 8) SUBH WORLD DESTROY null NOTRIG NOPERSIST RANDOM ENTREPLACE
+/*QUAKED func_biome (.6 .1 .6) (-8 -8 -8) (8 8 8) SUBH WORLD DESTROY X NOTRIG NOPERSIST RANDOM ENTREPLACE
 --------  CAT  -------
 Chaos Mod MK II
 
@@ -1125,7 +1126,8 @@ Chaos Mod MK II
 */
 
 
-/*QUAKED classname_c (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_c (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  CAT  --------
 All Cat classnames
 -------- SPAWNFLAGS --------
@@ -1278,7 +1280,8 @@ Module to make shield pods for Anode X
 */
 
 
-/*QUAKED classname_anode (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_anode (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  CAT  --------
 All Anode X classnames
 
@@ -1654,7 +1657,8 @@ Need placement guidelines & sizing
 */
 
 
-/*QUAKED classname_pk (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_pk (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  PK  --------
 All Painkeep classnames
 -------- SPAWNFLAGS --------
@@ -1724,8 +1728,6 @@ and shoots spawn / tarbaby
 Also makes tarbabies on death
 
 --------  CAT  --------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 -------- FLAGS --------
@@ -1744,8 +1746,6 @@ Bossman (like a boss), 800 health points.
 Very tall model - only use with high ceiling maps
 
 --------  CAT  --------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 -------- FLAGS --------
@@ -1765,8 +1765,6 @@ Small but tough - use sparingly
 Only identifiable female monster so far
 
 --------  CAT  --------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 -------- FLAGS --------
@@ -1785,8 +1783,6 @@ Velociraptor, 400 health points.
 Deadly dino.
 
 --------  CAT  --------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 -------- FLAGS --------
@@ -1805,8 +1801,6 @@ Phase spider, 200 health points.
 Spider - variety of attacks
 
 --------  CAT  --------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 -------- FLAGS --------
@@ -1825,8 +1819,6 @@ Blarg, 180 health points.
 Similar attacks to fiend, not as tough
 
 --------  CAT  --------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 -------- FLAGS --------
@@ -1849,12 +1841,26 @@ This classname is *deprecated* - set
 
 Looks like a tarbaby, but lava hot - shoots lava balls & jump attack
 
-
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 -------- NOTES --------
+Flags:
+"ambush"
+ the monster will only wake up on
+ really seeing the player, not another
+ monster getting angry
+*/
+
+
+/*QUAKED monster_supervore (1 0 0) (-32 -32 -24) (32 32 48) Ambush
+Vorerel (Super Shalrath), 600 health points.
+
+--------  CAT  -------
+"speed" - 0.1 normal, 0.05 fast, 0.2 slow
+
+a bigger shalrath with 4 arms and more magic
+note: requires chaos mod mk_III and cfg file data
+
 Flags:
 "ambush"
  the monster will only wake up on
@@ -1870,8 +1876,6 @@ Hexen 2 Imp, 60 health points.
 Flys around, annoys players
 
 --------  CAT  --------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 -------- FLAGS --------
@@ -1899,7 +1903,8 @@ tri leg aliens from alien infestation mod
 
 */
 
-/*QUAKED classname_m2 (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_m2 (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  CAT  --------
 All Monster II classnames
 -------- SPAWNFLAGS --------
@@ -1918,6 +1923,7 @@ monster_raptor
 monster_spider
 monster_blarg
 monster_lavabomb
+monster_supervore
 monster_clinger
 monster_young
 
@@ -1938,7 +1944,7 @@ place holder lists all Monster II classnames - not a useable entity
 --------  Half Life  --------
 
 -------- NOTES --------
-place holder for weapon_shotgun, which cm mk2 handles
+place holder for weapon_shotgun, which chaos mod mk3 might handle
 */
 
 /*QUAKED weapon_357 (0 .8 0) (-16 -16 0) (16 16 32)
@@ -2058,7 +2064,8 @@ place holder for weapon_shotgun, which cm mk2 handles
 --------  Half Life  --------
 */
 
-/*QUAKED classname_hl (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_hl (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  Half Life  --------
 All half life classnames
 -------- SPAWNFLAGS --------
@@ -3042,7 +3049,8 @@ Flags:
 "block" - object blocks ents (players / monsters)
 */
 
-/*QUAKED classname_doom (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_doom (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  DOOM  --------
 All doom classnames
 -------- SPAWNFLAGS --------
@@ -3567,7 +3575,8 @@ set skin for key color
 --------  WOLF  --------
 */
 
-/*QUAKED classname_wolf (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_wolf (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  WOLF  --------
 All wolf classnames
 -------- SPAWNFLAGS --------
@@ -5304,12 +5313,10 @@ MONSTER_* ENTITIES
 
 
 
-/*QUAKED monster_enforcer (1 0 0) (-16 -16 -24) (16 16 40) Ambush Lightning Laser Rail Rocket SSG
+/*QUAKED monster_enforcer (1 0 0) (-16 -16 -24) (16 16 40) Ambush Lightning Laser Rail silent Rocket SSG
 Enforcer, 80 health points.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 "Lightning" - use lightning gun
 "Laser" - use reflecting laser
@@ -5329,8 +5336,6 @@ Flags:
 Hell Knight, 250 health points.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 "death" - improved hell knight - more attacks, harder, 350 health
 
@@ -5356,8 +5361,6 @@ Flags:
 Grunt, 30 health points.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 "Nailgun" - use nail gun
 "SSG" - use super shot gun
@@ -5377,9 +5380,6 @@ Dog (Rottweiler), 25 health points.
 --------  CAT  -------
 "TwoHead" - two heads are better than one, double health, double attacks
 "Fluffy" - oh crap.  Cerebus - 3 heads, large, demon leap attack
-
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 Flags:
@@ -5390,14 +5390,12 @@ Flags:
 */
 
 
-/*QUAKED monster_ogre (1 0 0) (-32 -32 -24) (32 32 64) Ambush Boss Normal Super
+/*QUAKED monster_ogre (1 0 0) (-32 -32 -24) (32 32 64) Ambush Boss Normal
 Ogre, 200 health points.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
-"Super": mega ogre
+"Super": mega ogre - flags = 4096
 
 -------- ROGU --------
 "Boss": use the modified skin and fire multigrenades.
@@ -5415,8 +5413,6 @@ Flags:
 Knight, 75 health points.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 Flags:
@@ -5461,22 +5457,19 @@ when awakened by the player.
 */
 
 
-/*QUAKED monster_wizard (1 0 0) (-16 -16 -24) (16 16 40) Ambush Lava Poison Twohead Spike LargeSpike TripleSpike SupsTripleSpike
+/*QUAKED monster_wizard (1 0 0) (-16 -16 -24) (16 16 40) Ambush Lava Poison Twohead silent Spikes 3Head !_EASY !_MEDIUM !_HARD !_DM Super
 Scrag (Wizard), 80 health points.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
-"Lava" - lava skin scragg, shoots lava balls, more health, faster, badder
+"Lava" - Cthon skin scragg, shoots lava balls, more health, faster, badder
 "Poison" - Toxic Green skin scragg, shoots poison tracers, more health
 
 Note: any of these can be lava or poison
 "TwoHead" - two heads are better than one, double health, double attacks
 "Spike" - extra spikes, extra health, extra attacks, more magic
-"LargeSpike" - larger more badass version of spike scragg
-"TripleSpike" - Three headed spike scragg - triple spike health, 6x attacks, 
-"SupsTripleSpike" - Super Three headed spike scragg - monster id says "bad-ass motherfucker"
+"3Head" - Three headed spike scragg - triple spike health, 6x attacks, 
+"Super" - Super scragg - monster id says "bad-ass motherfucker"
 
 
 Flags:
@@ -5487,16 +5480,14 @@ Flags:
 */
 
 
-/*QUAKED monster_demon1 (1 0 0) (-32 -32 -24) (32 32 64) Ambush Double Super BOB
+/*QUAKED monster_demon1 (1 0 0) (-32 -32 -24) (32 32 64) Ambush Double X BOB silent X X X !_EASY !_MEDIUM !_HARD !_DM Super
 Fiend (Demon), 300 health points.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 "Double": double the demon, double the fun
 "Super": mega demon - watch out, use with care
-"BOB": use black orange beast
+"BOB": use black orange beast -- Not done
 
 Flags:
 "ambush"
@@ -5518,8 +5509,6 @@ Rockets only have half damage
 when hitting the Shambler.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 Flags:
@@ -5534,9 +5523,10 @@ Flags:
 Vore (Shalrath), 400 health points.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
+
+make a super shalrath - Vaareziel
+spawnflags: 4096
 
 Flags:
 "ambush"
@@ -5552,7 +5542,7 @@ Only event_lightning can kill him.
 */
 
 
-/*QUAKED monster_tarbaby (1 0 0) (-16 -16 -24) (16 16 24) Ambush Blue Green Spots Lavabomb random Super
+/*QUAKED monster_tarbaby (1 0 0) (-16 -16 -24) (16 16 24) Ambush Blue Green Spots silent Lavabomb random X !_EASY !_MEDIUM !_HARD !_DM Super XMAD
 Spawn (Tarbaby), 80 health points.
 
 --------  CAT  -------
@@ -5560,8 +5550,6 @@ Spawn (Tarbaby), 80 health points.
 "random" - select a rogue type at random
 "Super" - supersize him - larger tarbaby / lavabomb
 
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 -------- ROGU --------
@@ -5588,8 +5576,6 @@ Flags:
 Rotfish, 25 health points.
 
 --------  CAT  -------
-"netname" "fast" - make this a fast monster
-"netname" "slow" - make this a slow monster
 "speed" - 0.1 normal, 0.05 fast, 0.2 slow
 
 Flags:
@@ -5622,7 +5608,7 @@ fog: value for darkplaces
 - "fog (density red green blue alpha mindist maxdist top depth textures/mapname/fogheight.tga)"
 -------- CM2 --------
 event: a map genre: W, D, Q, Q2, Q3, PK
-target1: chaos mod mkII score limit achievement:
+target1: chaos mod mk_III score limit achievement:
 - score_rel1, score_rel2
 -------- NOTES --------
 Should be only one per MAP.
@@ -5640,7 +5626,8 @@ Game mode guide:
 */
 
 
-/*QUAKED classname_quake (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_quake (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  Q  --------
 All Quake classnames
 -------- SPAWNFLAGS --------
@@ -5651,6 +5638,9 @@ All Quake classnames
 1024 : Entity doesnt appear in Nightmare mode.
 2048 : Entity doesnt appear in Deathmatch mode.
 1792 : Entity __only__ appears in Deathmatch mode.
+
+make any monster a super monster
+4096 : Make a "super" monster - requires chaos mod mk_III & cfg file data
 
 weapon_axe	*
 weapon_shotgun	*
@@ -6763,49 +6753,48 @@ Hipnotic Monster
 */
 
 
-/*QUAKED monster_scourge (1 0 0) (-16 -16 -24) (16 16 40) Ambush Mega Super Super6 XMAD Mini Baby Cthon Lava ULTRA Poison Death Wraith stunt
+/*QUAKED monster_scourge (1 0 0) (-16 -16 -24) (16 16 40) Ambush Mega Six Cthon silent Mini Baby ULTRA !_EASY !_MEDIUM !_HARD !_DM Super XMAD stunt
 -------- HIPN --------
 Hipnotic Monster
 ----------------
-Now known as Centroids.
---------  CAT  -------
-"netname" - fast = fast monster, slow = slow monster
-"speed" - 0.1 normal, 0.05 fast, 0.2 slow
+called Centroids in hipnotic code
 
 "ambush"
  the monster will only wake up on
  really seeing the player, not another
  monster getting angry
 
-spawnflags < 256 can be copied to "height"
-" Mega" - 2 extra 3x nailguns, a bit tougher
-"Super" - double size, double bad
-"Super6" - double size with 4 extra 3x nailguns, ton tougher
-"XMAD" - triple sized - has plate stenciled "bad ass motherfucker"
+--------  CAT  -------
+"Mega" - 2 extra 3x nailguns, a bit tougher
+"Six"  - 4 extra 3x nailguns, even tougher
+"Cthon" - Cthon scourge - lava tough
+"silent" - spawn silent deal (may not have code)
 "Mini" - mini scrourges, take after mommy
-"Baby" - wee little baby scourge - aww...arent they cute
-"Cthon" - Cthon scourge - toughest
+"Baby" - wee little baby scourge - aww...arent they cute --- OUCH! it hurts
+"ULTRA" - ultimate Uber scourge - the "big" mommy
 
-NOTE: copy these spawnflags to height & clear here - they are engine entity controls for game skill
-"Lava" - Lava skin scourge - tougher
-"ULTRA" - ultimate Uber scourge - the "big" daddy
+"Super" - double size, double bad
+"XMAD" - triple sized - has plate stenciled "bad ass motherfucker"
+"stunt" - block evolution into more powerful scourge
+
 not implemented:
 "Poison" - has poisoned nails, stinger, green skin
-"Death" - death scourge - black widow hourglass & dark scales
+"Death" - death scourge
 "Wraith" - wraith scourge
-These will make regular scourge
 
-"stunt" - do NOT allow this scourge to "evolve" into more powerful scourge
+when map spawning large scourge:
 
-just to repeat: scourge uses "height" to code in spawnflags, because
-the engine excludes entities depending on game skill for 256+
+super - raise ent 32 units
+XMAD - raise ent 40 units
+ULTRA - raise ent 88 units
 */
 
-/*QUAKED monster_scourge_pod (1 0 0) (-16 -16 -24) (16 16 40) NULL Mega Super Super6 NULL NULL NULL Cthon Lava NULL Poison Death Wraith
+
+/*QUAKED monster_scourge_pod (1 0 0) (-16 -16 -24) (16 16 40) X Mega Six Cthon X X X X !_EASY !_MEDIUM !_HARD !_DM Super
 --------  CAT  -------
 This will place a scourge birth pod on the map
 ----------------
-"NULL" - not used, ignore
+"X" - not used, ignore
 
 "angle" - set facing angle of pod
 "wait" - time until pod pops - default 110 - 185 secs
@@ -6813,16 +6802,14 @@ This will place a scourge birth pod on the map
 
 Pods will be made for these:
 " Mega" - 2 extra 3x nailguns, a bit tougher
+"Six" - 4 extra 3x nailguns, ton tougher
 "Super" - double size, double bad
-"Super6" - double size with 4 extra 3x nailguns, ton tougher
 "Cthon" - Cthon scourge - toughest
-"Lava" - Lava skin scourge - tougher
 
 not implemented:
 "Poison" - has poisoned nails, stinger, green skin
 "Death" - death scourge
 "Wraith" - wraith scourge
-These will make regular pods
 */
 
 
@@ -7128,7 +7115,8 @@ takes the brush to do one full bob.
 */
 
 
-/*QUAKED classname_hip (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_hip (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  HIPN  --------
 All Hipnotic classnames
 -------- SPAWNFLAGS --------
@@ -7708,7 +7696,8 @@ health: amount of damage needed to set
 off trigger.
 */
 
-/*QUAKED classname_rog (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_rog (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  ROGU  --------
 All Rogue classnames
 -------- SPAWNFLAGS --------
@@ -7932,7 +7921,8 @@ Chainsaw!
 ScREw Cannon
 */
 
-/*QUAKED classname_zer (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_zer (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  ZERS  --------
 All Zerstorer classnames
 -------- SPAWNFLAGS --------
@@ -8041,7 +8031,8 @@ Keys:
  this would be the left side.
 */
 
-/*QUAKED classname_ctf (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_ctf (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  3WCTF  --------
 All 3wCTF classnames
 
@@ -8110,7 +8101,8 @@ the classname and use TFEntEd.
 
 
 
-/*QUAKED classname_tf (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_tf (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  TMFS  --------
 All Team fortress classnames
 
@@ -8348,7 +8340,8 @@ it does not respawn.
 */
 
 
-/*QUAKED classname_rally (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_rally (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  QRLY  --------
 All Quake Rally classnames
 
@@ -8470,7 +8463,8 @@ Keys:
 */
 
 
-/*QUAKED classname_quess (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_quess (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  QS  --------
 All Quess classnames
 
@@ -8689,41 +8683,9 @@ RESPAWN = respawn the generator when dead
 DM = appears in deathmatch (if used on regular levels)
 SEQ = (DOES NOTHING NOW) do not choose random targets, just fill them in sequence
 
-"mask"
-if more than one bit is set monsters will be selected randomly
-default - 2053
-
-mask_x:
-
-ARMY			= 1
-FISH			= 2
-KNIGHT			= 4
-DOG				= 8
-DEMON			= 16
-ENF				= 32
-HKNIGHT			= 64
-OGRE			= 128
-SHALR			= 256
-SHAMBL			= 512
-SCRAG			= 1024
-ZOMBY			= 2048
-CTHON			= 4096 // boss
-TARBABY			= 8192
-SCOURGE			= 16384
-SHUBS			= 32768
-SVORE			= 65536 // super vore
-GREMLIN			= 131072
-VOMIT			= 262144 // guy id left out
-
-mask_y:
-
-BLARG			= 1
-RAPTOR			= 2
-SPIDER			= 4
-MANGA			= 8
-BOSSMAN			= 16
-
 Keys:
+"netname" - spawn_loop cfg pointer for monster set to spawn
+"bubble_count" - random number for spawn_loop select - 0 if only one monster type
 "target" - should point to a spawn point sequence
 "health" - health for generator - defaults to 100, -1 health = can not be shot
 "max_health" - if set give any generted monster this health, otherwise default to 10 per monster
@@ -8737,7 +8699,7 @@ Keys:
 "solid" - make solid, 2 = BBOX, 4 = BSP - recommended
 "model" - select a generator image -
 "scale" - resize generator, monsters, healths - 0.5 = 50% values, 1.5 = 150% values
-"wad" - "fast" = make fast monsters, "slow" = make slow monsters, "rnd" = choose one - fast, slow, normal
+"lip" - monster speed factor - 0.5 - dbl speed, 1.5 - half speed, < 0 - random choice
 "bubble_count" - respawn this many times if set
 
 "progs/generator.bsp"
@@ -8775,7 +8737,8 @@ normal doors.
 */
 
 
-/*QUAKED classname_quant (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_quant (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  QNTL  --------
 All Quantlet classnames
 
@@ -10434,7 +10397,8 @@ model="q3_models/weapons2/shotgun/shotgun.md3"
 */
 
 
-/*QUAKED classname_q3 (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_q3 (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  Q3  --------
 All Quake III classnames
 -------- SPAWNFLAGS --------
@@ -11570,7 +11534,8 @@ model="models/objects/dmspot/tris.md2"
 */
 
 
-/*QUAKED classname_q2 (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_q2 (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  Q2  --------
 All Quake II classnames
 -------- SPAWNFLAGS --------
@@ -11783,7 +11748,8 @@ Unknown test - do NOT use on release maps
 */
 
 
-/*QUAKED classname_test (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
+/*QUAKED 
+			classname_test (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  Q2  --------
 All Quake test entity classnames
 
