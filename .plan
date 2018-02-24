@@ -33,7 +33,7 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-2.23.18
+2.24.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
@@ -42,6 +42,15 @@ WIP: gs_1 drive rebuild -- redo main 1Tb drive to attemp xp ressurect in ext par
  \_ wip: (bring a horse) - gparted move / expand 4Tb backup - run orphan file check
 WIP: archon scourge.qc convert to mk_III
 WIP: port monster_generator
+
+2.23.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: gs_1 drive rebuild -- redo main 1Tb drive to attemp xp ressurect in ext partition ?
+ \_ wip: (bring a horse) - gparted move / expand 4Tb backup - run orphan file check
+WIP: archon scourge.qc convert to mk_III
 
 2.22.18
 
