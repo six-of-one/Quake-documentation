@@ -33,6 +33,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.26.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: archon scourge.qc convert to mk_III
+WIP: port monster_generator
+DONE: lots of grub fskery via kali -- got 018.1.19 stormbringer up in /dev/sdb8
+DONE: *_486 Morphix - UP!
+
 2.25.18
 
 WIP: v107 archon code
@@ -40,7 +50,9 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
 WIP: archon scourge.qc convert to mk_III
 WIP: port monster_generator
-WIP: dist-upgrade experimental
+DONE: dist-upgrade experimental -- seeing some flake
+DONE: yandex replaced palemoon and chromium with drop in Default config dir
+\_ loaded up tabs from save -- even got channel subs back
 
 2.24.18
 
