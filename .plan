@@ -33,6 +33,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.27.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: archon scourge.qc convert to mk_III
+WIP: port monster_generator
+WIP: wmgrb script - grap win pos cfg & assign to repeatable commands in a dir, callable from a menu
+
 2.26.18
 
 WIP: v107 archon code
@@ -41,7 +50,9 @@ WIP: convert enhance to cfg method -- only morphs left
 WIP: archon scourge.qc convert to mk_III
 WIP: port monster_generator
 DONE: lots of grub fskery via kali -- got 018.1.19 stormbringer up in /dev/sdb8
-DONE: *_486 Morphix - UP!
+DONE: *_486 Morphix - UP! -- no nvidia yet
+DONE: #! up - nvidia driver re-install, 3 screens config -- no network
+WIP: wmgrb script - grap win pos cfg & assign to repeatable commands in a dir, callable from a menu
 
 2.25.18
 
