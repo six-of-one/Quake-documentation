@@ -33,14 +33,24 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.28.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: port monster_generator
+*_WIP: archon scourge.qc convert to mk_III
+\_ had to move up_bit 256 to 16384 -- not in easy sf deal
+DONE: 1Tb drive project sys2 - win7 boot in its partition, win xp boot fixed, doing all backups
+
 2.27.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: archon scourge.qc convert to mk_III
 WIP: port monster_generator
-WIP: wmgrb script - grap win pos cfg & assign to repeatable commands in a dir, callable from a menu
+*_WIP: archon scourge.qc convert to mk_III
+DONE: wmgrb script - grap win pos cfg & assign to repeatable commands in a dir, callable from a menu
 
 2.26.18
 
