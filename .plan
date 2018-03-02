@@ -33,13 +33,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.2.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: port monster_generator
+
 2.29.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
 WIP: port monster_generator
-*_WIP: archon scourge.qc convert to mk_III
+DONE: archon scourge.qc convert to mk_III
+DONE: re-org OS install.txt file 
+\_ WIP: remove some roll bkp / swap out for diff.gz style
 
 2.28.18
 
