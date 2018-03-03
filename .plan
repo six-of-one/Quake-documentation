@@ -35,16 +35,16 @@ PaiNKeep 3.0 WIP:
 
 3.2.18
 
-WIP: v107 archon code
+*_WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: port monster_generator
 
 2.29.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: port monster_generator
 DONE: archon scourge.qc convert to mk_III
 DONE: re-org OS install.txt file 
@@ -54,7 +54,7 @@ DONE: re-org OS install.txt file
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: port monster_generator
 *_WIP: archon scourge.qc convert to mk_III
 \_ had to move up_bit 256 to 16384 -- not in easy sf deal
@@ -64,7 +64,7 @@ DONE: 1Tb drive project sys2 - win7 boot in its partition, win xp boot fixed, do
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: port monster_generator
 *_WIP: archon scourge.qc convert to mk_III
 DONE: wmgrb script - grap win pos cfg & assign to repeatable commands in a dir, callable from a menu
@@ -73,9 +73,8 @@ DONE: wmgrb script - grap win pos cfg & assign to repeatable commands in a dir, 
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: archon scourge.qc convert to mk_III
-WIP: port monster_generator
 DONE: lots of grub fskery via kali -- got 018.1.19 stormbringer up in /dev/sdb8
 DONE: *_486 Morphix - UP! -- no nvidia yet
 DONE: #! up - nvidia driver re-install, 3 screens config -- no network
@@ -85,9 +84,8 @@ WIP: wmgrb script - grap win pos cfg & assign to repeatable commands in a dir, c
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: archon scourge.qc convert to mk_III
-WIP: port monster_generator
 DONE: dist-upgrade experimental -- seeing some flake
 DONE: yandex replaced palemoon and chromium with drop in Default config dir
 \_ loaded up tabs from save -- even got channel subs back
@@ -96,7 +94,7 @@ DONE: yandex replaced palemoon and chromium with drop in Default config dir
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: gs_1 drive rebuild -- redo main 1Tb drive to attemp xp ressurect in ext partition - prospects unknown for the nonce
 DONE: gparted move / expand 4Tb backup - run orphan file check
 WIP: archon scourge.qc convert to mk_III
@@ -106,7 +104,7 @@ DONE: installed palemoon to replace broken chromium
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: gs_1 drive rebuild -- redo main 1Tb drive to attemp xp ressurect in ext partition ?
  \_ wip: (bring a horse) - gparted move / expand 4Tb backup - run orphan file check
 WIP: archon scourge.qc convert to mk_III
@@ -115,7 +113,7 @@ WIP: archon scourge.qc convert to mk_III
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: gs_1 drive rebuild -- redo main 1Tb drive to attemp xp ressurect in ext partition ?
  \_ wip: (bring a horse) - gparted move / expand 4Tb backup - run orphan file check
 DONE: move orphan data from backup
@@ -129,7 +127,7 @@ DONE: entities.def update for latest recodes
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: gs_1 drive rebuild -- redo main 1Tb drive to attemp xp ressurect in ext partition ?
  \_ wip: (bring a horse) - still move orphan data from backup, 
 DONE:  dup sys1 to 2Tb backup internal
@@ -140,18 +138,19 @@ DONE: scourge.qc convert to mk_III cfg file, rv 1
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
-WIP: gs_1 drive rebuild -- 
- \_ wip: (bring a horse) - gparted move / expand 4Tb backup after copying orphan sys1 data from backup, dup sys1 to 2Tb backup internal
+WIP: convert enhance to cfg method -- only archon, morphs left
+WIP: gs_1 drive rebuild -- install some linux stuff on bohdi / steamos
+ \_ wip: (bring a horse) - move orphan data from backup, dup sys1 to 2Tb backup internal
 DONE: plug all drives -- resized win7 to 250Gb
 NIX: install new main linux -- booted recover - grub re-do, seems to have fixed problem
 WIP: archon scourge.qc convert to mk_III
+DONE: th_turn #define adjust
 
 2.19.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - apt-get upgrade / dist_upgrade may be the thing
 										\-- found a way to install std distro packages - may attempt alternate dm
  \_ wip: (bring a horse) - gparted move / expand 4Tb backup after copying orphan sys1 data from backup, dup sys1 to 2Tb backup internal
@@ -162,10 +161,10 @@ WIP: archon scourge.qc convert to mk_III
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - apt-get upgrade / dist_upgrade may be the thing
 \_ wipe 2Tb sys2 drive & copy - drives have to be internal or it will take 30 days - ~1.5G / hr -- nixed, case hardware mods drive interface, parms are wrong when bare
- \_ replan: (bring a horse) - gparted move / expand 4Tb backup after copying off unique sys1 data, dup sys1 to 2Tb backup internal
+ \_ replan: (bring a horse) - gparted move / expand 4Tb backup after copying orphan sys1 data from backup, dup sys1 to 2Tb backup internal
 DONE: item regen HUD show regen rune
 CHECKED: quad actor via tdmg warning -- good
 ???: 'quake adv toolkit' message is bork wrong -- checked this out
@@ -178,7 +177,7 @@ DONE: scragg enhanced attacks were left out
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst + wipe 2Tb sys2 drive & copy backup over
 NIX: -- wad q1 test fails in conv code for pkitems.qc - placeitem
 research -
@@ -204,7 +203,7 @@ xx: ultra scourge needs tested, prob, sc_supers as well - individually, multiple
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - try update & nvidia install before hardware inst
 DONE: .qca stamp & compiler.qc version (if avail) on qcc output
 DONE: rest of q3 items -- artifacts / rune powers done, holdables done
@@ -213,7 +212,7 @@ DONE: rest of q3 items -- artifacts / rune powers done, holdables done
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left
+WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: gs_1 drive rebuild -- alt 1Tb root drive - steamOS - done but, after hardware inst errors out
 DONE: rest of hip / rogue weps into whpr.cfg -- all but lava nail ammo
 FIXED: ops_rot - q1 mega health has no max_health - rots below 100
