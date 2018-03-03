@@ -33,12 +33,20 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.3.18
+
+WIP: v107 archon code
+*_WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: port monster_generator
+
 3.2.18
 
 *_WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only archon, morphs left
 WIP: port monster_generator
+DONE: nodules, altar, ppp, god particle
 
 2.29.18
 
