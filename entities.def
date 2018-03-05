@@ -6769,7 +6769,8 @@ called Centroids in hipnotic code
 "Six"  - 4 extra 3x nailguns, even tougher
 "Cthon" - Cthon scourge - lava tough
 "silent" - spawn silent deal (may not have code)
-"Mini" - mini scrourges, take after mommy
+"
+Mini" - mini scrourges, take after mommy
 "Baby" - wee little baby scourge - aww...arent they cute --- OUCH! it hurts
 "ULTRA" - ultimate Uber scourge - the "big" mommy
 
@@ -8673,7 +8674,11 @@ Keys:
  generator lax cycle in seconds
 */
 
-/*QUAKED monster_generator (1 0 0) (-27 -27 0) (27 27 60) RESPAWN DM SEQ
+/*QUAKED info_gen_spawn (0.7 0.2 0.2) (-8 -8 -8) (8 8 32)
+This is the destination marker for a generator.
+*/
+
+/*QUAKED monster_generator (1 0 0) (-27 -27 0) (27 27 60) RESPAWN DM
 -------- QNTL --------
 You must set the key "target" to a sequence of targets that start matching "targetname".
 
@@ -8683,29 +8688,33 @@ RESPAWN = respawn the generator when dead
 DM = appears in deathmatch (if used on regular levels)
 SEQ = (DOES NOTHING NOW) do not choose random targets, just fill them in sequence
 
+if more than one bit is set monsters will be selected randomly
+
 Keys:
-"netname" - spawn_loop cfg pointer for monster set to spawn
-"bubble_count" - random number for spawn_loop select - 0 if only one monster type
+"netname" - spawn_loop cfg pointer for monster set to spawn - '__Generator' defaults to army / knight / zomby list
+"bubble_count" - random number for spawn_loop select - "0" if only one monster type, default = 2
 "target" - should point to a spawn point sequence
 "health" - health for generator - defaults to 100, -1 health = can not be shot
+"takedamage" - set 0 if health = -1, default = 2 (DAMAGE_YES)
 "max_health" - if set give any generted monster this health, otherwise default to 10 per monster
 "targetname" - if set generator will only be fired by a trigger
 "speed" - if not targeted, generate a monster every {#} seconds
-"delay" - if set pause for wait seconds after generating for delay seconds
+"delay" - set same as speed non-target, large value targeted (controls spawn_loop code) 
+"swim_flag" - [ gen_time ] if set pause for wait rels after generating for swim_flag rels
  - if negative, slow down generation to count %
 "count" - slow down if delay is negative - generate 1 in this many - default 1 in 4
 "wait" - length of delay pause, -1 to stop, also used for respawn timing
 "volume" - generate this many health pts of monsters then stop
 "solid" - make solid, 2 = BBOX, 4 = BSP - recommended
-"model" - select a generator image -
 "scale" - resize generator, monsters, healths - 0.5 = 50% values, 1.5 = 150% values
 "lip" - monster speed factor - 0.5 - dbl speed, 1.5 - half speed, < 0 - random choice
-"bubble_count" - respawn this many times if set
+"walkframe" - (resp_cnt) respawn this many times if set
 
+"model" - select a generator body -
 "progs/generator.bsp"
 "progs/generator2.bsp"
 "progs/generator3.bsp"
-"progs/generator3L.bsp"
+"progs/generator3L.bsp"	- larger - just set .scale with reg gens for larger monsters
 "progs/gen2_l1.bsp"
 "progs/gen2_l2.bsp"
 "progs/gen2_l3.bsp"

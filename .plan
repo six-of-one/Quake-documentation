@@ -33,12 +33,33 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.5.18
+
+WIP: v107 archon code
+*_WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
+
 3.4.18
 
 WIP: v107 archon code
 *_WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
 TWEAK: port monster_generator
+FIXED: __spawn_12_bubble_count is "2" ["2"] rnd_
+-- left:
+__spawn_27_archon is "9" ["9"] cyclic pts to add
+__spawn_27_wait is "3" ["3"] every {n} rels
+FIXED: dont work on map reload - server.cfg deal -- archon controls moved to server
+FIXED: no damage gens -- default is 0, must set = 2 for a shot-able gen
+FIXED: __gen_scragg - something kills every takedamage in the level but player:
+				\_ this (if e8__ is world) --	spawn_tdeath(e8__.origin, e8__);
+				 \_ *** warning: in generator_fire - gened: 0			-- gened the world -- in spite of my efforts, .rnd_ is STILL = 2 !
+DONE: block generator spawns from rnd select -- created info_gen_spawn
+FIXED: generator monsters not spawn fraging each other -- they have to have health - __gen_set "1" was not defined
+FIXED: archon point ogre spawn (# 2) has a dang long think to monster_go
+???: crate: but sometimes the message text is centerprint elsewhere - why?
+\_ crates respawn via cvar_fields -- still dont know
 
 3.3.18
 
