@@ -33,12 +33,24 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.6.18
+
+WIP: v107 archon code
+*_WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
+\_ partition setup complete
+DONE: message colors on archon nodule elements
+WIP: morph cubes
+
 3.5.18
 
 WIP: v107 archon code
 *_WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
 WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
+DONE: message colors on archon nodule elements
+WIP: morph cubes
 
 3.4.18
 
