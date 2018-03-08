@@ -12,6 +12,11 @@ chaos mod Archon - mark III code base port to qc 2.0:
 - frikbot - minor rev
 - viswep -- needs minor revision, position data update
 - xents --- nearly complete
+- morph --- convert in progress (last big module)
+* mark I elements to do:		(we hope anyway)
+- hold items -- pick up items and carry them
+- run fire ---- frames I made to stop weapon fire "ice skating"
+- enviro ------ volcano, burning things, rain, floating, etc
 
 quake hack:
 
@@ -33,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.8.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
+*_WIP: morph cubes
+
 3.7.18
 
 WIP: v107 archon code
@@ -40,6 +53,12 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
 WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
 *_WIP: morph cubes
+DONE: $delaycmd - executed in console (client side) to reset vars settings
+\_ not used by morph cube now - if not used by anything, remove this
+DONE: call cube cprint cfg from client side
+DONE: need scr_centertime restore after morph cube
+DONE: fire button clear long centerprints
+CHECKED: does killing monsters give their .xp / .archon to player as xp -- it does now
 
 3.6.18
 
