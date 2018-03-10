@@ -38,20 +38,30 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.10.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
+*_WIP: morph cubes -- initial polymorph
+
 3.9.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
 WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
-*_WIP: morph cubes
+*_WIP: morph cubes -- initial polymorph
+FIXED: not setting mask_x -- changed to .mask - may have vector confusion by engine extension
+FIXED: model gets set, doesnt change -- modelindex_player deal
 
 3.8.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-*_WIP: morph cubes
+*_WIP: morph cubes -- polymorph after select
 DONE: morph cube lower limit vs player archon level - block touch
 
 3.7.18
@@ -60,7 +70,7 @@ WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
 WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
-*_WIP: morph cubes
+*_WIP: morph cubes -- select morph from cube choices
 DONE: $delaycmd - executed in console (client side) to reset vars settings
 \_ not used by morph cube now - if not used by anything, remove this
 DONE: call cube cprint cfg from client side
@@ -76,7 +86,7 @@ WIP: convert enhance to cfg method -- only morphs left
 WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
 \_ partition setup complete
 DONE: message colors on archon nodule elements
-WIP: morph cubes
+WIP: morph cubes -- port cube ops - touch & select
 DONE: missing m-*_cprint.cfg & conversion of morph_print_notify() centerprint lines
 
 3.5.18
@@ -86,7 +96,7 @@ WIP: v107 archon code
 WIP: convert enhance to cfg method -- only morphs left
 WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
 DONE: message colors on archon nodule elements
-WIP: morph cubes
+WIP: morph cubes -- port cubes
 
 3.4.18
 
