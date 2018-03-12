@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.12.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
+*_WIP: morph cubes -- initial polymorph
+
 3.11.18
 
 WIP: v107 archon code
@@ -46,6 +54,8 @@ WIP: convert enhance to cfg method -- only morphs left
 WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
 *_WIP: morph cubes -- initial polymorph
 WIP: qr -- adding search saver
+eliminated from a1.qc
+\_/// NOTE - .weaponframe use *** will interfere with new monster frame code sets for more complex monsters - search for weaponframe use ***
 
 3.10.18
 
