@@ -38,20 +38,26 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.13.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+*_WIP: morph - frame ops
+
 3.12.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
-*_WIP: morph cubes -- initial polymorph
+*_WIP: morph - frame ops
+DONE: respawns -- maybe...
 
 3.11.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
 *_WIP: morph cubes -- initial polymorph
 WIP: qr -- adding search saver
 eliminated from a1.qc
@@ -65,6 +71,7 @@ WIP: convert enhance to cfg method -- only morphs left
 WIP: OS - sdb2 restore prior to last 017 reboot - attempt iceweasel fix
 *_WIP: morph cubes -- initial polymorph
 FIXED: tossed armor can be recollected -- should be non issue, but just in case
+DONE: set this: morph_pack_rethink to work with tossed armor -- use .think1
 WIP: qr -- adding search saver
 
 3.9.18
