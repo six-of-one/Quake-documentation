@@ -38,12 +38,20 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.14.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+*_WIP: morph - frame ops, attacks
+\_ no touch - needs bit mask adjustment all around, mask needs changed to group style ops
+
 3.13.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-*_WIP: morph - frame ops
+*_WIP: morph - frame ops, weapons, no touch, walk / run
 
 3.12.18
 
