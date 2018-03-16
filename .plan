@@ -38,14 +38,25 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.16.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left
+*_WIP: morph - frame ops, attacks -- check already melded code closely
+
 3.15.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-*_WIP: morph - frame ops, attacks
+*_WIP: morph - frame ops, attacks -- check already melded code closely
 \_ no touch - needs bit mask adjustment all around, mask needs changed to group style ops
 ?: viswep reloads an axe somehow
+DONE: heal mod & heal code -- maybe - check some more, then test
+FIXED: backpack from morph -- item.weapon = pX; 		fails: 	weapon          1091.0000
+\_ because morph cubes use mcode for HUD ops -- this is really stinky, and not the good kind
+ \___needs_test -- make sure x_encparm doesnt stuff anything else up in pack
 
 3.14.18
 
