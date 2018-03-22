@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.22.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: morph - frame ops, attacks -- wip item list set notes
+*_WIP: set already melded code to compile when good
+
 3.21.18
 
 WIP: v107 archon code
@@ -45,6 +53,11 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: morph - frame ops, attacks -- wip item list set notes
 *_WIP: set already melded code to compile when good
+\_ DONE: shub_killer, vars, lava things heal
+DONE: code this test to exclude same morph types - perhaps a cvar_string("__m"+ftos(morphy)) test
+\_ || (other.morphy \something\ == self.classname)
+FIXED: shub_killer did not always get morph form correct
+DONE: pack touch respects .mask
 
 3.20.18
 
