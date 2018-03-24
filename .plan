@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.23.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: morph - frame ops, attacks -- wip item list set notes
+*_WIP: set already melded code to compile when good
+
 3.22.18
 
 WIP: v107 archon code
@@ -45,6 +53,7 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: morph - frame ops, attacks -- wip item list set notes
 *_WIP: set already melded code to compile when good
+\_ DONE: runes module
 
 3.21.18
 
