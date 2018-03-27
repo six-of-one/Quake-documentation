@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.27.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: set already melded code to compile when good -- most of this is caught up
+
 3.26.18
 
 WIP: v107 archon code
@@ -45,6 +53,10 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 *_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: set already melded code to compile when good -- most of this is caught up
+IMP: no move thru non-waters (teleports, etc) -- also not working consistently
+FIXED: drown issues with IS_LAVA
+FIXED: server EDICT 0:
+\_ think          morph_pack_rethink()
 
 3.25.18
 
