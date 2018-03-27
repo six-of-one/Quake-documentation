@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.26.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: set already melded code to compile when good -- most of this is caught up
+
 3.25.18
 
 WIP: v107 archon code
@@ -45,6 +53,12 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: morph - frame ops, attacks -- wip item list set notes
 *_WIP: set already melded code to compile when good
+FIX: doom door sound issue on test_c - outside door -- close sound never stops 			-- whats more, sounds are totally wrong from ent specs
+\_ 2.16.18 - works correctly now - or freaking not...what the actual hell is this code doing -- test in DM vs coop vs SP
+FIXED: backpack touch mask not set
+DONE: minor issuse with _archon, _morph, buttons, doors, runes
+DONE: FL_0DAMAGE in  Monster_JumpTouch
+seems done -- TDO: update all his code to qc++   -- hknight
 
 3.24.18
 
