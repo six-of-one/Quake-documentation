@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.28.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: set already melded code to compile when good -- most of this is caught up
+
 3.27.18
 
 WIP: v107 archon code
@@ -45,6 +53,10 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 *_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: set already melded code to compile when good -- most of this is caught up
+FIXED: items morphs can still touch
+X: seems like health mod doesnt boost add below 50% -- not the case, this works correct
+X: monster idle sounds seem to loop endless with player ent -- verify this with test case
+\_ more likely the idle sounds are being called too often by looping monster code
 
 3.26.18
 
