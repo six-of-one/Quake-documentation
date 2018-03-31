@@ -38,21 +38,36 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.31.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: lava bomb "cthonme"
+
 3.30.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
-WIP: set already melded code to compile when good -- most of this is caught up
+FIXED: scragg spike had morph_pack_rethink set ?! -- must have been set via call with newmis = spike, but how ?
+\_ now make sure this has pack touch before ops
+DONE: select builtin weps
+DONE: shambler morph test added to shambler 1/2 dmg code
+DONE: lava bomb attacks
+WIP: lava bomb "cthonme"
 
 3.29.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
-*_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: set already melded code to compile when good -- most of this is caught up
+*_WIP: morph - frame ops, attacks -- wip item list set notes
 DONE: morph - haste rune + run
 select builtin needed -- _i{impulse} can be used (.weapon) and _p{impulse} is .pk_currentitem
 
