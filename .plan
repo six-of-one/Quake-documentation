@@ -38,6 +38,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.1.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: lava bomb "cthonme"
+WIP: need re-coded - builtin weps (use new wep selector cfg - no) -- impulse 1 now cycles pki, touch gives pki - no viswep
+
 3.31.18
 
 WIP: v107 archon code
@@ -46,6 +56,20 @@ WIP: convert enhance to cfg method -- only morphs left - have to finish out adap
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: lava bomb "cthonme"
+DONE: cthon -- fix died & respawn issue with morphy = 895
+FIXED: broke fire button for human
+FIXED: archon ppp does not have x_items set -- random spawn ones
+\_ archon_ppp_thk is doing this -- if (e2__.x_items & X_PP)
+FIXED: canpab fails now -- from T_Heal changes for morphs
+FIXED: aircannon viswep framing is wrong -- works in pk3 -- style wasnt cleared from __pk_set
+ _		-- this hasnt happened lately
+/  could this just be archon pts getting low ??		-- this doesnt seem the same as the intro msg is cleared when it happens
+maybe an eweapon clear somewhere -- cycle wep could clear this
+some morph cube doesnt allow morph select -- eweap not set, cube has no owner
+\_ mcode is set to bring message up, then cleared somehow
+issue where lavabomb morph gets stuck after melee attack -- movetype is set to 4 ?
+\_ this is tarbaby monster code ops -- will be cleared when rest of morph code is ported
+WIP: need re-coded - builtin weps (use new wep selector cfg - no) -- impulse 1 now cycles pki, touch gives pki - no viswep
 
 3.30.18
 
