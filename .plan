@@ -38,6 +38,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.2.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: lava bomb "cthonme"
+WIP: need re-coded - builtin weps (use new wep selector cfg - no) -- 
+
 4.1.18
 
 WIP: v107 archon code
@@ -46,7 +56,12 @@ WIP: convert enhance to cfg method -- only morphs left - have to finish out adap
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: lava bomb "cthonme"
-WIP: need re-coded - builtin weps (use new wep selector cfg - no) -- impulse 1 now cycles pki, touch gives pki - no viswep
+WIP: need re-coded - builtin weps (use new wep selector cfg - no) -- 
+NOTE: beartraps dont hit some morphs -- bt dont target players in SP without an override
+FIXED: morph face over top std rune indicators - archon / sys6 HUD
+DONE: impulse 10 / 12 have issue selecting morph wep 4096 -- 
+FIXED: still needs called twice to get next wep on 10 to 12 switch -- seems to be anyway, piece of old 10 / 12 code got left in
+DONE: lava blob nails now have lavawpn effect
 
 3.31.18
 
