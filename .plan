@@ -38,6 +38,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.3.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: need re-coded - builtin weps -- scourge weps
+
 4.2.18
 
 WIP: v107 archon code
@@ -45,8 +54,10 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
-WIP: lava bomb "cthonme"
-WIP: need re-coded - builtin weps (use new wep selector cfg - no) -- 
+DONE: lava bomb "cthonme" -- arg - cvar_fields "1" check failed, no __m_895	= "1"
+DONE: HUD adjust for IMP_MBCTHON = 895
+DONE: item_weapon ammo unit maskage
+WIP: need re-coded - builtin weps -- scourge weps
 
 4.1.18
 
