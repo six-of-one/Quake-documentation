@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.4.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+
 4.3.18
 
 WIP: v107 archon code
@@ -46,6 +54,10 @@ WIP: convert enhance to cfg method -- only morphs left - have to finish out adap
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: need re-coded - builtin weps -- scourge weps
+DONE: scourge weps rev 1
+DONE: bind F12 crosshair mess up fixed
+DONE: add morph sounds / walksounds
+FIXED: for some reason stand frames freeze on scourge if currentammo = 0 on poly
 
 4.2.18
 
