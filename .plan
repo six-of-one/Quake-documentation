@@ -38,6 +38,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.6.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: morph death frames via monster code
+
 4.5.18
 
 WIP: v107 archon code
@@ -45,6 +54,10 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
+DONE: existing cm2 morph obits -- need tested 		- TDO: wep / situ specific obits - ex: fiend rage boom deaths
+DONE: monster respawning code via SUB_Renew - .th_respawn		-- there are some CHECK items
+\_ not put on shubs, cthon, generators, clinger or young
+WIP: morph death frames via monster code
 
 4.4.18
 
@@ -53,6 +66,7 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
+DONE: sound tracking warning segment boost
 FIXED: doom door sound issue on test_c - outside door -- close sound never stops
 !OMFG - in server.cfg -- caused wrong samples to play, retesting
 // not in pk3 modules yet
