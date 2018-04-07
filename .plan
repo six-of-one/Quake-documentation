@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.7.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+
 4.6.18
 
 WIP: v107 archon code
@@ -45,7 +53,12 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
-WIP: morph death frames via monster code
+TWEAK: adjust on SUB_Renew & mon_renew code -- maybe combine gen_respawn and mon_renew
+DONE: morph death frames via monster code -- all usable sets anyway, still some death frames to code
+FIXED: enforcer was calling ai_run in death frames - had to lock dead morphs
+DONE: all missile / ent CONTENT_SKY checks are now sky_touch content + texture checks
+DONE: cm2 Wiz_MissileTouch ported to Morph_MissileTouch
+DONE: cm2 fire_burst fn() ported, excised unused fn( parms )
 
 4.5.18
 
@@ -57,7 +70,7 @@ WIP: set already melded code to compile when good -- tracking down last bits
 DONE: existing cm2 morph obits -- need tested 		- TDO: wep / situ specific obits - ex: fiend rage boom deaths
 DONE: monster respawning code via SUB_Renew - .th_respawn		-- there are some CHECK items
 \_ not put on shubs, cthon, generators, clinger or young
-WIP: morph death frames via monster code
+WIP: morph death frames via monster code -- base and wizard
 
 4.4.18
 
