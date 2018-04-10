@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.10.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+
 4.9.18
 
 WIP: v107 archon code
@@ -45,6 +53,12 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
+FIXED: alien young were dying instantly - noway code bork
+DONE: cfg generic for clinger burst spawner -- used self.event, defaults to monster_young
+\_ now working, lvl 3 young trilegs are way too fast and deadly -- may need a fix, try cm2 version
+DONE: monster pain frames used by morphs
+FIXED: zombie down still allows morph to move & reposition the model -- test
+NOTE: zombie hook was missing fleshy ball -- fixed, but needs correct distro location
 
 4.8.18
 
