@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.11.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+
 4.10.18
 
 WIP: v107 archon code
@@ -45,6 +53,14 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
+FIXED: morph tarbaby_mitosis .th_pain call was on overload
+FIXED: zombie morph can constantly restart fire frames
+???: touch pk cube with melee wep = frame bork -- could not replicate, maybe this was a specific melee xwep ?
+DONE: all zombies CB_ZOMBY .mask value - IS_ZOMBY test
+DONE: one rogue monster IS_LAVA -- note: monster not in code yet
+FIXED: morph demon had wrong pain frames -- was bad cfg issue - many new cfg need double checked
+DONE: gib_tracer, cloudkill for zombie morph
+DONE: def laser for enforcer -- eweap seem to work - fire frames on lasercanon a bit funky
 
 4.9.18
 
