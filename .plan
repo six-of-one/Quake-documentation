@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.12.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+
 4.11.18
 
 WIP: v107 archon code
@@ -45,6 +53,10 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
+TWEAK: minor code bits
+DONE: morph ogre attacks
+DONE: chaos_bomb ported -- random v_angle not working right - all bombs go in x axis one way
+FIX: holding down button1 with m-ogre does nada
 
 4.10.18
 
