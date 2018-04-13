@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.13.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+
 4.12.18
 
 WIP: v107 archon code
@@ -45,6 +53,10 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
+FIXED: holding down button1 with m-ogre does nada -- this may explain the general firing slop of some morph attacks
+\_ happens because .attack_finished is not set and weapon frame keeps calling W_Attack()
+FIXED: m-ogre chainsaw has no hit	-- but it doesnt hit doors
+FIXED: zomby gib fountains go away too easy
 
 4.11.18
 
