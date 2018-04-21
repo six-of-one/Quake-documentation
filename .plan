@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.20.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+
 4.19.18
 
 WIP: v107 archon code
@@ -45,6 +53,8 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: morph fiend attacks, all morph special jump attacks
+FIXED: deathtype falling wacks morph deathtype on first thud
 
 4.18.18
 
@@ -70,7 +80,7 @@ FIXED: this is an ogre spawned by pp random:
 FIX: fired soon after release of zombie down - solid & movetype not restored
 DONE: removed human jump sound from other morphs -- morph jump fn() still needs ported
 DONE: enforcer can get q1 hook
-WIP: shambler attacks
+WIP: morph shambler attacks
 DONE: morph jumps use pain sound (.noise2) and play it 20% of jumps
 DONE: thunder bolt doesnt blow up in lava -- do rest of weps
 
