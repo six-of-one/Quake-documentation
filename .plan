@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.23.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+
 4.22.18
 
 WIP: v107 archon code
@@ -45,6 +53,13 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
+DONE: loop_sound
+DONE: most code_morph activated as code_morph_a
+WIP: sphere of annihilation port
+FIXED: hell knight special wep usage
+DONE: volspec set based on morph wep selection, even if self.volume has not been set -- because new impulse selector has no separate fn() call that does this
+\_ sbar.qc
+FIXED: world is used as telefrag owner, blows everything touching it -- must be from mini_teleport 			--- maybe fixed - this could still happen
 
 4.21.18
 
