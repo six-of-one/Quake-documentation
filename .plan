@@ -38,6 +38,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.27.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: gremlin port
+
 4.26.18
 
 WIP: v107 archon code
