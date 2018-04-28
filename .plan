@@ -38,6 +38,17 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.28.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: gremlin port -- morph part mostly done, monster update tdo
+WIP: SOA testing
+WIP: morph order, spells
+
 4.27.18
 
 WIP: v107 archon code
@@ -45,7 +56,14 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
-WIP: gremlin port
+WIP: gremlin port -- morph part mostly done, monster update tdo
+XXX: why does lava bomb morph have an issue returing to stand frames in mon takeover code ?
+\_ -- and this seems to be fixed now 			- may have been morph motion transition between ai_run() & ai_stand() based on velocity_{x,y}
+DONE: gremlin spawning in water
+DONE: sphere_annihilation_reverse_touch in all touch fn -- this is a pain, a single touch interface would be a lot easier
+DONE: empathy, wetsuit touch ops
+WIP: SOA testing
+WIP: morph order, spells
 
 4.26.18
 
@@ -77,6 +95,7 @@ WIP: convert enhance to cfg method -- only morphs left - have to finish out adap
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: final lava bomb port
+FIXED: lavabomb skin 1 is messed ? (looks like missing override deal) -- was .colorspace when mitosis copied a bomb from morph
 DONE: framernseq -- non sequential frame macro
 \_ only pkbot has frame macro = [  ] sets left -- those have complex code, not worth buidling framer sets
 
