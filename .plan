@@ -38,6 +38,17 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.29.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: gremlin port -- morph part mostly done, monster update tdo
+WIP: SOA testing
+WIP: morph order, spells
+
 4.28.18
 
 WIP: v107 archon code
@@ -48,6 +59,7 @@ WIP: set already melded code to compile when good -- tracking down last bits
 WIP: gremlin port -- morph part mostly done, monster update tdo
 WIP: SOA testing
 WIP: morph order, spells
+FIXED: phone boink sounds dont seem to play -- used .noise1 .noise3 from holdable tele
 
 4.27.18
 
