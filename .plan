@@ -48,6 +48,14 @@ WIP: set already melded code to compile when good -- tracking down last bits
 WIP: gremlin port -- morph part mostly done, monster update tdo
 WIP: SOA testing
 WIP: morph order, spells
+DONE: some human pain sounds for enforcer, knights, soldiers -- sounds given are:	teledth, lava burn, drown, axe hit
+DONE:archon models should prob have .effects | 512			--- test
+DONE: find a way to protect morph fire by frames from movement frame hijack -- set .th_run / .th_walk to SUB_Null, block setting .think in move code
+\_ happens because starting to walk / run hijacks fire from frames
+XX: morphs - wont fire while running (except lavabomb sof), fire button is cantankerous at best
+FIXED: cthon bombs too fast, put normalize back in  -- newmis.velocity = normalize(newmis.velocity) * velmul * rvel;			maybe test with other code that uses fire_missile
+FIXED: monster respawn test fail -- t_length not set, so SUB_regen was not correct ops
+DONE: m-cthon port
 
 4.28.18
 
@@ -177,6 +185,7 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
+DONE: no lightning blast in lava -- rest of ltn weps
 
 4.13.18
 
