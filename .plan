@@ -38,6 +38,18 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.1.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- tracking down last bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: gremlin port -- morph part mostly done, monster update tdo
+WIP: SOA testing
+WIP: morph order, spells
+WIP: compiler SWITCH testing - buku #ifdef updates
+
 4.30.18
 
 WIP: v107 archon code
@@ -48,6 +60,9 @@ WIP: set already melded code to compile when good -- tracking down last bits
 WIP: gremlin port -- morph part mostly done, monster update tdo
 WIP: SOA testing
 WIP: morph order, spells
+DONE: rogue power shield
+DONE: ego improved code
+WIP: compiler SWITCH testing - buku #ifdef updates
 
 4.29.18
 
