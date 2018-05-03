@@ -38,17 +38,34 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.2.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- still in prog, but with less bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: SOA testing
+WIP: morph order, spells
+
 5.1.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
-WIP: set already melded code to compile when good -- tracking down last bits
+WIP: set already melded code to compile when good -- still in prog, but with less bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
-WIP: gremlin port -- morph part mostly done, monster update tdo
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: SOA testing
 WIP: morph order, spells
-WIP: compiler SWITCH testing - buku #ifdef updates
+DONE: compiler SWITCH testing - buku #ifdef updates	-- mostly		removing some modules breaks others and the switch control flow is not protected
+CHECKED: gremling viswep model align -- pretty close for models checked
+issues: laser can not animated, hand 2 went thru flamer2 barrel
+FIXED: when m-scourge gets bombs, they have no prox trigger -- had prox trigger, boom timer was messed, not giving warn sound
+NIX: need spec to tell gremlin_spawn what create fn() to call	-- .spawnfunction		-- now m-grem will only make x_grem
+FIXED: scourge now not tossing proxs
+WIP: mega health max no work with morphs
 
 4.30.18
 
