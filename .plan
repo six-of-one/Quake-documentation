@@ -47,6 +47,19 @@ WIP: set already melded code to compile when good -- still in prog, but with les
 *_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: SOA testing
+
+5.2.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- still in prog, but with less bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+FIXED: mega health max no work with morphs
+FIXED: x_touch mega health does not handle morphs correct
+\_ -- switch .blocked to health_touch (calls ops_rot), healtype must = 2, _health copy to _healamount
+ \_ x_touch mega health does not actually add health -- x_load failed touch - cheated in health touch with e8__
 WIP: morph order, spells
 
 5.1.18
