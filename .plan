@@ -38,6 +38,17 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.3.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- still in prog, but with less bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: SOA testing
+WIP: morph order, spells
+
 5.2.18
 
 WIP: v107 archon code
@@ -47,6 +58,9 @@ WIP: set already melded code to compile when good -- still in prog, but with les
 *_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: SOA testing
+WIP: morph order, spells
+DONE: fade remove code here -- .lip == -0.06
+\_ in fade_relocate()
 
 5.2.18
 
