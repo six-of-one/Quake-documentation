@@ -38,6 +38,30 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.5.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- still in prog, but with many less bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: SOA testing
+WIP: morph chaos, spells
+
+5.4.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+WIP: set already melded code to compile when good -- still in prog, but with many less bits
+*_WIP: morph - frame ops, attacks -- wip item list set notes
+DONE: updated touch mask - altar, nodules, ppp, runes -- now altar, runes are no wraith + no arc, nodules are just no wraith
+FIXED: runes ignored mask	-- Archons should not get runes
+FIXED: cube_touch ignored mask as well
+WIP: morph chaos, spells
+FIXED: bug in bframe, bframe 5 -- did not contain if (self.bfr==2) self.frame=bb;
+
 5.3.18
 
 WIP: v107 archon code
@@ -45,20 +69,7 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- still in prog, but with less bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
-WIP: gremlin port -- morph part mostly done, x_monster update tdo
-WIP: SOA testing
-WIP: morph order, spells
-
-5.2.18
-
-WIP: v107 archon code
-WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
-WIP: set already melded code to compile when good -- still in prog, but with less bits
-*_WIP: morph - frame ops, attacks -- wip item list set notes
-WIP: gremlin port -- morph part mostly done, x_monster update tdo
-WIP: SOA testing
-WIP: morph order, spells
+DONE: morph order, spells		-- ish, some spell code tweak may be needed
 DONE: fade remove code here -- .lip == -0.06
 \_ in fade_relocate()
 
@@ -69,7 +80,6 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- still in prog, but with less bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
-WIP: gremlin port -- morph part mostly done, x_monster update tdo
 FIXED: mega health max no work with morphs
 FIXED: x_touch mega health does not handle morphs correct
 \_ -- switch .blocked to health_touch (calls ops_rot), healtype must = 2, _health copy to _healamount
@@ -84,7 +94,6 @@ WIP: convert enhance to cfg method -- only morphs left - have to finish out adap
 WIP: set already melded code to compile when good -- still in prog, but with less bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
-WIP: SOA testing
 WIP: morph order, spells
 DONE: compiler SWITCH testing - buku #ifdef updates	-- mostly		removing some modules breaks others and the switch control flow is not protected
 CHECKED: gremling viswep model align -- pretty close for models checked
