@@ -38,16 +38,30 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.6.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: SOA testing
+WIP: archon spells
+
 5.5.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
-WIP: set already melded code to compile when good -- still in prog, but with many less bits
-*_WIP: morph - frame ops, attacks -- wip item list set notes
+DONE: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
+DONE: set already melded code to compile when good -- all current instance complete
+DONE: morph - frame ops, attacks -- wip item list set notes
+DONE: morph chaos
+NOTE: major porting cm mk2 -> cm mk3 is now COMPLETE !!!
+FIXED: no reticle -- 1 - reticle.spr not present, 2 - 
+DONE: spell takeover vars #define as unique ids
+CHECKED: if (self.spell_targ.classname == "archon_power_act")	-- power point makes this
+FIXED: bouncy laser brightfield when fired by scourge / chaos
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: SOA testing
-WIP: morph chaos, spells
+WIP: archon spells
 
 5.4.18
 
