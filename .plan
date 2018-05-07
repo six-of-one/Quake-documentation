@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.7.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: SOA testing
+WIP: archon spells
+
 5.6.18
 
 WIP: v107 archon code
@@ -45,6 +53,12 @@ WIP: archon morphs via qc++
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: SOA testing
 WIP: archon spells
+NIX: something funny with order & ppp collect -- was designed to allow Archon to touch ppp & then it gets removed			- huh?
+DONE: compile switch upd
+DONE: build expire into chaos_tele
+FIXED: chaos has .volume issue	-- must be chaos_level code - MAX_CHAOS_LVL not set
+FIXED: poly magic using morphic_impulse -- maybe, still has cost update issue, exit screen clear deal
+DONE: rest of rogue items -- belt, shield, sphere
 
 5.5.18
 
