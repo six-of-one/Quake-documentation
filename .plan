@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.8.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: SOA testing
+WIP: archon spells
+
 5.7.18
 
 WIP: v107 archon code
@@ -45,6 +53,11 @@ WIP: archon morphs via qc++
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: SOA testing
 WIP: archon spells
+FIXED: m-ogre cluster bomb, all cluster go one direction	-- used W_FireGrenade, was going thru ogre shot
+FIXISH: spurious these -- exec <filename> : execute a script file
+FIXED: some morph melee attacks dont open damage-open-doors -- also added blood
+DONE: alpha speed / vampire artifact
+DONE: dynamo, positron ents on test map
 
 5.6.18
 
