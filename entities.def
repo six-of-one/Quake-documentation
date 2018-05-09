@@ -19,10 +19,11 @@
 // Cataboligne 10/1/016   @   - bit list tweak
 // Cataboligne 11/9/016   @   - redid styles on lights so radiant entity window is pretty
 // Cataboligne 12/31/017  @   - update for some alpha items
-// Cataboligne 2/22/018   @   - update for chaos mod mk_III dev - more scanning needed for changed ops
+// Cataboligne 2/22/018   @   - update for chaos mod mk_III dev - *more scanning needed for changed ops
+// Cataboligne 5/7/018    @   - added some chaos mod mk_I weapon ents
 
-// Version: 1.8.4
-// Last entry: 2-22-018
+// Version: 1.8.5
+// Last entry: 5-8-018
 
 
 
@@ -48,8 +49,8 @@
 // Quake Rally mod
 // Quess mod
 // Quantlet mod             - unreleased gauntlet total conversion
-// Quake 3                  - darkplaces can load q3 maps - Archon supports
-// Quake 2                  - has to be hand translated - Archon supports
+// Quake 3                  - darkplaces can load q3 maps - Archon supports ents
+// Quake 2                  - map has to be hand translated - Archon supports ents
 
 // H'der - search with text editor find or use `grep "H'der"` in cli to list all headers
 
@@ -459,28 +460,6 @@ a controler for removeable map areas
 */
 
 
-/*QUAKED weapon_flamer (0 .5 .8) (-16 -16 0) (16 16 32)
---------  CAT  -------
-Cat special flame thrower
-*/
-
-
-/*QUAKED ammo_gas (0 .8 0) (-16 -16 0) (16 16 32) BIG
---------  CAT  -------
--------- SPAWNFLAGS --------
-BIG = gives 48 instead of 24
-!(bit list) : Entity appears in all game modes.
-256 : Entity doesnt appear in Easy mode.
-512 : Entity doesnt appear in Medium mode.
-1024 : Entity doesnt appear in Hard mode.
-1024 : Entity doesnt appear in Nightmare mode.
-2048 : Entity doesnt appear in Deathmatch mode.
-1792 : Entity __only__ appears in Deathmatch mode.
--------- NOTES --------
-24 unit gas cylinder model ammo for flamers.
-*/
-
-
 /*QUAKED trigger_hurt_switch (.5 .5 .5) ? START_OFF
 --------  CAT  -------
 Chaos Mod MK II
@@ -856,31 +835,31 @@ mask_x:
 
 ARMY			= 1
 FISH			= 2
-KNIGHT			= 4
-DOG				= 8
+KNIGHT		= 4
+DOG			= 8
 DEMON			= 16
-ENF				= 32
-HKNIGHT			= 64
+ENF			= 32
+HKNIGHT		= 64
 OGRE			= 128
 SHALR			= 256
-SHAMBL			= 512
+SHAMBL		= 512
 SCRAG			= 1024
 ZOMBY			= 2048
 CTHON			= 4096 // boss
-TARBABY			= 8192
-SCOURGE			= 16384
+TARBABY		= 8192
+SCOURGE		= 16384
 SHUBS			= 32768
 SVORE			= 65536 // super vore
-GREMLIN			= 131072
+GREMLIN		= 131072
 VOMIT			= 262144 // guy id left out
 
 mask_y:
 
 BLARG			= 1
-RAPTOR			= 2
-SPIDER			= 4
+RAPTOR		= 2
+SPIDER		= 4
 MANGA			= 8
-BOSSMAN			= 16
+BOSSMAN		= 16
 */
 
 
@@ -1047,10 +1026,93 @@ will not translate to regular nailgun if map mode is NOT painkeep
 Also does not set map mode to painkeep
 */
 
+
+/*QUAKED weapon_flamer (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  -------
+Cat special flame thrower
+
+This is a custom model unit - small blue tank
+and silver pipes, "baker" brand gauge face
+*/
+
+/*QUAKED ammo_gas (0 .8 0) (-16 -16 0) (16 16 32) BIG
+--------  CAT  -------
+-------- SPAWNFLAGS --------
+BIG = gives 48 instead of 24
+!(bit list) : Entity appears in all game modes.
+256 : Entity doesnt appear in Easy mode.
+512 : Entity doesnt appear in Medium mode.
+1024 : Entity doesnt appear in Hard mode.
+1024 : Entity doesnt appear in Nightmare mode.
+2048 : Entity doesnt appear in Deathmatch mode.
+1792 : Entity __only__ appears in Deathmatch mode.
+-------- NOTES --------
+24 unit gas cylinder model ammo for flamers.
+*/
+
 /*QUAKED weapon_quantum (0 .5 .8) (-16 -16 0) (16 16 32)
 --------  CAT  --------
 Howard Roy - quantum tunnel apparatus
 
+This portal maker preceeded the official "portal"
+by both being coded in 1997 and also be a quake mod.
+
+This version is updated with some new modes.
+
+-------- NOTES --------
+*/
+
+/*QUAKED weapon_positron (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+Auth not sure - positron cannon
+
+-------- NOTES --------
+*/
+
+/*QUAKED weapon_gatling (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+Auth not sure - gatling gun
+
+-------- NOTES --------
+*/
+
+/*QUAKED weapon_enflaser (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+Extraction of enforcers laser for players to use
+
+-------- NOTES --------
+*/
+
+/*QUAKED weapon_flamer_q1 (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+Auth not sure - a custom flamer made for q1
+uses shotgun frame animation for player model & v_model
+
+-------- NOTES --------
+*/
+
+/*QUAKED weapon_demo (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+Auth not sure - a cylinder shape demo charge
+chaos mod (mk_I) enabled this with the detonator
+
+-------- NOTES --------
+*/
+
+// c_weapon_* - chaos mod only special weps
+
+/*QUAKED c_weapon_detonator (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+A fancy detonator styled after Paine's model in "Speed"
+
+other planned but unreleased boomers:
+/float MC_TRIPWIRE		= 134;		float IV_TRIPWIRE			= 256;
+/float MC_SATCHEL			= 135;		float IV_SATCHEL			= 512;
+/float MC_SUICIDE			= 136;		float IV_SUICIDE			= 2048;
+/float MC_ANFO				= 137;		float IV_ANFO				= 16384;
+
+The detonator would control all of these
+It can also select prox mines from the Hip gun
 -------- NOTES --------
 */
 
@@ -1082,6 +1144,37 @@ experimental weapons
 -------- NOTES --------
 */
 
+/*QUAKED c_weapon_dynamo (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+experimental weapons
+
+-------- NOTES --------
+*/
+
+/*QUAKED c_item_rotor (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+the rotor piece from an overloaded dynamo
+chaos mod (mk I) used it as a collectable
+item for the scourge morph
+
+-------- NOTES --------
+*/
+
+/*QUAKED c_weapon_bomb (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+this is the classic acme black spherical hissing fuse bomb
+requires matches
+
+-------- NOTES --------
+*/
+
+/*QUAKED c_item_matchbox (0 .5 .8) (-16 -16 0) (16 16 32)
+--------  CAT  --------
+a box of blue diamond matches
+this item is required to use the bomb above
+
+-------- NOTES --------
+*/
 
 /*QUAKED info_allow (0 0.5 0) (-4 -4 -4) (4 4 4)
 Invisible entity.
@@ -1172,10 +1265,19 @@ weapon_hook
 weapon_nailgun_q1
 weapon_pulsenail
 weapon_quantum
+weapon_positron
+weapon_gatling
+weapon_flamer_q1
+weapon_demo
+c_weapon_detonator
 c_weapon_deepsleep
 c_weapon_shovel
 c_weapon_reggun
 c_weapon_tallball
+c_weapon_dynamo
+c_item_rotor
+c_weapon_bomb
+c_item_matchbox
 monster_silhouette
 
 -------- NOTES --------
@@ -3079,6 +3181,7 @@ d_ammo_4shell
 d_ammo_shellbox
 d_ammo_cellbox
 d_ammo_cellpack
+d_ammo_gas
 d_barrel
 d_weapon_bfg
 d_weapon_rocketlauncher
@@ -3088,6 +3191,13 @@ d_weapon_supershotgun
 d_weapon_plasma
 d_weapon_pistol
 d_weapon_saw
+d_weapon_flamer
+d_weapon_rifle
+d_weapon_bayonet
+d_weapon_spray
+d_weapon_prob
+d_weapon_claw
+d_weapon_unmaker
 d_art_berserker
 d_art_soulsphere
 d_art_megasphere
@@ -3899,11 +4009,12 @@ doom / q2 doors:
 
 noise1: door closing
 noise2: door opening
-noise3: key fail - no default
+noise3: key fail - default = basetry.wav
 noise4: key open - no default
 map: set mode of door - "W", "D", "Q", "PK", "Q2", "Q3" - only D & Q2 are used
 -- affects auto key messages & sounds
 - to use custom sounds set:
+- required to override noise3 & noise4
 "worldtype" = 6
 "sounds" = 6
 netname: print string when x_item key is needed - set by bit & map mode if left blank
