@@ -38,6 +38,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.9.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: SOA testing
+WIP: archon spells
+
 5.8.18
 
 WIP: v107 archon code
@@ -45,6 +53,15 @@ WIP: archon morphs via qc++
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: SOA testing
 WIP: archon spells
+DONE: chaos mod mk_I items in entities.def, added to test map
+NIX: Archon magic - teleport self fails once beacon is created
+\_ -- teleport self works, the other teleport (option 1) becomes quirky
+FIXED: HUD had wrong test for art haste
+DONE: art_vamp new icon for HUD
+NIX: explosive wep fix for scrag - in T_MissileTouch -- scragg boom was moved to Morph_MissileTouch, which seems complete
+DONE: human sounds so far	-- believe all morph sounds are seperate from human ones
+TESTED: test map - lava nails respawned, not in DM -- not currently repeatable
+DONE: positron add
 
 5.7.18
 
