@@ -38,6 +38,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.10.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: SOA testing
+WIP: archon spells
+WIP: wraith - demi-Archon
+
 5.9.18
 
 WIP: v107 archon code
@@ -45,6 +54,9 @@ WIP: archon morphs via qc++
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: SOA testing
 WIP: archon spells
+DONE: q1 flamer w/custom model
+FIXED: casting in morph selection broke cube dialog -- wanted archon_magic
+WIP: wraith - demi-Archon
 
 5.8.18
 
