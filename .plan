@@ -38,6 +38,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.11.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: SOA testing
+WIP: archon spells
+WIP: wraith & demi-Archons
+
 5.10.18
 
 WIP: v107 archon code
@@ -45,7 +54,15 @@ WIP: archon morphs via qc++
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: SOA testing
 WIP: archon spells
-WIP: wraith - demi-Archon
+WIP: wraith & demi-Archons
+TWEAK: wraith - power drain slows down as archon builds
+DONE: stronger wraith does more damage?
+DONE: no health show for wraith
+DONE: envirosuit, wetsuit skin ops
+FIXED: Archon / demi -> poly, then poly dies -> Archon form
+DONE: wraith solid from energy drains
+DONE: wraith solid protect from suit .skin chgs
+FIXED: Archons / demi were not dropping runes when shifting back
 
 5.9.18
 
@@ -56,7 +73,7 @@ WIP: SOA testing
 WIP: archon spells
 DONE: q1 flamer w/custom model
 FIXED: casting in morph selection broke cube dialog -- wanted archon_magic
-WIP: wraith - demi-Archon
+WIP: wraith & demi-Archons
 
 5.8.18
 
