@@ -10,10 +10,11 @@ chaos mod Archon - mark III code base port to qc 2.0:
 
 - maphack (rewritten) - finish mod maps
 - frikbot - minor rev
-- viswep -- needs minor revision, position data update
+- viswep -- needs minor revision, position data tweaks left
 - xents --- nearly complete
-- morph --- convert in progress (last big module)
+- morph --- convert done, fixing quirks
 * mark I elements to do:		(we hope anyway)
+- demi-Archons  in progress
 - hold items -- pick up items and carry them
 - run fire ---- frames I made to stop weapon fire "ice skating"
 - enviro ------ volcano, burning things, rain, floating, etc
@@ -39,12 +40,29 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.13.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: archon spells
+WIP: wraith & demi-Archons
+
+5.12.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: gremlin port -- morph part mostly done, x_monster update tdo
+WIP: archon spells
+WIP: wraith & demi-Archons
+DONE: wraith skin vars solid forms -- all morphs designated wraithable so far
+
 5.11.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: gremlin port -- morph part mostly done, x_monster update tdo
-WIP: SOA testing
+DONE: SOA testing -- for now
 WIP: archon spells
 WIP: wraith & demi-Archons
 DONE: wraith icon for hud
