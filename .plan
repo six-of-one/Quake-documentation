@@ -40,13 +40,25 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.14.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+
 5.13.18
 
 WIP: v107 archon code
 WIP: archon morphs via qc++
-WIP: gremlin port -- morph part mostly done, x_monster update tdo
 WIP: archon spells
 WIP: wraith & demi-Archons
+DONE: gremlin port - x_monster update -- ish
+TWEAK: hip grem code in x_grem code set - gorging --  disabled by previous return - needs adjusted
+FIXED: gremlin spawn from player -- monsters are not currently tested in watermove so monster gremlins dont spawn
+FIXED: moving sphere up / down with wheel has no stop -- wasnt clearing impulse
+FIXED: mega health - grabbed one as hk and no rot occured	-- ops_rot starts but drops out on 1st think - one test didnt use .health_modifier
 
 5.12.18
 

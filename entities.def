@@ -2005,6 +2005,17 @@ tri leg aliens from alien infestation mod
 
 */
 
+/*QUAKED monster_gremlin_x (1 0 0) (-16 -16 -24) (16 16 32) Ambush
+
+-------- NOTES --------
+from the movie - yes
+random 30% will fly
+they spawn from player morph gremlins in water
+
+"button0" -	1 = allow in deathmatch
+
+*/
+
 /*QUAKED 
 			classname_m2 (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  CAT  --------
@@ -2028,6 +2039,7 @@ monster_lavabomb
 monster_supervore
 monster_clinger
 monster_young
+monster_gremlin_x
 
 -------- NOTES --------
 place holder lists all Monster II classnames - not a useable entity
