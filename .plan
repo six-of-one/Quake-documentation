@@ -40,6 +40,14 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.15.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+
 5.14.18
 
 WIP: v107 archon code
@@ -47,6 +55,26 @@ WIP: archon morphs via qc++
 WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
+DONE: compile.qc setup to output messages for bash script to config game distro
+-- modules: arc.pk3, cfg.pk3, HUD.pk3, xmon.pk3, morph.pk3, hiprg.pk3, x6.pk3, pk.pk3
+DONE: compiler SWITCH testing - some few #ifdef updates
+FIXED: wraith skin not acc. in gremlin mdl -- was extra mdl not in pak file
+FIXED: bound_other_ammo will kerbob other ammo limits in x_ents	 -- backpack test case, q1 weps have no limit issue some how
+???: getting lava-nails with no base nail ammo causes frame bork -- this is now fixed - currentammo goes to 5 if there are no nails
+\_ likely same for other rogue x-weps -- no, other weps add reg. rockets & cells
+combat.qc -- .dmg_take
+CHECKED: used as .ldmg_ by monsters - make sure morphs dont get hosed
+-- this could crap out if a morph player attacks another player who is also doing a melee attack
+FIXED: \_ changed to light_lev
+???: morph monster matches -- hip_weapon, replace morph_ffchk, morph_clichk
+\_ we have -- // monster friendly matrix - access with		// __{mon classname}{morphy}
+ \_ is this the same ?
+XXX: dcam leaving liquid splashes (liq splash in lava too) -- doesnt happen now ?
+DONE: ? human sounds so far -- no non human morph has human sounds now
+TESTED: double_w_touch is a .touch() but has no harp check - test with SOA -- sucks in just fine
+DONE: rogue _ when ogre drops multi rock pack, it will have to work same as boxes
+WIP: chaos tele-sphere may no operate correctly	-- may relate to stable & lock target options
+FIXED: chaos tele-sphere spawn issue - was set		__func_chaos_teleport		"1" override bits -- this ent cant be overrode
 
 5.13.18
 
