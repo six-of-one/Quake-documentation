@@ -765,6 +765,10 @@ NOMOVE - do not allow teleport to move
 "target" - teleport destination
 "aflag" -666 - do not change from selected target
  - if selected target does not exist, a random one is chosen and aflag does not apply
+ - use any other negative value to hold lock for a while, but eventually go random
+ - if > 0 x < 1 - probability of retarget
+"super_time" - at this time, ".think1()" is called
+"think1" - call this at super_time - use "chaos_tele_expire" for remove(self)
 */
 
 
