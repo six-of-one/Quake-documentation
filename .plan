@@ -40,6 +40,15 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.16.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+WIP: chaos tele-sphere map cfg options fix	-- losing .movetarget dest when aflag = -666 (targ lock)
+
 5.15.18
 
 WIP: v107 archon code
@@ -47,6 +56,18 @@ WIP: archon morphs via qc++
 WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
+WIP: chaos tele-sphere map cfg options fix	-- wild SOA uses archon_bouncer to move
+FIXED: movetype = 0 chaos tele-sphere teleports itself around !
+FIXED: looping walk sound for scourge morph & monster not cancelled by null.wav on same channel
+-- unless engine started with +sv_freezenonclients 1		- what the actuall hell ?!
+-- rune sounds do turn this off
+\_ used a cfg setup where autoexec.cfg sets sv_freezenonclients 1 & sclient.cfg sets sv_freezenonclients 0
+ \_ this hack needs a better fix, such as find out why the hell the engine does this crappery
+FIXED: seems like scourge walk sound plays when dead -- by the above hack / tweak
+CLEAR: mask_x in touch fn -- archon level -- were they all done ? -- just saying yes till proven otherwise
+FIXED: touch a cube, and frame bork happens - sometimes
+NIX: touching a reg. ammo q1 box dooshes xweps ? -- happens even if you dont collect ammo
+\_ now cant replicate -- until seen again
 
 5.14.18
 
