@@ -40,6 +40,14 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.18.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done
 
 5.17.18
 
@@ -48,7 +56,10 @@ WIP: archon morphs via qc++
 WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done		-- effect rain stuff, tested with visage
+WIP: port mk2 env stuff not already done
+DONE: particle_burst port to mk3
+FIXED: lavabomb, chaos ejecta not appearing -- was fire_touch
+DONE: lava puddles, large lava balls
 
 5.16.18
 
@@ -58,7 +69,7 @@ WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
 FIXED: chaos tele-sphere map cfg options fix	-- movetarget is cleared after 1st teleport - why?
-	-- losing .movetarget dest when aflag = -666 (targ lock)
+	-- losing .movetarget dest when aflag = -666 (targ lock) - this was by design
 \_ retooled a bit: -666 is now perma-lock, any x < 0 will lock for some time - 5% chance to change
  \_								+x < 1 is perm probability of change, otherwise set to 90% = CHAOS_UNSTABLE_TELE
 FIXED: obit issue - "_-=*[Six]                        " -- one issue was HIP re-use of .deathtype to send a message thru
