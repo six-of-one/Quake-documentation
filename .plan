@@ -40,6 +40,15 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.19.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done		-- 
+
 5.18.18
 
 WIP: v107 archon code
@@ -47,7 +56,11 @@ WIP: archon morphs via qc++
 WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done
+WIP: port mk2 env stuff not already done		-- func_saver, effect_affect, func_map_feature`
+DONE: port  trigger_stat_relay / SUB_Stat_UseTargets to mk3
+DONE: now handle func_m_illusionary / m_func_illusionary, func_detail
+DONE: put in rest of score_rel & player_count code -- where is this = calling this done, saw nothing else to put in
+DONE: q gauntlet code + vmodel
 
 5.17.18
 
