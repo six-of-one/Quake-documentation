@@ -40,6 +40,15 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.20.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done		-- 
+
 5.19.18
 
 WIP: v107 archon code
@@ -48,6 +57,16 @@ WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
 WIP: port mk2 env stuff not already done		-- 
+DONE: BlastProof -- implementing as .dmg_boom -- assigned mostly in .cfg files
+CHECKED: mc_disambig -- completed in cfg now ? - seems to be the case
+FIX: reticle splashes water
+cvar sv_sound_watersplash is "misc/h2ohit1.wav" ["misc/h2ohit1.wav"] sound to play when MOVETYPE_FLY/TOSS/BOUNCE/STEP entity enters or leaves water (empty cvar disables the sound)
+\_ -- required engine tweak for this - turn off on a per entity basis -- set FL_NOWATERSPLASH in .flags, ent wont splash
+DONE: LMS may need a bot tweak if 2 bots are left, slightly more favorable than botfixer -- idea: if human players are all dead, kill bots with bot_fixed
+FIXED: did a map pk_cube create a respawning item -- yes it did, and it did not respawn --- is this correct behave ?
+\_ clrld.cfg did not have a wait = -2 setting for reggun -- not fixing, map_item.cfg set it to "30", no reset after by clrld.cfg
+FIXED: map spawn pk_cube were not respawning in DM
+RE-CHECKED: #define centerprint _b_centerprint -- not sure why, setup seems correct
 
 5.18.18
 
