@@ -40,6 +40,17 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.23.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done		-- enumerate what is left here - multi model beam code
+\_ multi-frame bolt -- bolt4.mdl
+WIP: held entities code (mk 1)
+
 5.22.18
 
 WIP: v107 archon code
@@ -47,8 +58,10 @@ WIP: archon morphs via qc++
 WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done		-- 
+WIP: port mk2 env stuff not already done		-- enumerate what is left here
+\_ multi-frame bolt -- bolt4.mdl
 WIP: held entities code (mk 1)
+DONE: make this the beam4 call
 
 5.21.18
 
