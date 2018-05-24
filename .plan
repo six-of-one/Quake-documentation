@@ -40,6 +40,15 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.24.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done		-- enumerate what is left here - hold stuff, watermove / content code (mk1), alt rain code (snow balls), floaters, meltdown, throwgib, lava_shot, blast move
+
 5.23.18
 
 WIP: v107 archon code
@@ -47,8 +56,12 @@ WIP: archon morphs via qc++
 WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done		-- enumerate what is left here - multi model beam code
-\_ multi-frame bolt -- bolt4.mdl
+WIP: port mk2 env stuff not already done		-- enumerate what is left here - multi model beam code chg
+\_ DONE: multi-frame bolt -- bolt*.mdl
+DONE: chaos beam -- cut 1 - multi beam mdl version, cut 2 - adds pink / purple tube thingy
+FIXED: bolt3.mdl large bolts, and cthunder takeover
+DONE: lightning bolt frame model from cm1  -- engine mod with cl_bmdl, cl_bfrm -- no longer and engine mod since dp had TE_LIGHTNING4NEH
+TWEAK: multi beam to use {n} for bolt{n}.mdl - if n = 0, use string in s0__		-- 20 - 39, large (4x) versions, 40 - 59, tiny (1/3 versions)
 WIP: held entities code (mk 1)
 
 5.22.18
