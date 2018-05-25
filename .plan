@@ -40,6 +40,15 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+5.25.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done
+
 5.24.18
 
 WIP: v107 archon code
@@ -48,6 +57,7 @@ WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
 WIP: port mk2 env stuff not already done		-- enumerate what is left here - hold stuff, watermove / content code (mk1), alt rain code (snow balls), floaters, meltdown, throwgib, lava_shot, blast move
+FIXED: pk cube HUD flashing msg -- m-lava only it seems
 
 5.23.18
 
