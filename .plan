@@ -39,6 +39,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.28.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done
+WIP: held entities code (mk 1 code port) -- make it work
+
 5.27.18
 
 WIP: v107 archon code
@@ -47,7 +57,11 @@ WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
 WIP: port mk2 env stuff not already done
-WIP: held entities code (mk 1 code port)
+WIP: held entities code (mk 1 code port) -- code is ported, time to make it work again
+FIXED: odd occurance are happening where vars ents end up in morph_pack_rethink() -- things like lavaballs, etc		-- they do eventually sub-remove
+\_ bug in the call logic when restoring an item could whammy any ent setup with nspawn / newmis
+ \_ adds a bug to morph cube made armor -- it had a similar bug before the fix
+
 
 5.26.18
 
