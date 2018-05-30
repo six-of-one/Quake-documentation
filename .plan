@@ -39,6 +39,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.30.18
+
+WIP: v107 archon code
+WIP: archon morphs via qc++
+WIP: archon spells
+WIP: wraith & demi-Archons
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done
+
 5.29.18
 
 WIP: v107 archon code
@@ -47,6 +56,11 @@ WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
 WIP: port mk2 env stuff not already done
+FIXED: when fire_toss a held ent, axe animates (not attack, just there)
+TWEAK: hold ent ops - mask vw_axe, weaponmodel, throw goes further than drop, etc
+\_ impulse 2 - 8 selects wep slot, auto-drops held ent
+DONE: Archon "soul" vessel can be taken to altar & sacraficed
+FIXED: order has issues - spell dislplay in HUD, firing spells selected, order form 2	-- spell targeter code was commented out from tests before spell_target() was coded - dur
 
 5.28.18
 
