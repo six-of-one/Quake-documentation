@@ -39,14 +39,27 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+5.31.18
+
+WIP: v107 archon code
+WIP: archon spells	-- need to test / check spell ops, all code is done
+WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done -- volcano, falling everything detect, watermove, blastmove
+
 5.30.18
 
 WIP: v107 archon code
-WIP: archon morphs via qc++
-WIP: archon spells
-WIP: wraith & demi-Archons
+DONE: archon morphs via qc++ -- with the fix of order spell casting the mk2 morphs are complete		including the rest of mk1 morphs is under consideration
+WIP: archon spells	-- need to test / check spell ops, all code is done
+WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
 WIP: port mk2 env stuff not already done
+NIX: some random spawn ogre dont take damage -- confirmed takedamage = 2			-- have not seen this lately, all rnd ogre have been killable
+DONE: {pk_}client.qc -- PK_SelectSpawnPoint (rnd select code)	- a revision of the mk2 code is present - cvar PK must be >= 1
+DONE: env -- beam4, lightning_bolt - .ish - beam4 is folded into multi_beam, l_b uses a self remove temp ent to play sounds which isnt encoded yet
+DONE: homing missile / multirock fly time eweap style - rest of hiprg weps -- plasma, homers, mgren
+DONE: rest of .dmg_boom and -- damg = damg * 0.5;	// mostly immune
 
 5.29.18
 

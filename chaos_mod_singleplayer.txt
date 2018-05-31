@@ -17,7 +17,7 @@ Empty.  Disused.  Broken down.  Looks like its a hundred years old.
 Outside its quiet.  Too quiet.  No cars.  No people.  No radio chatter.  No planes.  Nothing.
 Left the base through the broken gates and walked 5 miles down the cracked pavement.
 
-Place looks like there hasnt been a single human (besides yours truely) here in decades.
+Place looks like there hasnt been a single human (besides yours truely) here in years.
 
 Found some old rations.  Damn MRE's.  Who knows how long they've been here, but I can still eat 'em.
 Still taste terrible too.
@@ -77,7 +77,7 @@ Hah.  A "cool" day.
 There is only one thing of interest on lava ball world.
 And someone made it.
 
-A staff.  Filigreed metal work.  About 5 feet with a fancy triangle at the top.
+A staff.  Filigree metal work.  About 5 feet with a fancy triangle at the top.
 Might be made of iron.  The iron Shubbers crew used to make magical gates from.
 
 And in the triangle...
@@ -162,10 +162,10 @@ Day 7:
 Triangle stick teleported in again !
 Lucky I've taken to staying in my room until I need food.
 
-Its buzzing like a banshee and spinning around.
+The crazy light point buzzing like a banshee and spinning around.
 
 I know when I touch it I'll teleport.  I can feel it.
-<sigh>
+Sigh.
 
 
 World ?
@@ -177,6 +177,8 @@ Its still the Slipgate Complex.  The one I went through.
 Somebody did some clean up.  No corpses.  Resupply going on.
 Gotta explore the rest, but no offices.  No one around either, but they might have been reassigned
 to fight off the death squads.
+
+Hours later:
 
 Crap.
 Guess its world 6 then.
@@ -385,7 +387,7 @@ with hydraulics or serious explosives.
 
 Me: TS, gotta get through that...
 
-I shrug back a bit.   The staff floated around and a blast of the insanity
+I shrug back a bit.   The staff floats around and a blast of the insanity
 hits the door.  Suddenly it twists and flows with the blast.  Ammo, health
 kits, chairs, waste bins, paper stacks, file boxes, several guns, bricks, logs
 and all manner of debris are falling out of the doorway.
@@ -394,7 +396,7 @@ Check the guns and ammo.  Nothing I want.  Old habits...
 
 Clear a path.  Door frame is stepped like a bank vault.  If the frame is any
 indicator, 3 feet thick.  Russians dont piss around with security doors.
-They didnt know about Chaos staffs though.
+They didnt expect a Chaos staff blast.
 
 Plain gray walls lead away with the expected ducts and conduit.
 Base designs change, but they always have the typical things.
@@ -442,7 +444,7 @@ too.  Area 51 has the best security short of the pentagons secret bunker.
 
 But... How in hell did Russians get their hands on it?
 
-Got a vague memory of part from one scientist.  About how power always had
+Got a vague memory of talk from one scientist.  About how power always had
 to be supplied to a gate to maintain some kind of "dimensional lock".  So even
 though it wasnt in use, it could not be powered down.
 
@@ -483,7 +485,7 @@ The thing lights up.  The usual red pulsating glow comes from the side grills.
 
 Now what?
 
-I know the things are damn picky and the destination has to be carefully set.
+I know these things are damn picky and the destination has to be carefully set.
 Russians might have this thing pointed at space.
 
 I decide to sleep on it.  No idea how much juice those batteries have.
@@ -495,7 +497,7 @@ the door.  No surprises short of teleport.
 Day 4:
 
 Checking gear for the hop.  Hear something outside my safe spot.
-Scratching sound?  Some thumps?  Scrape by the door.
+Scratching sound?  Some thumps?  It scrapes by the door.
 
 The door is a heavy iron affair that fits tight into the frame.
 No cracks and no light spilling through.
@@ -513,7 +515,7 @@ oiled it.
 
 Empty corridor.  Whew.
 Have a good look up and down in the dim staff light.
-Suddenly the light from floaty is much brighter.
+Suddenly the light from old floaty triangle is much brighter.
 
 Me: thanks bud, now scale it back, low prof. is what we need.
 TS: 10-4 Capt.
@@ -525,7 +527,7 @@ Back to the proto-gate.  Still humming away.
 Another whew.
 
 How to calibrate the gate?  No computer screen or keyboard on this one.
-If I even knew what to do with those.  Can barely send an email.
+If I even knew what to do with those.  Ordering supplies is about my top speed.
 
 Me: TS is this thing trapped?
 TS: No issues detected.
@@ -572,7 +574,7 @@ a partial cave.  More of an overhang really.  All set.
 Have to mentally tell TS not to float in the open.
 
 If you add super to boring you get this.  It rained.  Twice.
-Lucky it was from the other side of the rock.
+All damn day.  Lucky it was from the other side of the rock.
 
 You can only clean a shotgun so many times.
 Tried to make a chess set with shotgun shells.
@@ -590,7 +592,7 @@ Then finally, activity.
 
 A large group of brutish ogres, knights and a hell knight in charge.
 Some type of bovine land animal.  Horns, tough hide.  Hitched to flat
-wagons in pairs and quads.  Piled with more timber and blocks.
+wagons in pairs and quads of the beast.  Piled with more timber and blocks.
 
 They set out unloading everything.  Get in lots of arguments.
 Good bit of in-fighting between ogres and knights.
@@ -882,6 +884,7 @@ the path.
 
 But I wonder...  Before I was reconstituted.
 After all the gates and dimension travel I've done.
+All the tech and magic teleports.  The rune powers.
 Am I even really still me?
 
 Shit like that makes my head spin.  So I do the best
@@ -911,7 +914,7 @@ a tarbaby and it explodes, that might get noticed.
 Gotta be real careful.  I suspect dropped gear would
 attract some attention.
 
-Behind the HKs, the ledge crosses a portal but doesnt go
+Behind the HKs, the ledge crosses a door portal but doesnt go
 through.  I drop down real slow and careful.
 The warders give no shits about my muffled thud landing.
 
@@ -919,7 +922,7 @@ The corridor is very dim.  I hug the wall and proceed
 with great caution.  I'm sure a light wouldnt be covered
 by the hider.
 
-TS: you'd be correct.  Once the light shined out of
+TS: you'd be correct.  Once the light shine went beyond
 the quantum indifference shell it would be noticed.
 
 Damn artifacts.  Better when they _dont_ talk to you
