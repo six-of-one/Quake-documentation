@@ -39,6 +39,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+6.2.18
+
+WIP: v107 archon code
+WIP: archon spells	-- need to test / check spell ops, all code is done
+WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: grab_callback - restore // code
+WIP: bomb
+
 6.1.18
 
 WIP: v107 archon code
@@ -46,7 +56,13 @@ WIP: archon spells	-- need to test / check spell ops, all code is done
 WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
 WIP: port mk2 env stuff not already done -- volcano, falling everything detect, blastmove
-WIP: monsters -> watermove, splinch, fallen
+DONE: monsters -> watermove, splinch, fallen, noway bounds
+// map monster tarbabies that were placed in water on purpose should not take damage	-- on second check there dont seem to be any
+___: is there a reason watermove was taken out of monster code ? -- unknown, clearing this
+DONE: f8 - "impulse 66" - "cursor_ent" -- console dump entity fields of cursor target
+WIP: grab_callback - restore // code
+DONE: redefine .height as used by morph -- saves true form of poly capable morphs			-- w
+WIP: bomb
 
 5.31.18
 
