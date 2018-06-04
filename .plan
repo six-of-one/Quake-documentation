@@ -39,6 +39,17 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+6.4.18
+
+WIP: v107 archon code
+WIP: archon spells	-- need to test / check spell ops, all code is done
+WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+WIP: port mk2 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: grab_callback - restore // code -- still have grab_lavaball
+HOLD: bomb -- still need - demo_charge fire / throw code, fire_burst & model fragments
+WIP: all wsys6 obits		-- which of these are left?		well, pretty much __all__ of them.  dang dude
+
 6.3.18
 
 WIP: v107 archon code
@@ -48,6 +59,13 @@ WIP: line item bugs, tweaks, fixes
 WIP: port mk2 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: grab_callback - restore // code
 WIP: bomb -- still need - demo_charge fire / throw code, fire_burst & model fragments
+DONE: lmst - crown last winner, announce cprint, fix endless bot war - last 2 bots
+note: LMS may need a bot tweak if 2 bots are left, slightly more favorable than botfixer -- if players are all dead, kill bots with bot_fixed
+DONE: alt_fire - touch held touchable
+DONE: bot fixer also needs tweaked for coop with bots -- in coop, frag test is ignored
+TESTED: q3 disambig -- added some conversions
+NIX: replace cvar reads with gv - have script use - prvm_globalset server  {var}		-- cases where qc is reading cvars - still no likey
+\_-- only doing this where it makes sense to set a global that way
 
 6.2.18
 
