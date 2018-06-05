@@ -39,16 +39,33 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+6.5.18
+
+WIP: v107 archon code
+WIP: archon spells	-- need to test / check spell ops, all code is done
+WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+WIP: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: grab_callback - restore // code -- still have grab_lavaball
+HOLD: bomb -- still need - demo_charge fire / throw code, fire_burst & model fragments
+
 6.4.18
 
 WIP: v107 archon code
 WIP: archon spells	-- need to test / check spell ops, all code is done
 WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: grab_callback - restore // code -- still have grab_lavaball
 HOLD: bomb -- still need - demo_charge fire / throw code, fire_burst & model fragments
-WIP: all wsys6 obits		-- which of these are left?		well, pretty much __all__ of them.  dang dude
+DONE: all wsys6 obits		-- which of these are left?		well, pretty much __all__ of them.  dang dude
+CHECKED: spawning monsters - total accum -- done in monster_start, but what about the packet, test w/ 2 cli
+\_ works as far as HUD nums go - no global to test in 2nd cli, 1st cli total_monsters correct
+TESTED: q3 disambig -- on weptest (q3)
+TESTED: q2 disambig -- on fact3 (converted q2)
+DONE: genre weapon xlate - ammo_grenades, weapon_railgun, etc 
+\_ - only have to worry about q3 maps (wad == "") -- this is really nixed by new system, but requires cfg file for each map
+DONE: gremlin tga override & bmp retex -- did this happen?		-- confirmed happened  - note red wing grem has no mdl_1 override
 
 6.3.18
 
@@ -56,7 +73,7 @@ WIP: v107 archon code
 WIP: archon spells	-- need to test / check spell ops, all code is done
 WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: grab_callback - restore // code
 WIP: bomb -- still need - demo_charge fire / throw code, fire_burst & model fragments
 DONE: lmst - crown last winner, announce cprint, fix endless bot war - last 2 bots
@@ -73,7 +90,7 @@ WIP: v107 archon code
 WIP: archon spells	-- need to test / check spell ops, all code is done
 WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: grab_callback - restore // code
 WIP: bomb -- still need - matches, demo_charge fire / throw code, fire_burst & model fragments
 \_bug_or_feature: FIXED: if no matches, throw animation still runs, but bomb is not tossed
@@ -87,7 +104,7 @@ WIP: v107 archon code
 WIP: archon spells	-- need to test / check spell ops, all code is done
 WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 DONE: monsters -> watermove, splinch, fallen, noway bounds
 // map monster tarbabies that were placed in water on purpose should not take damage	-- on second check there dont seem to be any
 ___: is there a reason watermove was taken out of monster code ? -- unknown, clearing this
