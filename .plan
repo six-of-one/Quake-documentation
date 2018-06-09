@@ -39,6 +39,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+6.9.18
+
+WIP: v107 archon code
+HOLD: archon spells	-- need to test / check spell ops, all code is done
+HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+WIP: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
+HOLD: grab_callback - restore // code -- still have grab_lavaball
+WIP: idea to have generic code set that uses cvar script to run frames, call fn, etc
+
 6.8.18
 
 WIP: v107 archon code
@@ -48,6 +58,8 @@ WIP: line item bugs, tweaks, fixes
 WIP: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 HOLD: grab_callback - restore // code -- still have grab_lavaball
 WIP: idea to have generic code set that uses cvar script to run frames, call fn, etc
+\_ cfg: imp
+DONE: HUD morph update, select cfg, 2 x new cubes
 
 6.7.18
 
@@ -58,6 +70,7 @@ WIP: line item bugs, tweaks, fixes
 WIP: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 HOLD: grab_callback - restore // code -- still have grab_lavaball
 WIP: idea to have generic code set that uses cvar script to run frames, call fn, etc
+\_ DONE: base ops code
 
 6.6.18
 
