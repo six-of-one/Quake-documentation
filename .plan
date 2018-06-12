@@ -39,6 +39,18 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+6.12.18
+
+WIP: v107 archon code
+HOLD: archon spells	-- need to test / check spell ops, all code is done
+HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
+HOLD: grab_callback - restore // code -- still have grab_lavaball
+HOLD: idea to have generic code set that uses cvar script to run frames, call fn, etc
+WIP: bot badwolf loop -- something to do with value of pX and whatever x_decparm is trying to load during bot_phys.qc : SV_CheckOnGround
+\_ got it nailed, just need trace
+
 6.11.18
 
 WIP: v107 archon code
@@ -49,6 +61,9 @@ HOLD: port mk1 env stuff not already done -- volcano, falling everything detect,
 HOLD: grab_callback - restore // code -- still have grab_lavaball
 HOLD: idea to have generic code set that uses cvar script to run frames, call fn, etc
 WIP: bot badwolf loop -- something to do with value of pX and whatever x_decparm is trying to load during bot_phys.qc : SV_CheckOnGround
+\___------- *** WARNING - x_decparm fail cnt: 1998 item: AutoSentry pX: 2
+FIXED: new bug where items on init is not 4097
+\_ set _morph_cube0      "0"	-- .items bugged, but why?
 
 6.10.18
 
@@ -63,6 +78,7 @@ WIP: bot badwolf loop -- something to do with value of pX and whatever x_decparm
 DONE: morph.qc -- set_char_num			- now done in cfg
 \_ player_human_become -- this is the morph call default, with cfg setting the _0_ option to start as the genre map choice
 FIXED: locus was world after bork with misc.qc / fireball
+FIXED: NULL function - setup in watermove for monster -- test deeply
 
 6.9.18
 
