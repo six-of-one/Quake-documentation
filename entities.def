@@ -313,7 +313,7 @@ Set this biome to build when triggered with:
 
 spawnflags:
 
-SUBH         1			- sub hack biome - do not set master biome, triggers use owner to get biome info
+SUBH         	1			- sub hack biome - do not set master biome, triggers use owner to get biome info
 WORLD          2			- use this biome immediately upon map load
 DESTROY        4			- destroy any hack chunk in the same location - would allow this biome to "overwrite" any other biome!  *will not work with persistent hacks
                8			- do NOT set - would have bizarre effects
