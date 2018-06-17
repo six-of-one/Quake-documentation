@@ -39,6 +39,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+6.17.18
+
+WIP: v107 archon code
+HOLD: archon spells	-- need to test / check spell ops, all code is done
+HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: idea to have generic code set that uses cvar script to run frames, call fn, etc
+\_ code is done -- down to cfg setups, morph specific code
+
 6.16.18
 
 WIP: v107 archon code
@@ -47,8 +57,8 @@ HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wrai
 WIP: line item bugs, tweaks, fixes
 HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: idea to have generic code set that uses cvar script to run frames, call fn, etc
-\_ code is done -- down to cfg setups, morph specific code -- doom morph cfg done
-WIP: 2nd bot badwolf loop -- bot is ending up with .vwepent pointing at a removed ent, which inf loops in vload
+\_ code is done -- down to cfg setups, morph specific code
+FIXED: 2nd bot badwolf loop -- bot is ending up with .vwepent pointing at a removed ent, which inf loops in vload
 
 6.15.18
 
