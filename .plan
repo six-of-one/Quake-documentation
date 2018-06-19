@@ -39,6 +39,18 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+6.19.18
+
+WIP: v107 archon code
+HOLD: archon spells	-- need to test / check spell ops, all code is done
+HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: idea to have generic code set that uses cvar script to run frames, call fn, etc
+\_ code is done -- down to cfg setups, morph specific code
+WIP: melee_damage
+WIP: pk bot code self-refer loop bug -- attempt 1
+
 6.18.18
 
 WIP: v107 archon code
@@ -49,6 +61,8 @@ HOLD: port mk1 env stuff not already done -- volcano, falling everything detect,
 WIP: idea to have generic code set that uses cvar script to run frames, call fn, etc
 \_ code is done -- down to cfg setups, morph specific code
 WIP: melee_damage
+FIXED: a 3rd badwolf loop bug in bot code	-- same removed ent infinite loop		-- maybe a check for any more instance of this
+FIX: pk bot code self-refer loop bug
 
 6.17.18
 
