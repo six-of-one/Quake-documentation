@@ -39,6 +39,17 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+6.22.18
+
+WIP: v107 archon code
+HOLD: archon spells	-- need to test / check spell ops, all code is done
+HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: generic code set that uses cvar script to run frames, call fn, etc
+WIP: melee_damage
+DONE: cleaning stale mkII and other notes
+
 6.21.18
 
 WIP: v107 archon code
@@ -49,6 +60,8 @@ HOLD: port mk1 env stuff not already done -- volcano, falling everything detect,
 WIP: generic code set that uses cvar script to run frames, call fn, etc
 WIP: melee_damage
 WIP: cleaning stale mkII and other notes
+NIX: dead, weaponmodel still visible -- not able to replicate, need notes on this			- has not repeated since this
+DONE: added tr_wbbox, tr_wrockbox to translate.cfg, tr_wolf *
 
 6.20.18
 
