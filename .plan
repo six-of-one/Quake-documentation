@@ -46,9 +46,11 @@ HOLD: archon spells	-- need to test / check spell ops, all code is done
 HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
 HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
-WIP: generic code set that uses cvar script to run frames, call fn, etc
-WIP: melee_damage
-DONE: cleaning stale mkII and other notes
+WIP: generic code set that uses cvar script to run frames, call fn, etc -- morph specific stuff left for aux morphs
+WIP: melee_damage	-- item above uses
+WIP: long run server bot test
+DONE: cleaning stale mkII and other notes	-- for now
+WIP: vars hack map projects
 
 6.21.18
 
@@ -59,6 +61,7 @@ WIP: line item bugs, tweaks, fixes
 HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: generic code set that uses cvar script to run frames, call fn, etc
 WIP: melee_damage
+WIP: long run server bot test
 WIP: cleaning stale mkII and other notes
 NIX: dead, weaponmodel still visible -- not able to replicate, need notes on this			- has not repeated since this
 DONE: added tr_wbbox, tr_wrockbox to translate.cfg, tr_wolf *
@@ -72,6 +75,7 @@ WIP: line item bugs, tweaks, fixes
 HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: generic code set that uses cvar script to run frames, call fn, etc
 WIP: melee_damage
+WIP: long run server bot test
 NIX: - dyn items needs checked re: garden (hub2)	-- was mkII issue
 NIX: see images captured 11.1.12 (archon screens) - gremlin multi-viswep deal -- mkII dead throw code, never seen in mkIII -- tho mkIII does not dead throw at present
 NIX: scourge fire test, bounding box checks, extra attacks for mega, supers	-- mkII scourge code, much differs now
@@ -95,9 +99,11 @@ WIP: generic code set that uses cvar script to run frames, call fn, etc
 \_ code is done -- down to cfg setups, morph specific code
 DONE: morph generic base cfg
 WIP: melee_damage
-FIXED: pk bot code self-refer loop bug -- attempt 1
+WIP: long run server bot test
+WIP: pk bot code self-refer loop bug -- attempt 1
 FIXED: loop bug in remove_owner spawn_loop ent -- if __*_netname0{...} fails to load from a __*_path __reference, and cfg was used to clear the copied _path var, it loops
 \_ was truly bonkers - owner transfer to _path ent is complex as well
+FIXED: explode shell ammo was hovering -- _pos1 in cfg was set as _pos0
 
 6.18.18
 
