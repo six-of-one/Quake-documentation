@@ -39,6 +39,18 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+6.25.18
+
+WIP: v107 archon code
+HOLD: archon spells	-- need to test / check spell ops, all code is done
+HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
+WIP: line item bugs, tweaks, fixes
+HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: generic code set that uses cvar script to run frames, call fn, etc -- morph specific stuff left for aux morphs
+HOLD: melee_damage	-- item above uses
+WIP: long run server bot test
+WIP: vars hack map projects -- tardis console
+
 6.24.18
 
 WIP: v107 archon code
