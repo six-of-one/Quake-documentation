@@ -39,6 +39,13 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+7.6.18
+
+WIP: v107 archon code
+WIP: line item bugs, tweaks, fixes
+WIP: generic code set that uses cvar script to run frames, call fn, etc -- morph specific stuff left for aux morphs
+WIP: vars hack map projects -- tardis console - hack trace corridors
+
 7.4.18
 
 WIP: v107 archon code
