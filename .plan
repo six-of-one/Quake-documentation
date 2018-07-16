@@ -39,9 +39,47 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
-7.8.18
+7.16.18
 
-WIP: long run server test -- 8 days now, solid run
+NVTS!
+Host_Error: server runaway loop counter hit limit of 10000000 jumps
+  weapons.qc : W_BestWeapon : statement 56
+    items.qc : ammo_touch : statement 8
+pk_bot//botmove.qc : botwalkmove : statement -103803
+pk_bot//bot_ai.qc : ai_botgetGoody : statement 105
+pk_bot//bot_ai.qc : ai_botrun : statement 14
+pk_bot//pkbot.qc : bot_run : statement 31
+
+so much for the pre-beta 2.0 release...
+
+7.15.18
+
+WIP: long run server test -- update to follow
+-- switched server over to hub play, was on 1 map for 2 weeks
+
+7.14.18
+
+WIP: long run server test -- update to follow
+
+7.13.18
+
+WIP: long run server test -- update to follow
+
+7.12.18
+
+WIP: long run server test -- update to follow
+
+7.11.18
+
+WIP: long run server test -- update to follow
+
+7.10.18
+
+WIP: long run server test -- update to follow
+
+7.9.18
+
+WIP: long run server test -- time: 750114 seconds
 
 7.6.18
 
