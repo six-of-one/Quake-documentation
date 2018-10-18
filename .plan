@@ -39,10 +39,19 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+10.18.18
+
+WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
+WIP: run server test -- fix test
+
+ISSUE: loop bug now fixed - somehow creating extra pk bots ??
+
 10.17.18
 
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
 WIP: run server test -- fix test
+
+CHECK: see screen where 4 bots voted for pkn7 on archub -- usually on 2 vote for the same
 
 10.16.18
 
