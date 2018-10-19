@@ -39,12 +39,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+10.19.18
+
+ISSUE: loop bug now fixed - somehow creating extra pk bots ??
+
 10.18.18
 
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
 WIP: run server test -- fix test
-
-ISSUE: loop bug now fixed - somehow creating extra pk bots ??
 
 10.17.18
 
