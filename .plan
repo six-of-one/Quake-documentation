@@ -40,6 +40,12 @@ PaiNKeep 3.0 WIP:
 ---  START of .plan daily
 
 
+10.29.18
+
+WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
+WIP: run server test -- multiple fixes test
+- may need some more in depth testing, bots seem ok on long run server  -- fraglimit is not set
+
 10.28.18
 
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
