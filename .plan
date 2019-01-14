@@ -39,12 +39,29 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.13.019
+
+mod startup research
+- mapping
+- code updates
+- lead task
+
+TDO: fix init maphack_trigger discovered yesterday - somehow
+
 1.12.019
 
 mod startup research
 - mapping
 - code updates
 - lead task
+
+ISSUE: some ld cfg info_player_start convert to hack launch trigger not appearing in proper place - ld_k7a.cfg
+-- in this case k7a_9.map is the base load chunk and k7a_6.map has an info_player_start
+- still no trigger ?
+-- moved from biome cfg to load cfg after biome call & it worked -for whatever reasons
+- so biome_clr.cfg zaps __copy0_info_player_start with 0
+ISSUE: init maphack_trigger sizes: 2 2 2
+ISSUE: getting biome load on correct Z val - pk12b has it wrong
 
 1.11.019
 
