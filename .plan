@@ -39,11 +39,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.15.019
+
+mod startup research
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+ISSUE: init maphack_trigger sizes: 2 2 2
+
 1.14.019
 
 mod startup research
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+NIX: getting biome load on correct Z val - pk12b has it wrong -- this was the adjusted location to true player start
+- real issue is trigger being 2 2 2
+ISSUE: init maphack_trigger sizes: 2 2 2
+-- some of these work right
 
 1.13.019
 
