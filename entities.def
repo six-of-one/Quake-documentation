@@ -287,7 +287,7 @@ Chaos Mod MK II
 spawnflags:
 
 NOTOUCH          1       - trigger is fired by targetname
-NOAUTO	        2       - trigger persists outside autotrigger parameters
+NOAUTO	        2       - trigger persists outside autotrigger parameters -- needed for std player trigger -> fn_hack
 PERM	   	     4       - trigger never goes away (in theory) -- issue: really goes away
 
 Variable sized trigger. Normally built by map hack code.
