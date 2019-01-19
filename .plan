@@ -39,6 +39,15 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.18.019
+
+mod startup research
+ISSUE: init maphack_trigger sizes: 2 2 2
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+- hack is being removed after load
+
 1.17.019
 
 mod startup research
@@ -46,6 +55,8 @@ ISSUE: init maphack_trigger sizes: 2 2 2
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+- maphack not on board - making fail loads -- forgot to make qh2_0000 load for qh2_0001 notrig mode
+\_ fixed that
 
 1.16.019
 
