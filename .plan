@@ -39,6 +39,14 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.20.019
+
+mod startup research
+ISSUE: init maphack_trigger sizes: 2 2 2
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+
 1.19.019
 
 mod startup research
@@ -46,6 +54,11 @@ ISSUE: init maphack_trigger sizes: 2 2 2
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+DONE: prob dont want target maphack_trigger doing this -- maphack_touch remove 6 build triggers
+HRM: *slime0 is in quake101.wad - does not work with hm...*slime2 not in wad (acc to wally), but works ??
+\_ strings quake101.wad|g slime003
+		*slime0
+		*slime2
 
 1.18.019
 
