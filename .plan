@@ -39,11 +39,19 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.23.019
+
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+
 1.22.019
 
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+FIXED: teleport created the 6 auto-triggers & special map pieces are valid for builder
+\_ make a new target2 string for build strings & leave __biome_ cvar blank
 
 1.21.019
 
