@@ -39,11 +39,22 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+1.28.019
+
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+
 1.27.019
 
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+DONE: more comments added to maphack main ops code
+FIXED: killtarget trigger on qh2_0011 not getting tagged from hack load
+\_ targetname     k5710029		-- func_wall
+ _ killtarget     k57							-- trigger_once
+ \_ this is in x_ents - retarget()
 
 1.26.019
 
