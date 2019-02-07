@@ -39,11 +39,18 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.7.019
+
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+
 2.6.019
 
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+FIXED: non _p{n} hack code had a map select bug that exceeded supplied map list by 1
 
 2.5.019
 
