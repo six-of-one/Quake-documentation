@@ -39,23 +39,35 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.6.019
+
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+
 2.5.019
 
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+DONE: doom updates; gzdoom, brutal doom, eday -- prep for sigil
 
 2.4.019
 
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+TDO: update doom for sigil
 
 2.3.019
 
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+Previous not recorded:
+- CGR preservation project
+- +avgn
+- vpinball (005) version restore & ops
 
 2.2.019
 
@@ -74,6 +86,7 @@ WIP: build 1st qh2 corridors test run
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+DONE: restore vpinball 005 version - load old tables
 
 1.30.019
 
