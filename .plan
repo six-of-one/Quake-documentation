@@ -39,11 +39,20 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+2.10.019
+
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+
 2.9.019
 
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
+NOTE: radiant surface select display - "j" controls this
+FIXED: init maphack_trigger sizes: 2 2 2 -- a setmodel has to happen before setsize
+\_ seems to work, but this trigger still must have an org aligned with func_maphack ordinals
 
 2.8.019
 
