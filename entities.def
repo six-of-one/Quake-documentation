@@ -226,6 +226,7 @@ Chaos Mod MK II
 spawnflags:
 
 FADEIN         1			- fade chunks into existance - has a heavy cost on rendering engine (large models hurt "fps" bad)
+HTOUCH			2			- used with touch maphack_trigger ent - setup so player must touch
 DESTROY        4			- destroy hack chunk after ent load - this is for pre-loading map bsp models
 HOLD           8			- place holder - will not load a model or set solid (for multi chunk hacks to occupy large areas)
 NOTRIG 	      16			- this maphack will NOT make load triggers - for limited builds
@@ -254,6 +255,8 @@ map segment:
 "target2"		"{n}"		- biome load string - default __biome_, used to load cvar biome data
 "origin"			"# # #"	- MUST match func_maphack coords sets for probe
 
+"targetname"		"{n}"	- targeted by touch trigger
+
 feature:
 
 a connected series sequence of map-hacks that are copied onto map by:
@@ -278,6 +281,10 @@ MH/k{dff}_{filename}.ent	- will load all ents it contains unless ent.lefty*, dff
 
 *"lefty"						- percent chance an ent will be removed per chunk load - not for multipart ents: linked doors
 
+ents will load on chunk as related to, '0 0 0' and then relocate to hack origin
+rotates will be performed around, '0 0 0' prior to relocate
+- this means for rotate to spin correctly, '0 0 0' must be the center
+
 */
 
 /*QUAKED maphack_trigger (0.5 0.0 0.5) ? NOTOUCH NOAUTO PERM
@@ -295,9 +302,10 @@ Exception is the initial map chunk trigger, and special triggers such as boss ba
 
 parameters:
 
-"lefty"			"#"		- trigger size set - total size value, MUST be set, + and evenly divisible by 2
+"lefty"			"#"		- trigger size set - total size value, MUST be set,  [+ and evenly divisible by 2 ]
 "origin"			"# # #"	- MUST match func_maphack coords sets for probe
 "target2"		"{n}"		- biome load string - default __biome_, used to access cvar biome data
+"target"		"{n}"		- fire off a func_maphack via player touch trigger
 
 */
 
@@ -1501,6 +1509,7 @@ Written by Matt Houser
 	"stdev" "#" 	- Variation around the mean time (default is 0)
 	"dmg" "#"		- acid drop damage -- [ 1 - 4 ] suggested  (default 0)
 	"noise3"	"{snd}"	- hiss sound when acid drop hits
+	"cnt" "#"	- avoid touch for # secs - hack owned drips will touch air
 */
 
 
