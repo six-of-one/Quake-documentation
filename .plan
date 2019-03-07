@@ -39,6 +39,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.7.019
+
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+- build 1st matched base "unit"
+- new rooms -- 
+- build xx05 base style list -- 1st cut done, testing
+\_ need some tex tweaks
+
 3.6.019
 
 WIP: map chunks, map chunks, and... map chunks
@@ -46,7 +56,11 @@ WIP: map chunks, map chunks, and... map chunks
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- 
-- build xx05 base style list
+- build xx05 base style list -- 1st cut done, testing
+- enumerate ideas:
+o- "buy stuff guy" - thinking of an ogre in a modified overall
+o- some kind of break / healing / ammo load area as in tf2 ?
+o- boss rooms for tech bases - bosses like q2-ish cyborg, terminator t1000 type, landru, etc
 
 3.5.019
 
