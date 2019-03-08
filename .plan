@@ -39,15 +39,25 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.8.019
+
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+- build 1st matched base "unit"
+- new rooms -- 
+- build xx05 base style list -- 1st cut done, testing
+
 3.7.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- 
 - build xx05 base style list -- 1st cut done, testing
 \_ need some tex tweaks
+FIXED: tex - 0011, 0008, 5105, 0015, 0012 -- tech08_2 align
 
 3.6.019
 
