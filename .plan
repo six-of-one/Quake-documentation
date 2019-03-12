@@ -39,6 +39,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+3.11.019
+
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+- build 1st matched base "unit"
+- new rooms -- expand short rooms, turns, jogs, up / downs - new pillar room
+- optimize existing hacks for optimal reuse to give appearance of larger variety of rooms
+- building xx05 base style list -- 1st cut done, testing
+
 3.10.019
 
 WIP: map chunks, map chunks, and... map chunks
@@ -49,6 +59,7 @@ WIP: build 1st qh2 corridors test run
 - optimize existing hacks for optimal reuse to give appearance of larger variety of rooms
 \_ main method will be func_wall with ".lefty" func_maphack remove chance
 - building xx05 base style list -- 1st cut done, testing
+FIXED: tex - 0003, 0009 -- tech08_2 align
 
 3.9.019
 
