@@ -39,6 +39,16 @@ PaiNKeep 3.0 WIP:
 
 ---  START of .plan daily
 
+4.4.019
+
+WIP: map chunks, map chunks, and... map chunks
+-- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+WIP: build 1st qh2 corridors test run
+- build 1st matched base "unit"
+- new rooms - 5505 wip - q maze unit
+\_ external walls complete, now designing maze, idea is func_wall with MH .lefty will make random paths
+ \_ note that 1 path MUST always be navigatable
+
 4.3.019
 
 WIP: map chunks, map chunks, and... map chunks
