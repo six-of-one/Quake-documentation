@@ -17,7 +17,7 @@ Empty.  Disused.  Broken down.  Looks like its a hundred years old.
 Outside its quiet.  Too quiet.  No cars.  No people.  No radio chatter.  No planes.  Nothing.
 Left the base through the broken gates and walked 5 miles down the cracked pavement.
 
-Place looks like there hasnt been a single human (besides yours truely) here in years.
+Place looks like there hasnt been a single human (besides yours truly) here in years.
 
 Found some old rations.  Damn MRE's.  Who knows how long they've been here, but I can still eat 'em.
 Still taste terrible too.
@@ -1509,6 +1509,514 @@ mini-rockets and similar grenade ammo are not affected.
 As no reliable test exists for teleported bullet ammo;
 effective immediately, the following gas powered fletchet
 weapons are authorized for smg and mg replacements:
+
+።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።።
+
+
+
+What if...the original Quake got a high tech boost before:
+it was the lovecraftian horror adventure it was meant to be?
+
+Intro:
+
+( notes in a pda journal ? )
+
+I'm in a lab.  Not even sure why, orders to report here.
+No scuttlebutt either.  Another marine with me, some corporal.
+
+New guy.  You can always tell.  
+Assigned to security unit 6 for a week, hasnt said a word yet.
+
+Been here 2 years.  Most newbies are uptight about the extra high
+security.  Triple checks on and off base.  Sleep shift bunk checks.
+Hall checks.  Supply checks every other day.
+
+It's hard to believe this is just for research into new tech.
+Civie corps do this with dozens of armed guys in suits and a bunch of 
+high tech gear.
+
+Bored.  Lab techs came in, ignored us like usual.  Must be the camo.
+Heh.  Grunt humor.
+
+Oh crap.  General Tanner, the Marine Commandant on base.
+
+General Tanner: "Marine Unit 6, Techs front and center!  At ease boys."
+
+Corporal NB moved so fast to attention I though he might keep going.
+
+General Tanner: "Marines you have been selected for a special mission."
+"Your task is to enter a high risk area to erase a computer database!"
+"MacDonald here will provide the details."
+
+Aw crap.  Computer stuff.  High risk means we cant take techs.
+
+Dr. MacDonald: "Doctor MacDonald if you please General."
+
+Gen. Tanner just grunts.  This is the only time I like doctors.
+
+Dr. MacDonald: "Now gentlement, this information sits at the highest classification level."
+"You will be temporarily granted zulu clearance."
+
+Well crap in crap storm surrounded by crap sundaes on bring your crap to work day.
+Grunts dont get clearance zulu.  Ever.  And people that do who arent doctors or generals...
+Well I heard they undergo a painful memory erase thing.
+
+Dr. MacDonald: "Now dont worry, we wont be erasing your memories."
+
+Damn mind reading scientists.
+
+Dr. MacDonald: "And no, I cant read minds, I heard the same rumors you did."
+"We have secretly operated one working slip gate for months now."
+
+What the...  That junk pile we guard?  No way they got one that works.
+They havent even put it together with the same parts twice.
+
+Dr. MacDonald: "This is a special unit off the main project books."
+
+Great.  Scientist lingo for black ops research.
+
+Dr. MacDonald: "We need you to enter a potential fire fight base incursion to
+erase the database of another slip gate."
+
+Me: "What base sir?"
+
+Dr. MacDonald: "Another version of this base sargeant."
+
+I will not open my mouth.  I... will... not...  Something entirely stupid is waiting.
+I'm sure of it.  And Gen. Tanner is giving me the stink eye already.  Shhh...
+Hold it in.
+
+Corporal NB: "Sir?"
+
+Whew.  Gotta buy this guy a reconstituted brew.
+
+Dr. MacDonald: "Slip gate research has led us to discover multiple dimensions."
+"In one of those dimensions we are attacked.  The enemy steals the database of the"
+"main slip gate and compromises every base enabled gate.  We intend to stop them."
+
+Gen. Tanner: "Any questions unit 6!"
+
+Me: "Gear sir?"
+
+Gen. Tanner: "Standard field kit, shotguns, medium armor and take a fletchet sargeant."
+"Op is at 0600 tomorrow, dismissed."
+
+Us Grunts: <salute> "Yes sir!"
+
+Woof.  Great.  A sneak and sab on our *own* base.  But not our base.  During an unknown
+incursion with possible fire fight.  And a freaking nail gun.  Dont know why we cant
+have SAWs or M134s.  At least we got decent rockets.
+
+Wait... Did we just meet in the lab to make the tech guys comfortable??
+
+Me: "Hey corp NB, you wanna hit the canteen?"
+
+Corp NB: "No sir, I'm turning in."
+
+Me: "You dont have to 'sir' me son, have no dreams."
+
+I head off to the watering hole.  Well the hut where the food and cooks are.
+Base is in the moutains and when it was repurposed expansion didnt go so well.
+
+Used to be pleasent dreams.  Until some of the guys started having these nightmares.
+Well the medics called them nightmares.  Yeah.  Then a guy in my bunk room woke up
+screaming one night.  Lots of shouting, freaking out.  Something about horrible monsters
+shooting lightning, acid, strange light beams.  Monsters that teleported.  Some that
+looked like dead men.  Zombies?  That fad ended a while back.  And ones made of lava.
+Med. came up with a pill that stopped it.  Have a pill for everything except boredom.
+Well, they do but you arent allowed to have them.  Something about duty performance.
+
+Now its 'have no dreams.'  Whatever works.
+
+One can down and its bunk time.
+
+----------------------
+
+day 1
+
+0600 hours
+
+Full gear, waiting in the lab.  Again.  Getting worried for Corp NB, but he showed
+a minute before the General.  The appearnce of on time is on time.
+
+Damn nail gun.  Two 50 ct nail packs feel like they weigh 50 lbs.
+
+Dr. Mac arrives minutes later.
+
+Dr. MacDonald: "Gentlemen please follow me."
+
+Gen. Tanner: "Good luck boys, kick ass!"
+
+Us: "Thanks sir!"
+
+We head for a side door.  Out side.  Strange.  This door is not on security protocols...
+Dr. Mac leads on a path that becomes well secluded withing 30 feet of base.
+And zero triple checks.  What gives?
+
+This violates every outdoor secop there is!
+
+We find out.
+
+The path leads to a gap in the mountain wall.  It looks natural on approach.
+Once you tuck past the edge you can see cut marks.  Within 5 feet is a solid steel door.
+A hiss comes forth as it releases from its lock.
+
+I think its steel, it opens out like a bank vault on a swing arm.  And its 3 feet thick.
+With a stepped entry just like a vault.  No way to bash that in.
+
+The corridor within is tight and light only in red.  No guards here either.  But eyes are watching.
+There must be a camera every 2 feet.  And other things I'm not sure about.  Laser nozzels?
+maybe gas?
+
+As we proceed the door seals behind us.  Pressure bumps my ears when it does.
+the other end is an elevator.  Dr. Mac puts a key card in a slot and it opens.
+He gestures for us to wait outside while he operates something.
+
+After he motions us in I look.  His key card is in another slot below a closed panel.
+Below the card is a button lit green.  Panel must contain the security gizmos.
+When he pushes the button a sudden jerk gets us moving down fast.
+If it wasnt for the nails I might be floating.
+
+The stop is just as abrupt.  The doors open and Dr Mac removes the key card.
+Lights on the elevator go out.  One way trip without the Doc then.
+
+We head down a seemingly random serious of tunnel corridors.  Some are finished in base
+gray walls and other are carved from solid rock.  No idea what kind, its rock.  Has stuff in it.
+
+We come to a sealed CBR lab door.  The kind that let nothing escape.
+Dr. Mac does another security procedure and the door hisses open.
+
+We step into a dimly lit lab.  I think corp NB is getting nervous.  He's been twitching his
+shotgun on the strap since the elevator ride started.
+
+Follow Doc past some monitors.  Holy Crap!
+What in Washingtons name is this...
+
+Its kinda lumpy.  Maybe metal.  Mostly purple?  Or just lots of purple light.  Might
+have some kind of crystal windows that are purple.  Its shaped like a twisted pickle.
+Or a giant purple turd.  Oh shit.  Dont say that.  Gonna be hard, its in my head now.
+
+Doc is talking to the tech.  Jargon, techie lingo, I dont know.  Maybe some numbers.
+Its hard to tell, they have numbers that contain things besides 1 to 9.
+Then Doc leads us around the other side.
+
+Dr. MacDonald: "This is the teleport pad."
+
+Doc points at a small purplish disk.  Odd cables connect it to the turd.
+Odd because they are not a consistent size.  Look like...shit.  Really thin strung out turds.
+
+Dr. MacDonald: "When the signal is given, one at a time step on to the pad.  Second man wait 5"
+"seconds.  First man when you step through DO NOT STOP!  You have 5 seconds to clear pad result"
+"space.  If you dont the second arrival will annihilate you.  Keep moving.  Are you clear?"
+
+Me: "Clear Doc.  I'll go first, keep moving."
+
+Dr. MacDonald: "Good sargeant.  8 feet should be enough.  Now base layout should be the same."
+"things might be at any level of unmeterd chaos."
+
+We both look at him.
+
+Dr. MacDonald: "You call it a shit storm."
+
+Why didnt you say so Doc...
+
+Dr. MacDonald: "As quick as you can make it to the main slip gate.  We will try to open the destination"
+"in a nearby room.  When you arrive distract any guards.  Tell them monsters are right behind you."
+"and hope they run off.  When clear, plug this into the main USB connector of the gate."
+
+Doc hands each of us one of those dongle thingies.
+
+Dr. MacDonald: "You know what a USB port is?"
+
+Us: "Yes sir."
+
+Doc shows us a layout of the gate front on a monitor.  He indicates the main port.
+No, thats not hard to find on a panel filled with crap.  During a possible fire fight.
+
+Dr. MacDonald: "First one that can, stick in the USB stick.  You need 15 or 20 seconds."
+"Once the program completes gate lights will cycle down.  When they cycle back up the gate"
+"will open a portal here.  The process maybe takes 10 - 60 seconds.  Depends on the firmware"
+"and hardware in their gate.  When its formed, return with the same protocol.  One at a time"
+"with a 5 second delay.  Any questions?"
+
+Me: "We need 30 to 90 seconds with that gate.  What if the local boys oppose us?"
+
+Dr. MacDonald: "Um..."
+
+Scientists.  Know how the sun works.  Cant answer a tactical question.  Wonder if He'll phone the General?
+
+Dr. MacDonald: "Use your discretion and creativity."
+
+Oh nuts.  I hate the creativity answer.  Thats pure bullshit.
+We are marines, creativity means shooting everyone.
+
+We wait while Doc fires up this gate.  This thing is crazy.
+Light level jumps considerably.  Techs all have welding goggles on.  What the hell.
+
+Man, this thing throws off sparks and weird light rays.  I mean the shit fires off in a spiral
+and zips into a tight little circle then blinks out.  What are we seeing.
+Suddenly theres noise.  A very loud hum.  And the rooms starts shaking.
+
+No wonder they bored down into the mountain.  This would shake the base apart.
+They can barely get their junk gate to glow dimly, how much juice does this take?
+A mist has formed over the floor pad, reaching up to the ceiling pad.
+
+Doc yells as loud as he can:
+Dr. MacDonald: "GO GO GO, REMEMBER 5 SECONDS!"
+
+I grip the nailer and step into mist.
+
+Darkness.  A fist hits me in the groin.  Or maybe a wall.
+I take 8 stumbling steps to be sure.  Then I kneel down.
+
+Suddenly in seconds a flash and sproink sound right behind me.
+I barely turn.  As the light dies I see Corp NB crumple.
+
+I turn on my service light.  Corp. doesnt look good.  Sallow skin.
+Almost no pulse.  Crap.  He has to come back with me, no choice.
+
+I slap him a couple times.  Nothing.  No time for this.
+I lift him best I can and heft the nailer.  Good thing its the small one.
+
+I look around.  Where the hell?  A tunnel with a rough floor.  One I dont know.
+I pick a direction and start moving slowly.
+
+Theres an exit.  I hear a distant alarm.  Guess the battle is on.
+Move out.  A low bridge over my head?
+Crap and double crap.  This leades to the retention pond.
+
+Shine my light under the bridge.  Culvert is sealed.  Maybe they got tired of
+the rats.  And theres no way up...
+
+Wait.  There was a ledge by that cheater elevator maintenance put in.
+They got tired of having to go all the way up stairs to fix the light in
+the entry armor an ammo storage.
+
+They had a sealed maintenance door.  We cant even get a billet latrine and
+those guys could get an ice cream dispenser in hell.
+
+I head back.  Its not far.  100 feet.  Dragging NB isnt easy.  He looks light
+but all grunts got muscle.  And 60 pounds of gear.  Someone would be pissed
+if I left any too.
+
+I lay him down on the ledge steps.  The door is in parts.  Guess they were
+just installing it.  I finally manage to grab hydro part and push enought for
+the door to move.  It slides open with a groan.  At least it can return
+on its own.
+
+I look into the storage by the gate room.  10 crates of nails.  Just what I need.
+no people.  Regular lights.  No alarm here.  Hrm.
+
+I grab NB and drag him through the door.
+Odd.  Door noise attracted no one.  Did I just hear a dog?
+
+Maybe they brought some in to guard the base.  All kinds of animals wonder in
+from the mountain side.  Even with a 10 foot security fence and razor wire topping.
+
+I run in the gate room.  Empty too.  Gate is up and humming, thats good.
+Dont know what the plan would be if it was in the same state as the one back home.
+
+I plug in the gizmo.  Then I take the op time to drag NB to the gate.
+Ah crap.  I have to push him through.  Well.
+
+If I shove hard enough and the other side is clear He should cruise about 6 feet.
+5 seconds.  Gate cycles down.  I count heart beats.  I'm at 50 when the gate is
+humming again.  I watch the pads light up and mists form.  5 more seconds.
+
+I shove the corporal through hard as I can.  I wait 10 seconds to be sure.
+I hear something behind me.
+
+I turn as I back into the gate.  I hear a loud groan "RUUUUHNNN"
+
+I saw...  A monster.  Hairy and bulky.  Larger than man sized, maybe 7 feet or 8.
+a foot wider than human, with...a chainsaw and a tube type weapon.
+
+What the literal h...
+
+The hit to the groin is not as hard.  I was expecting it.  And it isnt
+a physical hit that leaves a bruise.  I checked later.
+
+My base flashes in front of my eyes suddenly.  The WIP gate room.
+Medics have corp NB on a stretcher in the store room.
+
+Doc Mac and Gen. Tanner are there.  I start to walk towards them.
+I gotta give a report on that thing with the chainsaw.
+
+As I approach the junction something hits.
+Lets just call it pure unmetered chaos.
+
+Noise.  wind?  Flashes of light.  And darkness.
+Temperatures changes.  Angry bees.  Large angry bees.
+The unmetered keeps going.
+
+Suddenly base walls start changing.  Rapidly.  Different colors.
+Shapes.  Lighting.  Doors.
+
+The medics, corp NB, Doc and Gen. disappeared in the first flashes.
+
+Oh man.  Its all gone crazy.  Or I have.  That gate shit fucked me.
+Damn purple turds.  Never again, orders or no!
+
+Its over.  I'm in a white over green two tone corridor.
+The lights and doors look odd.  Its not our hydro stuff.  It looks like...
+Antique offices doors?  With nobs and glass panes?
+
+I saw some at a museum once.  If I ever find anyone I know they wont
+believe this.  I turn.  Corridor ends in 20 feet in a double door.
+The other way is a turn left.
+
+Where in hell am I?
+
+Theres a red box on the wall.  4 inches square.  Its labeled "FIRE".
+What, fire control?  In an empty corridor.
+
+I take a step.  Suddenly I hear a radio trans!
+
+<UNKNOWN>: "Unit 6, Unit 6 this is Alpha Command 1.
+
+What the?  My radio is on?
+
+I click the talky button on the throat mic.
+
+Me: "Unit 6, come in AC 1?"
+
+AC1: "Good we got you unit 6."
+
+Suddenly an alarm goes off.  Its a loud slow whoop that penetrates down the 
+corridor easily.  No flashing lights though.  Must be wired seperate.
+
+Me: "AC 1 where in hell am I?"
+
+AC1: "U6, Believe it or not you are home.  But things were changed."
+
+Me: "AC1, changed how?!"
+
+AC1: "No time U6, you must evade detection you should not be there."
+
+Me: "AC1, thats good, how?"
+
+AC1: "U6, move 8 feet left."
+
+Me: "AC1, that is a solid wall!"
+
+AC1: "U6, no time for back talk, guards will be there in seconds, move marine!"
+
+This new Alpha Command knew the lingo.  I lunged at the wall.
+First I felt sick.  A strange panic came over me.
+
+As I headed for a sure face bruising my body felt like...air?
+or the stuff in a floaty balloon.  It was like I was floating.
+
+I drifted into the wall.  About 4 feet on I stopped.
+Turning was hard.  There was nothing to push against!
+
+What in actuall hell?  I managed to make enough motion to turn.
+I watched some patrol guys rush down the hall.
+
+They were marines.  I know that much.  Not ones I knew.
+No camo, solid green.  With red caps.  The usual patches but none I knew.
+
+Real heavy weapons similar to m249s, with grenade launchers.
+They mean business.
+
+They stopped in front of my wall and one hit a mic switch.  Yet I saw no
+radio.  The audio was distorted and dim as if I was under water.
+Well I was stuck in a solid wall.
+
+Marine 1: "Patrol Six to base 1 this is Sargeant, no sign of intruder."
+"Verify the alarm code again."
+
+I heard no response.  Then I noticed he was holding something to his ear.
+A wire coiled up to a small bud.  That had to beat the shit they injected
+in our skulls.
+
+M1: "Thats correct base 1.  No signs here.  Continuing to next patrol junction."
+
+I watched helpless as the odd marines moved off.  They went throught the
+double doors.  After that my radio squaked alive.
+
+AC1: "U6, that was close.  Good thing we had an early lock on you."
+"that spectacular arrival helped."
+
+Me: "AC1, lets talk about this arrival, and me being stuck in a wall."
+"But first, GET ME OUTTA HERE!"
+
+AC1: "U6, be still a moment.  This is a good time to update your mission
+parameters while they cant find you."
+
+I sigh.  Nothing changes.
+
+Me: "Proceed AC1."
+
+AC1: "Good U6.  Bit of a story.  You just participated in a forbidden temporal"
+"manipulation."
+
+Me: "AC1 I'm just a marine, english please, not techie talky."
+
+AC1: "U6...  An alien slip gate unit was used to change a few worlds..."
+"uh."
+
+I hear a wishper "Get a tech guy...No, no, Peterson, Peterson."
+
+AC1: "Hold on U6 we're finding a translator."
+
+Yep.  Gotta get a geek to translate geek speak.
+They must be reading from a briefing.
+
+A new voice comes back.
+
+AC1: "Unit 6, this is Doctor Peterson"
+
+Me: "Hello doctor, so what is temporal manipulation and why is it forbidden."
+
+AC1: "Well 6, temporal is time, and manipulation is change.  It is forbidden"
+"because it can destroy entire universes."
+
+Me: "Well Doc, thats good.  That should be forbidden, but how did I do this?"
+
+AC1: "Tell me about the slip gate."
+
+Me: "You dont mean ours, you mean the purple turd.  About 12 feet long, glowing purple"
+"weird flashes, loud as shit and felt bad."
+
+AC1: "Ah.  I believe thats from the Oriatos.  A species we know very little"
+"about.  They seem to use some kind of organic tech."
+
+Organic.  No purple "shit"... Sherlock.  Eh.  I try.  I know its not very good.
+
+AC1: "When that gate connected you crossed a time barrier of sorts.  A kind of wall."
+"Your actions on alternate base made sweeping changes to a group spread across"
+"many worlds and times.  This in effect caused vast sweeping changes on all"
+"connected worlds."
+
+Me: "I dont understand why the big shitstorm is always mine."
+
+AC1: "Some of us are chosen 6.  Some of us are forged in fire."
+
+Frying pan to fire.  Yeah that sounds like me...
+
+AC1: "When you emptied that database an effect with a very complex techno"
+"bable name happened"
+
+For a super geek I like the way this guy talks.  Its like he knows I dont get it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
