@@ -1857,7 +1857,7 @@ Shapes.  Lighting.  Doors.
 
 The medics, corp NB, Doc and Gen. disappeared in the first flashes.
 
-Oh man.  Its all gone crazy.  Or I have.  That gate shit fucked me.
+Oh man.  Its all gone crazy.  Or I have.  That purple gate shit fucked me.
 Damn purple turds.  Never again, orders or no!
 
 Its over.  I'm in a white over green two tone corridor.
@@ -1871,14 +1871,14 @@ The other way is a turn to the left.
 Where in hell am I?
 
 Theres a red box on the wall.  4 inches square.  Its labeled "FIRE".
-What, fire control?  In an empty corridor.
+What, fire control?  In an empty corridor.  Hidden autocanons maybe.
 
 I take a step.  Suddenly I hear a radio trans!
 
 <UNKNOWN>: "Unit 6, Unit 6 this is Alpha Command 1.
 
-What the?  My radio is on?
-
+The familiar sound and op is comforting.  
+Nice to know the tech survives the dimension bouncy bounce.
 I click the talky button on the throat mic.
 
 Me: "Unit 6, come in AC 1?"
@@ -1886,7 +1886,7 @@ Me: "Unit 6, come in AC 1?"
 AC1: "Good we got you unit 6."
 
 Suddenly an alarm goes off.  Its a loud slow whoop that penetrates down the 
-corridor easily.  No flashing lights though.  Must be wired seperate.
+corridor easily.  No flashing lights though.  Must be wired seperate here.
 
 Me: "AC 1 where in hell am I?"
 
@@ -1911,13 +1911,22 @@ As I headed for a sure face bruising my body felt like...air?
 or the stuff in a floaty balloon.  It was like I was floating.
 
 I drifted into the wall.  About 4 feet on I stopped.
-Turning was hard.  There was nothing to push against!
+Turning was hard.  There was nothing I could touch to push against!
 
-What in actuall hell?  I managed to make enough motion to turn.
+What in actuall hell?  I managed to make enough motion with my gear to turn.
+The other side of the wall... How do I report this?  There is no *wall* other side
+visible!  I am not in another room.  I'm looking through nothing into the corridor.
+
+The wall I just floated through is not visible.  I can see the far wall just fine,
+and the floor and ceiling.  This is new.  Grunts, well...lets say we dont like new.
+
+I look around.  No.  Nope.  All darkish gray mush.  Nothing else but the corridor.  Focus on
+the corridor.  Gotta stay focused.  Looking at the gray mush brings an uneasy feeling.
+
 I watched some patrol guys rush down the hall.
 
-They were marines.  I know that much.  Not ones I knew.
-No camo, solid green.  With red caps.  The usual patches but none I knew.
+They are marines.  I know that much.  Not ones I know.
+No camo, but solid green.  With red caps.  The usual patches but none I know.
 
 Real heavy weapons similar to m249s, with grenade launchers.
 They mean business.
@@ -1930,12 +1939,12 @@ Marine 1: "Patrol Six to base 1 this is Sargeant, no sign of intruder."
 "Verify the alarm code again."
 
 I heard no response.  Then I noticed he was holding something to his ear.
-A wire coiled up to a small bud.  That had to beat the shit they injected
-in our skulls.
+A wire coiled up to a small bud.  That had to beat the direct link shit they injected
+in our skulls.  Except that could be lost or damaged.
 
 M1: "Thats correct base 1.  No signs here.  Continuing to next patrol junction."
 
-I watched helpless as the odd marines moved off.  They went throught the
+I watched floating in nothing as the odd marines moved off.  They went through the
 double doors.  After that my radio squaked alive.
 
 AC1: "U6, that was close.  Good thing we had an early lock on you."
@@ -1959,7 +1968,11 @@ Me: "AC1 I'm just a marine, english please, not techie talky."
 AC1: "U6...  An alien slip gate unit was used to change a few worlds..."
 "uh."
 
-I hear a wishper "Get a tech guy...No, no, Peterson, Peterson."
+I hear a whishper "Get a tech guy...No, no, Peterson, Doctor Peterson.  Yes, we need him."
+"These instructions will be complicated for a marine seargant."
+
+Just great I tell myself.  Complicated tech.  And instructions.  Not orders, but instructions.
+There is a big difference.
 
 AC1: "Hold on U6 we're finding a translator."
 
@@ -1970,16 +1983,18 @@ A new voice comes back.
 
 AC1: "Unit 6, this is Doctor Peterson"
 
-Me: "Hello doctor, so what is temporal manipulation and why is it forbidden."
+Me: "Hello doctor, so what is temporal manipulation and why is it forbidden?"
 
-AC1: "Well 6, temporal is time, and manipulation is change.  It is forbidden"
+AC1: "Well 6, temporal is time, and manipulation is change.  Time change, it is forbidden"
 "because it can destroy entire universes."
 
-Me: "Well Doc, thats good.  That should be forbidden, but how did I do this?"
+Something tells me Doc is not talking about going to daylight savings time.
+
+Me: "Well Doc, thats good to know.  That should be forbidden, but why am I part of this?"
 
 AC1: "Tell me about the slip gate."
 
-Me: "You dont mean ours, you mean the purple turd.  About 12 feet long, glowing purple"
+Me: "You cant mean ours it never worked.  You must mean the purple turd.  About 12 feet long, glowing purple"
 "weird flashes, loud as shit and felt bad."
 
 AC1: "Ah.  I believe thats from the Oriatos.  A species we know very little"
@@ -1987,25 +2002,171 @@ AC1: "Ah.  I believe thats from the Oriatos.  A species we know very little"
 
 Organic.  No purple "shit"... Sherlock.  Eh.  I try.  I know my puns are not very good.
 
-AC1: "When that gate connected you crossed a time barrier of sorts.  A kind of wall."
-"Your actions on alternate base made sweeping changes to a group spread across"
+AC1: "When purple gate connected you crossed a time barrier of sorts.  A kind of wall."
+"Your actions on alternate base made sweeping changes to a connected group of dimensions spread across"
 "many worlds and times.  This in effect caused vast sweeping changes on all"
-"connected worlds."
+"connected worlds.  It is likely that Oriatos tech is not designed for this and the"
+"gate was sabatoged or trapped somehow."
 
-Me: "I dont understand why the big shitstorm is always mine."
+Hrm.  Lets see how the Doc answers a rhetorical question I ask myself all the time.
+
+Me: "I dont understand why the big shitstorm is always mine?"
 
 AC1: "Some of us are chosen 6.  Some of us are forged in fire."
 
 Frying pan to fire.  Yeah that sounds like me...
 
 AC1: "When you emptied that database an effect with a very complex techno"
-"bable name happened"
+"bable name happened.  Transmitted by the initial link opened by the purple gate."
 
 For a super geek I like the way this guy talks.  Its like that he knows I dont get it.
 
+Wait a sec.  Something isnt right.
 
+Me: "So Doc, if my base is now old wooden doors and brass knob land...where is AC1 transmitting from!"
 
+AC1: "Well technically we *arent* your Alpha Command 1, unit 6.  As you heard the marines in the hall
+they are *patrol* 6 now.  We were monitoring dimensional fractures and incursions.  When your *shitstorm*
+happened we locked onto the only stable entity.  That was you.  Our actual location in space, time and
+dimension is from a space going science research vessel.  We were orbiting planet jupiter in a solar
+system much the same as yours.  Somewhen about 50 to 100 years ahead of your time.  Research and tech wise
+maybe 200 years ahead."
 
+AC1: "Dimensionally we had shifted out of...lets call it phase.  To you it might appear as a gray haze all around you.
+Except for the corridor you just departed.  You still have a rough connection to that."
+
+Yep.  Gray mush land.  So I'm *out of phase* then.  Just great.
+
+AC1: "Now we are trapped.  Our home base and technical landscape shifted radically.  
+Home tech is now a century or more behind us. At least.  If we leave out of phase 
+and re-enter normal dimensionality.  Well we cant be sure what would happen without more research.
+You are our only currently known agent of change that can help us."
+
+Me: "God help us all..."
+
+AC1: "Do you pray then?  I have a theory to prove the spiritual connection and God Himself to be real.
+Unfortunately those in govt. control wont approve the funding documents."
+
+Me: "Govt. hardly ever changes.  If I'm gonna be the hero you better have a good plan.  I can tell you
+marines have one solid skill.  Shoot things until they die.  If we're good at anything else it is
+probably hunkering down in the shitstorm and surviving."
+
+AC1: "Stand by unit 6, we are searching for the nearest slipgate tech to your location.
+While we have a dimensional lock on you, we cannot grab on as it were while we are phased out.
+You will have to make use of local tech to get to us."
+
+Me: "I'll just be floating here in gray mush land.  Maybe these guys will push something interesting
+down this corridor."
+
+Time goes by.  When not active the radio is eerily silent.  Guess with all our tech changed there isnt
+much to make radio interference.  The place I'm looking at looks like it still uses gasoline to power
+machines.
+
+While I'm waiting I wonder if the grunt on patrol 6 is a local in dimension verion of me...
+I dont get too far with this thought.
+
+I have no idea how much time passes.  No clocks visible.  Not willing to risk unpacking any ops gear to check.
+Nothing happening in the corridor.
+
+Later the radio link fires up.
+
+AC1: "Unit 6, respond..."
+
+Me: "Right here AC1"
+
+Like I could step out for some fresh air or something.  Holy crap.  What am I breathing?!
+No.  Just focus.
+
+AC1: "Possibly suitable tech has been located.  A research center in London, England.  It was
+shut down a decade back for failure to produce results or profit.  We arent sure where they
+got it, but some of the tech is slipgate capable.  It will be very primitive and most likely
+dangerous.  But its our only hope."
+
+As dangerous as that large chainsaw toting monster?
+
+Me: "How do I proceed from gray dimension then?"
+
+AC1: "You wont like it."
+
+I suspect the Doc is very correct about this.
+
+AC1: "Security systems there are technically primitive, but extermely effective.  We must attempt to
+get you off base without setting off another alarm.  These people are prepped for war and we want to use
+their systems, so escalating alerts is undesirable."
+
+Me: "Just give it to me straight Doc."
+
+AC1: "After we nudge you back into the corridor I want you to move away from the double doors.
+The alarm sensors are by the doors and around the other turn.  Run full speed towards the doors.
+Before the alarm is triggered we will phase you nearly all the way out.  The momentum should carry
+you far enough out of the base.  With some luck when you phase back in the ground will be near by."
+
+Nope.  Dont like this one bit.
+
+Me: "Well, we better do it then."
+
+The float back to the corridor is a vertigo inducing deal.  I dont know what the push comes from.
+It feels very weird.
+
+Once my feet hit solid floor I huff with relief.  Short lived relief.
+I get in position.  Carefully.  I stay about 5 feet from the turn.
+The corridor is just short of 60 feet.
+
+Me: "Ok Doc, here we go!"
+
+I run full out at the doors.  Five feet away the weird strikes me.
+Gray takes over.  I watch the doors slide past.  The corridor beyond turns into a T in 10 feet.
+I pass through that like a smoke wall.  And the rest is gray.
+
+I dont want to slow my momentum so I dont dare look back.
+
+Time goes by.  Or does it?
+
+Me: "AC1, Doc, progress report?"
+
+AC1: "Nearly there U6.  Looking for a soft landing.  A field by a wooded area.  Maybe a 5 foot drop."
+
+5 feet in full gear wont be that bad.  Nor that good.  I prep to roll on landing.
+Suddenly gravity is back.  I smack my left side hard and decide to stay there.
+
+I find myself laying in yellow grass about 2 feet high.  Clouds float through a pleasent blue sky.
+I'm tempted to camp here as long as I can.  With my supplies and survival training I could probably
+spend months here.
+
+After this reflection I stand up cautiously.
+
+I see a line of trees a 100 yards away.  They climb up a hillside.  The rest of the way is more field.
+Wild spots of some brush here and there.  If fades down a hill side.  In the distance I see what must
+be mountains.
+
+The sun is close to noon.  Perhaps afternoon.  I check the chonometer in my gear.  0800 hours.  
+Not local time then.
+
+Me: "I need bearings AC1, where do I head?"
+
+AC1: "The forest is roughly due west.  You will find a road a couple miles south.  East on the road
+takes you to a small town in Colorado.  Perhaps 8 miles.  Local travelers might aid you."
+
+I hope so.  10 miles with full gear is not fun.
+
+AC1: "Once there procede to a city called Colorado Springs.  It has a transportation facility
+with a military transport adjunct called Peterson AFB.  Heh, good name choice.
+We are working arranging a military flight to London.  That should involve the least amount
+of funding and stowage requirements.  As you might surmise, you cannot leave ANY of your gear there.
+There is one issue.  We have no way of providing you with local credentials."
+
+Me: "They still have marines here.  You leave that to me."
+
+AC1: "Are you certain U6?"
+
+Me: "Completely.  As long as no Generals or command rank officers wander in..."
+
+AC1: "We'll check for lowest base activity level.  That should be no issue."
+
+I walk across the wild fields for 40 minutes.  The road is some dark stuff.
+Not concrete.  Though some post things have concrete bases.
+
+Looks like little rocks mixed with something dark.
 
 
 
