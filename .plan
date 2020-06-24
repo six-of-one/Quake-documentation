@@ -1,62 +1,633 @@
 .plan
 -------------------------------------------------
-Number Six
--------------------------------------------------	
-quakec#cataboligne#org				(replace #'s with @ and then . )
+Mr. Cataboligne
+-------------------------------------------------
+chaos [at] cataboligne.org
 
-current project(s):
+current projects: archon mod - beta release
+______________ : quake-hack and maphack engine
 
-chaos mod Archon - mark III code base port to qc 2.0:
+on hold:  club doom (quake) mod
+halted: wdq generations mod - beta release
 
-- maphack (rewritten) - finish mod maps
-- frikbot - minor rev
-- viswep -- needs minor revision, position data tweaks left
-- xents --- nearly complete
-- morph --- convert done, fixing quirks
-* mark I elements to do:		(we hope anyway)
-- demi-Archons  in progress
-- hold items -- pick up items and carry them
-- run fire ---- frames I made to stop weapon fire "ice skating"
-- enviro ------ volcano, burning things, rain, floating, etc
+tech: quake hybrid project using advanced quake 1 engine
+test engine(s): custom darkplaces port -- only dp now,  x'ed - custom glquake, fteqw.gl
 
-quake hack:
 
+
+-------------------------------------------------
+test notes:
+-------------------------------------------------
+
+maphack issues
+
+
+glquake issues
+NPR quake is here too
+-- will not load maps on my system!
+-- may have a /dev/dsp issue as well
+
+winquake issues
+
+
+
+test: -- look at maps / etc
+e1m1red
+extras
+ve-test1 (under quake-c in res)
+
+
+-------------------------------------------------
+RELEASE notes:
+-------------------------------------------------
+
+release these as addon enhancement packs ?
+- should we1m1 be included ?
+- include d2m7 & other maps
+
+--------------------------------------
+
+TDO: frikbot morph attack tweaks (ref: scragg, shambler, lava, scourge) -- really most morph bot attacks are wonky in effectiveness
+\_ idea: some translation of the hitscan as a skill for bot morphs ?
+
+ISSUE: cloudkill & sphere have a serious problem together -- toned down a bit, but problem still persists
+--- recent test showed no observable issue
+
+TDO: needs check - no model showed up in demo - see oldone.qc
+
+--------------------
+*** Notes - in general:
+--------------------
+
+score board problems during live test
+
+ISSUE: weird vore touch stuff (slow to respond)		-- mkII
+** ISSUE: touch seems slow to react sometimes -- vore, any getting nodules
+- could this be some kind of bounding box deal ?
+
+issue with bigger dogs attacking ? -- dont always seem to bite
+
+ - - features or bugs: - - 
+ISSUE: set a gen on fire and it keeps burning - even during regen / null model states
+ISSUE: some monster respawns seem un-nailable -- check takedamage
+--- and this is still WAY borked
+
+HOLD:			-- held for mk III code release 1
+WIP: generations map set
+IDEA: crates could use .th_pain to throw off wood chunks
+IDEA: port NPR code to quakespasm or some engine, port bits qc++ uses too -- this just leaves maphack
+IDEA: any ent spawn (env, item, decor, weapon launch, etc) have a cvar_fields call option for override on classname
+IDEA: use cvar_fields on pre loaded viswep ent as loadout option - also allow existing slots to be deleted
+- the "loadout" idea - hash player name + wep classn or so & store as seta
+\_ player rename would require re-hash all stuff	-- prob want some unique permanent hash assign for each player			- how to do this?
+ \_ find a way to assign each player a unique code for that instance
+IDEA: fold func_train2 (hip) into func_train on sfs 32 - make map ent work with cfg -- this might get nixed
+TDO: rand spawn / mh generators need bsp sub ents for use (we hope, had compile issues on these)
+\_ needs dynamic targeting on spawn - mh has this for func_maphack ents --- how do we use ?
+ \_ the issue - new gens have no non-targeted mode
+
+NOTE: my rage free play weekend is coming up
+
+--------------------
+*** Notes - Mod release test items:
+--------------------
+
+CHECK: q3 mg test - see if bots do excessive damage		-- mk II
+
+--------------------
+*** Notes - New code:
+--------------------
+
+magic spell fires clb - need non bolt indicator var
+
+make other stuff spells - walls (flame, ice, stone, wood, etc - some destroyable)
+
+--------------------
+*** Notes - fixes:
+--------------------
+
+Marvin was just plain killed with _-=* [Six]'s random weapon of choice			-- these were both under mk II
+_-=* [Six] fell to his death -- killed by supervore SoA
+
+
+
+WIP: remove bit.mdl, check other unused mdl -- qtgib* -- have mdltest now
+WIP: remove test vw_* models --- at some later point
+--- ok its a year later - what even where these models? -- these are the code controlled models - axe, q2 rl
+CHECK: for any extra unused models - in all pak areas
+
+
+
+-----------
+CHECK: are these fixed by the xwep level xlate fix ?			-- mk II issues
+gremlin left a pulse nail vw holstered with changelevel test_c
+-- seen this with shotgun + human, tag_entity link is not present so holster wep gets lost - was reset when firing a pk item
+-- the dbl chg gun transtion below is doing the same thing - with an extra tagged viswep or two that do not animate properly
+
+-----------
+
+** 2nd player on listen server cant see ent 1 model (order) after changelevel ***
+-- this bug is alive and doing well - from test_c listen server - p1 morph to hk, took exit to pk12 - p2 can not see p1, not after respawn either
+-- can see after cl to original join level - even fails in ******** dedicated server ******** for p2 - an unmorphed human
+-- 3rd player can see both, a - cl - dm4, p1 still not visible
+-- after cl ac1 - all 3 visible
+-- could this be related to csqc HUD code fscking view when cam active?
+sv_protocolname is "DP7" ["DP7"] selects network protocol to host for (values include QUAKE, QUAKEDP, NEHAHRAMOVIE, DP1 and up)
+-- try this with 2 player model visible issue
+
+
+ISSUE: had vamp & blue gear - could not drop -- happened with power amp - green spike
+- note rules 1 do not allow dropping runes
+
+
+new HUD cube display does not recog. poly spell as not cube
+
+bugs might exist in monster frame code - ShamClaw
+
+
+archon mk III
+
+
+
+quake hack
+
+as it stands - biome cfg script MUST run first, load map as final command
 -- be able to reload qone & hack levels with map command - have to reload _all_ sub models
-- find a way to force all sub models reload
+A fresh map would also need to call PRVM_ED_CallSpawnFunctions () to let the objects initialize themselves.
+-- look into this code for our fail to reload a hack map
 
-qone:
+			/= could also be used with charmed monster helpers
+- coop & frikbot - svx_coopbot_teledist - when bots are further away for x secs, teleport them back to player
+- select a random spot a distance away, in open space, over solid floor (no lava or freefall)
+- alt: set a bot beacon at players location - when beacon is clear of all players / bots, teleport in bot
 
-release followup -
+qone
 
-play through / promo video - e1 at least
+release followup:
+
+play through (quake HD) / promo video - e1 at least
 -- look for oddities
--- wait until archon update is done for this
+-- live stream, twitch, patreon deal
 
 
-PaiNKeep 3.0 WIP: 
-- 3.0 released !!!
-- see followup items notes
+CHECK: fix bot race condition for frik - see d2m1 detail
+???: pattern match override & copy - check before main copy
 
----  START of .plan daily
+WIP: compiler #ifdef spawn_func -- new weps, hip, x monsters			- mostly done as of now
+TDO: countdown & remove timer  -- what was this for ?		-- could it be fade remove ?
+
+Archon implements:
+- autodetect expansion packs (turn off w/ cfg) -- this is file detect deal via .mdl, can be done on individual items w/ _qover
+
+- rune controls -- need tested
+
+IDEA: monster & morph cvar sets -- frame out, fn calls
+TDO: use swap drop code for deadthrow, etc
+TDO: cfg script __ pos1 & pos2 settings for all wsys6 ents+ --- is this really needed for release?
+also all target2 test match stuff
+ISSUE: when teleporting to a dest thats part of the base map, maphack_trigger does not follow ***
+\-- this has one easy fix: have no base map dest - otherwise need to have proper base origin for mh triggers, which comes from oh
+ \- all map parts with dest need to be maphack loaded then
+
+
+
+REMEMBER: archon stuff moved to ideas.txt
+
+
+light outsides of k7a / x4c hacks
+
+NOTE: generic maphack load map to load any regular map module as a func_maphack - re: reality bomb level wipe
+-- requires map hack to work with map / cl commands
+
+Archon notes from pk3 code compare
+- checkpowerups uses hud_message, drop item checks  -- has generic noise for powerups, so x_ents can use this code
+- cm2 painkeep_touch archon code handle -- doing this stuff in touched now   -> does this need checked to see if all op is xfered ??
+
+--------------------
+WIP: Archon (_mark_III) release list --
+--------------------
+
+WIP: maphack world builder -- production line for outdoor map chunks
+next: & doom world
+- plus buildings and larger terrain features, an even higher hill set
+
+???: code_xents remove spawn func & touch where obsolete -- flamer, portal gun, already completed xwep & other code that has spawns
+WIP: check these and see which can be wrapped in #ifdef _X_ -- qr "\.classname = "
+\_ possibles - bodyque, backpack, bubble, ExplodeShellsAttack, NoiseTarget, exploder, rubble*, bot_waker, bot_fixer, bot_lr
+
+
+ip_org change where ent is on a plat / train / door etc -- happens nowhere as of now - for later
+
+WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
+WIP: DM maps & the hack builder			- some chunk expansion for variety -
+FIX: shubs kill no work - not killed, screwed player inventory, info_intermix was bunk, exit causes cam bug
+\_ worse shubs telefrag death is happening for unknown reasons - player ent is nowhere near the trigger - could a monster be doing this ?
+
+
+TDO: make sure *0__ are always local use only - they will never be safe -- this may be causing freed ents showing up in bad places
+
+IDEA: 
+inventory - use pk_currentitem - inv mask, touchable held mask items				-- not in beta
+fire - throw, hold / grab impulse - drop, alt_fire - touch held touchable					-- code is done for held item
+alt loop #s for inventory - can do with gen impulse too - fn call & # hack
+sp / coop - store vw chain in pack / chest etc. - have an inventory viewer			-- after release
+could loop inventory, both touch items & untouch -- _mX300 deal & seq loop
+
+extras: osten mode: trophy, flair, siren, announcer
+x_item_dm_giveaway -- was more complex in cm2
+
+
+TDO: turn off nox & no cycles -- waht / why ?			-- this is the no-exit found deal that auto sets fraglimit to 50 - it can be sort of irritating in testing
+TDO: initial load out / genre -- fakeload x_weps somehow -- ideal - in .cfg
+FIX: genre translate from q1 ammo boxes to others - origin is always off, which buries the others 
+\-- one possible fix is to replace q1 ammo boxen w/ prorper centered, but then old q1 mapen will be wrong!
+ \_ or setup special translate / qover items that use proper center boxen !
+  \_ possible to lift model up with lower _pos1 z values
+
+
+will x_load loop issue appear again ?
+
+FIX: slime flare needs a fade - a certain one after a timeout
+
+pk 3.0 update:
+
+stats pkg for dm players - some kind of master storage w/ seta store / cvar reads
+enhance pki - chain beartraps, 2 head sentry, nail bombs, bouncing bettys, mine fields
+- orphan ego (player died) goes wild, wanders around doing dmg
+maphack randomize maps & randomizing hub -- for now would have to use dyn hub features because of sub bsp model load deal
+expand arc_hub - maybe use archon radix map concept (needs maphack to work with reload)
+add in some wsys6 weps -- 3 phase, positron (done), bomb, demo charge
+akimbo: pulse nailg - ds gun?, other pistol types -- make generic code for this - ref dual chaingun
+d2m7 w/hidden bfg
+- need a new hub map op - load all hub maps w/ maphack & use a special loader
+
+
+--------------------
+WIP: pk 3.0 release list --
+--------------------
+
+TDO: * progs.dat patch !!!
+
+pk1 & 2 - obit changes -- no explshell suicide - need to see what happened with some of the suicides that are not coded in pk1
+
+on the fence:
+- monsters in dm				-- code on this is ready
+- dead throw controls
+- noicide controls				-- code ready, needs more through test ?
+- stuffcmd( self, "fov 110\n" ); // special intermission view - lock pov -- why was this added				* notes say this is "crow vision" - that explains it all
+
+feature or bug:								-- these all need a ruling at some point
+--- clb & lg makes blood on crates
+tomb bleeds - feature or bug ?
+ISSUE: swap wep drop for q1 weps - incomplete stats -- bug or feature?
+ltn sentry doesnt damage owner ? (might be an engine thing)		-- make sure wasnt dmg rune
+IDEA: died / fell out feature - remove corpse / head on respawn ?
+note: pk*bot have voted, have no model, have invuln on +glowing, and are in bot_run() moving around	-- looks like a will-o-wisp
+\_ likely was from changelevel issue noted elsewhere
+runes relo right away after dead eject
+silencer does not affect rune op sound			--- leaving as a feature - runes are more powerful than artifacts
+: q2 grap no silenced -- used CHAN_AUTO & silencer only works on CHAN_WEP
+dbl shot doesnt load xplode shot (should under pk1 mode)
+NOTE: if a random monster gets shot before going through monster_start, monster_go it gets the no-turn issue
+
+TESTS
+
+tested - cl_bob - on hook pull -- it bobs - been fixed
+tested - hub load sets def PK -- it does
+tested - swap wep eject - some weps seem to not eject -- x_wep do not eject
+tested - sfx again - hub just tested -- pk_sfx turns back on, but needs a manual reload
+tested - fakeload & level transit -- this is now the best its been
+tested - maploop, mapload, mapi, amap1, loop1 -- seems legit
+tested - every case of a slot having more than 1 pk_currentitem store -- cycles & single impulse tests - all seem good
+tested - impulse list
+testing - verify runes work as intended + admin controls -- on & off cfg works
+testing - bots & pki -- bots are throwing pki
+test - obits past std
+test - pk xtreme -- have a revision of the cm2 version
+test - all rcon cmd from a remote client
+everything new that goes in packs
+x obituaries that will be used in pk3 update (all need done eventually) -- cfg file check looks decent
+runes & power ups & cary weps 				- "No such file or directory"	-- is this a test we need to run against ?
+check all HUD ops - mcode, weps, items, etc
+test ClearSpawnPoint in dm 2
+check all items crates, cubes & x_weps will use for missing models
+check: did a cl dm4_x - went to arc_hub, pk*bot were not visible & not on scoreboard
+- verify painkeep ops & code + 3.0 release -- how deep to run with this
+
+TDO: a few real playtests from a true client
+test maphack stuff that used .movetarget after chaos_tele change to .oldenemy
+
+
+just fixed q3_disambig - running altarbeta -- Host_Error: server runaway loop counter hit limit of 10000000 jumps
+on relativity_q - HUD was showing a frag count for player, frags = 0, was this a "catchup" value ?	-- see screens id1/mh_000994
+\_ not seeing this on pkn8
+
+
+
+ISSUE: long run server slow downs -- on this for some time, happens on maphack & normal maps, tried slowing touch for t_botpath
+ISSUE: after long run slowdown, lag persists after cl / hub votes, but otherwise runs smooth
+
+ISSUE: dob code ran with world as self via bots -- not repeating so far
+-- make sure dob works right w/real player, check bot logic
+
+ _
+/  _______ this may all be cleared _____
+test x_ent / std q1 wep transit fix & 	issue 	-v
+ISSUE: wep select slot 1 several times now - cant get to some pki, even with direct impulse
+\_ seems only happening when playing bots so far -- make sure 301 & m1300 arent getting bonked
+
+oddity:
+
+HalVM_isfunciton: null value: VM_callfunciton: null value:  accepts Codename: blizzard's shaft
+LoreVM_isfunciton: null value: VM_callfunciton: null value:  got shot in the arse by his own autosentry
+KrosisVM_isfunciton: null value: VM_callfunciton: null value:  felt the luminous heat from Clan LOLZ [w00ps]'s laser
+\_ these are engine warnings for the given call
+*** WARNING - eweapon ent  (I'm a bot 6 was freed!
+
+research: 
+dp .viewmodelforclient entity -- acts as weaponmodel in 1pv
+\_ put r / c / l wep hold op in cfg & alias -- new mode - make r_drawviewmodel position the 1pv model with an offset via engine code
+
+NOTE: * beartrap, tomb, pulsenail inf ammo -- in user id1/config.cfg
+
+
+/---------- backlog list -----------
+WIP: backlog item clear -- many tdo & check items need cleared out
+TDO: q3 item keys -- wait, random, target_give ent (now can be replaced with targeted spawn_loop maker ent)
+--- .wait has been set on all map spawn ents
+TDO: remove nondp
+TDO: code_painkeep vs. code_painkeep_		-- old code can be removed when confirmed mk III code matches release beta ops
+WIP: missing alpha item code -- some of this is now done - vampire, speed			whats left - unmaker, dark claw, evil book, skull stick, bayonet, probjectile		-- not alpha, and not done: automap, light amp visor,		also possible berserk not work right
+ISSUE: changelevel & map sometimes makes dyn_item, sometimes makes map_item -- map_item.cfg  called in server.cfg - prob. runs after items spawned
+- spawn_x_ cvar command sets	-- believe this to be admin alias shortcuts for activate / deactivate
+CHECK: weps that general use VW?_ projectile positioning - fi bfg uses plasma shot code
+CHECK: allow runes & arts to transfer to cary weps -- think this is done for sentry - method is to set theowner on inflictor
+TDO: add hud icon select to cfg for xweps - figure out how to have that detectable from vw ents -- use mcode & set __mc{n}_vwicon "{model}"
+TDO: fakeload of initial wep / ammo -- use x_decparm & x_encparm
+\_ how to remove a wep ? -- perhaps a gave style touch that removes instead of add ?
+-- should this be blocked in pk1, pk2 ?
+\---------- backlog fin -----------
+
+VERIFY this -- void() PlayerDead
+--// a frikbot voted on a hub - dont let him respawn
+--	if (self.stack1 == "botvoted") return;
+
+
+TDO: fix HUD scaling for generic width / height of console & video
+MAYBE: move ammo to hud_message ?
+WIP: infinite ammo and pki + other x_weps -- tested beartraps
+\_ !!! make sure this doesnt get out on releases
+
+** - list of cfg items that could have $ren deal: distance, style, blocked, dmg_take, lip, pos?, pk3 stats (button stuff) -- check: path
+\_ dmg_save - ammo used, dmg_take - damage units for hitscan (i.e. shotgun pellets per blast), lip - ammo type AMMO_{S}
+IDEA: load a difficulty .cfg during a given server start: exec diff$skill.cfg		-- in cfg, commented out
+IDEA: skill factor in enhanced monster code -- can be done with sf 256, 512, 1024, 2048, 1792 bits, cfg can be set with $skill
+IDEA: move to T_Damage -- if (self.owner.flags & FL_0DAMAGE)			--- not sure it would make sense in every context of inflictor vs. targ
+IDEA: use cursor_trace_ent for magic reticle selection
+IDEA: cvar_fields setup method for x_encparm, x_decparm		-- would need for new inventory method
+
+TDO: port engine mods to latest source & test	-- leave out the item (is it droptofloor) update that scuttles x_ents so badly
+CHK: mk II drop to floor -- void() dtf_handle
+\_ what was the deal with dtf_handle ?
+
+
+
+found gauntlet sound on midway install !
+
+
+more feature or bug stuff:
+note: harpoon is out & hooked -- legit temp ents (bubble, sparks, lavaballs) are locating near player
+???: rvel in fire_missile only for eweaps - ?? should this change -- morph shots are not getting haste accel here
+flight has no HUD timer -- no rune power arts do
+wetsuit HUD icon is boots for rad suit
+oddly now a infrequent event happens where lavaballs show no visible model -- no thoughts on this		--- not seen recently
+pain frames also block morph fire by frames -- this is better now the move frames dont block fire
+bug where had no nails, got lava ng - not selectable, got lava sng, can select sng...but not the lavang
+\_ -- this may have been fixed by the fix for the frame bork
+???: altar touch - few quals, an Archon could drain thier own soul vessel
+
+not ported yet:
+splash.qc -- the noway, lava, slime, fallen out loop code in CheckWaterLevels			--> much of this is done in various modules (runes, watermove, ip_chk)
+{pk_}client.qc -- 
+{pk_}player.qc -- 
+morph.qc -- GibMorph
+painkeep.qc -- all the liveupdate code		- much of this is replaced by spawn_loop & thinks setup in cfg
+painkeep.qc -- NoExit_save (was this moved to cfg ?)
+m-enforcer -- some xwep fire frames are funky (laser cannon)
+* -- DeadThrowWeps, DEAD_GIBPACK, Rocket_Wash
+
+
+release cfg build items
+
+- skill based cfg sets - adjust monster health, health pack vals, wep damage, timers, etc
+- remove all test elements
+- restore / set game element timings -- revoke all test timing / settings
+- set spawn lists - cubes, crates, nodules, flags, runes, items, monsters, sequences for these
+
+possible Archon mk III sequences:
+
+start out with pk cubes, crates, rnd weps / items
+XP for - power items, open cubes, trade for frags (somehow - buy stuff guy ?)
+roc map set has seq. ascending frag point where exit appears (no frag_limit)
+reg maps can be played, but dont count towards progress
+nodules / altar / morph cubes appear after certain frag level - scale up as things go
+\_ archons get more pts from nodules -- not accd to mk2 touch fn
+ \_ redo archon point system for start / morphs
+gp starts out after 3 highger pt. morphs @ 500 pts, scales up with higher pt. morphs
+archon spirits appear after 2 demi-archon transforms
+
+inventory notes
+- use viswep storage - limited slots
+- can hold multiple of some things - use .count, like lavaball - could have "5x lava balls"
+- bigger things have smaller limits, i.e - 24 lavaballs, 2 small health boxes
+- use hold toss code to throw out
+- big items can only be carried (mk1 hold code)
+- bigger items can only be pushed -- no code yet
+- need some kind of management system in HUD - should use models
+- also need mcode assign to all things
+- use .mdl as model will be blanked
+- turned off for DM, SP / coop only (prob option on this, maybe limited DM inventory)
+- the only way to get an Archon soul vessel to the altar is the hold / carry system		-- done
+
+how things can be moved
+harpoon
+grav well
+air cannon
+player carry / monster pickup
+teleport
+water / floating		(note: bouyancy value req.)
+blastmove
+earthquake
+spell ?
+frozen - cant move
+
+inventory flags
+not_inventory		(prob = 0)
+push only
+held only
+1 per slot
+stackable
+viswep displayable		(need animate ref)
+throwable w/ damage	(uses cary throw)
+
+lava rune - swim / heal in lava, throw std. lavaballs, walk on lava, burn touchers at cost of mana, immune to lava weps
+
+
+???: .scale and ThroGib with supers -- ThrowHead should already scale 
+TDO: check all hip weps - check IT_? stuffq -- again, check for what exactly?
+CHECK: models / sounds on some maps (ac1, de1m1, d2m1) -- for what ? (sounds are prob. doors / buttons / teleports )
+CHECK: viswep, drw -- 			if (self.class_select == "class_player")
+\_ see if that code seg applies to bots, that selects humans only
+ \_ check over all the _player _bot select code
+CHECK: code that does self takeover mid fn()
+TEST: fire_missile adjustment - some of the stuff that uses it, see if its correct now
+\_ -- this may be from: "se 1 morphy 7" withoug setting height -- or not
+CHECK: trace_ent.class_select == "chaos_item"
+\_ -- Chaos Archon spell made items arent getting set to this
+ \_ -- star burst chaos items should have this
+
+CHECK: m-chaos had set:
+eweapon        entity 7
+vwepent        entity 7
+-- this a design choice ?
+
+CHECK: HEADSKN_*
+WIP: touch mask + items -- where is this?				- may have to check this on an item by item basis, in map, or by cfg files
+test items - all enh & supers, speed effect
+\_ _xp "++" fix, solid 2 fix on mass tr
+
+
+does beta 2 need these ?
+TDO: monster method to ignore watermove damage for map monsters -- some monsters were intentionally placed in water / slime (besides fish)
+TDO: add monster stuck tests		-- this is the 'not able to move code' from cm2 --> splinch code
+TDO: think to check rest of fallen ents (not players nor monsters) -- partially done in ip_chk, but only catches respawnables / map_items
+FIX: art_runes dropped std haste rune on dead player		-- fix for this & HUD deal is a second set of flags
+TDO: shubs didnt get speed or speed_div = 1
+TDO: enhance new gremlins - wep usage, jumping, magic
+TDO: monster have CB_ or IMP_ to compare to morphs easier
+\_ respawned monsters dont chase the player ?		-- may have think set to SUB_regen & stuck there
+morphs shooting missile ents - we need this ? -- good in friendly fire cases
+		newmis.morphy = self.morphy;
+ISSUE: viswep double up - see reggun screen cap -- NOT really fixed after all - cfg gave weapon seems to be culprit
+FIX: frikbot still has fryguy issue ? -- this clears eventually, but hang time is minutes
+ISSUE: enforcer firing railgun returns to
+ stand frames sometimes -- how even ?
+what about fast / slow monsters and their attack_finished times ?
+
+doing m-chaos poly test - somehow ended up with eweapon ego + mask
+\_ need exit to clear out & exec $v_def	-- HUD does this, but seems to have slowdown issues in some cases
+ \_ poly monster / item -- diff than poly player
+
+testing: 2nd player came in when 1st morphed to: scourge then gremlin - 2nd was scourge on entry-spawn
+-- on re-test not happened
+
+REMOVE: cfg/morph/m-hdr_q2_cprint.cfg
+tested - fakeload & level transit -- seems a bit wonky now
+ISSUE: got a cube, could not fire it -- viswep ents keep chainging now?		-- on re-test this works ok, what gives here			is it connected to level transit ?
+TDO: resume "HOLD:" items -- see 6.25.18
+
+
+ *** WARNING - viswep long loop!	-- no longer crashing, but does not get cleared
+
+ISSUE: "holding" god particle makes it untouchable - stuck in toth_delay() -- looks like a 2nd hold touch wacked the orig think
+ISSUE: pk mode skin has no face in HUD
+ISSUE: deepsleep cant shoot a crate under liquid surf when above ?
+ISSUE: vars touch fn() on qh2 maps - nails, explode morph shots, harp
+-- issued map {reg map}. touch seems work ok
+
+https://github.com/six-of-one/Quake-documentation/blob/master/.plan
+	---  START of .plan daily
+
+TDO: x4d outside terrain biome from OA 
+
+6.23.020
+
+WIP: new map chunck set
+
+
+6.22.020
+
+WIP: new map chunck set
+- moved causway to edge
+- added big round entry alcove + door
+
+6.21.020
+
+WIP: new map chunck set
+
+-- weenieville PK access
+
+AUX: obs remote via autohotkey programmed wireless numpad (YAY)
+
+
+6.20.020
+
+WIP: new map chunck set
+- remember fullbright issue on chunks
+-- fix high tri count below ground surface extents
+
+6.19.020
+
+WIP: new map chunck set
+- extended & stressed walkway
+- added mini-wall section
+- walkways will cross gaps
+
+6.18.020
+
+WIP: new map chunck set
+- new wall segment`
+
+6.17.020
+
+WIP: new map chunck set
+-- pillar rock sub maphack
+-- new architecture
+- pole lights
+
+6.16.020
+
+WIP: new map chunck set
+-- based on altarbeta + dm4 / pk10
+-- labyrinth, see walr06 imgs, testure/art
+- more float rock bits cv
+- biome set for terrain created
+
+@: Archon Radix	    	dm4 style with archon-board core (escher?)
+
+6.15.020
+
+WIP: new map chunck set
+-- based on altarbeta + dm4 / pk10
+-- labyrinth, see walr06 imgs, testure/art
+- more float rock bits cv
+- blue vers of al_dirt* texs
+-- initial terrain chunks done
+
+6.14.020
+
+WIP: new map chunck set
+-- based on altarbeta + dm4 / pk10
+-- labyrinth, see walr06 imgs, testure/art
 
 4.23.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 
 4.22.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 
 4.21.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 
@@ -74,21 +645,21 @@ more map chunks after I return
 4.12.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 
 4.11.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 
 4.10.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit - maze details
@@ -96,7 +667,7 @@ WIP: build 1st qh2 corridors test run
 4.9.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit - maze details
@@ -104,7 +675,7 @@ WIP: build 1st qh2 corridors test run
 4.8.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 
@@ -112,7 +683,7 @@ WIP: build 1st qh2 corridors test run
 4.7.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit - making maze
@@ -120,7 +691,7 @@ WIP: build 1st qh2 corridors test run
 4.6.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit - making maze
@@ -128,7 +699,7 @@ WIP: build 1st qh2 corridors test run
 4.4.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit
@@ -138,7 +709,7 @@ WIP: build 1st qh2 corridors test run
 4.3.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit
@@ -146,15 +717,7 @@ WIP: build 1st qh2 corridors test run
 4.2.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
-WIP: build 1st qh2 corridors test run
-- build 1st matched base "unit"
-- new rooms - 5505 wip - q maze unit
-
-4.2.019
-
-WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit
@@ -162,7 +725,7 @@ WIP: build 1st qh2 corridors test run
 3.31.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit, style of de1m2 hid maze
@@ -170,7 +733,7 @@ WIP: build 1st qh2 corridors test run
 3.30.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit, style of de1m2 hid maze
@@ -178,7 +741,7 @@ WIP: build 1st qh2 corridors test run
 3.28.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms - 5505 wip - q maze unit, style of de1m2 hid maze
@@ -186,15 +749,15 @@ WIP: build 1st qh2 corridors test run
 3.27.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
-- new rooms - 5505 started
+- new rooms
 
 3.26.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms
@@ -202,7 +765,7 @@ WIP: build 1st qh2 corridors test run
 3.25.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms
@@ -210,7 +773,7 @@ WIP: build 1st qh2 corridors test run
 3.23.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms
@@ -218,7 +781,7 @@ WIP: build 1st qh2 corridors test run
 3.22.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms
@@ -226,7 +789,7 @@ WIP: build 1st qh2 corridors test run
 3.21.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- randomly built larger room / complex - possible boss fight arena lead in
@@ -236,23 +799,24 @@ WIP: build 1st qh2 corridors test run
 3.20.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- randomly built larger room / complex - possible boss fight arena lead in
 - optimize existing hacks for optimal reuse to give appearance of larger variety of rooms
 - building xx05 base style list -- 1st cut in progress, testing
+- research hip & rogue maps
 
 3.19.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 
 3.18.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- randomly built larger room / complex - possible boss fight arena lead in
@@ -266,7 +830,7 @@ Saint Patricks day - celebrated, no code / mapping
 3.16.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- randomly built larger room / complex - possible boss fight arena lead in
@@ -276,7 +840,7 @@ WIP: build 1st qh2 corridors test run
 3.15.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- expand short rooms, turns, jogs, up / downs
@@ -286,7 +850,7 @@ WIP: build 1st qh2 corridors test run
 3.14.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- expand short rooms, turns, jogs, up / downs
@@ -296,7 +860,7 @@ WIP: build 1st qh2 corridors test run
 3.13.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- expand short rooms, turns, jogs, up / downs
@@ -306,7 +870,7 @@ WIP: build 1st qh2 corridors test run
 3.12.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- expand short rooms, turns, jogs, up / downs
@@ -316,7 +880,7 @@ WIP: build 1st qh2 corridors test run
 3.11.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- expand short rooms, turns, jogs, up / downs - new pillar room
@@ -326,7 +890,7 @@ WIP: build 1st qh2 corridors test run
 3.10.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- expand short rooms, turns, jogs, up / downs - new pillar room
@@ -338,7 +902,7 @@ FIXED: tex - 0003, 0009 -- tech08_2 align
 3.9.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- expand short rooms, turns, jogs, up / downs - new pillar room
@@ -347,7 +911,7 @@ WIP: build 1st qh2 corridors test run
 3.8.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- 
@@ -356,7 +920,7 @@ WIP: build 1st qh2 corridors test run
 3.7.019
 
 WIP: map chunks, map chunks, and... map chunks
--- current theme - base run ( e1m`	1, e2m1, e3m1, e4m1 )
+-- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms -- 
@@ -435,7 +999,7 @@ WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
-- new rooms
+- new rooms -- wp: teleporter experiments room
 
 2.26.019
 
@@ -444,6 +1008,7 @@ WIP: map chunks, map chunks, and... map chunks
 WIP: build 1st qh2 corridors test run
 - build 1st matched base "unit"
 - new rooms
+teleporter lab parts
 
 2.25.019
 
@@ -510,7 +1075,7 @@ WIP: build 1st qh2 corridors test run
 WIP: map chunks, map chunks, and... map chunks
 -- current theme - base run ( e1m1, e2m1, e3m1, e4m1 )
 WIP: build 1st qh2 corridors test run
-- build 1st matched base "unit"
+- 1st matched base "unit"
 
 2.17.019
 
@@ -730,7 +1295,7 @@ WIP: map chunks, map chunks, and... map chunks
 WIP: build 1st qh2 corridors test run
 DONE: prob dont want target maphack_trigger doing this -- maphack_touch remove 6 build triggers
 HRM: *slime0 is in quake101.wad - does not work with hm...*slime2 not in wad (acc to wally), but works ??
-\_ strings quake101.wad|g slime003
+\_ strings quake101.wad|g slime
 		*slime0
 		*slime2
 
@@ -820,6 +1385,18 @@ WIP: 018 recap - moddb
 
 mdb status update 018
 
+11.4.18
+
+WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
+WIP: run server test -- multiple fixes test
+- slowdown, with only 2700 ents -- not sure why
+
+11.3.18
+
+WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
+WIP: run server test -- multiple fixes test
+- continued to here, paused to check
+
 10.29.18
 
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
@@ -841,7 +1418,7 @@ WIP: run server test -- multiple fixes test
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
 WIP: run server test -- multiple fixes test
 - loop bug may be squashed with the last fix, but maybe other untracked issues now
-	
+
 10.25.18
 
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
@@ -880,9 +1457,21 @@ WIP: run server test -- multiple fixes test
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
 WIP: run server test -- fix test
 
+FIXED: badwolf loop bug in vchk - bot came in with free .vwepent again -- how do bots keep finding these?  maybe pkbot code needs a more inclusive fix
+! - there seem to be a few duplicates of base q1 weps
+
+-- "viswep long loop" - is likely this indicates a freed vwepent
+
 10.19.18
 
 ISSUE: loop bug now fixed - somehow creating extra pk bots ??
+
+could be -
+	self = other;
+...
+		if (self.ammo_cells >= mx_cells)
+			return;
+-- return with self changed			- tho I dont see how yet
 
 10.18.18
 
@@ -894,13 +1483,16 @@ WIP: run server test -- fix test
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
 WIP: run server test -- fix test
 
-CHECK: see screen where 4 bots voted for pkn7 on archub -- usually on 2 vote for the same
-
 10.16.18
 
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
 - searching
 
+Host_Error: server runaway loop counter hit limit of 10000000 jumps
+  weapons.qc : W_BestWeapon : statement 56
+-- try blocking bots from calling W_BestWeapon in
+    items.qc : ammo_touch : statement 8
+ 
 9.14.18
 
 WIP: badwolf loop bug in bot code -- is this another variation of the last one ?
@@ -984,7 +1576,6 @@ WIP: line item bugs, tweaks, fixes
 WIP: generic code set that uses cvar script to run frames, call fn, etc -- morph specific stuff left for aux morphs
 WIP: vars hack map projects -- tardis console
 
-
 7.1.18
 
 WIP: v107 archon code
@@ -1011,7 +1602,8 @@ WIP: vars hack map projects -- tardis console - 4: re-bvild the sphere
 WIP: v107 archon code
 WIP: line item bugs, tweaks, fixes
 WIP: generic code set that uses cvar script to run frames, call fn, etc -- morph specific stuff left for aux morphs
-WIP: vars hack map projects -- tardis console - 3: corridors
+WIP: vars hack map projects -- tardis console - 4: re-bvild the sphere
+FIXED: polymorph is making regen armor
 
 6.27.18
 
@@ -1019,6 +1611,7 @@ WIP: v107 archon code
 WIP: line item bugs, tweaks, fixes
 WIP: generic code set that uses cvar script to run frames, call fn, etc -- morph specific stuff left for aux morphs
 WIP: vars hack map projects -- tardis console - 3: corridors
+FIXED: lavabomb - SZ_GetSpace: overflow	-- appears the lava bombs made from player ents (or maybe even monsters) can infinite loop on mitosis if .th_pain is set to that and each new ent gets hit by radius damage
 
 6.26.18
 
@@ -1047,7 +1640,7 @@ HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wrai
 WIP: line item bugs, tweaks, fixes
 HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: generic code set that uses cvar script to run frames, call fn, etc -- morph specific stuff left for aux morphs
-WIP: melee_damage	-- item above uses
+HOLD: melee_damage	-- item above uses
 WIP: long run server bot test
 WIP: vars hack map projects -- tardis console
 
@@ -1059,7 +1652,7 @@ HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wrai
 WIP: line item bugs, tweaks, fixes
 HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: generic code set that uses cvar script to run frames, call fn, etc -- morph specific stuff left for aux morphs
-WIP: melee_damage	-- item above uses
+HOLD: melee_damage	-- item above uses
 WIP: long run server bot test
 WIP: vars hack map projects -- tardis console
 FIXED: random spawn flamer (must be from power point) is making SUB_regen ammo
@@ -1078,7 +1671,7 @@ WIP: generic code set that uses cvar script to run frames, call fn, etc -- morph
 WIP: melee_damage	-- item above uses
 WIP: long run server bot test
 DONE: cleaning stale mkII and other notes	-- for now
-WIP: vars hack map projects
+WIP: vars hack map projects -- tardis console
 
 6.21.18
 
@@ -1140,11 +1733,12 @@ HOLD: archon spells	-- need to test / check spell ops, all code is done
 HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
 HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
-WIP: idea to have generic code set that uses cvar script to run frames, call fn, etc
+WIP: generic code set that uses cvar script to run frames, call fn, etc
 \_ code is done -- down to cfg setups, morph specific code
 WIP: melee_damage
 FIXED: a 3rd badwolf loop bug in bot code	-- same removed ent infinite loop		-- maybe a check for any more instance of this
-FIX: pk bot code self-refer loop bug
+FIXED: infinite misc_fireball from cubes
+FIXED: pk bot code self-refer loop bug
 
 6.17.18
 
@@ -1153,7 +1747,7 @@ HOLD: archon spells	-- need to test / check spell ops, all code is done
 HOLD: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
 HOLD: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
-WIP: idea to have generic code set that uses cvar script to run frames, call fn, etc
+WIP: generic code set that uses cvar script to run frames, call fn, etc
 \_ code is done -- down to cfg setups, morph specific code
 WIP: melee_damage
 FIXED: respawning explodbox from cubes
@@ -1385,7 +1979,7 @@ WIP: v107 archon code
 WIP: archon spells	-- need to test / check spell ops, all code is done
 WIP: wraith & demi-Archons	-- all wraith code is ported - yet it seems the wraith is not complete
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done -- volcano, falling everything detect, blastmove
+WIP: port mk1 env stuff not already done -- volcano, falling everything detect, blastmove
 WIP: monsters -> watermove, splinch, fallen
 
 5.30.18
@@ -1439,7 +2033,6 @@ FIXED: odd occurance are happening where vars ents end up in morph_pack_rethink(
 \_ bug in the call logic when restoring an item could whammy any ent setup with nspawn / newmis
  \_ adds a bug to morph cube made armor -- it had a similar bug before the fix
 
-
 5.26.18
 
 WIP: v107 archon code
@@ -1453,9 +2046,9 @@ WIP: held entities code (mk 1 code port)
 5.25.18
 
 WIP: v107 archon code
-WIP: archon morphs via qc++
-WIP: archon spells
-WIP: wraith & demi-Archons
+WIP: archon morphs via qc++ -- done except for Archon magic,  mk1 extra morphs, new demi-Archons
+WIP: archon spells -- order spell access is odd ball, some spells need improved - add apocalypse, add fortress mode
+WIP: wraith & demi-Archons -- new demi (not in mk1 or mk2) dragon, shapeshifter, possible level ups from gremlin, shalrath, lavabomb
 WIP: line item bugs, tweaks, fixes
 WIP: port mk2 env stuff not already done
 WIP: held entities code (mk 1 code port)
@@ -1559,10 +2152,11 @@ WIP: archon morphs via qc++
 WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done		-- func_saver, effect_affect, func_map_feature`
+WIP: port mk2 env stuff not already done		-- func_saver, effect_affect, func_map_feature
 DONE: port  trigger_stat_relay / SUB_Stat_UseTargets to mk3
 DONE: now handle func_m_illusionary / m_func_illusionary, func_detail
 DONE: put in rest of score_rel & player_count code -- where is this = calling this done, saw nothing else to put in
+\_- player count, score rel is used by dm4_x, arc_hub	-- score_rel is done now, believe player count is dont too, just needs tested
 DONE: q gauntlet code + vmodel
 
 5.17.18
@@ -1572,10 +2166,11 @@ WIP: archon morphs via qc++
 WIP: archon spells
 WIP: wraith & demi-Archons
 WIP: line item bugs, tweaks, fixes
-WIP: port mk2 env stuff not already done
+WIP: port mk2 env stuff not already done		-- effect rain stuff, tested with visage
 DONE: particle_burst port to mk3
 FIXED: lavabomb, chaos ejecta not appearing -- was fire_touch
 DONE: lava puddles, large lava balls
+WIP: lightning bolt frame model from cm1  -- wierd is happening with the model
 
 5.16.18
 
@@ -1850,7 +2445,7 @@ WIP: gremlin port -- morph part mostly done, monster update tdo
 WIP: SOA testing
 WIP: morph order, spells
 DONE: some human pain sounds for enforcer, knights, soldiers -- sounds given are:	teledth, lava burn, drown, axe hit
-DONE:archon models should prob have .effects | 512			--- test
+DONE: archon models should prob have .effects | 512			--- test
 DONE: find a way to protect morph fire by frames from movement frame hijack -- set .th_run / .th_walk to SUB_Null, block setting .think in move code
 \_ happens because starting to walk / run hijacks fire from frames
 XX: morphs - wont fire while running (except lavabomb sof), fire button is cantankerous at best
@@ -2150,8 +2745,8 @@ WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left - have to finish out adapt code cfgs
 WIP: set already melded code to compile when good -- tracking down last bits
 *_WIP: morph - frame ops, attacks -- wip item list set notes
-WIP: lava bomb "cthonme"
-WIP: need re-coded - builtin weps (use new wep selector cfg - no) -- 
+WIP: lava bomb "cthonme" -- polymorph to cthon sets morphy, but - cvf not done, exec doesnt happen		-- reverse to blob works
+WIP: need re-coded - builtin weps
 NOTE: beartraps dont hit some morphs -- bt dont target players in SP without an override
 FIXED: morph face over top std rune indicators - archon / sys6 HUD
 DONE: impulse 10 / 12 have issue selecting morph wep 4096 -- 
@@ -2467,10 +3062,13 @@ FIXED: archon point ogre spawn (# 2) has a dang long think to monster_go
 
 3.3.18
 
-WIP: v107 archon code
-*_WIP: archon morphs via qc++
+*_WIP: v107 archon code
+WIP: archon morphs via qc++
 WIP: convert enhance to cfg method -- only morphs left
-WIP: port monster_generator
+DONE: port monster_generator
+FIXED: altar, cfg issues
+DONE: test archon_ppp & blocked deal
+FIXED: no touch on chalice, cross, crown, chest
 
 3.2.18
 
@@ -2665,7 +3263,7 @@ WIP: v107 archon code
 WIP: archon morphs via qc++
 WIP: convert enhance to cfg method
 WIP: gs_1 drive rebuild -- 1Tb root drive total wipe & fresh install - restore w7, setup bohdi fin - done
-WIP: rest of hip / rogue weps into whpr.cfg -- lava nail ops & cfg
+WIP: rest of hip / rogue weps into whpr.cfg -- lava nail ops & cfg done
 \_ need ammo ops, share slot with ngs
 
 2.13.18
@@ -2867,7 +3465,7 @@ WIP: archon morphs via qc++
 WIP: sub field cfg remake -- has touch set left
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
-WIP: 5Tb disk setup
+WIP: 5Tb disk setup -- move all game related files
 FIXED: monster enhance option puts pkitems in packs
 FIX: enforcer firing issues -- most were monunit not having sf ammo load
 \_ still have hip laser issues
@@ -2882,6 +3480,7 @@ WIP: archon morphs via qc++
 WIP: sub field cfg remake -- has touch set left
 WIP: archon monster enhance -- generic code for monster_start
 WIP: convert enhance to cfg method
+WIP: 5Tb disk setup -- format / system tests
 
 1.29.18
 
@@ -3246,6 +3845,7 @@ WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
 WIP: move VWX_ data to cfg files, retool ops code
 FIXED: csqc hud doesnt show q1 runes as indicated by serverflags 1, 2, 4, 8 -- client side compile is under archon qc
+XXX: #ifdef code_fix -- most of this is cleared - search __fix
 
 12.20.17
 
@@ -3298,7 +3898,8 @@ IMP: new mode for item_respawn - read an "e"ncoded cvar_fields data set on call
 
 WIP: v107 archon code
 WIP: backlog item clear -- many tdo & check items need cleared out
-WIP: explode box respawn & admin
+WIP: explode box respawn & admin -- still have to stop damage, rest works
+research: respawing monsters in mk2 codebase
 
 12.14.17
 
@@ -3314,11 +3915,11 @@ reFIXED: grav well pulls dead cams - changed dob cfg code -- prvm_edictset serve
 WIP: explode box respawn & admin
 \_ coding as a generic respawn for any ent - spawn_loop will be used for explosions / making other ents
  \_ additional - monsters should be able to pick up / drop items
-
+ 
 12.12.17
 
 WIP: v107 archon code
-WIP: backlog item clear -- many easy check items need cleared out
+WIP: backlog item clear -- many tdo & check items need cleared out
 DONE: gave cfg shortcut alias
 DONE: give away cfg - genre init weps
 - clear: wont force an overwrite of inventory wep
@@ -3457,7 +4058,7 @@ WIP: v107 archon code - random items from power points
 DONE: sub loop for spawn_loop code - rnd items can now spawn subsets
 \_ like a randomly spawn weapon can add ammo to the level
 using '-8 -8 -8' for __archon_maker_rocket_1 messes up spawn of archon points ??
-.punchangle does not eject during sub loop
+ISSUE: .punchangle does not eject during sub loop
 
 11.27.17
 
@@ -3487,6 +4088,13 @@ IDEA: proceed from r_replacemaptexture code to get tex replace on bsp models
 
 WIP: maphack engine code to use replacable texs on a biome entry level
 \_ without some kind of per model code system, tex replace is suck
+IDEA: proceed from r_replacemaptexture code to get tex replace on bsp models
+
+ugh:
+/usr/bin/ld: sys_linux.o: relocation R_X86_64_32 against `.rodata.str1.1' can not be used when making a shared object; recompile with -fPIC
+/usr/bin/ld: vid_null.o: relocation R_X86_64_32 against `.rodata.str1.8' can not be used when making a shared object; recompile with -fPIC
+/usr/bin/ld: snd_null.o: relocation R_X86_64_32 against symbol `bgmvolume' can not be used when making a shared object; recompile with -fPIC
+-- needed to make clean & remake whole thing
 
 11.22.17
 
@@ -3496,6 +4104,7 @@ WIP: maphack engine code to use replacable texs on a biome entry level
 -- 				data = loadimagepixelsbgra(gamemode == GAME_TENEBRAE ? tx->name : va("textures/%s/%s", mapname, tx->name), false, false, false, NULL);
 --				if (!data)
 --					data = loadimagepixelsbgra(gamemode == GAME_TENEBRAE ? tx->name : va("textures/%s", tx->name), false, false, false, NULL);
+
 
 11.21.17
 
@@ -3547,14 +4156,12 @@ ceriux random weapon project qc - "how to randomize weapon spawns"
 
 Minecraft mod update
 - building mod pack for 1.10.2
-- some kind of ssl problem
 
 7.22.17
 
 Minecraft mod update
 - have 1.10.2, 1.12 installed
 - 1.10.2 runs offline only, 1.12 complete fail
-
 
 7.17.17
 
@@ -3625,121 +4232,15 @@ WIP: archon code - power point random spawner
 Research for Archon restart
 WIP: archon code
 
-6.29.17
+6.30.17
 
-Hiatus
-
-6.27.17
-
-Hiatus
-
-6.26.17
-
-Hiatus
-
-6.25.17
-
-Hiatus
-
-6.24.17
-
-Hiatus
-
-6.23.17
-
-Hiatus
-
-6.22.17
-
-Hiatus
-
-6.21.17
-
-Hiatus
-
-6.20.17
-
-Hiatus
-
-6.19.17
-
-Hiatus
-
-6.18.17
-
-Hiatus
-
-6.17.17
-
-Hiatus / Doctor Who
-
-6.16.17
-
-Hiatus / Doctor Who
-
-6.15.17
-
-Hiatus / Doctor Who
-
-6.14.17
-
-Hiatus / Doctor Who
-
-6.13.17
-
-Hiatus / Doctor Who
-
-6.12.17
-
-omg...Doctor Who haz me
-
-6.11.17
-
-Hiatus / Doctor Who
-
-6.10.17
-
-Hiatus / Doctor Who
-
-6.9.17
-
-Hiatus / Doctor Who
-
-6.8.17
-
-Hiatus / Doctor Who
-
-6.7.17
-
-Hiatus / Doctor Who
-
-6.6.17
-
-Hiatus / Doctor Who
-
-6.5.17
-
-Hiatus / Doctor Who
-
-6.4.17
-
-Hiatus / Doctor Who
-
-6.3.17
-
-Hiatus / Doctor Who
-
-6.2.17
-
-Hiatus / Doctor Who
-
-6.1.17
-
-Hiatus / Doctor Who
+Hiatus to 6.1.17
 
 5.31.17
 
-Hiatus time
+WIP: archon code
+TDO: check HUD code / ops -- win has no hud stuff
+Hiatus / Doctor Who
 
 5.29.17
 
@@ -3749,34 +4250,42 @@ TDO: check HUD code / ops -- win has no hud stuff
 5.27.17
 
 WIP: archon code
+TDO: check HUD code / ops -- win has no hud stuff
 
 5.26.17
 
 WIP: archon code
+TDO: check HUD code / ops -- win has no hud stuff
 
 5.25.17
 
 WIP: archon code
+TDO: check HUD code / ops -- win has no hud stuff
 
 5.24.17
 
 WIP: archon code
+TDO: check HUD code / ops -- win has no hud stuff
 
 5.23.17
 
 WIP: archon code
+TDO: check HUD code / ops -- win has no hud stuff
 
 5.22.17
 
 WIP: archon code
+TDO: check HUD code / ops -- win has no hud stuff
 
 5.21.17
 
 WIP: archon code
+TDO: check HUD code / ops -- win has no hud stuff
 
 5.20.17
 
 WIP: archon code
+TDO: check HUD code / ops -- win has no hud stuff
 
 5.19.17
 
@@ -3790,7 +4299,7 @@ WIP: archon code
 5.17.17
 
 Chaos of tasks: some spiffy for PK3, map work - hack stuff, archon code
-I'm kind of queing up on these
+Gardening today
 
 5.16.17
 
@@ -3868,7 +4377,7 @@ FIX: issue (re)discovered
 WIP: hard server tests with 6 bots 
 WIP: testing release package
 WIP: test list +win -- also recording
-TEST: issue (re)discovered 
+TEST: issue (re)discovered
 
 5.2.17
 
@@ -3956,17 +4465,16 @@ DONE: streaming with obs -- streaming / record setup
 
 4.18.17
 
-WIP: pk code check vs. archon / pk 3.0
 WIP: building release package
-WIP: test list +win
-WIP: streaming with obs -- compiling new source / install
+WIP: test list +win \_
+WIP: streaming with obs -- streaming / record setup
 \_  having to use cam mic, front & rear mic w/capture 1 - input src 1 just doesnt work
  \_ for some reason source 1 / cap 1 register very low
 
 4.17.17
 
 WIP: pk code check vs. archon / pk 3.0
-WIP: test list +win
+WIP: test list +win \_
 WIP: streaming with obs -- compiling new source / install
 
 4.16.17
@@ -3975,7 +4483,7 @@ WIP: pk code check vs. archon / pk 3.0
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: x6.pk3 cleanup
-WIP: test list +win
+WIP: test list +win \_
 WIP: streaming with obs -- got mic working - no game audio yet on record
 
 4.15.17
@@ -4005,7 +4513,7 @@ DONE: added pk3cli.lnk for win launching client
 WIP: pk code check vs. archon / pk 3.0
 WIP: hard server tests with 6 bots 
 WIP: building release package
-WIP: x6.pk3 cleanup -- .mdl 
+WIP: x6.pk3 cleanup
 WIP: test list
 DONE: update mh trigger on OA -- hit every spawn point		(not working sp?)
 
@@ -4129,6 +4637,8 @@ WIP: building release package
 WIP: test list
 WIP: x6.pk3 cleanup -- .mdl
 WIP: missing ac1 tex
+WIP: finalize crates / pkcube contents, random pki for sp & dm map with no pki
+WIP: streaming with obs
 
 4.1.17
 
@@ -4157,6 +4667,9 @@ DONE: server.cfg & DM.cfg map calls outside of cfg.pk3
 CHECKED: sv_sound_watersplash "" -- was old qc driven cam ent - not anymore
 \_ null this and stuff doesnt splash
 WIP: missing ac1 tex
+-- this --v is now implemented as $lrcon, $lset, etc.  dedicated / listen will have "" for these and process all admin directly
+???: everything an admin will enter at cmdline has to be rcon, server called stuff must NOT be rcon or it fails if pwd not set
+\_ idea: settable "local" mode via $remcmd - can be rcon or null for local
 
 3.30.17
 
@@ -4177,6 +4690,7 @@ WIP: hard server tests with 6 bots
 WIP: building release package
 WIP: test list
 WIP: hip support module include
+WIP: _pak identify.txt
 
 3.28.17
 
@@ -4205,7 +4719,7 @@ FIXED: aircan blowing lasers from hiplaz -- test
 DONE: player override step with __player or __player{morphnum}
 WIP: admin master settings similar to respawn timer - max ammo, health box heal amts
 FIXED: player override borks model size
-
+ 
 3.25.17
 
 WIP: pk code check vs. archon / pk 3.0
@@ -4219,11 +4733,11 @@ DONE: upated _ow vers as well
 CHECKED: pkbot chat diahrea during low fps - 3.21 screens
 -- pkbot talk is in BotFoundTarget - if all bots get stuck, and one keeps entering that routine, it may be the only talker
 DONE: bound_other_ammo - max ammo admin -- caveat: server.cfg MUST have global set, code has no defaults
-for fancy chars - need upd, scite does wierd stuff now - ○
 
 3.24.17
 
 WIP: pk code check vs. archon / pk 3.0
+WIP: pk*bot -- updating bot code from cm2 - search qr " \*bot\b"
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: test list
@@ -4253,6 +4767,7 @@ WIP: test list
 WIP: default.cfg for cvar that werent ported & are needed 
 -- (painkeep.qc clear - all in imp_sv.cfg)
 DONE: pk ammo max admin
+WIP: max ammo admin - all ammos
 
 3.21.17
 
@@ -4287,11 +4802,10 @@ WIP: pk code check vs. archon / pk 3.0
 WIP: hard server tests with 6 bots 
 WIP: building release package
 WIP: test list
-DONE: qh elements for pk3 - bash & .bat files, mod include list, msvcr120.dll -- .arc 
+DONE: qh elements for pk3 - bash & .bat files, mod include list, msvcr120.dll -- .arc adjust to handle .projinc
+WIP: default.cfg for cvar that werent ported & are needed (painkeep.qc as well)
 
 3.17.17
-
-Happpy St. Pattys day!
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: hard server tests with 6 bots 
@@ -4307,7 +4821,6 @@ DONE: include engine in release
 WIP: pk code check vs. archon / pk 3.0
 WIP: hard server tests with 6 bots 
 WIP: building release package
-WIP: doom1_e1 map issue -- 
 WIP: test list
 DONE: inf ammo, x_wep
 FIXED: cfg errors in translate - armor1, armor2, q3 artifacts that turn on alpha
@@ -4427,6 +4940,7 @@ WIP: pk code check vs. archon / pk 3.0
 WIP: hard server tests with 6 bots 
 WIP: building release package
 DONE: remake of mod builder script
+WIP: pklevel set to arc_hub on any hub
 
 3.6.17
 
@@ -4469,10 +4983,10 @@ DONE: scripted obits -- was done aways back
 WIP: pk code check vs. archon / pk 3.0
 WIP: hard server tests with 6 bots 
 FIXED: holster last wep kinda odd -- found 2nd logic bug - even made _yet_ _another_ logic bug
-\ axe holster flicks to slot 1 items when other slot items pk_curr != 1 -- have other partial holster issues as well
+\_axe holster flicks to slot 1 items when other slot items pk_curr != 1 -- have other partial holster issues as well
  \_ hammer & axe both holstered
 DONE: update W_ChangeWeapon was code, include pki -- eweap didnt changed, does it need incl
-\ when on a pki, and hitting impulse for empty slot, it changes vw display to axe tho wep is still pki
+\_when on a pki, and hitting impulse for empty slot, it changes vw display to axe tho wep is still pki
  \_ - changed pk_currentitem to 1, but eweap stayed on item
 DONE: dob - dead observer by alias & cli #
 
@@ -4805,7 +5319,7 @@ WIP: pk code check vs. archon / pk 3.0
 WIP: fakeload for pk range weps, unholstered x_ent
 - parm assign already has self.mcode set in viswep from cm2
 - make __p{mcode} lines:
-g -R _mcode *|g sys6|sed -e 's/.*://' -e 's/\t""//' -e 's/__[0-9a-z_].*/& "&/' -e 's/__[0-9a-z_]*//' -e 's/\t\t\t\t/\t\t/' -e 's/"/__p/' -e 's/"//' -e 's/_mcode/"/' -e 's/"[0-9]*"//'
+-- g -R _mcode *|g sys6|sed -e 's/.*://' -e 's/\t""//' -e 's/__[0-9a-z_].*/& "&/' -e 's/__[0-9a-z_]*//' -e 's/\t\t\t\t/\t\t/' -e 's/"/__p/' -e 's/"//' -e 's/_mcode/"/' -e 's/"[0-9]*"//'
 FIXED: viswep bad loop bug -- added vw_chain before the vload "find the last vwepent" loop
 
 2.7.17
@@ -4933,7 +5447,6 @@ WIP: pk modules cleared 123: weapons.qc, items.qc
 DONE: detect pk*bot with .group test -- changed from .map
 FIXED: noautoaim boondogble -- notautoaim removed, ops relegated to sv_aim "1" on server
 
-
 1.25.17
 
 WIP: pk code check vs. archon / pk 3.0
@@ -4944,20 +5457,19 @@ WIP: pk modules cleared 123: actor.qc (module only), ogre.qc, defs.qc
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk modules clearing 123: pkitems.qc, client.qc, weapons.qc
-WIP: pk modules cleared 23: hknight.qc, enforcer.qc, boss.qc, beartrap.qc, copb.qc, ego.qc, horn.qc, grap.qc, motd.qc, tomb.qc, phone.qc, turret.qc, gravity.qc, bolt.qc, hub.qc
-
+WIP: pk modules cleared 123: hknight.qc, enforcer.qc, boss.qc, beartrap.qc, copb.qc, ego.qc, horn.qc, grap.qc, motd.qc, tomb.qc, phone.qc, turret.qc, gravity.qc, bolt.qc, hub.qc
 
 1.23.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk modules clearing 123: pkitems.qc, client.qc, weapons.qc
-WIP: pk modules cleared 23: zombie.qc, wizard.qc, tarbaby.qc, soldier.qc, shalrath.qc, oldone.qc, knight.qc, fish.qc, dog.qc, demon.qc
+WIP: pk modules cleared 123: zombie.qc, wizard.qc, tarbaby.qc, soldier.qc, shambler.qc, shalrath.qc, oldone.qc, knight.qc, fish.qc, dog.qc, demon.qc
 
 1.22.17
 
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk modules clearing 123: pkitems.qc, client.qc
-WIP: pk modules cleared 123: subs.qc, world.qc, trigger.qc
+WIP: pk modules cleared 123: subs.qc, world.qc, triggers.qc
 
 1.21.17
 
@@ -4984,7 +5496,7 @@ WIP: pk modules cleared 123: combat.qc
 WIP: pk code check vs. archon / pk 3.0
 WIP: pk modules clearing 123: pkitems.qc, client.qc
 CHECKED: changed - itm_ng.cfg turns off __weapon_pulsenail -- undone, whole seq. needs tested
-WIP: pk modules cleared 123: cleared player.qc, sound.qc (if func_pksound_play matches v1/2 code), sparks.qc, train2d.qc (2dtrain.qc)
+WIP: pk modules cleared 123: player.qc, sound.qc (if func_pksound_play matches v1/2 code), sparks.qc, train2d.qc (2dtrain.qc)
 \_: zombie2.qc
 FIXED: 2dtrain.qc missing
 
@@ -5010,11 +5522,9 @@ DONE: runes randomly relocate & fall out / noway checks
 - need to check for runes fallen out every few secs, run relo code every spec secs
 WIP: notes review, org
 
-
 1.14.17
 
 WIP: pk code check vs. archon / pk 3.0
-WIP: pk modules clearing 123:
 WIP: no_hub, pk_hub -- no hub does NOT bonk hub_control
 DONE: ( > 0 ) _reload now auto unset by reload loop
 NIX: fix _pos1,2 in items.cfg -- this was changed a few notes back
@@ -5029,7 +5539,7 @@ WIP: pk modules clearing 123: admin.qc, pkitems.qc, client.qc
 DONE: _any_ pushable model ent -- note: prob wont work with touch trigger ents, only solids / non touch
 FIXED: more pushables -- some issue where they fall out of level
 \_ ref bounded on top or sides note in entities.def
-WIP: no_hub, pk_hub -- no hub does NOT remove hub_control
+WIP: no_hub, pk_hub -- no_hub does NOT bonk hub_control
 
 1.12.17
 
@@ -5056,7 +5566,6 @@ DONE: pk ignore armor when drowning
 DONE: put some variety in the joining game msgs -- but it no worky?
 WIP: pk modules cleared 123: drip.qc, fight.qc, light.qc *(serious recode), meantime.qc (#def replace)
 \_: misc.qc
-
 
 1.10.17
 
@@ -5089,6 +5598,7 @@ WIP: pk 3.0 rcon admin __
 WIP: pk item position restore after move (respawn or timer)
 \_ fallen out check for map items -- need to catch repeat offenders & "freeze" them
 DONE: ramp count up for q-hack possibles -- in remove_loop
+ISSUE: pk weps & items dissappear on reload!
 
 1.7.17
 
@@ -5096,6 +5606,7 @@ WIP: pk code check vs. archon / pk 3.0
 FIXED: x-terminal-emulator -> /usr/bin/urxvt* -- messed by printer driver install ?!
 UNDONE: commented out all *_pos{1,2} "0 0 0" non cfgable vectors -- this was complete fail, test map run slow as balls, many models were black
 DONE: test gib_{1,2,3}.wav -- fixed bug
+WIP: pk 3.0 rcon admin __follows
 DONE: pk1-3 mode scripts, & nopk variants
 DONE: alias / script to turn pk mode back off
 WIP: pk map menu cfg
@@ -5144,7 +5655,7 @@ DONE: sound, ambientsound redirect
 DONE: pk 3.0 branding, announce article moddb
 WIP: pk code check vs. archon / pk 3.0
 DONE: hub spawn 15 rel invuln
-WIP: pk alt sounds impl
+WIP: pk alt sounds impl -- tele sound swap & the revs sound link
 
 1.1.17
 
@@ -5161,6 +5672,7 @@ FIXISH: new issue - harp does not damage these triggers, but bounces off -- stil
 CHECKED: check where else archon had this -- on altars and occaug eye set
 DM test override status - button0 define for dm_over
 DONE: set def_resp "$1", exec cfg with $def_resp, spawn_ run
+-- need a way to pass a parm to an exec cfg - re: setting master stuff like _wait for respawns
 
 12.31.16
 
@@ -5199,7 +5711,6 @@ WIP: motd.qc replace with cfg -- needs to run on player connect to dm server
 
 12.27.16
 
-WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 WIP: pk code check vs. archon / pk 3.0
@@ -5212,7 +5723,6 @@ DONE: x4c, k7a map tweaks, _bb3 biome set got left out last edit
 
 12.26.16
 
-WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -
 FIXED: harpoon out state shows wrong v_model state -- has to be the x wep code ops & assigning v_model from cfg
@@ -5220,12 +5730,11 @@ WIP: pk code check vs. archon / pk 3.0
 
 12.25.16
 
-WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - some chunk expansion for variety -- x4c group
 FIXISH: genre mega heal respawn code -- bumpted respawn time to 60 secs, ideal would be 80
 FIXED: wolf mortar - added fire fn
-			
+
 12.24.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
@@ -5239,7 +5748,6 @@ CHECKED: genre mega heal respawn code -- no rot, imm respawn of box
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
-- pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
 - some chunk expansion for variety
 - added 2nd core to x4c - 8a0 / 10a0
 DONE: transparent chunks for media sets
@@ -5323,7 +5831,7 @@ WIP: DM maps & the hack builder
 WIP: k7a - aa3 expand nodes, too much sameness - k7a_1m8aa3
 DONE: adjust trigger, clip in rprep
 NOTE: some reconstituted maps lack texture names on brush faces (egyptra3, pkts04)
-- pkts04 is really bad - no world brushes get made
+- pkts04 is really bad - no world brushes get made by reconstr
 WIP: enumerate all pk maps
 FIXED: "invisible" sub-hacks now seem fixed via svh local var -- test this extensively
 
@@ -5341,8 +5849,8 @@ WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
 WIP: k7a_12 k7a_4 + whole freaking bunch of new chunks
 DONE: biome specific z limits -- high_limit, low_limit 	- via #define on button?
-- invisible room may be due to sub-hack think / setup
-- hide hack needs to be checked for room flicker
+- invisible room may be due to sub-hack think / setup -- seems this was indeed the case
+- hide hack needs to be checked for room flicker -- apparently not the cause
 
 12.12.16
 
@@ -5365,6 +5873,7 @@ WIP: maphack world builder -- outdoor test biome cfg files, production line for 
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
+WIP: k7a_3 k7a_4 k7a_4a
 FIXED: k7a_3 had some issue that crashed the engine:
 
 Mod_Q1BSP_RecursiveNodePortals: WARNING: new portal was clipped away
@@ -5390,6 +5899,7 @@ then I ctrl-z them back in and it works
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 WIP: DM maps & the hack builder
 - pk 3.0 hack based maps - no. 2 - egyptra theme -- k7a group
+WIP: k7a_1 k7a_2 k7a_3
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
 
 12.8.16
@@ -5405,6 +5915,7 @@ WIP: maphack world builder -- outdoor test biome cfg files, production line for 
 WIP: DM maps & the hack builder
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
 WIP: wepeqcy update - all listed weps done
+WIP: genre weapon xlate - ammo_grenades, weapon_railgun, etc -- only have to worry about q3 maps (wad == "")
 FIXED: respawn incorrect mdl issues, mostly a translate issue -- all cfg must also set mdl
 -- q1setcyc causes problems with disamb_q3.cfg and non-q translates - it sets _mdl
 -- SUB_regen, setmodel(self, self.mdl); also causes problems if mdl != model for any reason
@@ -5417,6 +5928,7 @@ WIP: DM maps & the hack builder
 WIP: Archon, PK3 -- pk3 admin settings & xtreme mode
 WIP: wepeqcy update - all listed weps done
 WIP: test map updates - secret door -- yes, it lacked one
+WIP: genre weapon xlate - ammo_grenades, weapon_railgun, etc -- only have to worry about q3 maps (wad == "")
 CHECKED: adren adds 1 to max health -- ISSUE: x_ents health dont use max_health field!
 WIP: pk 3.0 maphack based hub
 
@@ -5441,6 +5953,7 @@ NOTE: added sphere_annihilation to _x_6 - release needs some effort for pak file
 FIXED: map nodules dont appear - model not set right -- modelmode2 - check the stuff prev. method fixed
 DONE: bot test 1 - frikbot; uses pki (we think anyway) - had a loop crash on vw_load, need pkbots
 WIP: master server vars - ammo max, etc
+WIP: wepeqcy update
 WIP: test map updates - misc_teleporttrain
 
 12.3.16
@@ -5494,6 +6007,7 @@ WIP: Archon, PK3
 WIP: q1 health translate sfs code
 DONE: sf check to limit sf loop code run to actual sfs only & in cfg files
 FIXED: infinite loop in cvar_fields on sfs -- maybe, needs more test
+WIP: test map updates - trigger_push
 ???: push not working on test map for v107 ?!
 
 11.27.16
@@ -5518,6 +6032,7 @@ WIP: DM maps & the hack builder
 WIP: Archon, PK3
 FIXED: guake-term backgrounds not visible -- prefs / appearance / transparency - move slider right
 WIP: master translate cfg
+WIP: test map updates - teleport
 
 11.25.16
 
@@ -5570,7 +6085,7 @@ WIP: Archon, PK3
 DONE: BecomeExplosion - all of them, do sound test -- can not block engine played sound later - use cl_sound_r_exp3 '" to silence
 DONE: explosions, sounds & silence, alt snds in hip code
 DONE: explosion via Become do not need to play r_exp3.wav - engine does that
-FIX: hip weps missing a good bit - hammer code fsck player model
+WIP: hip weps missing a good bit - hammer code fsck player model
 FIXED: EWEAP fails in lasercannon code -- used self.eweapon
 
 11.20.16
@@ -5627,6 +6142,7 @@ XXX: explode shooter vwepent is not removed when ammo runs out -- other vwepent 
 -- also block a legit cube when empty!
 DONE: doom crate - put in doom room with rnd doom items in cfg -- crate is textured - check it
 FIXED: adjust on using SUB_Regen with cvar_fields load & event driving there
+WIP: loopcyc scripts
 
 \_ the next 2 XXX seem cleared away
 XXX: got ammo - explode shooter changed to reg SG -- could not dup on get ammo, but happens on swap out
@@ -5770,12 +6286,12 @@ WIP: DM maps & the hack builder
 11.7.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
-WIP: painkeep maps & the hack builder
+WIP: DM maps & the hack builder
 
 11.6.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
-WIP: painkeep maps & the hack builder
+WIP: DM maps & the hack builder
 - x4 expand - now a "lip 256" op set
 - _7 & _8 are up steps & down ramp
 NOTE: can NOT make a func_wall with *teleport tex without some other tex brush added in
@@ -5783,7 +6299,7 @@ NOTE: can NOT make a func_wall with *teleport tex without some other tex brush a
 11.5.16
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
-WIP: painkeep maps & the hack builder
+WIP: DM maps & the hack builder
 NOTE: can not remove func_wall with think to SUB_Remove
 			\_ you can set a targetname on a door, and have a spawner with a target that thinks to SUB_UseTargets
 
@@ -5859,7 +6375,7 @@ WIP: maphack world builder -- outdoor test biome cfg files, production line for 
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 today - more map chunks, and terrain features
-FIXED: weaphum continues past new wep select for 1/2 sec -- weapons.qc
+FIXED: wephum continues past new wep select for 1/2 sec -- weapons.qc
 DONE: higher hills clk_{n}h
 
 10.27.16
@@ -5900,7 +6416,7 @@ WIP: the bash script chunk builder
 
 WIP: maphack world builder -- outdoor test biome cfg files, production line for outdoor map chunks
 REV: init is broken after moving cvar_fields - new cfg init leaves initial hacks in ldfail status somehow -- delay on loading any initial maphack
-- reverted back to earlier code, above fix caused to many problems
+-- reverted back to earlier code, above fix caused too many problems
 FIXED: init issues fixed by running init biome cfg before loading map -- used a bash fn() to do this
 - this fix may have allieviated the overlaps that were seen
 DONE: item_rune fix (code had item_sigil which new rune server code changed)
@@ -5921,11 +6437,13 @@ DONE: mostly anyway -- next is to remove global biome, setup *hack.cfg & get new
 
 10.19.16
 
-WIP: maphack world builder -- production line for outdoor map chunks
+WIP: maphack world builder -- outdoor test biome cfg files
 
 10.18.16
 
-WIP: replacing func_biome with cfg system
+WIP: maphack world builder -- production line for outdoor map chunks
+- caulk tex chunks
+- anode x materials
 
 10.17.16
 
@@ -5945,6 +6463,7 @@ DONE: /// NEED: update this when master biome changes to new system -- env sky t
 
 WIP: maphack - code to run from biome cfg
 WIP: replacing func_biome with cfg system
+-- on init to a non default biome, def biomes are spawned the first time, then alt takes over
 FIXED: maphack_trigger spawn failure - biome not loading from cfg because of missing _ prepended to field name
 DONE: /// subhacks - only remove triggers owned by this guys biome -- in the new idiom, this would be matching target2	
 FIXED: maphack_trigger was propigating insane - not being deleted before fire, sf world from biome was becoming noauto on trigger
@@ -5961,11 +6480,11 @@ DONE:/// add option for these to go away if rotate is not matched to provided va
 handled - /// for now hacks will not rotate if they have bmodel ents such as: doors, plats, buttons, triggers
 CHECKED: trick rotate maps (2 or 4 segment maps) point ents handling - ents on map dont need rotated, what about .ent files?
 -- bsp load ents do not rotate on trick rotate, .ent file ones do
-WIP: replacing func_biome with cfg system
+	WIP: replacing func_biome with cfg system
 
 10.12.16
 
-WIP: maphack - make some new hacks
+WIP: maphack - make some new hacks -- code to run from biome cfg
 DONE: boss kill 2 - find proper intermission spot
 - boss kill 1 is a bit easier as finale is not triggered - still need crawler text
 
@@ -6004,7 +6523,7 @@ FIXED: map, changelevel command - server.cfg needs to reset map_item stat
 
 WIP: maphack world builder -- 
 WIP: need dynamic item ident, detectable, map items too
-FIXED: -- need to copy files back
+DONE: -- need to copy files back
 
 10.3.16
 
@@ -6029,12 +6548,20 @@ WIP: maphack world builder -- ARG
 WIP: crate spawner
 DONE: quakeone quake-hack announce
 
+removed comment from maphack.qc:
+--- this was actually a fail in plats.qc
+--- the code has since been fixed, but may have been a .mdl or .model issue with maphack ops
+firing explode shot at far away hack
+SV_PushMove: entity #3521 has an invalid modelindex 0.000000
+SV_PushMove: entity #3525 has an invalid modelindex 0.000000
+(unending - dropped on space overflow)
+
 9.30.16
 
 WIP: maphack world builder -- spec adjusted for the notes above regarding maphack full scale
 WIP: patreon / git link branding -- lots of this now
 WIP: crate spawner
- 
+
 9.29.16
 
 WIP: maphack world builder
@@ -6052,13 +6579,14 @@ WIP: loopcyc scripts
 9.26.16
 
 DONE: harpoon doesnt always grap items because harp back touch is not setup on items & stuff
-WIP: patreon release guide
+FIXED: some misnamed #ifdef ids
 
 9.25.16
 
 WIP: patr uploads
 WIP: rune code - compare all existing source for missing code
- 
+DONE: turret indestructible spawns invuln if not found on map
+
 9.24.16
 
 WIP: swap weps should "throw" the deselecting wep - can be touched
@@ -6066,6 +6594,9 @@ WIP: swap weps should "throw" the deselecting wep - can be touched
 9.23.16
 
 WIP: rune code - compare all existing source for missing code
+DONE: cut some headers for patreon posts
+DONE: script to build clear reloads file
+NOTE: item reload sequence can not easily get rid of stuff on map -- should be able to current null model & touch, will have to SUB_remove to get rid of
 
 9.22.16
 
@@ -6090,7 +6621,7 @@ WIP: item_reload
 WIP: #ifdef masking some precache that snuck in
 FIXED: many items do not play proper regen sound
 -- x_touch - respawn use noise4 (weps might have issue here) -- poss to check __ over
-FIXED: swap wep on impulse 29 fail - was key bind on "w" = "impulse 29; impulse 50" - added ;wait in middle
+	FIXED: swap wep on impulse 29 fail - was key bind on "w" = "impulse 29; impulse 50" - added ;wait in middle
 
 9.19.16
 
@@ -6127,14 +6658,15 @@ FIXED: R_EARTH is 0 after cfg sets it -- messes up rune id
 WIP: rune code in *.qc
 DONE: rune code in client.qc
 DONE: dp cam and view ofs deal -- tracked down to csprogs.dat
-- the original SMC HUD code is bonked as well
+bunch of quakeone.com posts
 
 9.16.16
 
 FIXED: runes dont bounce when tossed
-WIP: rune code in combat.qc
+DONE: rune code in combat.qc
 DONE: weekly code snapshot for v107 - excises prop codes
 DONE: code_xents undefined and can compile pk, hip
+quake-life qc code - got it
 
 9.15.16
 
@@ -6189,7 +6721,8 @@ FIX: floaty rock bits via func_train fail -- this is an archon code update
 9.4.16
 
 WIP: dynamic spawners
-WIP: rune code revent
+WIP: rune code revent -- removing a few chunks
+FIXED: techs have wrong models ?!
 
 9.3.16
 
@@ -6198,6 +6731,7 @@ WIP: dynamic spawners
 9.2.16
 
 WIP: dynamic spawners
+DONE: need a way to send cmd to end existing loopers
 
 9.1.16
 
@@ -6227,13 +6761,13 @@ WIP: hack chunk map design
 WIP: dynamic spawners
 WIP: sync list for updating v107 to archon code base
 
-8.25.16
+8.26.16
 
 WIP: dynamic spawners
 
 8.23.16
 
-FIX: -- warning: You may wish to add brackets after that ! operator
+FIXED: pk_2 -- warning: You may wish to add brackets after that ! operator
 
 8.22.16
 
@@ -6241,12 +6775,14 @@ mail list: rotate a gib rolling down a wall
 
 8.21.16
 
-DONE: removing  warning: {X}  no references, pk_2
+DONE: pk_2 removing  -- warning: {X}  no references
 
 8.20.16
 
-FIXED: Release version pk2.x & pk1.2.x dont compile with fteqcc
+FIXED: Release version pk2.x doesnt compile with fteqcc
 -- still have pile of warnings
+
+Test new maphack engine with ka_0 test map system, triggers, and sample hacks -- works good so far
 
 8.19.16
 
@@ -6367,9 +6903,9 @@ WIP: chain thunderbolt, hub
 
 3.5.16
 
-WIP: qc 2.0 <- archon
+WIP: qc 2.0 <- pk 3.0
 WIP: pk items / weps into wsys6 -- rest of qc
-FIXED: not compiling painkeep
+FIXED: option of not compiling painkeep
 WIP: chain thunderbolt
 
 3.4.16
@@ -6383,7 +6919,7 @@ DONE: grap
 
 WIP: qc 2.0 <- archon
 WIP: pk items / weps into wsys6 -- rest of qc
-DONE: air cannon
+DONE: air cannon -- but selected under axe & not shotgun
 FIXED: pk_item range weps & vw animations
 
 3.2.16
@@ -6421,10 +6957,12 @@ DONE: sparks, pk lightning effect (light.qc)
 2.26.16
 
 WIP: qc 2.0 <- archon
-WIP: pk weps into wsys6 -- rest of qc
+WIP: pk items / weps into wsys6 -- rest of qc
 FIXED: plasma gun 3 - cfg ammo type wrong
 FIXED: no te_gunshot on exploder barrels -- was in TraceAttack
 DONE: recode on spawnblood as well to not bloody world, doors & such
+NIXED: wchg  select / switch with 0 ammo -- tests ok, this must have been fixed
+DONE: drip
 
 2.25.16
 
@@ -6490,7 +7028,7 @@ FIXED: bfg traces & barrels
 
 WIP: qc 2.0 <- archon
 DONE: quantum -- first cut
-WIP: railgun
+DONE: railgun
 
 2.16.16
 
@@ -6520,6 +7058,7 @@ WIP: qc 2.0 <- archon
 WIP: rest of x_firecode
 DONE: pistols / fists
 DONE: plasma weps
+DONE: zerocase adjust
 
 2.13.16
 
@@ -6542,6 +7081,7 @@ DONE: W_BestWeapon by .distance set in cfg files
 2.11.16
 
 WIP: qc 2.0 <- archon
+DONE: cancel code on touch
 WIP: fail touch
 
 2.10.16
@@ -6554,6 +7094,7 @@ WIP: fail touch -- note: copyentity issue poss chaos mod vector
 2.9.16
 
 WIP: qc 2.0 <- archon
+DONE: pack type for max ammo -- used target1, this locks that up
 FIXED: double entity fields
 WIP: rest of x_firecode
 
@@ -6568,6 +7109,8 @@ FIX: double entity fields
 WIP: qc 2.0 <- archon
 WIP:  packs, artifacts, keys
 DONE: ammo (mostly), wep cfgs -- still need wep qc
+IMP: new ops $T (set new / add time field), =D - add field val + rnd stdev & assign
+FIXED: bug where health box got touch and made a viswep
 
 2.6.16
 
@@ -6586,8 +7129,11 @@ WIP: code, cfg, bullet x weps
 WIP: qc 2.0 <- archon
 FIXED: null th_die could crash server in killed()
 -- better solution: put SUB_Null in all .void every spawn() call
-IMP: cvar_fields sets all .void to SUB_Null -- this will fail non fn tests
-IMP: wad == "pwep" so touch code knows to run wep stuff -- pwep is the packwep deal from deadthrew
+DONE: cvar_fields sets all .void to SUB_Null -- this will fail non fn tests
+NIXED: wad == "pwep" so touch code knows to run wep stuff -- pwep is the packwep deal from deadthrew
+DONE: for x wep touch
+set		__msk_d_weapon_supershotgun_blocked		"c"		""
+set		__d_weapon_supershotgun_blocked		"x_weapon_touch"		""
 
 2.3.16
 
@@ -6786,7 +7332,6 @@ DONE: updated qone.map with ENTREPLACE flag for HD .ent replacement files (we ho
 - works for the most part with quake_hack - qone has bad fps
 WIP: pk2.0 -> git
 
-
 1.8.16
 
 WIP: NPR -> proquake (win) -- fail
@@ -6872,7 +7417,6 @@ WIP: quake hack -
 WIP: map chunk fixes for beta release
 DONE: automate package build for quake hack -- for now
 
-
 12.29.15
 
 WIP: quake hack - 
@@ -6951,7 +7495,6 @@ non visible bmodels -- trying old compile tools - NO
 - tried adding vis data from a sealed map - NO
 FIXED: bad loop bug -- using f3__ in SV_OnEntityPreSpawnFunction copy loop, switched to glb_local
 
-
 12.23.15
 
 WIP: map hack - 
@@ -7001,7 +7544,8 @@ FIXED: damage plat still wrong
 total remove & reinstall of vs015 - which got buggered by pf86 move
 DONE: episode local area respawn coop - sp (what used to be each map start) - trigger_respawn
 - issue in real coop - simultaneous death will lead to spawn frags - only 1 local area spawn point
-
+DONE: sp coop hack -- makes coop weapon / item graps look like sp ( no weps stay )
+FIXED: coop spawnfrag on trigger_respawn point
 
 12.19.15
 
@@ -19080,6 +19624,14 @@ skinned potion mdl.
 -------
 did 1st ghost and grunt skins.
 
+---
+---
+---
+---  START of quantlet v1
+---
+---
+---
+
 97 nov 18:
 -------
 chaos texture wad "c.wad"
@@ -19220,3 +19772,17 @@ Doom2 weapons upgrade custom pack build
 96 may 28:
 -------
 1st map in BSP
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
