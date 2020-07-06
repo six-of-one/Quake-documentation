@@ -538,12 +538,103 @@ ISSUE: vars touch fn() on qh2 maps - nails, explode morph shots, harp
 https://github.com/six-of-one/Quake-documentation/blob/master/.plan
 	---  START of .plan daily
 
-TDO: x4d outside terrain biome from OA 
+FIX: chaos.wad, q3tex_tmp.wad issues - missing tex
+
+7.5.020
+
+- invitation to 
+connect central.jur4ss1c.net:26120
+-- specated ctf & made commentary
+
+WIP: adepts lament; vars ops
+
+
+
+
+
+7.4.020
+
+WIP: adepts lament; vars ops
+-- 1st cut
+
+7.2.020
+
+WIP: archon radix; vars ops
+- bot test
+
+- ded trees -- test looks decent
+
+7.1.020
+
+WIP: archon radix; vars ops
+- bot test
+
+-- win10 connection borked - wont allow incoming setup
+
+DONE: 2nd door
+
+
+6.30.020
+
+WIP: archon radix; vars ops
+- entities (done) & bot test
+
+-- bot test fail
+
+6.29.020
+
+WIP: archon radix; vars ops
+-- fixed sv_hide for map - server.cfg is called in world.qc, after that cfg/map/{mapname}.cfg
+FIXED: sv_hide dist & center of walls & maze - maybe 10K dist
+
+6.28.020
+
+WIP: archon radix; vars ops
+- only one maze layer map to edit -- dm lifts maze 192 qu
+
+-- wad list
+quake101.wad;c2.wad;painkeep.wad;clbshb.wad;q2.wad;q3tex_tmp.wad;doomtex.wad;pkplus.wad;trnc.wad;metmon.wad
+
+6.27.020
+
+WIP: new map chunck set
+
+- retex maze
+
+6.26.020
+
+WIP: new map chunck set
+
+- maze DM mode
+
+DONE: x4d outside terrain biome from OA 
+DONE: biome maze fin, extract walls & biome
+--- technically
+
+6.25.020
+
+WIP: new map chunck set
+
+- borked map, needs fixy
+-- FIXED !!!
+yay
+
+6.24.020
+
+WIP: new map chunck set
+
+- borked map, needs fixy
+-- fixed yet still iffy
+
+- fixed
+- made maze biome 
 
 6.23.020
 
 WIP: new map chunck set
+-- finish outer walls
 
+- borked map, needs fixy
 
 6.22.020
 
