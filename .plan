@@ -545,13 +545,19 @@ FIX: chaos.wad, q3tex_tmp.wad issues - missing tex
 - invitation to 
 connect central.jur4ss1c.net:26120
 -- specated ctf & made commentary
+- dmsp mod test on cutchyz server
+connect 172.249.81.123:26000
 
 WIP: adepts lament; vars ops
 
+relativity_q -- 1.5 * brush size
+- adjust center for maphack load
+- removed sky boxes
+- replaced caulk
 
 
 
-
+7.5.020
 7.4.020
 
 WIP: adepts lament; vars ops
