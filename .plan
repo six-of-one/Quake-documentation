@@ -526,7 +526,9 @@ tested - fakeload & level transit -- seems a bit wonky now
 ISSUE: got a cube, could not fire it -- viswep ents keep chainging now?		-- on re-test this works ok, what gives here			is it connected to level transit ?
 TDO: resume "HOLD:" items -- see 6.25.18
 
-
+1000
+000
+000
  *** WARNING - viswep long loop!	-- no longer crashing, but does not get cleared
 
 ISSUE: "holding" god particle makes it untouchable - stuck in toth_delay() -- looks like a 2nd hold touch wacked the orig think
@@ -539,6 +541,78 @@ https://github.com/six-of-one/Quake-documentation/blob/master/.plan
 	---  START of .plan daily
 
 FIX: chaos.wad, q3tex_tmp.wad issues - missing tex
+
+
+7.16.020
+
+FIXED: w7 compiles
+\_ -- added manually *.h *.c 			--- DID THIS again !
+ \-- zlib.dll not found issue - workaround - ren pk3 to zip, and unzip to use files
+DONE: qone play through work around
+
+DONE: save maphack project - vs2013 on w7
+
+Qone run - 1 hr - eps 1 & 2 
+-- cube & crate rng is heavy - lots of quad & pent
+-- settings make a lot of c & c
+
+
+7.15.020
+
+much work to compile maphack on win -- still no work
+w10 - bonkers errors
+w7 - link errors - 114
+FIXED: w7 compiles
+\_ -- added manually *.h *.c
+ \-- zlib.dll not found issue - missing sounds & models in pk3 files
+
+DONE: localized rnd item spawner in coop & SP
+-- controlled by cvar __rndl_dis - nominal 300 - only SP / coop
+
+7.14.020
+
+vs 019 - will not compile maphack
+
+7.13.020
+
+qone run - on strem system - kind of stodgy
+- stuttery control
+- bmodel no appear 2nd player coop connect to listen server
+
+
+7.11.020
+
+qone run
+- coop linux server - play on win
+- some net lag it seems
+
+possible issues: runes have to much territory
+weapons need to stay, unless set to respawn
+not throwing packs
+
+
+7.9.020
+
+qone run
+-- system crash - could have been /dev/snd/controlC0 parm in obs
+- lose items -- decent option is respawn weps ammo ?
+\ -- throw pack
+
+- ammo rune
+
+7.8.020
+
+WIP: relativity_q 
+
+-- fixed blocks - clip brushes were hidden by radiant filters and not moved !
+- clip, trigger
+- fixed landscape hack overlap on structure
+
+7.7.020
+
+WIP: relativity_q 
+- fixed map compile issue
+- removed all skys transit to maphack
 
 7.5.020
 
@@ -555,9 +629,6 @@ relativity_q -- 1.5 * brush size
 - removed sky boxes
 - replaced caulk
 
-
-
-7.5.020
 7.4.020
 
 WIP: adepts lament; vars ops
