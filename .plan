@@ -527,8 +527,6 @@ ISSUE: got a cube, could not fire it -- viswep ents keep chainging now?		-- on r
 TDO: resume "HOLD:" items -- see 6.25.18
 
 1000
-000
-000
  *** WARNING - viswep long loop!	-- no longer crashing, but does not get cleared
 
 ISSUE: "holding" god particle makes it untouchable - stuck in toth_delay() -- looks like a 2nd hold touch wacked the orig think
@@ -541,7 +539,25 @@ https://github.com/six-of-one/Quake-documentation/blob/master/.plan
 	---  START of .plan daily
 
 FIX: chaos.wad, q3tex_tmp.wad issues - missing tex
+TDO: disable for coop pack ownership
+TEST: pack ownership sometime
+NOTE: do we want coop packs for QH2 run as setup
 
+TDO: per teleport / start cd play cmd
+
+7.19.020
+
+WIP: per teleport / start cd play cmd
+
+
+7.18.020
+
+DONE: qone - throw packs in coop hack
+DONE: pack ownership for coop & coop hack
+- pack also last forever & contain all weps
+
+WIP: per teleport / start cd play cmd
+-- tried cfg on target sub fire -- .script via ,group
 
 7.16.020
 
