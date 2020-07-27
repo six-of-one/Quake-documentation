@@ -540,15 +540,104 @@ https://github.com/six-of-one/Quake-documentation/blob/master/.plan
 
 FIX: chaos.wad, q3tex_tmp.wad issues - missing tex
 TDO: disable for coop pack ownership
-TEST: pack ownership sometime
 NOTE: do we want coop packs for QH2 run as setup
 
-TDO: per teleport / start cd play cmd
+ISSUE: seen on qh2 & qone run - lava nails / laser cannon not doing dmg
+- ammo_cells is negative (check bfg 10K)
+
+
+7.26.020
+
+quake-c requests:
+-How can ? add ledge grab in quake 1 with quake c ?
+-How can ? make player legs when chase_active 0 ?		--- can be done but will be less than optimal appearing
+-how can i add a new weapon?
+-How can i add a new monster?
+-How can i add a new entity?
+-How can i make flames from sprites?
+-how can i make gibbable cropses?
+-how can i make locational damages?
+-How can display ammo on weapons
+ 
+Q: -How can i add a glass function?
+DONE: use hiprubbl.qc and modify for sounds / texture override
+
+7.25.020
+
+CHECK: quake 2 monster code
+
+Promo: weapon system 6
+
+7.22.020
+
+CHECK: porting NPRQuake to maphack -- notes
+
+NPRQ:
+gl_rsurf.c
+R_RecursiveWorldNode -
+R_DrawSequentialPoly (surf, lightmap_textures, lightmap_modified,
+                                          lightmap_rectchange, lightmaps, 
+                                          lightmap_bytes, solidskytexture, &speedscale,
+                                          alphaskytexture, gl_mtexable, currenttexture,
+                                          cnttextures, realtime, qglMTexCoord2fSGIS,
+                                          gl_lightmap_format, qglSelectTextureSGIS,
+                                          r_origin);
+
+GLQ:
+gl_rsurf.c
+R_RecursiveWorldNode -
+R_DrawSequentialPoly (surf);
+
+Maphack:
+
+gl_rsurf.c
+R_Q1BSP_Draw
+gl_rmain.c
+R_DrawWorldSurfaces -  -- 
+R_QueueWorldSurfaceList
+R_ProcessWorldTextureSurfaceList
+R_DrawWorldTextureSurfaceList
+R_DrawTextureSurfaceList_GL20
+RSurf_DrawBatch
+-- R_Mesh_Draw
+
+gl_backend.c
+R_Mesh_Draw -
+qglDrawRangeElements ?
+
+WIP: relativity maphack build
+
+7.21.020
+
+WIP: relativity maphack build
+- 90_, 180_, 270_ rotate pieces
+
+DONE: cut qone run e1 & e2 - uploaded
+DONE: cut maphack / qone promo - 
+
+DONE: qc auto-version system with "version" alias in console
+
+REVIEW: smc (by seven) feature grab -- way complex code
+things of note:
+ - monster cloning & random position
+ - monster spike launch
+
+7.20.020
+
+DONE: moddb forum updates
+WIP: relativity maphack build
+- added rel_bd{1,2,3}
+-- need transition pieces?  a bridger ?  a more open piece  - a teleporter block ?
 
 7.19.020
 
-WIP: per teleport / start cd play cmd
+DONE: per teleport / start cd play cmd
+-- uses .cfg which are set in retarget -- <map only used by mh qone
 
+TESTED: pack ownership sometime -- works
+
+WIP: random spawnable - crates & cubes contents adjust
+WIP: re-watch QDQ -- pick a few more speed run tricks
 
 7.18.020
 
