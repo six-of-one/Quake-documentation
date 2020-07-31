@@ -532,8 +532,6 @@ TDO: resume "HOLD:" items -- see 6.25.18
 ISSUE: "holding" god particle makes it untouchable - stuck in toth_delay() -- looks like a 2nd hold touch wacked the orig think
 ISSUE: pk mode skin has no face in HUD
 ISSUE: deepsleep cant shoot a crate under liquid surf when above ?
-ISSUE: vars touch fn() on qh2 maps - nails, explode morph shots, harp
--- issued map {reg map}. touch seems work ok
 
 https://github.com/six-of-one/Quake-documentation/blob/master/.plan
 	---  START of .plan daily
@@ -542,9 +540,38 @@ FIX: chaos.wad, q3tex_tmp.wad issues - missing tex
 TDO: disable for coop pack ownership
 NOTE: do we want coop packs for QH2 run as setup
 
-ISSUE: seen on qh2 & qone run - lava nails / laser cannon not doing dmg
-- ammo_cells is negative (check bfg 10K)
+TEST: test_c map - manga has no think on ded
+FIX: manga death - Host_Error: SVVM_ExecuteProgram: QC function self.think is missing
 
+
+
+7.30.020
+
+
+
+7.29.020
+
+FIXED: harpoon moves health dmg triggers
+
+ISSUE: seen on qh2 & qone run - lava nails / laser cannon not doing dmg
+NOTE: __biome_ must be set for maphack open lvl
+FIXED: -- but no like setting a blank __biome_
+same \____
+XXX: vars touch fn() on qh2 maps - nails, explode morph shots, harp
+-- issued map {reg map}. touch seems work ok
+
+FIXED:  ammo_cells is negative (check bfg 10K)
+
+7.28.020
+
+DONE: tunr off all random items
+
+DONE: dmsp mod source
+-- not needed - archon already does random DM monster spawns
+
+WIP: qone re-cfg for slospeed run
+
+NOTE: cube & crate random lists need to set "rnd_" read in value (bubble_count)
 
 7.26.020
 
