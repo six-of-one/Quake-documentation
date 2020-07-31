@@ -6744,12 +6744,12 @@ Default is 1.
 */
 
 
-/*QUAKED func_breakawaywall (0 .5 .8) ?
+/*QUAKED func_breakawaywall (0 .5 .8) ? MULTI_USE
 -------- HIPN --------
 Hipnotic Special Effect
 -----------------------
 Special walltype that
-removes itself when triggered.
+removes itself when triggered - unless  MULTI_USE is set
 */
 
 
