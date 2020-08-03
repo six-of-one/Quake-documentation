@@ -545,9 +545,27 @@ FIX: manga death - Host_Error: SVVM_ExecuteProgram: QC function self.think is mi
 
 
 
+8.2.020
+
+CHECK: win qone run had no cdtrack ogg play
+
+8.1.020
+
+DONE: moar crates
+FIXED: doom crate (std size) box too small
+
+7.31.020
+
+Q-one: complete full slospd run
+WIP: moar crates
+
 7.30.020
 
+DONE: respawn func_breakawaywall ops
+DONE: mod showcase - perq, ultim, painx, zerstorer, stlk, shrak, ypod, nehahra
+DONE: blue bottle flamer fly-type tweak to use MOVETYPE_FLYMISSILE & timeout to MOVETYPE_BOUNCE
 
+WIP: ultimate mod weps - add to archon mk-III
 
 7.29.020
 
