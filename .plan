@@ -541,13 +541,27 @@ TDO: disable for coop pack ownership
 NOTE: do we want coop packs for QH2 run as setup
 
 TEST: test_c map - manga has no think on ded
-FIX: manga death - Host_Error: SVVM_ExecuteProgram: QC function self.think is missing
+
+TDO: compile win maphack with "self.think is missing" fix
+FIX: beacon start issue
+
+
+8.3.020
 
 
 
 8.2.020
 
+Doom stuff: roguelike arsenal mod - 12in1 - oblige 7.7 -- deathly_gateway.wad
+
 CHECK: win qone run had no cdtrack ogg play
+- got newest DLL -- no worky
+
+TEST: can 2 -game launch with engine use diff ents - custom qc ?
+so far - fails
+
+FIXISH: manga death - Host_Error: SVVM_ExecuteProgram: QC function self.think is missing
+-- changed this in engine so it no longer bombs down
 
 8.1.020
 
