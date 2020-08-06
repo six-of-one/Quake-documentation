@@ -546,8 +546,43 @@ TDO: compile win maphack with "self.think is missing" fix
 FIX: beacon start issue
 
 
+8.5.020
+
+DONE: quake software screens to match hq8x posted -- can use dosbox
+WIP: hq8x research $other options
+
+
+8.4.020
+
+WIP: mod release builder
+\_ copied off w10 -- needs cleanup
+
+FIXED: audio jack issue on dev system -- coming out of speaker vol control
+- moved to MB main jack split w/speaker audio
+
+CHECK: hq remap texs
+DONE: hq8x tools built
+WIP: converting textures
+
 8.3.020
 
+WIP: mod release builder
+
+rsync: update existing files and prevent creation of new files in the destination, we utilize the --existing option
+
+# Output to the user what we propose to do
+rsync --dry-run --itemize-changes --files-from=$tmpfile "$@" &&
+
+# Alternatively, we could just output $tmpfile... but whatever...
+
+read -p "Continue? (y/n)?" &&
+
+if [[ $REPLY = [yY] ]]
+then
+{
+  rsync --files-from=$tmpfile "$@"
+}
+fi
 
 
 8.2.020
