@@ -4,13 +4,36 @@
 
 #magnify method: eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X, scale2X, scale3X, xbr2X
 method="scale2X"
+ops="-magnify -magnify -magnify"
+fil="scale8x.pk3"
+np="0"
 
-if [[ "$1" != "0" || (! -f pak0.pak && "$2" != "np")i || "$1" == "-h" || "$1" == "--help" ]]; then 
+if [[ "$1" != "0" || "$1" == "-h" || "$1" == "--help" ]]; then 
 
 	if [[ "$1" == "-h" || "$1" == "--help" ]]; then
 
+		echo "hq8x"
+		echo
+		echo "		0 -np -m -o -f [filespec]"
+		echo
+		echo "	0 - acknowledge tmp dir ops - my reminder"
+		echo "	-np - ignore any .pak files found"
+		echo "	-m {select method from list}"
 		echo "methods:"
-		ehco "	eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X, scale2X, scale3X, xbr2X"
+		echo "	eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X, scale2X, scale3X, xbr2X"
+		echo "	default = scale2x"
+		echo "	-o {specify operation}"
+		echo "operation"
+		echo "	default = -magnify -magnify -magnify"
+		echo
+		echo "	-f [filspec] - write this zipfile"
+		echo "	default: scale8x.pk3"
+		echo
+		echo "	pak files: place in tmp dir, run $(basename $0) without '-np' - uses unpacked maps dir with maps"
+		echo "	map files: place *.bsp in tmp dir, run $(basename $0)"
+		echo "	wad files: place *.wad in tmp dir, run $(basename $0)"
+		echo "	png files: place *.png in tmp dir, run $(basename $0)"
+		echo
 	else
 		echo "--- you must operate in tmp folders"
 
@@ -20,24 +43,36 @@ if [[ "$1" != "0" || (! -f pak0.pak && "$2" != "np")i || "$1" == "-h" || "$1" ==
 	fi
 else
 
-	if [[  "$1" == "0" ]]; then shift; fi
-	if [[  "$1" == "np" ]]; then shift; fi
+# while loop proc all parms but final filespec for zip file
+
+  while [[ "$1" != "" ]]; do
+
+#	if [[  "$1" == "0" ]]; then shift; fi
+ 	if [[  "$1" == "-np" ]]; then np="1"; fi
 
 	if [[ "$1" == "-m" ]]; then
 
 		shift
 		method="$1"
-		shift
 
 	fi
 
-	if [[ "$1" != "" ]]; then
+        if [[ "$1" == "-o" ]]; then
 
+                shift
+                ops="$1"
+
+        fi
+
+	if [[ "$1" == "-f" ]]; then
+
+		shift
 		fil="$1"
 
-	else
-		fil="scale8x.pk3"
 	fi
+
+	shift
+  done
 
 # if none of the unpack / convert ops set this to 1, script will exit with no converts
 set nop="0"
@@ -45,6 +80,7 @@ set nop="0"
 # 1 time op to move an existing map dir if unpacking
 set mvd="1"
 
+if [[ "$np" != "1" ]]; then
 
 for i in *.pak;do
 
@@ -55,9 +91,12 @@ for i in *.pak;do
 	        mv -i maps maps.0
 	fi
 
-	pakextract $i;
+	if [[ -f "$i" ]]; then pakextract $i; fi;
 	
 done 2> /dev/null
+
+fi
+
 
 
 cd maps 2> /dev/null
@@ -65,17 +104,16 @@ cd maps 2> /dev/null
 #other bsps?
 #cp /path/to/other/bsps/*.bsp .
 
-for i in *.bsp;do nop="1";bsputil --extract-textures $i;done 2> /dev/null
-for i in *.wad;do nop="1";qpakman -f -e "$i";done 2> /dev/null
+for i in *.bsp;do if [[ -f "$i" ]]; then nop="1";bsputil --extract-textures $i;fi;done 2> /dev/null
+for i in *.wad;do if [[ -f "$i" ]]; then nop="1";qpakman -f -e "$i";fi;done 2> /dev/null
 
 #greyscale?
 #for i in *.png;do convert $i -set colorspace Gray -separate -average $i;done 
 
 for i in *.png;do 
 	#hq8x
-	nop="1"
 #	convert $i -magnify -magnify -magnify $i
-	convert $i -define magnify:method=$method -magnify -magnify -magnify $i
+	if [[ -f "$i" ]]; then nop="1"; convert $i -define magnify:method=$method $ops $i; fi
 done 
 
 if [[ "$nop" == "1" ]]; then
@@ -92,6 +130,13 @@ cd textures
 optipng -strip all *.png
 
 #fix names
+#		noticed some rename issues with some special texs -- these:
+#Unknown option: a
+#Usage: rename [-v] [-n] [-f] perlexpr [filenames]
+#Unknown option: 0
+#Unknown option: 0
+#
+
 rename 's/plus_/+/' *.png
 rename 's/star_/#/' *.png
 rename 's/_fbr//' *.png
