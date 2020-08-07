@@ -39,14 +39,27 @@ else
 		fil="scale8x.pk3"
 	fi
 
+# if none of the unpack / convert ops set this to 1, script will exit with no converts
 set nop="0"
 
-if [[ -d maps ]];then
-#	rm -rf maps
-	mv maps maps.0
-fi
+# 1 time op to move an existing map dir if unpacking
+set mvd="1"
 
-for i in *.pak;do pakextract $i;done 2> /dev/null
+
+for i in *.pak;do
+
+# move an exiting map dir - one time only, the unpack will make a new map dir
+	if [[ -d maps && "$mvd" == "1" ]];then
+
+		mvd="0"
+	        mv -i maps maps.0
+	fi
+
+	pakextract $i;
+	
+done 2> /dev/null
+
+
 cd maps 2> /dev/null
 
 #other bsps?
