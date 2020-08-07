@@ -1,1 +1,94 @@
-/home/Quake/.qbr/q1lab/kit/hq8x
+#!/bin/bash
+#requires pakextract, bsputil, optipng, and qpakman
+
+#magnify method: eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X, scale2X, scale3X, xbr2X
+method="scale2X"
+
+if [[ "$1" != "0" || (! -f pak0.pak && "$2" != "np")i || "$1" == "-h" || "$1" == "--help" ]]; then 
+
+	if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+
+		echo "methods:"
+		ehco "	eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X, scale2X, scale3X, xbr2X"
+	else
+		echo "--- you must operate in tmp folders"
+
+		if [[ ! -f pak0.pak ]];then
+			echo "no pak file"
+		fi
+	fi
+else
+
+	if [[  "$1" == "0" ]]; then shift; fi
+	if [[  "$1" == "np" ]]; then shift; fi
+
+	if [[ "$1" == "-m" ]]; then
+
+		shift
+		method="$1"
+		shift
+
+	fi
+
+	if [[ "$1" != "" ]]; then
+
+		fil="$1"
+
+	else
+		fil="scale8x.pk3"
+	fi
+
+set nop="0"
+
+if [[ -d maps ]];then
+#	rm -rf maps
+	mv maps maps.0
+fi
+
+for i in *.pak;do pakextract $i;done 2> /dev/null
+cd maps 2> /dev/null
+
+#other bsps?
+#cp /path/to/other/bsps/*.bsp .
+
+for i in *.bsp;do nop="1";bsputil --extract-textures $i;done 2> /dev/null
+for i in *.wad;do nop="1";qpakman -f -e "$i";done 2> /dev/null
+
+#greyscale?
+#for i in *.png;do convert $i -set colorspace Gray -separate -average $i;done 
+
+for i in *.png;do 
+	#hq8x
+	nop="1"
+#	convert $i -magnify -magnify -magnify $i
+	convert $i -define magnify:method=$method -magnify -magnify -magnify $i
+done 
+
+if [[ "$nop" == "1" ]]; then
+
+if [[ -d textures ]];then
+#	rm -rf textures
+	mv textures textures.0
+fi
+mkdir textures 
+mv *.png textures 
+cd textures
+
+#optimize pngs
+optipng -strip all *.png
+
+#fix names
+rename 's/plus_/+/' *.png
+rename 's/star_/#/' *.png
+rename 's/_fbr//' *.png
+
+cd ..
+
+zip -r ../$fil textures 
+
+else
+
+	echo hq8x - no operation performed...
+
+fi
+fi
