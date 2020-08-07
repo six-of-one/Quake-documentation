@@ -1,5 +1,6 @@
 #!/bin/bash
 #requires pakextract, bsputil, optipng, and qpakman
+# git source: https://github.com/ciscon/random/blob/master/quake-scripts/quake_convert_textures-hq8x.sh
 
 #magnify method: eagle2X, eagle3X, eagle3XB, epb2X, fish2X, hq2X, scale2X, scale3X, xbr2X
 method="scale2X"
