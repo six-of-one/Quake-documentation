@@ -530,7 +530,6 @@ TDO: resume "HOLD:" items -- see 6.25.18
  *** WARNING - viswep long loop!	-- no longer crashing, but does not get cleared
 
 ISSUE: "holding" god particle makes it untouchable - stuck in toth_delay() -- looks like a 2nd hold touch wacked the orig think
-ISSUE: pk mode skin has no face in HUD
 ISSUE: deepsleep cant shoot a crate under liquid surf when above ?
 
 https://github.com/six-of-one/Quake-documentation/blob/master/.plan
@@ -543,14 +542,39 @@ NOTE: do we want coop packs for QH2 run as setup
 TEST: test_c map - manga has no think on ded
 
 TDO: compile win maphack with "self.think is missing" fix
-FIX: beacon start issue
 
+
+8.9.020
+
+DONE: rogue monsters - invis_sw
+WIP: rogue monsters - wrath
+
+
+8.8.020
+
+DONE: airquake
+DONE: def q dirs on win - mh & qss
+
+CHECK: xmas jam 17 & 19 maps
+- some very awesome maps - a few ideas were acquired
+
+DONE: rogue monsters - invis_sw
+WIP: rogue monsters - wrath
+
+8.6.020
+
+WIP: rogue monsters - invis_sw
+DONE: hq8x -- improvements
 
 8.5.020
 
 DONE: quake software screens to match hq8x posted -- can use dosbox
 WIP: hq8x research $other options
 
+FIXED: beacon start issue
+FIXED: pk mode skin has no face in HUD
+
+WIP: rogue monsters - invis_sw
 
 8.4.020
 
