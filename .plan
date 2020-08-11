@@ -544,11 +544,21 @@ TEST: test_c map - manga has no think on ded
 TDO: compile win maphack with "self.think is missing" fix
 
 
+8.10.020
+
+WIP: archon (mega 7z) release build
+DONE: rogue monsters - s_wrath
+
+CANWE: have a script controlled / specced generic monster set ?
+
+
 8.9.020
 
 DONE: rogue monsters - invis_sw
-WIP: rogue monsters - wrath
+DONE: rogue monsters - wrath
+WIP: rogue monsters - s_wrath
 
+WIP: archon (mega 7z) release build
 
 8.8.020
 
