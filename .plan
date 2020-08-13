@@ -544,13 +544,38 @@ TEST: test_c map - manga has no think on ded
 TDO: compile win maphack with "self.think is missing" fix
 
 
+8.11.020
+
+WIP: archon (mega 7z) release build
+WIP: gtk-radiant w10
+WIP: relativity biome
+
+DONE: check / fix cfg file copy list
+
+WIP: rogue monsters - lavaman
+WIP: ulitm mod monsters - cyber demon (yellow model)
+
+8.11.020
+
+WIP: archon (mega 7z) release build
+WIP: gtk-radiant w10
+DONE: code cleanup
+- some local entity missile
+- local vectors in rogue monster code
+DONE: rogue monsters - morph
+-- has fast run but not move issue
+WIP: rogue monsters - lavaman
+WIP: ulitm mod monsters - cyber demon (yellow model)
+\_ both need reframing
+
 8.10.020
 
 WIP: archon (mega 7z) release build
 DONE: rogue monsters - s_wrath
+DONE: rogue monsters - eel
+WIP: ulitm mod monsters - drone
 
 CANWE: have a script controlled / specced generic monster set ?
-
 
 8.9.020
 
