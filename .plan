@@ -544,16 +544,27 @@ TEST: test_c map - manga has no think on ded
 TDO: compile win maphack with "self.think is missing" fix
 
 
-8.11.020
+8.13.020
+
+WIP: archon (mega 7z) release build
+WIP: ulitm mod monsters - cyber demon (yellow model)
+
+
+8.12.020
 
 WIP: archon (mega 7z) release build
 WIP: gtk-radiant w10
-WIP: relativity biome
+WIP: relativity biome -- the causeway
+- cut 1 - not well matched with other pieces
+- prob have to put all piece in editor & then cut them out matched
 
 DONE: check / fix cfg file copy list
 
-WIP: rogue monsters - lavaman
 WIP: ulitm mod monsters - cyber demon (yellow model)
+
+DONE: rogue monsters - lavaman		-- except attack fn confus
+\_ renew fails here -- gib code
+NOTE: test tomorrow
 
 8.11.020
 
