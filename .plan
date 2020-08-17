@@ -544,11 +544,29 @@ TEST: test_c map - manga has no think on ded
 TDO: compile win maphack with "self.think is missing" fix
 
 
+8.16.020
+
+WIP: archon (mega 7z) release build
+WIP: ulitm mod monsters -  (yellow model)
+
+WIP: research on no coop spawn frags for NationwideMoose
+
+8.15.020
+
+WIP: archon (mega 7z) release build
+DONE: ulitm mod monsters - cyber demon (yellow model)
+
+WIP: research on no coop spawn frags for NationwideMoose
+-- need FvF code to check
+
+FIXED: speed issues lavaman & morph
+
 8.13.020
 
 WIP: archon (mega 7z) release build
 WIP: ulitm mod monsters - cyber demon (yellow model)
 
+DONE: chaos archon mkIII demo for NationwideMoose
 
 8.12.020
 
@@ -573,6 +591,7 @@ WIP: gtk-radiant w10
 DONE: code cleanup
 - some local entity missile
 - local vectors in rogue monster code
+DONE: ulitm mod monsters - drone
 DONE: rogue monsters - morph
 -- has fast run but not move issue
 WIP: rogue monsters - lavaman
