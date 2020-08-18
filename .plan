@@ -542,6 +542,13 @@ NOTE: do we want coop packs for QH2 run as setup
 TEST: test_c map - manga has no think on ded
 
 TDO: compile win maphack with "self.think is missing" fix
+IDEA: Q-one style for mission paks - MP-one
+
+
+8.17.020
+
+WIP: archon (mega 7z) release build
+
 
 
 8.16.020
@@ -549,7 +556,9 @@ TDO: compile win maphack with "self.think is missing" fix
 WIP: archon (mega 7z) release build
 WIP: ulitm mod monsters -  (yellow model)
 
-WIP: research on no coop spawn frags for NationwideMoose
+DONE: research on no coop spawn frags for NationwideMoose
+DONE: qc forum post of same
+DONE: qcmanual.html update on github.io for frame macro link
 
 8.15.020
 

@@ -2029,6 +2029,43 @@ they spawn from player morph gremlins in water
 
 */
 
+
+/*QUAKED monster_drone (1 0 0) (-16 -16 -24) (16 16 32) Ambush
+Drone, 100 health points.
+
+-------- NOTES --------
+flying drone - from ultimate mod
+
+--------  CAT  --------
+"speed" - 0.1 normal, 0.05 fast, 0.2 slow
+
+-------- FLAGS --------
+Flags:
+"ambush"
+ the monster will only wake up on
+ really seeing the player, not another
+ monster getting angry
+*/
+
+/*QUAKED monster_cyberdemon (1 0 0) (-32 -32 -24) (32 32 64) Ambush
+Cyber Demon, 4500 health points.
+
+-------- NOTES --------
+Cyber demon - from ultimate mod
+Quakified version - model needs improved
+
+--------  CAT  --------
+"speed" - 0.1 normal, 0.05 fast, 0.2 slow
+
+-------- FLAGS --------
+Flags:
+"ambush"
+ the monster will only wake up on
+ really seeing the player, not another
+ monster getting angry
+*/
+
+
 /*QUAKED 
 			classname_m2 (0.5 0.5 0.5) (-8 -8 -8) (8 8 8) DO NOT USE
 --------  CAT  --------
@@ -2053,6 +2090,8 @@ monster_supervore
 monster_clinger
 monster_young
 monster_gremlin_x
+monster_drone
+monster_cyberdemon
 
 -------- NOTES --------
 place holder lists all Monster II classnames - not a useable entity
