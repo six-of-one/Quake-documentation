@@ -545,11 +545,21 @@ TDO: compile win maphack with "self.think is missing" fix
 IDEA: Q-one style for mission paks - MP-one
 
 
+8.18.020
+
+WIP: archon (mega 7z) release build
+CHECKED: MP-one -- does not work
+\_ "-hipnotic" engine command line option fails maphack
+
 8.17.020
 
 WIP: archon (mega 7z) release build
+DONE: drone & cyberd in entities.def, place on test map
 
+TASK: monster survival wave mode
+-- initial cut done
 
+WIP: MP-one -- does not work
 
 8.16.020
 
