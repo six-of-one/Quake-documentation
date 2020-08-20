@@ -544,12 +544,31 @@ TEST: test_c map - manga has no think on ded
 TDO: compile win maphack with "self.think is missing" fix
 IDEA: Q-one style for mission paks - MP-one
 
+Archon::
+1- map set, 6 maps
+2- morph ops - not all function
+3- monster survival wave idea
+4- never ending corridor DM idea
+
+
+8.19.020
+
+WIP: archon (mega 7z) release build
+
+DONE: mumles fin state
+WIP: krachmacher
 
 8.18.020
 
 WIP: archon (mega 7z) release build
 CHECKED: MP-one -- does not work
 \_ "-hipnotic" engine command line option fails maphack
+
+PROJ: quake arcade tournament -- operational & tested
+- checked mdl - few diffs
+- checked qc - nearly same - prize system not implemented here
+- saved html docs
+
 
 8.17.020
 
