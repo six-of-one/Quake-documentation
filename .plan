@@ -544,12 +544,45 @@ TEST: test_c map - manga has no think on ded
 TDO: compile win maphack with "self.think is missing" fix
 IDEA: Q-one style for mission paks - MP-one
 
+FIX: skins on wolf rocket & smg ammo reversed
+
 Archon::
 1- map set, 6 maps
-2- morph ops - not all function
+2- morph ops - not all function xfer cm m1
 3- monster survival wave idea
 4- never ending corridor DM idea
 
+TDO: chan pt reward - FPS session on an interesting map vs bots or real players
+doom oblige map
+-- figure this out
+
+ISSUE: swamp wont load from .cfg ??
+
+8.25.020
+
+WIP: archon (mega 7z) release build
+
+WIP: quake 3.4.3 spec
+
+8.24.020
+
+WIP: archon (mega 7z) release build
+
+WIP: rest of Archon map design
+-- image & map tour
+WIP: Spectre Vitriol - init & mh design
+- cut 1 near complete
+
+
+8.23.020
+
+WIP: archon (mega 7z) release build
+
+WIP: Killmoulis Arcana
+-  less tris -- still heavy on new hardware
+
+DONE: demo play on vars new maps
+- mod info given
 
 8.22.020
 
@@ -557,6 +590,8 @@ WIP: archon (mega 7z) release build
 
 DONE: dragon {rogue} -- partial qc update done
 - #ifdef on this code
+
+WIP: Killmoulis Arcana -- basic forest done
 
 8.20.020
 
