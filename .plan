@@ -558,11 +558,23 @@ doom oblige map
 
 ISSUE: swamp wont load from .cfg ??
 
+8.26.020
+
+WIP: archon (mega 7z) release build
+
+WIP: rest of Archon map design
+
+FIXED: tree slags FPS too low
+\_ issue is transparent tree_top1.tga
+
+
 8.25.020
 
 WIP: archon (mega 7z) release build
 
-WIP: quake 3.4.3 spec
+DONE: quake 3.4.3 spec
+
+WIP: rest of Archon map design
 
 8.24.020
 
