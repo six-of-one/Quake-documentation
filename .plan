@@ -558,6 +558,22 @@ doom oblige map
 
 ISSUE: swamp wont load from .cfg ??
 
+
+8.30.020
+
+WIP: archon (mega 7z) release build
+WIP: Remorhaz Bane
+
+8.29.020
+
+WIP: archon (mega 7z) release build
+WIP: Remorhaz Bane
+
+8.27.020
+
+WIP: archon (mega 7z) release build
+WIP: Remorhaz Bane
+
 8.26.020
 
 WIP: archon (mega 7z) release build
@@ -567,6 +583,7 @@ WIP: rest of Archon map design
 FIXED: tree slags FPS too low
 \_ issue is transparent tree_top1.tga
 
+TESTED: map perm grav well for vortex
 
 8.25.020
 
