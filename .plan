@@ -544,7 +544,6 @@ TEST: test_c map - manga has no think on ded
 TDO: compile win maphack with "self.think is missing" fix
 IDEA: Q-one style for mission paks - MP-one
 
-FIX: skins on wolf rocket & smg ammo reversed
 
 Archon::
 1- map set, 6 maps
@@ -559,10 +558,17 @@ doom oblige map
 ISSUE: swamp wont load from .cfg ??
 
 
+8.31.020
+
+WIP: archon (mega 7z) release build
+WIP: Remorhaz Bane - cut 2
+
+FIXED: skins on wolf rocket & smg ammo reversed
+
 8.30.020
 
 WIP: archon (mega 7z) release build
-WIP: Remorhaz Bane
+WIP: Remorhaz Bane - cut 2
 
 8.29.020
 
