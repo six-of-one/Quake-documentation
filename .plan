@@ -555,8 +555,23 @@ TDO: chan pt reward - FPS session on an interesting map vs bots or real players
 doom oblige map
 -- figure this out
 
-ISSUE: swamp wont load from .cfg ??
+TDO: core (3 specific & 3 general) for all maps
 
+
+9.2.020
+
+WIP: archon (mega 7z) release build
+
+
+9.1.020
+
+WIP: archon (mega 7z) release build
+WIP: Remorhaz Bane - cut 2
+-- struct core pretty much complete
+
+TDO: core (3 specific & 3 general) for all maps
+
+XXX: swamp wont load from .cfg ?? -- not seen lately
 
 8.31.020
 
@@ -564,6 +579,12 @@ WIP: archon (mega 7z) release build
 WIP: Remorhaz Bane - cut 2
 
 FIXED: skins on wolf rocket & smg ammo reversed
+
+WUT: blubeta.2 -- where this keep croping in??
+malloc(): invalid size (unsorted)
+Received signal 6, exiting...
+recursive shutdown
+
 
 8.30.020
 
