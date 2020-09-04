@@ -554,14 +554,23 @@ Archon::
 TDO: chan pt reward - FPS session on an interesting map vs bots or real players
 doom oblige map
 -- figure this out
+CHECK: q3 aux models
 
 TDO: core (3 specific & 3 general) for all maps
 
+
+9.3.020
+
+WIP: archon (mega 7z) release build
+
+WIP: Grimlock - initialized
 
 9.2.020
 
 WIP: archon (mega 7z) release build
 
+WIP: Grimlock - initialized
+- zerstorer wad, editor tex set, hq8x override .pk3 file
 
 9.1.020
 
