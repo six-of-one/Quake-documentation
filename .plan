@@ -559,11 +559,36 @@ CHECK: q3 aux models
 TDO: core (3 specific & 3 general) for all maps
 
 
+
+9.7.020
+
+WIP: archon (mega 7z) release build
+
+WIP: Grimlock
+- more corridor
+
 9.6.020
 
 WIP: archon (mega 7z) release build
 
 WIP: Grimlock
+- tested silent/stealth/nodeath teleport for loop trick - works
+- used .punchangle to stop droptofloor removing falling map items
+- illusion is lost when masked teleporting
+
+\_script_to_rndize origin_z:
+1grep origin vortex.map |g " [0-9]*\""> /tmp/c
+grep origin vortex.map |g " [0-9]*\""|sed -e 's/ [0-9]*\"$//'|sed -e 's/ [-][0-9]*\"$//' > /tmp/c2
+for f in `cat /tmp/c2`;do let z=$RANDOM;y=" ";if [[ $RANDOM -gt 16000 ]];then y="-";fi;if [[ "$f" == "\"origin\"" ]]; then echo $y${z:1:3}\";fi;echo $f;done|sed -e 's/"origin/#"origin/g' > /tmp/c3
+vi and [SHIFT]-j till done
+cat /tmp/c388888888u9|tr "#" "\n" > /tmp/c4
+scite /tmp/c & /tmp/c4
+sed -i 's/"origin" "1344 1952 136"/
+and
+"origin" "1344 1952 777"/'
+paste -d '\n'  "/tmp/c" "/tmp/c4"|sed 'N;s/\n//'|sed -e 's/$/ vortex.map/'
+
+DONE: messaged all map cores
 
 9.3.020
 
