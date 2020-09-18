@@ -560,6 +560,15 @@ ISSUE: can harpoon mess up func_maphack origin_z - grim & trying to spear trees
 
 TDO: core (3 specific & 3 general) for all maps
 
+fog test on OA
+fog 0.6 0.2 2.0 0 0.4 60 5000 31000
+
+9.17.020
+
+WIP: archon (mega 7z) release build
+
+WIP: vars decor & core realm features
+- reactor_1
 
 9.16.020
 
