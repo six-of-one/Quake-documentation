@@ -563,12 +563,22 @@ TDO: core (3 specific & 3 general) for all maps
 fog test on OA
 fog 0.6 0.2 2.0 0 0.4 60 5000 31000
 
+9.20.020
+
+WIP: archon (mega 7z) release build
+WIP: vars decor & core realm features
+
 9.17.020
 
 WIP: archon (mega 7z) release build
 
 WIP: vars decor & core realm features
 - reactor_1
+
+WIP: map chunk relocater script
+- make a composite of * hack resources
+
+cat clk_6.map|tr "\n" "@"|sed -e 's/.*brush 0//' -e 's/}@}.*/}@/' |tr "@" "\n"
 
 9.16.020
 
@@ -577,9 +587,13 @@ WIP: archon (mega 7z) release build
 WIP: vars decor & core realm features
 - reactor_1
 
+WIP: map chunk relocater script
+
 9.15.020
 
 WIP: archon (mega 7z) release build
+
+WIP: decompile slayers progs.dat testing
 
 WIP: vars decor & core realm features
 - reactor_1
