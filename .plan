@@ -563,10 +563,20 @@ TDO: core (3 specific & 3 general) for all maps
 fog test on OA
 fog 0.6 0.2 2.0 0 0.4 60 5000 31000
 
+9.22.020
+
+WIP: archon (mega 7z) release build
+WIP: vars decor & core realm features
+WIP: martian chron scenery
+
 9.21.020
 
 WIP: archon (mega 7z) release build
 WIP: vars decor & core realm features
+
+WIP: henge as killy core #3 -- really 2
+- re-henge - a generic core
+WIP: martian chron scenery
 
 9.20.020
 
